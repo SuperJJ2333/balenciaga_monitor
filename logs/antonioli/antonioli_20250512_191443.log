@@ -1,0 +1,36 @@
+2025-05-12 19:14:43,317 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\antonioli\antonioli_20250512_191443.log
+2025-05-12 19:14:43,317 - utils.page_setting - INFO - 未找到历史库存数据目录: E:\pythonProject\outsource\balenciaga_monitor\data\antonioli\inventory
+2025-05-12 19:14:43,317 - utils.page_setting - INFO - antonioli - 库存监控已初始化
+2025-05-12 19:14:44,735 - utils.page_setting - INFO - antonioli - 浏览器页面已初始化
+2025-05-12 19:14:44,743 - utils.page_setting - INFO - 开始监控 https://antonioli.eu/en-us/collections/designer-balenciaga/man?grid-switcher=4&filter.p.m.elastick.department=SHOES&filter.v.price.gte=&filter.v.price.lte=
+2025-05-12 19:14:44,745 - utils.page_setting - INFO - 正在获取商品目录: https://antonioli.eu/en-us/collections/designer-balenciaga/man?grid-switcher=4&filter.p.m.elastick.department=SHOES&filter.v.price.gte=&filter.v.price.lte=
+2025-05-12 19:15:05,461 - utils.page_setting - INFO - 找到 22 个商品元素
+2025-05-12 19:15:44,073 - utils.page_setting - WARNING - 解析单个商品时出错: Document is empty
+2025-05-12 19:15:44,997 - utils.page_setting - DEBUG - 找到商品: leopold flat ballerinas, URL: https://antonioli.eu/en-us/collections/designer-balenciaga/man
+2025-05-12 19:15:44,998 - utils.page_setting - WARNING - 解析单个商品时出错: Document is empty
+2025-05-12 19:15:45,673 - utils.page_setting - DEBUG - 找到商品: trtactor loafers, URL: https://antonioli.eu/en-us/collections/designer-balenciaga/man
+2025-05-12 19:15:45,674 - utils.page_setting - WARNING - 解析单个商品时出错: Document is empty
+2025-05-12 19:15:50,707 - utils.page_setting - DEBUG - 找到商品: stomper derbies, URL: https://antonioli.eu/en-us/collections/designer-balenciaga/man
+2025-05-12 19:15:50,709 - utils.page_setting - WARNING - 解析单个商品时出错: Document is empty
+2025-05-12 19:15:50,713 - utils.page_setting - DEBUG - 找到商品: crocs collaboration mule jibbitz, URL: https://antonioli.eu/en-us/collections/designer-balenciaga/man
+2025-05-12 19:15:50,713 - utils.page_setting - WARNING - 解析单个商品时出错: Document is empty
+2025-05-12 19:15:50,716 - utils.page_setting - DEBUG - 找到商品: giant boots 80mm, URL: https://antonioli.eu/en-us/collections/designer-balenciaga/man
+2025-05-12 19:15:50,716 - utils.page_setting - WARNING - 解析单个商品时出错: Document is empty
+2025-05-12 19:15:50,720 - utils.page_setting - DEBUG - 找到商品: speed 2.0 lt sneakers, URL: https://antonioli.eu/en-us/collections/designer-balenciaga/man
+2025-05-12 19:15:50,720 - utils.page_setting - WARNING - 解析单个商品时出错: Document is empty
+2025-05-12 19:15:50,723 - utils.page_setting - DEBUG - 找到商品: runner sneakers, URL: https://antonioli.eu/en-us/collections/designer-balenciaga/man
+2025-05-12 19:15:50,723 - utils.page_setting - WARNING - 解析单个商品时出错: Document is empty
+2025-05-12 19:15:50,727 - utils.page_setting - DEBUG - 找到商品: 3xl sneakers, URL: https://antonioli.eu/en-us/collections/designer-balenciaga/man
+2025-05-12 19:15:50,727 - utils.page_setting - WARNING - 解析单个商品时出错: Document is empty
+2025-05-12 19:15:50,730 - utils.page_setting - DEBUG - 找到商品: circuit sneakers, URL: https://antonioli.eu/en-us/collections/designer-balenciaga/man
+2025-05-12 19:15:50,730 - utils.page_setting - WARNING - 解析单个商品时出错: Document is empty
+2025-05-12 19:15:50,733 - utils.page_setting - DEBUG - 找到商品: circuit sneakers, URL: https://antonioli.eu/en-us/collections/designer-balenciaga/man
+2025-05-12 19:15:50,733 - utils.page_setting - WARNING - 解析单个商品时出错: Document is empty
+2025-05-12 19:15:50,736 - utils.page_setting - DEBUG - 找到商品: stapler sneakers, URL: https://antonioli.eu/en-us/collections/designer-balenciaga/man
+2025-05-12 19:15:50,736 - utils.page_setting - INFO - 共解析到 11 个商品
+2025-05-12 19:15:52,851 - utils.page_setting - INFO - 监控开始，共获取到 11 个商品信息
+2025-05-12 19:15:52,856 - utils.page_setting - INFO - antonioli - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\antonioli\inventory\balenciaga_inventory_20250512_191552.json
+2025-05-12 19:15:52,856 - utils.page_setting - INFO - 已保存10个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\antonioli\inventory\balenciaga_inventory_20250512_191552.json
+2025-05-12 19:15:52,857 - utils.page_setting - INFO - 没有历史库存数据，无法检测变化
+2025-05-12 19:15:52,857 - utils.page_setting - INFO - 监控结束，关闭浏览器
+2025-05-12 19:15:53,680 - utils.page_setting - INFO - antonioli - 监控任务完成，日志已保存

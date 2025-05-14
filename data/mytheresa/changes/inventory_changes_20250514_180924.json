@@ -1,0 +1,76 @@
+{
+  "new_products": [
+    {
+      "id": "Sunday suede sandals_balenciaga-sunday-suede-sandals-brown-p00954700",
+      "name": "Sunday suede sandals",
+      "url": "https://www.mytheresa.com/mo/en/men/balenciaga-sunday-suede-sandals-brown-p00954700",
+      "price": "€680.0",
+      "inventory": {}
+    },
+    {
+      "id": "Sunday leather sandals_balenciaga-sunday-leather-sandals-black-p00954800",
+      "name": "Sunday leather sandals",
+      "url": "https://www.mytheresa.com/mo/en/men/balenciaga-sunday-leather-sandals-black-p00954800",
+      "price": "€680.0",
+      "inventory": {}
+    },
+    {
+      "id": "Santiago leather boots_balenciaga-santiago-leather-boots-black-p00827562",
+      "name": "Santiago leather boots",
+      "url": "https://www.mytheresa.com/mo/en/men/balenciaga-santiago-leather-boots-black-p00827562",
+      "price": "€1755.0",
+      "inventory": {}
+    },
+    {
+      "id": "Santiago over-the-knee leather boots_balenciaga-santiago-over-the-knee-leather-boots-black-p00827558",
+      "name": "Santiago over-the-knee leather boots",
+      "url": "https://www.mytheresa.com/mo/en/men/balenciaga-santiago-over-the-knee-leather-boots-black-p00827558",
+      "price": "€3710.0",
+      "inventory": {}
+    },
+    {
+      "id": "Paris denim slippers_balenciaga-paris-denim-slippers-blue-p00827591",
+      "name": "Paris denim slippers",
+      "url": "https://www.mytheresa.com/mo/en/men/balenciaga-paris-denim-slippers-blue-p00827591",
+      "price": "€695.0",
+      "inventory": {}
+    },
+    {
+      "id": "Technoclog rubber mules_balenciaga-technoclog-rubber-mules-black-p00807247",
+      "name": "Technoclog rubber mules",
+      "url": "https://www.mytheresa.com/mo/en/men/balenciaga-technoclog-rubber-mules-black-p00807247",
+      "price": "€905.0",
+      "inventory": {}
+    },
+    {
+      "id": "Logo leather slippers_balenciaga-logo-leather-slippers-black-p00777669",
+      "name": "Logo leather slippers",
+      "url": "https://www.mytheresa.com/mo/en/men/balenciaga-logo-leather-slippers-black-p00777669",
+      "price": "€710.0",
+      "inventory": {}
+    },
+    {
+      "id": "Paris canvas low-top sneakers_balenciaga-paris-canvas-low-top-sneakers-beige-p00725252",
+      "name": "Paris canvas low-top sneakers",
+      "url": "https://www.mytheresa.com/mo/en/men/balenciaga-paris-canvas-low-top-sneakers-beige-p00725252",
+      "price": "€615.0",
+      "inventory": {}
+    },
+    {
+      "id": "Speed 2.0 logo sneakers_balenciaga-speed-2-0-logo-sneakers-black-p00458886",
+      "name": "Speed 2.0 logo sneakers",
+      "url": "https://www.mytheresa.com/mo/en/men/balenciaga-speed-2-0-logo-sneakers-black-p00458886",
+      "price": "€910.0",
+      "inventory": {}
+    },
+    {
+      "id": "Cargo mesh sneakers_balenciaga-cargo-mesh-sneakers-white-p00906284",
+      "name": "Cargo mesh sneakers",
+      "url": "https://www.mytheresa.com/mo/en/men/balenciaga-cargo-mesh-sneakers-white-p00906284",
+      "price": "€1255.0",
+      "inventory": {}
+    }
+  ],
+  "removed_products": [],
+  "inventory_changes": []
+}

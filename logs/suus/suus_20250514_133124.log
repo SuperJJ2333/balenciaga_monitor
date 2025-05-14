@@ -1,0 +1,16 @@
+2025-05-14 13:31:24,364 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\suus\suus_20250514_133124.log
+2025-05-14 13:31:24,366 - utils.page_setting - INFO - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\suus\inventory\balenciaga_inventory_20250512_181933.json
+2025-05-14 13:31:24,367 - utils.page_setting - INFO - suus - 库存监控已初始化
+2025-05-14 13:31:24,386 - utils.page_setting - ERROR - 初始化浏览器失败: 
+错误：Error while parsing request of 'SystemInfo.getProcessInfo'
+method：SystemInfo.getProcessInfo
+args：{}
+出现这个错误可能意味着程序有bug，请把错误信息和重现方法告知作者，谢谢。
+报告网站：https://gitee.com/g1879/DrissionPage/issues
+2025-05-14 13:31:24,386 - utils.page_setting - INFO - 尝试使用备选方式初始化浏览器...
+2025-05-14 13:31:24,452 - utils.page_setting - ERROR - 备选方式初始化浏览器也失败: 
+错误：Cannot find default execution context
+method：Runtime.evaluate
+args：{'expression': 'document.readyState;'}
+出现这个错误可能意味着程序有bug，请把错误信息和重现方法告知作者，谢谢。
+报告网站：https://gitee.com/g1879/DrissionPage/issues

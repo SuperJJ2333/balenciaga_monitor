@@ -1,0 +1,195 @@
+2025-05-14 18:09:24,910 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\sugar\sugar_20250514_180924.log
+2025-05-14 18:09:24,911 - utils.page_setting - INFO - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\sugar\inventory\balenciaga_inventory_20250512_181249.json
+2025-05-14 18:09:24,911 - utils.page_setting - INFO - sugar - 库存监控已初始化
+2025-05-14 18:09:24,913 - utils.page_setting - INFO - 开始监控 https://www.sugar.it/en-IT/man/designer/balenciaga/shoes
+2025-05-14 18:09:24,913 - utils.page_setting - INFO - 正在获取商品目录: https://www.sugar.it/en-IT/man/designer/balenciaga/shoes
+2025-05-14 18:09:26,029 - utils.page_setting - INFO - 找到 2 个商品元素
+2025-05-14 18:09:26,030 - utils.page_setting - DEBUG - 找到商品: Replica sneakers, URL: https://www.grifo210.com/en-ww/products/maison-margiela-replica-sneakers-s57ws0505p8153-ha771?_pos=1&_fid=0f836c48a&_ss=c
+2025-05-14 18:09:26,031 - utils.page_setting - DEBUG - 找到商品: Replica sneakers, URL: https://www.grifo210.com/en-ww/products/maison-margiela-replica-sneakers-s57ws0236p1895-101?_pos=2&_fid=0f836c48a&_ss=c
+2025-05-14 18:09:26,031 - utils.page_setting - INFO - 共解析到 2 个商品
+2025-05-14 18:09:26,031 - utils.page_setting - INFO - 监控开始，共获取到 2 个商品信息
+2025-05-14 18:09:26,032 - utils.page_setting - INFO - grifo210 - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\grifo210\inventory\balenciaga_inventory_20250514_180926.json
+2025-05-14 18:09:26,032 - utils.page_setting - INFO - 已保存2个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\grifo210\inventory\balenciaga_inventory_20250514_180926.json
+2025-05-14 18:09:26,035 - utils.page_setting - INFO - grifo210 - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\grifo210\changes\inventory_changes_20250514_180926.json
+2025-05-14 18:09:26,035 - utils.page_setting - INFO - 检测到库存变化: 2个新商品, 2个下架商品, 0个库存变化
+2025-05-14 18:09:26,035 - utils.page_setting - INFO - 检测到库存变化，已保存到变更记录
+2025-05-14 18:09:26,035 - utils.page_setting - INFO - 监控结束，关闭浏览器
+2025-05-14 18:09:26,035 - utils.page_setting - INFO - grifo210 - 监控任务完成，日志已保存
+2025-05-14 18:09:26,928 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\suus\suus_20250514_180926.log
+2025-05-14 18:09:26,929 - utils.page_setting - INFO - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\suus\inventory\balenciaga_inventory_20250514_174811.json
+2025-05-14 18:09:26,930 - utils.page_setting - INFO - suus - 库存监控已初始化
+2025-05-14 18:09:26,935 - utils.page_setting - INFO - suus - 浏览器页面已初始化
+2025-05-14 18:09:26,935 - utils.page_setting - INFO - 开始监控 https://www.suus.es/product-tag/guidi/
+2025-05-14 18:09:26,935 - utils.page_setting - INFO - 正在获取商品目录: https://www.suus.es/product-tag/guidi/
+2025-05-14 18:09:27,116 - utils.page_setting - INFO - 找到 10 个商品元素
+2025-05-14 18:09:27,117 - utils.page_setting - DEBUG - 找到商品: "Monday Shoe" sneakers, URL: https://www.sugar.it/en-IT/product/181864/balenciaga/sneakers/monday_shoe_sneakers
+2025-05-14 18:09:27,118 - utils.page_setting - DEBUG - 找到商品: "Tractor" platform loafers, URL: https://www.sugar.it/en-IT/product/181860/balenciaga/derby_shoes/tractor_platform_loafers
+2025-05-14 18:09:27,119 - utils.page_setting - DEBUG - 找到商品: "3XL" sneakers, URL: https://www.sugar.it/en-IT/product/180144/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:09:27,121 - utils.page_setting - DEBUG - 找到商品: "6XL" sneakers, URL: https://www.sugar.it/en-IT/product/180141/balenciaga/sneakers/6xl_sneakers
+2025-05-14 18:09:27,122 - utils.page_setting - DEBUG - 找到商品: X Crocs rubber ankle boots™, URL: https://www.sugar.it/en-IT/product/180149/balenciaga/boots/x_crocs_rubber_ankle_bootsT
+2025-05-14 18:09:27,123 - utils.page_setting - DEBUG - 找到商品: "Circuit" sneakers, URL: https://www.sugar.it/en-IT/product/180153/balenciaga/sneakers/circuit_sneakers
+2025-05-14 18:09:27,123 - utils.page_setting - DEBUG - 找到商品: "3XL" sneakers, URL: https://www.sugar.it/en-IT/product/180140/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:09:27,124 - utils.page_setting - DEBUG - 找到商品: "Circuit" sneakers, URL: https://www.sugar.it/en-IT/product/180152/balenciaga/sneakers/circuit_sneakers
+2025-05-14 18:09:27,126 - utils.page_setting - DEBUG - 找到商品: "3XL" sneakers, URL: https://www.sugar.it/en-IT/product/168751/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:09:27,127 - utils.page_setting - DEBUG - 找到商品: Logo slides, URL: https://www.sugar.it/en-IT/product/139120/balenciaga/sandals/logo_slides
+2025-05-14 18:09:27,127 - utils.page_setting - INFO - 共解析到 10 个商品
+2025-05-14 18:09:27,128 - utils.page_setting - INFO - 监控开始，共获取到 10 个商品信息
+2025-05-14 18:09:27,131 - utils.page_setting - INFO - sugar - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\sugar\inventory\balenciaga_inventory_20250514_180927.json
+2025-05-14 18:09:27,131 - utils.page_setting - INFO - 已保存7个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\sugar\inventory\balenciaga_inventory_20250514_180927.json
+2025-05-14 18:09:27,133 - utils.page_setting - INFO - sugar - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\sugar\changes\inventory_changes_20250514_180927.json
+2025-05-14 18:09:27,134 - utils.page_setting - INFO - 检测到库存变化: 0个新商品, 1个下架商品, 0个库存变化
+2025-05-14 18:09:27,134 - utils.page_setting - INFO - 检测到库存变化，已保存到变更记录
+2025-05-14 18:09:27,134 - utils.page_setting - INFO - 监控结束，关闭浏览器
+2025-05-14 18:09:27,134 - utils.page_setting - INFO - sugar - 监控任务完成，日志已保存
+2025-05-14 18:09:33,840 - utils.page_setting - INFO - 找到 12 个商品元素
+2025-05-14 18:09:33,842 - utils.page_setting - DEBUG - 找到商品: STAPLER SNEAKER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358838
+2025-05-14 18:09:33,842 - utils.page_setting - DEBUG - 找到商品: STAPLER SNEAKER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/359003
+2025-05-14 18:09:33,842 - utils.page_setting - DEBUG - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358126
+2025-05-14 18:09:33,843 - utils.page_setting - DEBUG - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352208
+2025-05-14 18:09:33,843 - utils.page_setting - DEBUG - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/354721
+2025-05-14 18:09:33,844 - utils.page_setting - DEBUG - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/356352
+2025-05-14 18:09:33,844 - utils.page_setting - DEBUG - 找到商品: CIRCUIT SNEAKER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352935
+2025-05-14 18:09:33,847 - utils.page_setting - DEBUG - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/333111
+2025-05-14 18:09:33,848 - utils.page_setting - DEBUG - 找到商品: SNEAKER TRACK, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/329455
+2025-05-14 18:09:33,848 - utils.page_setting - DEBUG - 找到商品: PHANTOM SNEAKER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244576
+2025-05-14 18:09:33,848 - utils.page_setting - DEBUG - 找到商品: SNEAKER RUNNER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244474
+2025-05-14 18:09:33,849 - utils.page_setting - DEBUG - 找到商品: SNEAKER TRACK HIKE, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/237063
+2025-05-14 18:09:33,849 - utils.page_setting - INFO - 共解析到 12 个商品
+2025-05-14 18:09:33,850 - utils.page_setting - INFO - 监控开始，共获取到 12 个商品信息
+2025-05-14 18:09:33,850 - utils.page_setting - INFO - 正在获取商品 [1/12]: STAPLER SNEAKER
+2025-05-14 18:09:35,046 - utils.page_setting - INFO - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358838
+2025-05-14 18:09:39,819 - utils.page_setting - INFO - 商品名称: STAPLER SNEAKER
+2025-05-14 18:09:39,826 - utils.page_setting - INFO - 找到 5 个尺码元素
+2025-05-14 18:09:39,827 - utils.page_setting - INFO - 商品 'STAPLER SNEAKER' 共有 4 种尺码
+2025-05-14 18:09:39,828 - utils.page_setting - INFO - 尺码: 40, 库存状态: available
+2025-05-14 18:09:39,828 - utils.page_setting - INFO - 尺码: 41, 库存状态: available
+2025-05-14 18:09:39,828 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 18:09:39,828 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 18:09:39,830 - utils.page_setting - INFO - 成功获取商品 'STAPLER SNEAKER' 的库存信息，共 4 种尺码
+2025-05-14 18:09:39,831 - utils.page_setting - INFO - 正在获取商品 [2/12]: STAPLER SNEAKER
+2025-05-14 18:09:41,737 - utils.page_setting - INFO - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/359003
+2025-05-14 18:09:46,860 - utils.page_setting - INFO - 商品名称: STAPLER SNEAKER
+2025-05-14 18:09:46,870 - utils.page_setting - INFO - 找到 5 个尺码元素
+2025-05-14 18:09:46,871 - utils.page_setting - INFO - 商品 'STAPLER SNEAKER' 共有 4 种尺码
+2025-05-14 18:09:46,871 - utils.page_setting - INFO - 尺码: 40, 库存状态: available
+2025-05-14 18:09:46,872 - utils.page_setting - INFO - 尺码: 41, 库存状态: available
+2025-05-14 18:09:46,872 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 18:09:46,873 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 18:09:46,876 - utils.page_setting - INFO - 成功获取商品 'STAPLER SNEAKER' 的库存信息，共 4 种尺码
+2025-05-14 18:09:46,877 - utils.page_setting - INFO - 正在获取商品 [3/12]: SNEAKER 3XL
+2025-05-14 18:09:48,695 - utils.page_setting - INFO - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358126
+2025-05-14 18:09:53,188 - utils.page_setting - INFO - 商品名称: SNEAKER 3XL
+2025-05-14 18:09:53,196 - utils.page_setting - INFO - 找到 5 个尺码元素
+2025-05-14 18:09:53,197 - utils.page_setting - INFO - 商品 'SNEAKER 3XL' 共有 4 种尺码
+2025-05-14 18:09:53,197 - utils.page_setting - INFO - 尺码: 40, 库存状态: available
+2025-05-14 18:09:53,198 - utils.page_setting - INFO - 尺码: 41, 库存状态: available
+2025-05-14 18:09:53,198 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 18:09:53,199 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 18:09:53,200 - utils.page_setting - INFO - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 4 种尺码
+2025-05-14 18:09:53,202 - utils.page_setting - INFO - 正在获取商品 [4/12]: SNEAKER 3XL
+2025-05-14 18:09:54,530 - utils.page_setting - INFO - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352208
+2025-05-14 18:09:57,098 - utils.page_setting - INFO - 商品名称: SNEAKER 3XL
+2025-05-14 18:09:57,106 - utils.page_setting - INFO - 找到 5 个尺码元素
+2025-05-14 18:09:57,106 - utils.page_setting - INFO - 商品 'SNEAKER 3XL' 共有 4 种尺码
+2025-05-14 18:09:57,106 - utils.page_setting - INFO - 尺码: 40, 库存状态: available
+2025-05-14 18:09:57,107 - utils.page_setting - INFO - 尺码: 41, 库存状态: available
+2025-05-14 18:09:57,108 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 18:09:57,109 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 18:09:57,111 - utils.page_setting - INFO - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 4 种尺码
+2025-05-14 18:09:57,111 - utils.page_setting - INFO - 正在获取商品 [5/12]: SNEAKER 3XL
+2025-05-14 18:09:58,093 - utils.page_setting - ERROR - 未找到任何商品列表元素
+2025-05-14 18:09:58,093 - utils.page_setting - ERROR - 获取商品目录失败，终止监控
+2025-05-14 18:09:59,118 - utils.page_setting - INFO - 监控结束，关闭浏览器
+2025-05-14 18:09:59,119 - utils.page_setting - INFO - antonioli - 监控任务完成，日志已保存
+2025-05-14 18:09:59,382 - utils.page_setting - INFO - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/354721
+2025-05-14 18:09:59,459 - utils.page_setting - ERROR - 未找到任何商品列表元素
+2025-05-14 18:09:59,459 - utils.page_setting - ERROR - 获取商品目录失败，终止监控
+2025-05-14 18:09:59,459 - utils.page_setting - INFO - 监控结束，关闭浏览器
+2025-05-14 18:09:59,460 - utils.page_setting - INFO - suus - 监控任务完成，日志已保存
+2025-05-14 18:10:05,275 - utils.page_setting - INFO - 商品名称: SNEAKER 3XL
+2025-05-14 18:10:05,283 - utils.page_setting - INFO - 找到 5 个尺码元素
+2025-05-14 18:10:05,283 - utils.page_setting - INFO - 商品 'SNEAKER 3XL' 共有 4 种尺码
+2025-05-14 18:10:05,283 - utils.page_setting - INFO - 尺码: 40, 库存状态: available
+2025-05-14 18:10:05,284 - utils.page_setting - INFO - 尺码: 41, 库存状态: available
+2025-05-14 18:10:05,284 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 18:10:05,284 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 18:10:05,285 - utils.page_setting - INFO - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 4 种尺码
+2025-05-14 18:10:05,285 - utils.page_setting - INFO - 正在获取商品 [6/12]: SNEAKER 3XL
+2025-05-14 18:10:07,382 - utils.page_setting - INFO - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/356352
+2025-05-14 18:10:12,845 - utils.page_setting - INFO - 商品名称: SNEAKER 3XL
+2025-05-14 18:10:12,856 - utils.page_setting - INFO - 找到 4 个尺码元素
+2025-05-14 18:10:12,856 - utils.page_setting - INFO - 商品 'SNEAKER 3XL' 共有 3 种尺码
+2025-05-14 18:10:12,856 - utils.page_setting - INFO - 尺码: 40, 库存状态: available
+2025-05-14 18:10:12,857 - utils.page_setting - INFO - 尺码: 41, 库存状态: available
+2025-05-14 18:10:12,857 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 18:10:12,858 - utils.page_setting - INFO - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 3 种尺码
+2025-05-14 18:10:12,859 - utils.page_setting - INFO - 正在获取商品 [7/12]: CIRCUIT SNEAKER
+2025-05-14 18:10:15,078 - utils.page_setting - INFO - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352935
+2025-05-14 18:10:21,904 - utils.page_setting - INFO - 商品名称: CIRCUIT SNEAKER
+2025-05-14 18:10:21,911 - utils.page_setting - INFO - 找到 7 个尺码元素
+2025-05-14 18:10:21,911 - utils.page_setting - INFO - 商品 'CIRCUIT SNEAKER' 共有 6 种尺码
+2025-05-14 18:10:21,912 - utils.page_setting - INFO - 尺码: 39, 库存状态: available
+2025-05-14 18:10:21,912 - utils.page_setting - INFO - 尺码: 40, 库存状态: available
+2025-05-14 18:10:21,912 - utils.page_setting - INFO - 尺码: 41, 库存状态: available
+2025-05-14 18:10:21,912 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 18:10:21,912 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 18:10:21,913 - utils.page_setting - INFO - 尺码: 44, 库存状态: available
+2025-05-14 18:10:21,914 - utils.page_setting - INFO - 成功获取商品 'CIRCUIT SNEAKER' 的库存信息，共 6 种尺码
+2025-05-14 18:10:21,914 - utils.page_setting - INFO - 正在获取商品 [8/12]: SNEAKER 3XL
+2025-05-14 18:10:24,714 - utils.page_setting - INFO - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/333111
+2025-05-14 18:10:27,515 - utils.page_setting - INFO - 商品名称: SNEAKER 3XL
+2025-05-14 18:10:27,523 - utils.page_setting - INFO - 找到 1 个尺码元素
+2025-05-14 18:10:27,523 - utils.page_setting - INFO - 商品 'SNEAKER 3XL' 共有 1 种尺码
+2025-05-14 18:10:27,523 - utils.page_setting - INFO - 尺码: 40, 库存状态: available
+2025-05-14 18:10:27,524 - utils.page_setting - INFO - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 1 种尺码
+2025-05-14 18:10:27,525 - utils.page_setting - INFO - 正在获取商品 [9/12]: SNEAKER TRACK
+2025-05-14 18:10:28,662 - utils.page_setting - INFO - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/329455
+2025-05-14 18:10:32,412 - utils.page_setting - INFO - 商品名称: MESH AND NYLON TRACK SNEAKER
+2025-05-14 18:10:32,420 - utils.page_setting - INFO - 找到 1 个尺码元素
+2025-05-14 18:10:32,420 - utils.page_setting - INFO - 商品 'MESH AND NYLON TRACK SNEAKER' 共有 1 种尺码
+2025-05-14 18:10:32,420 - utils.page_setting - INFO - 尺码: 41, 库存状态: available
+2025-05-14 18:10:32,422 - utils.page_setting - INFO - 成功获取商品 'SNEAKER TRACK' 的库存信息，共 1 种尺码
+2025-05-14 18:10:32,422 - utils.page_setting - INFO - 正在获取商品 [10/12]: PHANTOM SNEAKER
+2025-05-14 18:10:34,016 - utils.page_setting - INFO - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244576
+2025-05-14 18:10:52,708 - utils.page_setting - INFO - 商品名称: PHANTOM MESH SNEAKER
+2025-05-14 18:10:52,715 - utils.page_setting - INFO - 找到 1 个尺码元素
+2025-05-14 18:10:52,715 - utils.page_setting - INFO - 商品 'PHANTOM MESH SNEAKER' 共有 1 种尺码
+2025-05-14 18:10:52,715 - utils.page_setting - INFO - 尺码: 45, 库存状态: available
+2025-05-14 18:10:52,717 - utils.page_setting - INFO - 成功获取商品 'PHANTOM SNEAKER' 的库存信息，共 1 种尺码
+2025-05-14 18:10:52,717 - utils.page_setting - INFO - 正在获取商品 [11/12]: SNEAKER RUNNER
+2025-05-14 18:10:53,903 - utils.page_setting - INFO - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244474
+2025-05-14 18:10:57,193 - utils.page_setting - INFO - 商品名称: MESH AND NYLON RUNNER SNEAKER
+2025-05-14 18:10:57,200 - utils.page_setting - INFO - 找到 4 个尺码元素
+2025-05-14 18:10:57,201 - utils.page_setting - INFO - 商品 'MESH AND NYLON RUNNER SNEAKER' 共有 3 种尺码
+2025-05-14 18:10:57,201 - utils.page_setting - INFO - 尺码: 39, 库存状态: available
+2025-05-14 18:10:57,202 - utils.page_setting - INFO - 尺码: 40, 库存状态: available
+2025-05-14 18:10:57,202 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 18:10:57,203 - utils.page_setting - INFO - 成功获取商品 'SNEAKER RUNNER' 的库存信息，共 3 种尺码
+2025-05-14 18:10:57,203 - utils.page_setting - INFO - 正在获取商品 [12/12]: SNEAKER TRACK HIKE
+2025-05-14 18:10:59,937 - utils.page_setting - INFO - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/237063
+2025-05-14 18:11:04,265 - utils.page_setting - INFO - 商品名称: SNEAKER TRACK HIKE
+2025-05-14 18:11:04,271 - utils.page_setting - INFO - 找到 1 个尺码元素
+2025-05-14 18:11:04,271 - utils.page_setting - INFO - 商品 'SNEAKER TRACK HIKE' 共有 1 种尺码
+2025-05-14 18:11:04,273 - utils.page_setting - INFO - 尺码: 39, 库存状态: available
+2025-05-14 18:11:04,274 - utils.page_setting - INFO - 成功获取商品 'SNEAKER TRACK HIKE' 的库存信息，共 1 种尺码
+2025-05-14 18:11:04,274 - utils.page_setting - INFO - 库存信息获取完成，成功: 12/12
+2025-05-14 18:11:04,277 - utils.page_setting - INFO - eleonora_bonucci - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\inventory\balenciaga_inventory_20250514_181104.json
+2025-05-14 18:11:04,277 - utils.page_setting - INFO - 已保存12个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\inventory\balenciaga_inventory_20250514_181104.json
+2025-05-14 18:11:04,279 - utils.page_setting - INFO - eleonora_bonucci - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\changes\inventory_changes_20250514_181104.json
+2025-05-14 18:11:04,279 - utils.page_setting - INFO - 检测到库存变化: 1个新商品, 0个下架商品, 0个库存变化
+2025-05-14 18:11:04,280 - utils.page_setting - INFO - 检测到库存变化，已保存到变更记录
+2025-05-14 18:11:04,282 - utils.page_setting - INFO - eleonora_bonucci - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\summary\inventory_summary_eleonora_bonucci_20250514_181104.txt
+2025-05-14 18:11:04,283 - utils.page_setting - INFO - eleonora_bonucci - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\json_summary\inventory_summary_20250514_181104.json
+2025-05-14 18:11:04,284 - utils.page_setting - INFO - 监控结束，关闭浏览器
+2025-05-14 18:11:04,284 - utils.page_setting - INFO - eleonora_bonucci - 监控任务完成，日志已保存
+2025-05-14 18:19:29,642 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\antonioli\antonioli_20250514_181929.log
+2025-05-14 18:19:29,644 - utils.page_setting - INFO - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\antonioli\inventory\balenciaga_inventory_20250514_181848.json
+2025-05-14 18:19:29,644 - utils.page_setting - INFO - antonioli - 库存监控已初始化
+2025-05-14 18:19:30,817 - utils.page_setting - INFO - antonioli - 浏览器页面已初始化
+2025-05-14 18:19:30,817 - utils.page_setting - INFO - 开始监控 https://antonioli.eu/en-us/collections/designer-balenciaga/man?grid-switcher=4&filter.p.m.elastick.department=SHOES&filter.v.price.gte=&filter.v.price.lte=
+2025-05-14 18:19:30,817 - utils.page_setting - INFO - 正在获取商品目录: https://antonioli.eu/en-us/collections/designer-balenciaga/man?grid-switcher=4&filter.p.m.elastick.department=SHOES&filter.v.price.gte=&filter.v.price.lte=
+2025-05-14 18:19:31,656 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\duomo\duomo_20250514_181931.log
+2025-05-14 18:19:31,657 - utils.page_setting - INFO - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\duomo\inventory\balenciaga_inventory_20250514_180911.json
+2025-05-14 18:19:31,657 - utils.page_setting - INFO - duomo - 库存监控已初始化
+2025-05-14 18:19:31,657 - utils.page_setting - INFO - 开始监控 https://www.ilduomo.it/api/categoryProducts
+2025-05-14 18:19:31,658 - utils.page_setting - INFO - 正在获取商品目录: https://www.ilduomo.it/api/categoryProducts

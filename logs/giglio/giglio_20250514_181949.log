@@ -1,0 +1,718 @@
+2025-05-14 18:19:49,583 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\giglio\giglio_20250514_181949.log
+2025-05-14 18:19:49,584 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\giglio\inventory\balenciaga_inventory_20250514_180917.json
+2025-05-14 18:19:49,584 - utils.page_setting - INFO - [giglio] - giglio - 库存监控已初始化
+2025-05-14 18:19:49,585 - utils.page_setting - INFO - [giglio] - 开始监控 https://www.giglio.com/en-us/balenciaga/men.html?_gl=1*1fxjw4l*_up*MQ..&category=8&gclid=CjwKCAjw--K_BhB5EiwAuwYoynemd70DtOPlR5NfGVCI_MD0CV577lXDMZjwaNVDEs7gZ8CrA91gQBoCivUQAvD_BwE
+2025-05-14 18:19:49,586 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://www.giglio.com/en-us/balenciaga/men.html?_gl=1*1fxjw4l*_up*MQ..&category=8&gclid=CjwKCAjw--K_BhB5EiwAuwYoynemd70DtOPlR5NfGVCI_MD0CV577lXDMZjwaNVDEs7gZ8CrA91gQBoCivUQAvD_BwE
+2025-05-14 18:19:51,585 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\grifo210\grifo210_20250514_181951.log
+2025-05-14 18:19:51,586 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\grifo210\inventory\balenciaga_inventory_20250514_180926.json
+2025-05-14 18:19:51,586 - utils.page_setting - INFO - [giglio] - grifo210 - 库存监控已初始化
+2025-05-14 18:19:51,587 - utils.page_setting - INFO - [giglio] - 开始监控 https://www.grifo210.com/en-ww/collections/men-maison-margiela
+2025-05-14 18:19:51,587 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://www.grifo210.com/en-ww/collections/men-maison-margiela
+2025-05-14 18:19:52,232 - utils.page_setting - INFO - [giglio] - 找到 12 个商品元素
+2025-05-14 18:19:52,233 - utils.page_setting - DEBUG - [giglio] - 找到商品: STAPLER SNEAKER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358838
+2025-05-14 18:19:52,233 - utils.page_setting - DEBUG - [giglio] - 找到商品: STAPLER SNEAKER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/359003
+2025-05-14 18:19:52,234 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358126
+2025-05-14 18:19:52,235 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352208
+2025-05-14 18:19:52,235 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/354721
+2025-05-14 18:19:52,236 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/356352
+2025-05-14 18:19:52,236 - utils.page_setting - DEBUG - [giglio] - 找到商品: CIRCUIT SNEAKER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352935
+2025-05-14 18:19:52,237 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/333111
+2025-05-14 18:19:52,237 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER TRACK, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/329455
+2025-05-14 18:19:52,237 - utils.page_setting - DEBUG - [giglio] - 找到商品: PHANTOM SNEAKER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244576
+2025-05-14 18:19:52,238 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER RUNNER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244474
+2025-05-14 18:19:52,238 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER TRACK HIKE, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/237063
+2025-05-14 18:19:52,238 - utils.page_setting - INFO - [giglio] - 共解析到 12 个商品
+2025-05-14 18:19:52,239 - utils.page_setting - INFO - [giglio] - 监控开始，共获取到 12 个商品信息
+2025-05-14 18:19:52,239 - utils.page_setting - INFO - [giglio] - 正在获取商品 [1/12]: STAPLER SNEAKER
+2025-05-14 18:19:53,591 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\hermes\hermes_20250514_181953.log
+2025-05-14 18:19:53,592 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\hermes\inventory\balenciaga_inventory_20250514_180921.json
+2025-05-14 18:19:53,593 - utils.page_setting - INFO - [giglio] - hermes - 库存监控已初始化
+2025-05-14 18:19:53,594 - utils.page_setting - INFO - [giglio] - 开始监控 https://www.hermes.com/hk/en/category/women/bags-and-small-leather-goods/bags-and-clutches/
+2025-05-14 18:19:53,594 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://www.hermes.com/hk/en/category/women/bags-and-small-leather-goods/bags-and-clutches/
+2025-05-14 18:19:53,655 - utils.page_setting - INFO - [giglio] - 找到 2 个商品元素
+2025-05-14 18:19:53,655 - utils.page_setting - DEBUG - [giglio] - 找到商品: Replica sneakers, URL: https://www.grifo210.com/en-ww/products/maison-margiela-replica-sneakers-s57ws0505p8153-ha771?_pos=1&_fid=7763e2cfd&_ss=c
+2025-05-14 18:19:53,656 - utils.page_setting - DEBUG - [giglio] - 找到商品: Replica sneakers, URL: https://www.grifo210.com/en-ww/products/maison-margiela-replica-sneakers-s57ws0236p1895-101?_pos=2&_fid=7763e2cfd&_ss=c
+2025-05-14 18:19:53,656 - utils.page_setting - INFO - [giglio] - 共解析到 2 个商品
+2025-05-14 18:19:53,657 - utils.page_setting - INFO - [giglio] - 监控开始，共获取到 2 个商品信息
+2025-05-14 18:19:53,659 - utils.page_setting - INFO - [giglio] - grifo210 - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\grifo210\inventory\balenciaga_inventory_20250514_181953.json
+2025-05-14 18:19:53,659 - utils.page_setting - INFO - [giglio] - 已保存2个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\grifo210\inventory\balenciaga_inventory_20250514_181953.json
+2025-05-14 18:19:53,661 - utils.page_setting - INFO - [giglio] - grifo210 - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\grifo210\changes\inventory_changes_20250514_181953.json
+2025-05-14 18:19:53,661 - utils.page_setting - INFO - [giglio] - 检测到库存变化: 2个新商品, 2个下架商品, 0个库存变化
+2025-05-14 18:19:53,661 - utils.page_setting - INFO - [giglio] - 检测到库存变化，已保存到变更记录
+2025-05-14 18:19:53,661 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:19:53,662 - utils.page_setting - INFO - [giglio] - grifo210 - 监控任务完成，日志已保存
+2025-05-14 18:19:54,466 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358838
+2025-05-14 18:19:54,819 - utils.page_setting - INFO - [giglio] - 找到 4 个商品元素
+2025-05-14 18:19:54,820 - utils.page_setting - DEBUG - [giglio] - 找到商品: Garden Party Voyage 49 bag, URL: https://www.hermes.com/hk/en/product/garden-party-voyage-49-bag-H085761CKAC/
+2025-05-14 18:19:54,821 - utils.page_setting - DEBUG - [giglio] - 找到商品: Garden Party pockets vertical bag, URL: https://www.hermes.com/hk/en/product/garden-party-pockets-vertical-bag-H084260CKAC/
+2025-05-14 18:19:54,821 - utils.page_setting - DEBUG - [giglio] - 找到商品: Garden Party pockets vertical bag, URL: https://www.hermes.com/hk/en/product/garden-party-pockets-vertical-bag-H084260CKAA/
+2025-05-14 18:19:54,821 - utils.page_setting - DEBUG - [giglio] - 找到商品: Garden Party Voyage 49 bag, URL: https://www.hermes.com/hk/en/product/garden-party-voyage-49-bag-H086065CKAA/
+2025-05-14 18:19:54,821 - utils.page_setting - INFO - [giglio] - 共解析到 4 个商品
+2025-05-14 18:19:54,822 - utils.page_setting - INFO - [giglio] - 监控开始，共获取到 4 个商品信息
+2025-05-14 18:19:54,824 - utils.page_setting - INFO - [giglio] - hermes - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\hermes\inventory\balenciaga_inventory_20250514_181954.json
+2025-05-14 18:19:54,825 - utils.page_setting - INFO - [giglio] - 已保存4个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\hermes\inventory\balenciaga_inventory_20250514_181954.json
+2025-05-14 18:19:54,825 - utils.page_setting - INFO - [giglio] - 未检测到库存变化
+2025-05-14 18:19:54,825 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:19:54,825 - utils.page_setting - INFO - [giglio] - hermes - 监控任务完成，日志已保存
+2025-05-14 18:19:55,601 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\julian\julian_20250514_181955.log
+2025-05-14 18:19:55,603 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\julian\inventory\balenciaga_inventory_20250514_180924.json
+2025-05-14 18:19:55,603 - utils.page_setting - INFO - [giglio] - julian - 库存监控已初始化
+2025-05-14 18:19:55,604 - utils.page_setting - INFO - [giglio] - 开始监控 https://www.julian-fashion.com/en-hk/men/designer/balenciaga/shoes
+2025-05-14 18:19:55,604 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://www.julian-fashion.com/en-hk/men/designer/balenciaga/shoes
+2025-05-14 18:19:57,606 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\mytheresa\mytheresa_20250514_181957.log
+2025-05-14 18:19:57,607 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\mytheresa\inventory\balenciaga_inventory_20250514_180924.json
+2025-05-14 18:19:57,607 - utils.page_setting - INFO - [giglio] - mytheresa - 库存监控已初始化
+2025-05-14 18:19:57,609 - utils.page_setting - INFO - [giglio] - 开始监控 https://api.mytheresa.com/api
+2025-05-14 18:19:57,609 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://api.mytheresa.com/api
+2025-05-14 18:19:57,889 - utils.page_setting - INFO - [giglio] - 商品名称: STAPLER SNEAKER
+2025-05-14 18:19:57,897 - utils.page_setting - INFO - [giglio] - 找到 5 个尺码元素
+2025-05-14 18:19:57,897 - utils.page_setting - INFO - [giglio] - 商品 'STAPLER SNEAKER' 共有 4 种尺码
+2025-05-14 18:19:57,897 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:19:57,897 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:19:57,898 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:19:57,898 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:19:57,900 - utils.page_setting - INFO - [giglio] - 成功获取商品 'STAPLER SNEAKER' 的库存信息，共 4 种尺码
+2025-05-14 18:19:57,900 - utils.page_setting - INFO - [giglio] - 正在获取商品 [2/12]: STAPLER SNEAKER
+2025-05-14 18:19:58,453 - utils.page_setting - INFO - [giglio] - 找到 16 个商品元素
+2025-05-14 18:19:58,454 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Runner 2.0' sneakers, URL: https://www.julian-fashion.com/en-hk/product/312011/balenciaga/sneakers/runner_20_sneakers
+2025-05-14 18:19:58,455 - utils.page_setting - DEBUG - [giglio] - 找到商品: '3XL' sneakers, URL: https://www.julian-fashion.com/en-hk/product/312009/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:19:58,455 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Track Trail Laces' sneakers, URL: https://www.julian-fashion.com/en-hk/product/312008/balenciaga/sneakers/track_trail_laces_sneakers
+2025-05-14 18:19:58,456 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Runner' sneakers, URL: https://www.julian-fashion.com/en-hk/product/312007/balenciaga/sneakers/runner_sneakers
+2025-05-14 18:19:58,457 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Circuit' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309743/balenciaga/sneakers/circuit_sneakers
+2025-05-14 18:19:58,458 - utils.page_setting - DEBUG - [giglio] - 找到商品: '3XL' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309895/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:19:58,463 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Triple S Sporty' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309894/balenciaga/sneakers/triple_s_sporty_sneakers
+2025-05-14 18:19:58,463 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Triple S Sporty' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309893/balenciaga/sneakers/triple_s_sporty_sneakers
+2025-05-14 18:19:58,464 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Runner' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309892/balenciaga/sneakers/runner_sneakers
+2025-05-14 18:19:58,466 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Circuit' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309891/balenciaga/sneakers/circuit_sneakers
+2025-05-14 18:19:58,466 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Alaska' sabots, URL: https://www.julian-fashion.com/en-hk/product/305111/balenciaga/sabot/alaska_sabots
+2025-05-14 18:19:58,467 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Pool Slide' sandals, URL: https://www.julian-fashion.com/en-hk/product/305110/balenciaga/slides/pool_slide_sandals
+2025-05-14 18:19:58,468 - utils.page_setting - DEBUG - [giglio] - 找到商品: '3XL' sneakers, URL: https://www.julian-fashion.com/en-hk/product/303214/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:19:58,469 - utils.page_setting - DEBUG - [giglio] - 找到商品: '3XL' sneakers, URL: https://www.julian-fashion.com/en-hk/product/303275/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:19:58,470 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Runner' sneakers, URL: https://www.julian-fashion.com/en-hk/product/283942/balenciaga/sneakers/runner_sneakers
+2025-05-14 18:19:58,470 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Track' sneakers, URL: https://www.julian-fashion.com/en-hk/product/250562/balenciaga/sneakers/track_sneakers
+2025-05-14 18:19:58,471 - utils.page_setting - INFO - [giglio] - 共解析到 16 个商品
+2025-05-14 18:19:58,472 - utils.page_setting - INFO - [giglio] - 监控开始，共获取到 16 个商品信息
+2025-05-14 18:19:58,474 - utils.page_setting - INFO - [giglio] - julian - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\julian\inventory\balenciaga_inventory_20250514_181958.json
+2025-05-14 18:19:58,474 - utils.page_setting - INFO - [giglio] - 已保存9个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\julian\inventory\balenciaga_inventory_20250514_181958.json
+2025-05-14 18:19:58,475 - utils.page_setting - INFO - [giglio] - 未检测到库存变化
+2025-05-14 18:19:58,475 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:19:58,475 - utils.page_setting - INFO - [giglio] - julian - 监控任务完成，日志已保存
+2025-05-14 18:19:59,525 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/359003
+2025-05-14 18:19:59,622 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\sugar\sugar_20250514_181959.log
+2025-05-14 18:19:59,623 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\sugar\inventory\balenciaga_inventory_20250514_181915.json
+2025-05-14 18:19:59,623 - utils.page_setting - INFO - [giglio] - sugar - 库存监控已初始化
+2025-05-14 18:19:59,625 - utils.page_setting - INFO - [giglio] - 开始监控 https://www.sugar.it/en-IT/man/designer/balenciaga/shoes
+2025-05-14 18:19:59,625 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://www.sugar.it/en-IT/man/designer/balenciaga/shoes
+2025-05-14 18:20:01,630 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\suus\suus_20250514_182001.log
+2025-05-14 18:20:01,631 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\suus\inventory\balenciaga_inventory_20250514_174811.json
+2025-05-14 18:20:01,631 - utils.page_setting - INFO - [giglio] - suus - 库存监控已初始化
+2025-05-14 18:20:01,637 - utils.page_setting - INFO - [giglio] - suus - 浏览器页面已初始化
+2025-05-14 18:20:01,637 - utils.page_setting - INFO - [giglio] - 开始监控 https://www.suus.es/product-tag/guidi/
+2025-05-14 18:20:01,638 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://www.suus.es/product-tag/guidi/
+2025-05-14 18:20:01,903 - utils.page_setting - INFO - [giglio] - 找到 10 个商品元素
+2025-05-14 18:20:01,904 - utils.page_setting - DEBUG - [giglio] - 找到商品: "Monday Shoe" sneakers, URL: https://www.sugar.it/en-IT/product/181864/balenciaga/sneakers/monday_shoe_sneakers
+2025-05-14 18:20:01,905 - utils.page_setting - DEBUG - [giglio] - 找到商品: "Tractor" platform loafers, URL: https://www.sugar.it/en-IT/product/181860/balenciaga/derby_shoes/tractor_platform_loafers
+2025-05-14 18:20:01,906 - utils.page_setting - DEBUG - [giglio] - 找到商品: "3XL" sneakers, URL: https://www.sugar.it/en-IT/product/180144/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:20:01,907 - utils.page_setting - DEBUG - [giglio] - 找到商品: "6XL" sneakers, URL: https://www.sugar.it/en-IT/product/180141/balenciaga/sneakers/6xl_sneakers
+2025-05-14 18:20:01,908 - utils.page_setting - DEBUG - [giglio] - 找到商品: X Crocs rubber ankle boots™, URL: https://www.sugar.it/en-IT/product/180149/balenciaga/boots/x_crocs_rubber_ankle_bootsT
+2025-05-14 18:20:01,910 - utils.page_setting - DEBUG - [giglio] - 找到商品: "Circuit" sneakers, URL: https://www.sugar.it/en-IT/product/180153/balenciaga/sneakers/circuit_sneakers
+2025-05-14 18:20:01,911 - utils.page_setting - DEBUG - [giglio] - 找到商品: "3XL" sneakers, URL: https://www.sugar.it/en-IT/product/180140/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:20:01,911 - utils.page_setting - DEBUG - [giglio] - 找到商品: "Circuit" sneakers, URL: https://www.sugar.it/en-IT/product/180152/balenciaga/sneakers/circuit_sneakers
+2025-05-14 18:20:01,912 - utils.page_setting - DEBUG - [giglio] - 找到商品: "3XL" sneakers, URL: https://www.sugar.it/en-IT/product/168751/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:20:01,913 - utils.page_setting - DEBUG - [giglio] - 找到商品: Logo slides, URL: https://www.sugar.it/en-IT/product/139120/balenciaga/sandals/logo_slides
+2025-05-14 18:20:01,913 - utils.page_setting - INFO - [giglio] - 共解析到 10 个商品
+2025-05-14 18:20:01,914 - utils.page_setting - INFO - [giglio] - 监控开始，共获取到 10 个商品信息
+2025-05-14 18:20:01,916 - utils.page_setting - INFO - [giglio] - sugar - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\sugar\inventory\balenciaga_inventory_20250514_182001.json
+2025-05-14 18:20:01,916 - utils.page_setting - INFO - [giglio] - 已保存7个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\sugar\inventory\balenciaga_inventory_20250514_182001.json
+2025-05-14 18:20:01,917 - utils.page_setting - INFO - [giglio] - 未检测到库存变化
+2025-05-14 18:20:01,917 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:20:01,917 - utils.page_setting - INFO - [giglio] - sugar - 监控任务完成，日志已保存
+2025-05-14 18:20:03,014 - utils.page_setting - INFO - [giglio] - 商品名称: STAPLER SNEAKER
+2025-05-14 18:20:03,022 - utils.page_setting - INFO - [giglio] - 找到 5 个尺码元素
+2025-05-14 18:20:03,022 - utils.page_setting - INFO - [giglio] - 商品 'STAPLER SNEAKER' 共有 4 种尺码
+2025-05-14 18:20:03,023 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:20:03,023 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:20:03,023 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:20:03,024 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:20:03,026 - utils.page_setting - INFO - [giglio] - 成功获取商品 'STAPLER SNEAKER' 的库存信息，共 4 种尺码
+2025-05-14 18:20:03,026 - utils.page_setting - INFO - [giglio] - 正在获取商品 [3/12]: SNEAKER 3XL
+2025-05-14 18:20:04,954 - utils.page_setting - INFO - [giglio] - 找到 88 个商品元素
+2025-05-14 18:20:04,954 - utils.page_setting - DEBUG - [giglio] - 开始解析商品目录数据
+2025-05-14 18:20:04,954 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sunday leather clogs, URL: https://www.mytheresa.com/mo/en/men/balenciaga-sunday-leather-clogs-black-p00889954
+2025-05-14 18:20:04,955 - utils.page_setting - DEBUG - [giglio] - 找到商品: 6XL mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-6xl-mesh-sneakers-multicoloured-p01057371
+2025-05-14 18:20:04,955 - utils.page_setting - DEBUG - [giglio] - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-black-p01032584
+2025-05-14 18:20:04,955 - utils.page_setting - DEBUG - [giglio] - 找到商品: Track Trail Laces sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-trail-laces-sneakers-orange-p01032586
+2025-05-14 18:20:04,955 - utils.page_setting - DEBUG - [giglio] - 找到商品: Monday 3B Sports Icon leather sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-monday-3b-sports-icon-leather-sneakers-black-p01040998
+2025-05-14 18:20:04,956 - utils.page_setting - DEBUG - [giglio] - 找到商品: Circuit sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-circuit-sneakers-yellow-p01010155
+2025-05-14 18:20:04,957 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL chain-detail mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-chain-detail-mesh-sneakers-grey-p01032583
+2025-05-14 18:20:04,957 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-white-p00806790
+2025-05-14 18:20:04,957 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sunday suede mules, URL: https://www.mytheresa.com/mo/en/men/balenciaga-sunday-suede-mules-brown-p00888846
+2025-05-14 18:20:04,958 - utils.page_setting - DEBUG - [giglio] - 找到商品: x Crocs Jibbitz clogs, URL: https://www.mytheresa.com/mo/en/men/balenciaga-x-crocs-jibbitz-clogs-black-p01010123
+2025-05-14 18:20:04,958 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-multicoloured-p00888849
+2025-05-14 18:20:04,958 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-multicoloured-p00963454
+2025-05-14 18:20:04,958 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-multicoloured-p00970247
+2025-05-14 18:20:04,958 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-grey-p00981020
+2025-05-14 18:20:04,960 - utils.page_setting - DEBUG - [giglio] - 找到商品: 10XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-10xl-sneakers-grey-p00948315
+2025-05-14 18:20:04,960 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-distressed-sneakers-black-p00798279
+2025-05-14 18:20:04,960 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL Extreme Graffiti sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-extreme-graffiti-sneakers-multicoloured-p00948306
+2025-05-14 18:20:04,961 - utils.page_setting - DEBUG - [giglio] - 找到商品: Bouncer sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-bouncer-sneakers-black-p00798287
+2025-05-14 18:20:04,961 - utils.page_setting - DEBUG - [giglio] - 找到商品: Pool logo rubber slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-pool-logo-rubber-slides-black-p00444559
+2025-05-14 18:20:04,962 - utils.page_setting - DEBUG - [giglio] - 找到商品: Monday leather sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-monday-3b-sports-icon-leather-sneakers-white-p01032582
+2025-05-14 18:20:04,962 - utils.page_setting - DEBUG - [giglio] - 找到商品: Circuit sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-circuit-sneakers-black-p01010156
+2025-05-14 18:20:04,962 - utils.page_setting - DEBUG - [giglio] - 找到商品: Opera leather Derby shoes, URL: https://www.mytheresa.com/mo/en/men/balenciaga-opera-leather-derby-shoes-black-p01010138
+2025-05-14 18:20:04,962 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S Sporty leather sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sporty-leather-sneakers-black-p01010143
+2025-05-14 18:20:04,963 - utils.page_setting - DEBUG - [giglio] - 找到商品: Combat Strike canvas lace-up boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-strike-canvas-combat-boots-black-p01008910
+2025-05-14 18:20:04,963 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3X mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3x-mesh-sneakers-black-p00971229
+2025-05-14 18:20:04,963 - utils.page_setting - DEBUG - [giglio] - 找到商品: Stapler sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-stapler-sneakers-beige-p00971230
+2025-05-14 18:20:04,963 - utils.page_setting - DEBUG - [giglio] - 找到商品: Strike leather boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-strike-leather-boots-black-p00971231
+2025-05-14 18:20:04,964 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sunday suede sandals, URL: https://www.mytheresa.com/mo/en/men/balenciaga-sunday-suede-sandals-brown-p00954700
+2025-05-14 18:20:04,964 - utils.page_setting - DEBUG - [giglio] - 找到商品: Alaska Fur High suede boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-alaska-fur-high-suede-boots-black-p00955186
+2025-05-14 18:20:04,964 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-white-p00963452
+2025-05-14 18:20:04,964 - utils.page_setting - DEBUG - [giglio] - 找到商品: 10XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-10xl-sneakers-white-p00948313
+2025-05-14 18:20:04,965 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sunday leather sandals, URL: https://www.mytheresa.com/mo/en/men/balenciaga-sunday-leather-sandals-black-p00954800
+2025-05-14 18:20:04,965 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-green-p00906279
+2025-05-14 18:20:04,965 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sunday Molded mules, URL: https://www.mytheresa.com/mo/en/men/balenciaga-sunday-molded-mules-black-p00906276
+2025-05-14 18:20:04,965 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-white-p00937108
+2025-05-14 18:20:04,966 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner Graffiti printed sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-graffiti-printed-sneakers-black-p00937106
+2025-05-14 18:20:04,966 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner Graffiti distressed sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-graffiti-distressed-sneakers-white-p00937107
+2025-05-14 18:20:04,966 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S Mold sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-mold-sneakers-black-p00856457
+2025-05-14 18:20:04,966 - utils.page_setting - DEBUG - [giglio] - 找到商品: Cargo mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-cargo-mesh-sneakers-beige-p00906283
+2025-05-14 18:20:04,967 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-white-p00906281
+2025-05-14 18:20:04,967 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-black-p00900180
+2025-05-14 18:20:04,967 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-worn-out-mesh-sneakers-multicoloured-p00926232
+2025-05-14 18:20:04,967 - utils.page_setting - DEBUG - [giglio] - 找到商品: Biker embossed leather knee-high boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-biker-embossed-leather-knee-high-boots-black-p00859154
+2025-05-14 18:20:04,968 - utils.page_setting - DEBUG - [giglio] - 找到商品: Romeo leather slippers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-romeo-leather-slippers-black-p00888848
+2025-05-14 18:20:04,968 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-multicoloured-p00850977
+2025-05-14 18:20:04,968 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL ski sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-ski-sneakers-black-p00896702
+2025-05-14 18:20:04,968 - utils.page_setting - DEBUG - [giglio] - 找到商品: Alaska Low snow boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-alaska-low-snow-boots-black-p00896713
+2025-05-14 18:20:04,968 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-multicoloured-p00899058
+2025-05-14 18:20:04,969 - utils.page_setting - DEBUG - [giglio] - 找到商品: Bulldozer leather lace-up boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-bulldozer-leather-lace-up-boots-black-p00850827
+2025-05-14 18:20:04,969 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-black-p00850983
+2025-05-14 18:20:04,969 - utils.page_setting - DEBUG - [giglio] - 找到商品: Steroid Derby shoes, URL: https://www.mytheresa.com/mo/en/men/balenciaga-steroid-derby-shoes-black-p00871950
+2025-05-14 18:20:04,969 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-white-p00868281
+2025-05-14 18:20:04,970 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL mesh sneaker mules, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-mesh-sneaker-mules-black-p00856471
+2025-05-14 18:20:04,970 - utils.page_setting - DEBUG - [giglio] - 找到商品: Santiago leather boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-santiago-leather-boots-black-p00827562
+2025-05-14 18:20:04,970 - utils.page_setting - DEBUG - [giglio] - 找到商品: Santiago over-the-knee leather boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-santiago-over-the-knee-leather-boots-black-p00827558
+2025-05-14 18:20:04,970 - utils.page_setting - DEBUG - [giglio] - 找到商品: Paris denim slippers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-paris-denim-slippers-blue-p00827591
+2025-05-14 18:20:04,970 - utils.page_setting - DEBUG - [giglio] - 找到商品: x Crocs platform slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-x-crocs-platform-slides-black-p00824969
+2025-05-14 18:20:04,971 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-mesh-sneakers-red-p00807230
+2025-05-14 18:20:04,971 - utils.page_setting - DEBUG - [giglio] - 找到商品: Leopold satin flats, URL: https://www.mytheresa.com/mo/en/men/balenciaga-leopold-satin-flats-black-p00807241
+2025-05-14 18:20:04,971 - utils.page_setting - DEBUG - [giglio] - 找到商品: Technoclog rubber mules, URL: https://www.mytheresa.com/mo/en/men/balenciaga-technoclog-rubber-mules-black-p00807247
+2025-05-14 18:20:04,973 - utils.page_setting - DEBUG - [giglio] - 找到商品: Steroid lace-up boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-steroid-lace-up-boots-blue-p00766853
+2025-05-14 18:20:04,973 - utils.page_setting - DEBUG - [giglio] - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-black-p00766848
+2025-05-14 18:20:04,973 - utils.page_setting - DEBUG - [giglio] - 找到商品: Logo leather slippers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-logo-leather-slippers-black-p00777669
+2025-05-14 18:20:04,974 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-white-p00747707
+2025-05-14 18:20:04,974 - utils.page_setting - DEBUG - [giglio] - 找到商品: Speed Lace-Up sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-lace-up-sneakers-black-p00741990
+2025-05-14 18:20:04,974 - utils.page_setting - DEBUG - [giglio] - 找到商品: Speed 2.0 Graffiti sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-2-0-graffiti-sneakers-black-p00741562
+2025-05-14 18:20:04,974 - utils.page_setting - DEBUG - [giglio] - 找到商品: Speed 2.0 lace-up sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-2-0-lace-up-sneakers-black-p00721775
+2025-05-14 18:20:04,975 - utils.page_setting - DEBUG - [giglio] - 找到商品: Paris canvas low-top sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-paris-canvas-low-top-sneakers-beige-p00725252
+2025-05-14 18:20:04,975 - utils.page_setting - DEBUG - [giglio] - 找到商品: Speed 2.0 sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-2-0-sneakers-black-p00721772
+2025-05-14 18:20:04,975 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-black-p00721768
+2025-05-14 18:20:04,975 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-white-p00700928
+2025-05-14 18:20:04,975 - utils.page_setting - DEBUG - [giglio] - 找到商品: Cosy BB leather slippers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-cosy-bb-leather-slippers-black-p00655755
+2025-05-14 18:20:04,975 - utils.page_setting - DEBUG - [giglio] - 找到商品: Bouncer mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-defender-mesh-sneakers-black-p00655748
+2025-05-14 18:20:04,976 - utils.page_setting - DEBUG - [giglio] - 找到商品: Bouncer mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-defender-sneakers-beige-p00655749
+2025-05-14 18:20:04,976 - utils.page_setting - DEBUG - [giglio] - 找到商品: Political Campaign Furry slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-political-campaign-furry-slides-beige-p00636445
+2025-05-14 18:20:04,976 - utils.page_setting - DEBUG - [giglio] - 找到商品: Crocs™ boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-crocstm-boots-black-p00635908
+2025-05-14 18:20:04,976 - utils.page_setting - DEBUG - [giglio] - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-green-p00585104
+2025-05-14 18:20:04,977 - utils.page_setting - DEBUG - [giglio] - 找到商品: Political Campaign Furry slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-political-campaign-furry-slides-grey-p00585082
+2025-05-14 18:20:04,977 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-white-p00585100
+2025-05-14 18:20:04,977 - utils.page_setting - DEBUG - [giglio] - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-beige-p00569596
+2025-05-14 18:20:04,977 - utils.page_setting - DEBUG - [giglio] - 找到商品: Pool logo rubber slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-pool-logo-rubber-slides-beige-p00556511
+2025-05-14 18:20:04,977 - utils.page_setting - DEBUG - [giglio] - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-black-p00513601
+2025-05-14 18:20:04,978 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-black-p00486655
+2025-05-14 18:20:04,978 - utils.page_setting - DEBUG - [giglio] - 找到商品: Tractor leather boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-tractor-leather-boots-black-p00493719
+2025-05-14 18:20:04,978 - utils.page_setting - DEBUG - [giglio] - 找到商品: Speed sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-sneakers-black-p00458883
+2025-05-14 18:20:04,978 - utils.page_setting - DEBUG - [giglio] - 找到商品: Speed 2.0 logo sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-2-0-logo-sneakers-black-p00458886
+2025-05-14 18:20:04,979 - utils.page_setting - DEBUG - [giglio] - 找到商品: Alaska High suede boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-alaska-high-suede-boots-white-p00955188
+2025-05-14 18:20:04,979 - utils.page_setting - DEBUG - [giglio] - 找到商品: Cargo mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-cargo-mesh-sneakers-white-p00906284
+2025-05-14 18:20:04,979 - utils.page_setting - INFO - [giglio] - 共解析到 88 个商品
+2025-05-14 18:20:04,980 - utils.page_setting - INFO - [giglio] - 监控开始，共获取到 88 个商品信息
+2025-05-14 18:20:04,982 - utils.page_setting - INFO - [giglio] - mytheresa - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\mytheresa\inventory\balenciaga_inventory_20250514_182004.json
+2025-05-14 18:20:04,982 - utils.page_setting - INFO - [giglio] - 已保存88个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\mytheresa\inventory\balenciaga_inventory_20250514_182004.json
+2025-05-14 18:20:04,983 - utils.page_setting - INFO - [giglio] - 未检测到库存变化
+2025-05-14 18:20:04,983 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:20:04,983 - utils.page_setting - INFO - [giglio] - mytheresa - 监控任务完成，日志已保存
+2025-05-14 18:20:05,221 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358126
+2025-05-14 18:20:08,182 - utils.page_setting - INFO - [giglio] - 商品名称: SNEAKER 3XL
+2025-05-14 18:20:08,191 - utils.page_setting - INFO - [giglio] - 找到 5 个尺码元素
+2025-05-14 18:20:08,191 - utils.page_setting - INFO - [giglio] - 商品 'SNEAKER 3XL' 共有 4 种尺码
+2025-05-14 18:20:08,192 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:20:08,192 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:20:08,192 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:20:08,192 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:20:08,195 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 4 种尺码
+2025-05-14 18:20:08,195 - utils.page_setting - INFO - [giglio] - 正在获取商品 [4/12]: SNEAKER 3XL
+2025-05-14 18:20:10,274 - utils.page_setting - INFO - [giglio] - 找到 2 个商品元素
+2025-05-14 18:20:10,275 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sneakers men, URL: https://www.giglio.com/en-us/shoes-men_sneakers-balenciaga-825601w3xch.html?cSel=001
+2025-05-14 18:20:10,276 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sneakers men, URL: https://www.giglio.com/en-us/shoes-men_sneakers-balenciaga-542023w2la2.html?cSel=001
+2025-05-14 18:20:10,276 - utils.page_setting - INFO - [giglio] - 共解析到 2 个商品
+2025-05-14 18:20:10,276 - utils.page_setting - INFO - [giglio] - 监控开始，共获取到 2 个商品信息
+2025-05-14 18:20:10,277 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352208
+2025-05-14 18:20:10,280 - utils.page_setting - INFO - [giglio] - giglio - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\giglio\inventory\balenciaga_inventory_20250514_182010.json
+2025-05-14 18:20:10,281 - utils.page_setting - INFO - [giglio] - 已保存2个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\giglio\inventory\balenciaga_inventory_20250514_182010.json
+2025-05-14 18:20:10,281 - utils.page_setting - INFO - [giglio] - 未检测到库存变化
+2025-05-14 18:20:10,281 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:20:10,283 - utils.page_setting - INFO - [giglio] - giglio - 监控任务完成，日志已保存
+2025-05-14 18:20:13,984 - utils.page_setting - INFO - [giglio] - 商品名称: SNEAKER 3XL
+2025-05-14 18:20:13,992 - utils.page_setting - INFO - [giglio] - 找到 5 个尺码元素
+2025-05-14 18:20:13,993 - utils.page_setting - INFO - [giglio] - 商品 'SNEAKER 3XL' 共有 4 种尺码
+2025-05-14 18:20:13,993 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:20:13,993 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:20:13,994 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:20:13,994 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:20:13,996 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 4 种尺码
+2025-05-14 18:20:13,996 - utils.page_setting - INFO - [giglio] - 正在获取商品 [5/12]: SNEAKER 3XL
+2025-05-14 18:20:15,154 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/354721
+2025-05-14 18:20:20,862 - utils.page_setting - INFO - [giglio] - 商品名称: SNEAKER 3XL
+2025-05-14 18:20:20,870 - utils.page_setting - INFO - [giglio] - 找到 5 个尺码元素
+2025-05-14 18:20:20,870 - utils.page_setting - INFO - [giglio] - 商品 'SNEAKER 3XL' 共有 4 种尺码
+2025-05-14 18:20:20,870 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:20:20,871 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:20:20,871 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:20:20,871 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:20:20,873 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 4 种尺码
+2025-05-14 18:20:20,873 - utils.page_setting - INFO - [giglio] - 正在获取商品 [6/12]: SNEAKER 3XL
+2025-05-14 18:20:21,940 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/356352
+2025-05-14 18:20:26,638 - utils.page_setting - INFO - [giglio] - 商品名称: SNEAKER 3XL
+2025-05-14 18:20:26,647 - utils.page_setting - INFO - [giglio] - 找到 4 个尺码元素
+2025-05-14 18:20:26,647 - utils.page_setting - INFO - [giglio] - 商品 'SNEAKER 3XL' 共有 3 种尺码
+2025-05-14 18:20:26,648 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:20:26,648 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:20:26,648 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:20:26,650 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 3 种尺码
+2025-05-14 18:20:26,651 - utils.page_setting - INFO - [giglio] - 正在获取商品 [7/12]: CIRCUIT SNEAKER
+2025-05-14 18:20:28,425 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352935
+2025-05-14 18:20:32,812 - utils.page_setting - ERROR - [giglio] - 未找到任何商品列表元素
+2025-05-14 18:20:32,813 - utils.page_setting - ERROR - [giglio] - 获取商品目录失败，终止监控
+2025-05-14 18:20:33,297 - utils.page_setting - INFO - [giglio] - 商品名称: CIRCUIT SNEAKER
+2025-05-14 18:20:33,304 - utils.page_setting - INFO - [giglio] - 找到 7 个尺码元素
+2025-05-14 18:20:33,305 - utils.page_setting - INFO - [giglio] - 商品 'CIRCUIT SNEAKER' 共有 6 种尺码
+2025-05-14 18:20:33,305 - utils.page_setting - INFO - [giglio] - 尺码: 39, 库存状态: available
+2025-05-14 18:20:33,305 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:20:33,305 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:20:33,306 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:20:33,306 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:20:33,306 - utils.page_setting - INFO - [giglio] - 尺码: 44, 库存状态: available
+2025-05-14 18:20:33,308 - utils.page_setting - INFO - [giglio] - 成功获取商品 'CIRCUIT SNEAKER' 的库存信息，共 6 种尺码
+2025-05-14 18:20:33,308 - utils.page_setting - INFO - [giglio] - 正在获取商品 [8/12]: SNEAKER 3XL
+2025-05-14 18:20:33,818 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:20:33,818 - utils.page_setting - INFO - [giglio] - antonioli - 监控任务完成，日志已保存
+2025-05-14 18:20:34,071 - utils.page_setting - ERROR - [giglio] - 未找到任何商品列表元素
+2025-05-14 18:20:34,071 - utils.page_setting - ERROR - [giglio] - 获取商品目录失败，终止监控
+2025-05-14 18:20:34,072 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:20:34,072 - utils.page_setting - INFO - [giglio] - suus - 监控任务完成，日志已保存
+2025-05-14 18:20:35,621 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/333111
+2025-05-14 18:20:40,984 - utils.page_setting - INFO - [giglio] - 商品名称: SNEAKER 3XL
+2025-05-14 18:20:40,991 - utils.page_setting - INFO - [giglio] - 找到 1 个尺码元素
+2025-05-14 18:20:40,991 - utils.page_setting - INFO - [giglio] - 商品 'SNEAKER 3XL' 共有 1 种尺码
+2025-05-14 18:20:40,992 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:20:40,993 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 1 种尺码
+2025-05-14 18:20:40,993 - utils.page_setting - INFO - [giglio] - 正在获取商品 [9/12]: SNEAKER TRACK
+2025-05-14 18:20:42,179 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/329455
+2025-05-14 18:20:46,378 - utils.page_setting - INFO - [giglio] - 商品名称: MESH AND NYLON TRACK SNEAKER
+2025-05-14 18:20:46,385 - utils.page_setting - INFO - [giglio] - 找到 1 个尺码元素
+2025-05-14 18:20:46,385 - utils.page_setting - INFO - [giglio] - 商品 'MESH AND NYLON TRACK SNEAKER' 共有 1 种尺码
+2025-05-14 18:20:46,386 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:20:46,387 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER TRACK' 的库存信息，共 1 种尺码
+2025-05-14 18:20:46,388 - utils.page_setting - INFO - [giglio] - 正在获取商品 [10/12]: PHANTOM SNEAKER
+2025-05-14 18:20:48,904 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244576
+2025-05-14 18:20:53,840 - utils.page_setting - INFO - [giglio] - 商品名称: PHANTOM MESH SNEAKER
+2025-05-14 18:20:53,852 - utils.page_setting - INFO - [giglio] - 找到 1 个尺码元素
+2025-05-14 18:20:53,853 - utils.page_setting - INFO - [giglio] - 商品 'PHANTOM MESH SNEAKER' 共有 1 种尺码
+2025-05-14 18:20:53,853 - utils.page_setting - INFO - [giglio] - 尺码: 45, 库存状态: available
+2025-05-14 18:20:53,854 - utils.page_setting - INFO - [giglio] - 成功获取商品 'PHANTOM SNEAKER' 的库存信息，共 1 种尺码
+2025-05-14 18:20:53,856 - utils.page_setting - INFO - [giglio] - 正在获取商品 [11/12]: SNEAKER RUNNER
+2025-05-14 18:20:56,739 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244474
+2025-05-14 18:21:03,170 - utils.page_setting - INFO - [giglio] - 商品名称: MESH AND NYLON RUNNER SNEAKER
+2025-05-14 18:21:03,178 - utils.page_setting - INFO - [giglio] - 找到 4 个尺码元素
+2025-05-14 18:21:03,178 - utils.page_setting - INFO - [giglio] - 商品 'MESH AND NYLON RUNNER SNEAKER' 共有 3 种尺码
+2025-05-14 18:21:03,179 - utils.page_setting - INFO - [giglio] - 尺码: 39, 库存状态: available
+2025-05-14 18:21:03,179 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:21:03,179 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:21:03,180 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER RUNNER' 的库存信息，共 3 种尺码
+2025-05-14 18:21:03,181 - utils.page_setting - INFO - [giglio] - 正在获取商品 [12/12]: SNEAKER TRACK HIKE
+2025-05-14 18:21:05,259 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/237063
+2025-05-14 18:21:10,532 - utils.page_setting - INFO - [giglio] - 商品名称: SNEAKER TRACK HIKE
+2025-05-14 18:21:10,539 - utils.page_setting - INFO - [giglio] - 找到 1 个尺码元素
+2025-05-14 18:21:10,540 - utils.page_setting - INFO - [giglio] - 商品 'SNEAKER TRACK HIKE' 共有 1 种尺码
+2025-05-14 18:21:10,540 - utils.page_setting - INFO - [giglio] - 尺码: 39, 库存状态: available
+2025-05-14 18:21:10,542 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER TRACK HIKE' 的库存信息，共 1 种尺码
+2025-05-14 18:21:10,542 - utils.page_setting - INFO - [giglio] - 库存信息获取完成，成功: 12/12
+2025-05-14 18:21:10,546 - utils.page_setting - INFO - [giglio] - eleonora_bonucci - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\inventory\balenciaga_inventory_20250514_182110.json
+2025-05-14 18:21:10,546 - utils.page_setting - INFO - [giglio] - 已保存12个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\inventory\balenciaga_inventory_20250514_182110.json
+2025-05-14 18:21:10,546 - utils.page_setting - INFO - [giglio] - 未检测到库存变化
+2025-05-14 18:21:10,548 - utils.page_setting - INFO - [giglio] - eleonora_bonucci - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\summary\inventory_summary_eleonora_bonucci_20250514_182110.txt
+2025-05-14 18:21:10,550 - utils.page_setting - INFO - [giglio] - eleonora_bonucci - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\json_summary\inventory_summary_20250514_182110.json
+2025-05-14 18:21:10,550 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:21:10,551 - utils.page_setting - INFO - [giglio] - eleonora_bonucci - 监控任务完成，日志已保存
+2025-05-14 18:30:04,372 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\antonioli\antonioli_20250514_183004.log
+2025-05-14 18:30:04,375 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\antonioli\inventory\balenciaga_inventory_20250514_181848.json
+2025-05-14 18:30:04,376 - utils.page_setting - INFO - [giglio] - antonioli - 库存监控已初始化
+2025-05-14 18:30:05,546 - utils.page_setting - INFO - [giglio] - antonioli - 浏览器页面已初始化
+2025-05-14 18:30:05,546 - utils.page_setting - INFO - [giglio] - 开始监控 https://antonioli.eu/en-us/collections/designer-balenciaga/man?grid-switcher=4&filter.p.m.elastick.department=SHOES&filter.v.price.gte=&filter.v.price.lte=
+2025-05-14 18:30:05,549 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://antonioli.eu/en-us/collections/designer-balenciaga/man?grid-switcher=4&filter.p.m.elastick.department=SHOES&filter.v.price.gte=&filter.v.price.lte=
+2025-05-14 18:30:06,388 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\duomo\duomo_20250514_183006.log
+2025-05-14 18:30:06,390 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\duomo\inventory\balenciaga_inventory_20250514_181946.json
+2025-05-14 18:30:06,390 - utils.page_setting - INFO - [giglio] - duomo - 库存监控已初始化
+2025-05-14 18:30:06,391 - utils.page_setting - INFO - [giglio] - 开始监控 https://www.ilduomo.it/api/categoryProducts
+2025-05-14 18:30:06,391 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://www.ilduomo.it/api/categoryProducts
+2025-05-14 18:30:08,401 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\eleonora_bonucci\eleonora_bonucci_20250514_183008.log
+2025-05-14 18:30:08,402 - utils.page_setting - INFO - [giglio] - 获取到 6 个Balenciaga商品
+2025-05-14 18:30:08,403 - utils.page_setting - DEBUG - [giglio] - 解析商品: Balenciaga Pool Slide, 尺码数量: 3
+2025-05-14 18:30:08,403 - utils.page_setting - DEBUG - [giglio] - 解析商品: Balenciaga Runner, 尺码数量: 1
+2025-05-14 18:30:08,404 - utils.page_setting - DEBUG - [giglio] - 解析商品: Balenciaga Pool Slide, 尺码数量: 3
+2025-05-14 18:30:08,405 - utils.page_setting - DEBUG - [giglio] - 解析商品: Balenciaga Runner 2 Sneakers, 尺码数量: 4
+2025-05-14 18:30:08,405 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\inventory\balenciaga_inventory_20250514_182110.json
+2025-05-14 18:30:08,406 - utils.page_setting - DEBUG - [giglio] - 解析商品: Balenciaga 3xl Sneakers, 尺码数量: 4
+2025-05-14 18:30:08,407 - utils.page_setting - INFO - [giglio] - eleonora_bonucci - 库存监控已初始化
+2025-05-14 18:30:08,407 - utils.page_setting - DEBUG - [giglio] - 解析商品: Balenciaga Alaska Slipper, 尺码数量: 1
+2025-05-14 18:30:08,410 - utils.page_setting - INFO - [giglio] - 开始监控 https://eleonorabonucci.com/en/balenciaga/men?&f=eyJPcmRpbmFtZW50byI6MCwiQ2F0ZWdvcnkiOls1Ml0sIkJyYW5kIjpbXSwiQ29sb3IiOltdLCJTaXplIjpbXSwiVGFnbGlhIjpbXSwiU2FsZGkiOmZhbHNlLCJOdW92YUNvbGxlemlvbmUiOnRydWUsIktpZHNNZW4iOnRydWUsIktpZHNXb21lbiI6dHJ1ZSwiU2l6ZUtpZHMiOjAsIlNlcXVlbnphIjpbeyJGaWx0cm8iOjEsIlZhbG9yZSI6NTIsIkV2ZW50IjoiXC9EYXRlKDE3NDQxOTQ4NzQ1ODgpXC8ifV0sIkxibEZpbHRyb0tpZHNNb2JpbGUiOm51bGwsIkxibEZpbHRyb1NpemVLaWRzTW9iaWxlIjpudWxsfQ==
+2025-05-14 18:30:08,411 - utils.page_setting - INFO - [giglio] - duomo - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\duomo\inventory\balenciaga_inventory_20250514_183008.json
+2025-05-14 18:30:08,411 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://eleonorabonucci.com/en/balenciaga/men?&f=eyJPcmRpbmFtZW50byI6MCwiQ2F0ZWdvcnkiOls1Ml0sIkJyYW5kIjpbXSwiQ29sb3IiOltdLCJTaXplIjpbXSwiVGFnbGlhIjpbXSwiU2FsZGkiOmZhbHNlLCJOdW92YUNvbGxlemlvbmUiOnRydWUsIktpZHNNZW4iOnRydWUsIktpZHNXb21lbiI6dHJ1ZSwiU2l6ZUtpZHMiOjAsIlNlcXVlbnphIjpbeyJGaWx0cm8iOjEsIlZhbG9yZSI6NTIsIkV2ZW50IjoiXC9EYXRlKDE3NDQxOTQ4NzQ1ODgpXC8ifV0sIkxibEZpbHRyb0tpZHNNb2JpbGUiOm51bGwsIkxibEZpbHRyb1NpemVLaWRzTW9iaWxlIjpudWxsfQ==
+2025-05-14 18:30:08,412 - utils.page_setting - INFO - [giglio] - 商品目录数据已保存到: E:\pythonProject\outsource\balenciaga_monitor\data\duomo\inventory\balenciaga_inventory_20250514_183008.json
+2025-05-14 18:30:08,412 - utils.page_setting - INFO - [giglio] - 监控完成，共获取到 6 个商品信息
+2025-05-14 18:30:08,416 - utils.page_setting - INFO - [giglio] - duomo - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\duomo\json_summary\inventory_summary_20250514_183008.json
+2025-05-14 18:30:08,418 - utils.page_setting - INFO - [giglio] - duomo - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\duomo\summary\inventory_summary_duomo_20250514_183008.txt
+2025-05-14 18:30:08,418 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:30:08,419 - utils.page_setting - INFO - [giglio] - duomo - 监控任务完成，日志已保存
+2025-05-14 18:30:10,412 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\giglio\giglio_20250514_183010.log
+2025-05-14 18:30:10,414 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\giglio\inventory\balenciaga_inventory_20250514_182010.json
+2025-05-14 18:30:10,414 - utils.page_setting - INFO - [giglio] - giglio - 库存监控已初始化
+2025-05-14 18:30:10,416 - utils.page_setting - INFO - [giglio] - 开始监控 https://www.giglio.com/en-us/balenciaga/men.html?_gl=1*1fxjw4l*_up*MQ..&category=8&gclid=CjwKCAjw--K_BhB5EiwAuwYoynemd70DtOPlR5NfGVCI_MD0CV577lXDMZjwaNVDEs7gZ8CrA91gQBoCivUQAvD_BwE
+2025-05-14 18:30:10,417 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://www.giglio.com/en-us/balenciaga/men.html?_gl=1*1fxjw4l*_up*MQ..&category=8&gclid=CjwKCAjw--K_BhB5EiwAuwYoynemd70DtOPlR5NfGVCI_MD0CV577lXDMZjwaNVDEs7gZ8CrA91gQBoCivUQAvD_BwE
+2025-05-14 18:30:12,427 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\grifo210\grifo210_20250514_183012.log
+2025-05-14 18:30:12,428 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\grifo210\inventory\balenciaga_inventory_20250514_181953.json
+2025-05-14 18:30:12,428 - utils.page_setting - INFO - [giglio] - grifo210 - 库存监控已初始化
+2025-05-14 18:30:12,430 - utils.page_setting - INFO - [giglio] - 开始监控 https://www.grifo210.com/en-ww/collections/men-maison-margiela
+2025-05-14 18:30:12,430 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://www.grifo210.com/en-ww/collections/men-maison-margiela
+2025-05-14 18:30:12,777 - utils.page_setting - INFO - [giglio] - 找到 2 个商品元素
+2025-05-14 18:30:12,778 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sneakers men, URL: https://www.giglio.com/en-us/shoes-men_sneakers-balenciaga-825601w3xch.html?cSel=001
+2025-05-14 18:30:12,782 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sneakers men, URL: https://www.giglio.com/en-us/shoes-men_sneakers-balenciaga-542023w2la2.html?cSel=001
+2025-05-14 18:30:12,782 - utils.page_setting - INFO - [giglio] - 共解析到 2 个商品
+2025-05-14 18:30:12,783 - utils.page_setting - INFO - [giglio] - 监控开始，共获取到 2 个商品信息
+2025-05-14 18:30:12,784 - utils.page_setting - INFO - [giglio] - giglio - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\giglio\inventory\balenciaga_inventory_20250514_183012.json
+2025-05-14 18:30:12,785 - utils.page_setting - INFO - [giglio] - 已保存2个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\giglio\inventory\balenciaga_inventory_20250514_183012.json
+2025-05-14 18:30:12,785 - utils.page_setting - INFO - [giglio] - 未检测到库存变化
+2025-05-14 18:30:12,786 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:30:12,786 - utils.page_setting - INFO - [giglio] - giglio - 监控任务完成，日志已保存
+2025-05-14 18:30:14,433 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\hermes\hermes_20250514_183014.log
+2025-05-14 18:30:14,434 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\hermes\inventory\balenciaga_inventory_20250514_181954.json
+2025-05-14 18:30:14,434 - utils.page_setting - INFO - [giglio] - hermes - 库存监控已初始化
+2025-05-14 18:30:14,437 - utils.page_setting - INFO - [giglio] - 开始监控 https://www.hermes.com/hk/en/category/women/bags-and-small-leather-goods/bags-and-clutches/
+2025-05-14 18:30:14,437 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://www.hermes.com/hk/en/category/women/bags-and-small-leather-goods/bags-and-clutches/
+2025-05-14 18:30:15,302 - utils.page_setting - INFO - [giglio] - 找到 12 个商品元素
+2025-05-14 18:30:15,303 - utils.page_setting - DEBUG - [giglio] - 找到商品: STAPLER SNEAKER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358838
+2025-05-14 18:30:15,303 - utils.page_setting - DEBUG - [giglio] - 找到商品: STAPLER SNEAKER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/359003
+2025-05-14 18:30:15,304 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358126
+2025-05-14 18:30:15,304 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352208
+2025-05-14 18:30:15,305 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/354721
+2025-05-14 18:30:15,306 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/356352
+2025-05-14 18:30:15,307 - utils.page_setting - DEBUG - [giglio] - 找到商品: CIRCUIT SNEAKER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352935
+2025-05-14 18:30:15,309 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER 3XL, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/333111
+2025-05-14 18:30:15,309 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER TRACK, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/329455
+2025-05-14 18:30:15,309 - utils.page_setting - DEBUG - [giglio] - 找到商品: PHANTOM SNEAKER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244576
+2025-05-14 18:30:15,310 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER RUNNER, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244474
+2025-05-14 18:30:15,310 - utils.page_setting - DEBUG - [giglio] - 找到商品: SNEAKER TRACK HIKE, URL: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/237063
+2025-05-14 18:30:15,311 - utils.page_setting - INFO - [giglio] - 共解析到 12 个商品
+2025-05-14 18:30:15,312 - utils.page_setting - INFO - [giglio] - 监控开始，共获取到 12 个商品信息
+2025-05-14 18:30:15,312 - utils.page_setting - INFO - [giglio] - 正在获取商品 [1/12]: STAPLER SNEAKER
+2025-05-14 18:30:15,784 - utils.page_setting - INFO - [giglio] - 找到 4 个商品元素
+2025-05-14 18:30:15,786 - utils.page_setting - DEBUG - [giglio] - 找到商品: Garden Party Voyage 49 bag, URL: https://www.hermes.com/hk/en/product/garden-party-voyage-49-bag-H085761CKAC/
+2025-05-14 18:30:15,787 - utils.page_setting - DEBUG - [giglio] - 找到商品: Garden Party pockets vertical bag, URL: https://www.hermes.com/hk/en/product/garden-party-pockets-vertical-bag-H084260CKAC/
+2025-05-14 18:30:15,787 - utils.page_setting - DEBUG - [giglio] - 找到商品: Garden Party pockets vertical bag, URL: https://www.hermes.com/hk/en/product/garden-party-pockets-vertical-bag-H084260CKAA/
+2025-05-14 18:30:15,788 - utils.page_setting - DEBUG - [giglio] - 找到商品: Garden Party Voyage 49 bag, URL: https://www.hermes.com/hk/en/product/garden-party-voyage-49-bag-H086065CKAA/
+2025-05-14 18:30:15,788 - utils.page_setting - INFO - [giglio] - 共解析到 4 个商品
+2025-05-14 18:30:15,789 - utils.page_setting - INFO - [giglio] - 监控开始，共获取到 4 个商品信息
+2025-05-14 18:30:15,791 - utils.page_setting - INFO - [giglio] - hermes - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\hermes\inventory\balenciaga_inventory_20250514_183015.json
+2025-05-14 18:30:15,793 - utils.page_setting - INFO - [giglio] - 已保存4个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\hermes\inventory\balenciaga_inventory_20250514_183015.json
+2025-05-14 18:30:15,793 - utils.page_setting - INFO - [giglio] - 未检测到库存变化
+2025-05-14 18:30:15,793 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:30:15,793 - utils.page_setting - INFO - [giglio] - hermes - 监控任务完成，日志已保存
+2025-05-14 18:30:16,448 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\julian\julian_20250514_183016.log
+2025-05-14 18:30:16,450 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\julian\inventory\balenciaga_inventory_20250514_181958.json
+2025-05-14 18:30:16,450 - utils.page_setting - INFO - [giglio] - julian - 库存监控已初始化
+2025-05-14 18:30:16,451 - utils.page_setting - INFO - [giglio] - 开始监控 https://www.julian-fashion.com/en-hk/men/designer/balenciaga/shoes
+2025-05-14 18:30:16,452 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://www.julian-fashion.com/en-hk/men/designer/balenciaga/shoes
+2025-05-14 18:30:18,082 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358838
+2025-05-14 18:30:18,460 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\mytheresa\mytheresa_20250514_183018.log
+2025-05-14 18:30:18,461 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\mytheresa\inventory\balenciaga_inventory_20250514_182004.json
+2025-05-14 18:30:18,462 - utils.page_setting - INFO - [giglio] - mytheresa - 库存监控已初始化
+2025-05-14 18:30:18,463 - utils.page_setting - INFO - [giglio] - 开始监控 https://api.mytheresa.com/api
+2025-05-14 18:30:18,464 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://api.mytheresa.com/api
+2025-05-14 18:30:19,311 - utils.page_setting - INFO - [giglio] - 找到 16 个商品元素
+2025-05-14 18:30:19,312 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Runner 2.0' sneakers, URL: https://www.julian-fashion.com/en-hk/product/312011/balenciaga/sneakers/runner_20_sneakers
+2025-05-14 18:30:19,313 - utils.page_setting - DEBUG - [giglio] - 找到商品: '3XL' sneakers, URL: https://www.julian-fashion.com/en-hk/product/312009/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:30:19,314 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Track Trail Laces' sneakers, URL: https://www.julian-fashion.com/en-hk/product/312008/balenciaga/sneakers/track_trail_laces_sneakers
+2025-05-14 18:30:19,315 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Runner' sneakers, URL: https://www.julian-fashion.com/en-hk/product/312007/balenciaga/sneakers/runner_sneakers
+2025-05-14 18:30:19,316 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Circuit' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309743/balenciaga/sneakers/circuit_sneakers
+2025-05-14 18:30:19,317 - utils.page_setting - DEBUG - [giglio] - 找到商品: '3XL' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309895/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:30:19,319 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Triple S Sporty' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309894/balenciaga/sneakers/triple_s_sporty_sneakers
+2025-05-14 18:30:19,320 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Triple S Sporty' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309893/balenciaga/sneakers/triple_s_sporty_sneakers
+2025-05-14 18:30:19,322 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Runner' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309892/balenciaga/sneakers/runner_sneakers
+2025-05-14 18:30:19,323 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Circuit' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309891/balenciaga/sneakers/circuit_sneakers
+2025-05-14 18:30:19,324 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Alaska' sabots, URL: https://www.julian-fashion.com/en-hk/product/305111/balenciaga/sabot/alaska_sabots
+2025-05-14 18:30:19,326 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Pool Slide' sandals, URL: https://www.julian-fashion.com/en-hk/product/305110/balenciaga/slides/pool_slide_sandals
+2025-05-14 18:30:19,327 - utils.page_setting - DEBUG - [giglio] - 找到商品: '3XL' sneakers, URL: https://www.julian-fashion.com/en-hk/product/303214/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:30:19,328 - utils.page_setting - DEBUG - [giglio] - 找到商品: '3XL' sneakers, URL: https://www.julian-fashion.com/en-hk/product/303275/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:30:19,329 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Runner' sneakers, URL: https://www.julian-fashion.com/en-hk/product/283942/balenciaga/sneakers/runner_sneakers
+2025-05-14 18:30:19,330 - utils.page_setting - DEBUG - [giglio] - 找到商品: 'Track' sneakers, URL: https://www.julian-fashion.com/en-hk/product/250562/balenciaga/sneakers/track_sneakers
+2025-05-14 18:30:19,330 - utils.page_setting - INFO - [giglio] - 共解析到 16 个商品
+2025-05-14 18:30:19,332 - utils.page_setting - INFO - [giglio] - 监控开始，共获取到 16 个商品信息
+2025-05-14 18:30:19,334 - utils.page_setting - INFO - [giglio] - julian - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\julian\inventory\balenciaga_inventory_20250514_183019.json
+2025-05-14 18:30:19,334 - utils.page_setting - INFO - [giglio] - 已保存9个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\julian\inventory\balenciaga_inventory_20250514_183019.json
+2025-05-14 18:30:19,335 - utils.page_setting - INFO - [giglio] - 未检测到库存变化
+2025-05-14 18:30:19,335 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:30:19,336 - utils.page_setting - INFO - [giglio] - julian - 监控任务完成，日志已保存
+2025-05-14 18:30:20,470 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\sugar\sugar_20250514_183020.log
+2025-05-14 18:30:20,472 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\sugar\inventory\balenciaga_inventory_20250514_182359.json
+2025-05-14 18:30:20,473 - utils.page_setting - INFO - [giglio] - sugar - 库存监控已初始化
+2025-05-14 18:30:20,474 - utils.page_setting - INFO - [giglio] - 开始监控 https://www.sugar.it/en-IT/man/designer/balenciaga/shoes
+2025-05-14 18:30:20,475 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://www.sugar.it/en-IT/man/designer/balenciaga/shoes
+2025-05-14 18:30:22,484 - utils.page_setting - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\suus\suus_20250514_183022.log
+2025-05-14 18:30:22,486 - utils.page_setting - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\suus\inventory\balenciaga_inventory_20250514_174811.json
+2025-05-14 18:30:22,486 - utils.page_setting - INFO - [giglio] - suus - 库存监控已初始化
+2025-05-14 18:30:22,533 - utils.page_setting - INFO - [giglio] - suus - 浏览器页面已初始化
+2025-05-14 18:30:22,533 - utils.page_setting - INFO - [giglio] - 开始监控 https://www.suus.es/product-tag/guidi/
+2025-05-14 18:30:22,534 - utils.page_setting - INFO - [giglio] - 正在获取商品目录: https://www.suus.es/product-tag/guidi/
+2025-05-14 18:30:23,092 - utils.page_setting - ERROR - [giglio] - 获取页面失败：页面响应为空
+2025-05-14 18:30:23,093 - utils.page_setting - ERROR - [giglio] - 获取商品目录失败，终止监控
+2025-05-14 18:30:23,093 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:30:23,093 - utils.page_setting - INFO - [giglio] - grifo210 - 监控任务完成，日志已保存
+2025-05-14 18:30:25,286 - utils.page_setting - INFO - [giglio] - 找到 10 个商品元素
+2025-05-14 18:30:25,287 - utils.page_setting - DEBUG - [giglio] - 找到商品: "Monday Shoe" sneakers, URL: https://www.sugar.it/en-IT/product/181864/balenciaga/sneakers/monday_shoe_sneakers
+2025-05-14 18:30:25,289 - utils.page_setting - DEBUG - [giglio] - 找到商品: "Tractor" platform loafers, URL: https://www.sugar.it/en-IT/product/181860/balenciaga/derby_shoes/tractor_platform_loafers
+2025-05-14 18:30:25,291 - utils.page_setting - DEBUG - [giglio] - 找到商品: "3XL" sneakers, URL: https://www.sugar.it/en-IT/product/180144/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:30:25,292 - utils.page_setting - DEBUG - [giglio] - 找到商品: "6XL" sneakers, URL: https://www.sugar.it/en-IT/product/180141/balenciaga/sneakers/6xl_sneakers
+2025-05-14 18:30:25,294 - utils.page_setting - DEBUG - [giglio] - 找到商品: X Crocs rubber ankle boots™, URL: https://www.sugar.it/en-IT/product/180149/balenciaga/boots/x_crocs_rubber_ankle_bootsT
+2025-05-14 18:30:25,295 - utils.page_setting - DEBUG - [giglio] - 找到商品: "Circuit" sneakers, URL: https://www.sugar.it/en-IT/product/180153/balenciaga/sneakers/circuit_sneakers
+2025-05-14 18:30:25,296 - utils.page_setting - DEBUG - [giglio] - 找到商品: "3XL" sneakers, URL: https://www.sugar.it/en-IT/product/180140/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:30:25,297 - utils.page_setting - DEBUG - [giglio] - 找到商品: "Circuit" sneakers, URL: https://www.sugar.it/en-IT/product/180152/balenciaga/sneakers/circuit_sneakers
+2025-05-14 18:30:25,298 - utils.page_setting - DEBUG - [giglio] - 找到商品: "3XL" sneakers, URL: https://www.sugar.it/en-IT/product/168751/balenciaga/sneakers/3xl_sneakers
+2025-05-14 18:30:25,299 - utils.page_setting - DEBUG - [giglio] - 找到商品: Logo slides, URL: https://www.sugar.it/en-IT/product/139120/balenciaga/sandals/logo_slides
+2025-05-14 18:30:25,300 - utils.page_setting - INFO - [giglio] - 共解析到 10 个商品
+2025-05-14 18:30:25,301 - utils.page_setting - INFO - [giglio] - 监控开始，共获取到 10 个商品信息
+2025-05-14 18:30:25,302 - utils.page_setting - INFO - [giglio] - sugar - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\sugar\inventory\balenciaga_inventory_20250514_183025.json
+2025-05-14 18:30:25,303 - utils.page_setting - INFO - [giglio] - 已保存7个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\sugar\inventory\balenciaga_inventory_20250514_183025.json
+2025-05-14 18:30:25,303 - utils.page_setting - INFO - [giglio] - 未检测到库存变化
+2025-05-14 18:30:25,304 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:30:25,304 - utils.page_setting - INFO - [giglio] - sugar - 监控任务完成，日志已保存
+2025-05-14 18:30:25,404 - utils.page_setting - INFO - [giglio] - 商品名称: STAPLER SNEAKER
+2025-05-14 18:30:25,411 - utils.page_setting - INFO - [giglio] - 找到 5 个尺码元素
+2025-05-14 18:30:25,412 - utils.page_setting - INFO - [giglio] - 商品 'STAPLER SNEAKER' 共有 4 种尺码
+2025-05-14 18:30:25,412 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:30:25,413 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:30:25,413 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:30:25,414 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:30:25,415 - utils.page_setting - INFO - [giglio] - 成功获取商品 'STAPLER SNEAKER' 的库存信息，共 4 种尺码
+2025-05-14 18:30:25,416 - utils.page_setting - INFO - [giglio] - 正在获取商品 [2/12]: STAPLER SNEAKER
+2025-05-14 18:30:26,704 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/359003
+2025-05-14 18:30:34,296 - utils.page_setting - INFO - [giglio] - 商品名称: STAPLER SNEAKER
+2025-05-14 18:30:34,305 - utils.page_setting - INFO - [giglio] - 找到 5 个尺码元素
+2025-05-14 18:30:34,305 - utils.page_setting - INFO - [giglio] - 商品 'STAPLER SNEAKER' 共有 4 种尺码
+2025-05-14 18:30:34,305 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:30:34,306 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:30:34,307 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:30:34,307 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:30:34,309 - utils.page_setting - INFO - [giglio] - 成功获取商品 'STAPLER SNEAKER' 的库存信息，共 4 种尺码
+2025-05-14 18:30:34,309 - utils.page_setting - INFO - [giglio] - 正在获取商品 [3/12]: SNEAKER 3XL
+2025-05-14 18:30:36,593 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358126
+2025-05-14 18:30:40,627 - utils.page_setting - INFO - [giglio] - 商品名称: SNEAKER 3XL
+2025-05-14 18:30:40,635 - utils.page_setting - INFO - [giglio] - 找到 5 个尺码元素
+2025-05-14 18:30:40,635 - utils.page_setting - INFO - [giglio] - 商品 'SNEAKER 3XL' 共有 4 种尺码
+2025-05-14 18:30:40,637 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:30:40,637 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:30:40,637 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:30:40,638 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:30:40,639 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 4 种尺码
+2025-05-14 18:30:40,640 - utils.page_setting - INFO - [giglio] - 正在获取商品 [4/12]: SNEAKER 3XL
+2025-05-14 18:30:42,409 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352208
+2025-05-14 18:30:46,474 - utils.page_setting - INFO - [giglio] - 商品名称: SNEAKER 3XL
+2025-05-14 18:30:46,481 - utils.page_setting - INFO - [giglio] - 找到 5 个尺码元素
+2025-05-14 18:30:46,482 - utils.page_setting - INFO - [giglio] - 商品 'SNEAKER 3XL' 共有 4 种尺码
+2025-05-14 18:30:46,483 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:30:46,484 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:30:46,484 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:30:46,485 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:30:46,487 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 4 种尺码
+2025-05-14 18:30:46,488 - utils.page_setting - INFO - [giglio] - 正在获取商品 [5/12]: SNEAKER 3XL
+2025-05-14 18:30:47,885 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/354721
+2025-05-14 18:30:51,805 - utils.page_setting - INFO - [giglio] - 商品名称: SNEAKER 3XL
+2025-05-14 18:30:51,815 - utils.page_setting - INFO - [giglio] - 找到 5 个尺码元素
+2025-05-14 18:30:51,816 - utils.page_setting - INFO - [giglio] - 商品 'SNEAKER 3XL' 共有 4 种尺码
+2025-05-14 18:30:51,817 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:30:51,817 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:30:51,817 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:30:51,818 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:30:51,820 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 4 种尺码
+2025-05-14 18:30:51,820 - utils.page_setting - INFO - [giglio] - 正在获取商品 [6/12]: SNEAKER 3XL
+2025-05-14 18:30:53,326 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/356352
+2025-05-14 18:30:53,962 - utils.page_setting - ERROR - [giglio] - 未找到任何商品列表元素
+2025-05-14 18:30:53,963 - utils.page_setting - ERROR - [giglio] - 获取商品目录失败，终止监控
+2025-05-14 18:30:54,692 - utils.page_setting - ERROR - [giglio] - 未找到任何商品列表元素
+2025-05-14 18:30:54,692 - utils.page_setting - ERROR - [giglio] - 获取商品目录失败，终止监控
+2025-05-14 18:30:54,693 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:30:54,976 - utils.page_setting - INFO - [giglio] - suus - 监控任务完成，日志已保存
+2025-05-14 18:30:54,991 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:30:54,993 - utils.page_setting - INFO - [giglio] - antonioli - 监控任务完成，日志已保存
+2025-05-14 18:30:57,048 - utils.page_setting - INFO - [giglio] - 商品名称: SNEAKER 3XL
+2025-05-14 18:30:57,056 - utils.page_setting - INFO - [giglio] - 找到 4 个尺码元素
+2025-05-14 18:30:57,057 - utils.page_setting - INFO - [giglio] - 商品 'SNEAKER 3XL' 共有 3 种尺码
+2025-05-14 18:30:57,057 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:30:57,058 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:30:57,058 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:30:57,060 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 3 种尺码
+2025-05-14 18:30:57,060 - utils.page_setting - INFO - [giglio] - 正在获取商品 [7/12]: CIRCUIT SNEAKER
+2025-05-14 18:30:58,498 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352935
+2025-05-14 18:31:00,776 - utils.page_setting - INFO - [giglio] - 找到 88 个商品元素
+2025-05-14 18:31:00,776 - utils.page_setting - DEBUG - [giglio] - 开始解析商品目录数据
+2025-05-14 18:31:00,777 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sunday leather clogs, URL: https://www.mytheresa.com/mo/en/men/balenciaga-sunday-leather-clogs-black-p00889954
+2025-05-14 18:31:00,780 - utils.page_setting - DEBUG - [giglio] - 找到商品: 6XL mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-6xl-mesh-sneakers-multicoloured-p01057371
+2025-05-14 18:31:00,780 - utils.page_setting - DEBUG - [giglio] - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-black-p01032584
+2025-05-14 18:31:00,781 - utils.page_setting - DEBUG - [giglio] - 找到商品: Track Trail Laces sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-trail-laces-sneakers-orange-p01032586
+2025-05-14 18:31:00,782 - utils.page_setting - DEBUG - [giglio] - 找到商品: Monday 3B Sports Icon leather sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-monday-3b-sports-icon-leather-sneakers-black-p01040998
+2025-05-14 18:31:00,782 - utils.page_setting - DEBUG - [giglio] - 找到商品: Circuit sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-circuit-sneakers-yellow-p01010155
+2025-05-14 18:31:00,784 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL chain-detail mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-chain-detail-mesh-sneakers-grey-p01032583
+2025-05-14 18:31:00,784 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-white-p00806790
+2025-05-14 18:31:00,785 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sunday suede mules, URL: https://www.mytheresa.com/mo/en/men/balenciaga-sunday-suede-mules-brown-p00888846
+2025-05-14 18:31:00,785 - utils.page_setting - DEBUG - [giglio] - 找到商品: x Crocs Jibbitz clogs, URL: https://www.mytheresa.com/mo/en/men/balenciaga-x-crocs-jibbitz-clogs-black-p01010123
+2025-05-14 18:31:00,786 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-multicoloured-p00888849
+2025-05-14 18:31:00,786 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-multicoloured-p00963454
+2025-05-14 18:31:00,786 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-multicoloured-p00970247
+2025-05-14 18:31:00,787 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-grey-p00981020
+2025-05-14 18:31:00,787 - utils.page_setting - DEBUG - [giglio] - 找到商品: 10XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-10xl-sneakers-grey-p00948315
+2025-05-14 18:31:00,788 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-distressed-sneakers-black-p00798279
+2025-05-14 18:31:00,788 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL Extreme Graffiti sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-extreme-graffiti-sneakers-multicoloured-p00948306
+2025-05-14 18:31:00,788 - utils.page_setting - DEBUG - [giglio] - 找到商品: Bouncer sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-bouncer-sneakers-black-p00798287
+2025-05-14 18:31:00,789 - utils.page_setting - DEBUG - [giglio] - 找到商品: Pool logo rubber slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-pool-logo-rubber-slides-black-p00444559
+2025-05-14 18:31:00,790 - utils.page_setting - DEBUG - [giglio] - 找到商品: Monday leather sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-monday-3b-sports-icon-leather-sneakers-white-p01032582
+2025-05-14 18:31:00,790 - utils.page_setting - DEBUG - [giglio] - 找到商品: Circuit sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-circuit-sneakers-black-p01010156
+2025-05-14 18:31:00,791 - utils.page_setting - DEBUG - [giglio] - 找到商品: Opera leather Derby shoes, URL: https://www.mytheresa.com/mo/en/men/balenciaga-opera-leather-derby-shoes-black-p01010138
+2025-05-14 18:31:00,791 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S Sporty leather sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sporty-leather-sneakers-black-p01010143
+2025-05-14 18:31:00,792 - utils.page_setting - DEBUG - [giglio] - 找到商品: Combat Strike canvas lace-up boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-strike-canvas-combat-boots-black-p01008910
+2025-05-14 18:31:00,792 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3X mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3x-mesh-sneakers-black-p00971229
+2025-05-14 18:31:00,792 - utils.page_setting - DEBUG - [giglio] - 找到商品: Stapler sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-stapler-sneakers-beige-p00971230
+2025-05-14 18:31:00,793 - utils.page_setting - DEBUG - [giglio] - 找到商品: Strike leather boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-strike-leather-boots-black-p00971231
+2025-05-14 18:31:00,794 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sunday suede sandals, URL: https://www.mytheresa.com/mo/en/men/balenciaga-sunday-suede-sandals-brown-p00954700
+2025-05-14 18:31:00,794 - utils.page_setting - DEBUG - [giglio] - 找到商品: Alaska Fur High suede boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-alaska-fur-high-suede-boots-black-p00955186
+2025-05-14 18:31:00,795 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-white-p00963452
+2025-05-14 18:31:00,795 - utils.page_setting - DEBUG - [giglio] - 找到商品: 10XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-10xl-sneakers-white-p00948313
+2025-05-14 18:31:00,795 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sunday leather sandals, URL: https://www.mytheresa.com/mo/en/men/balenciaga-sunday-leather-sandals-black-p00954800
+2025-05-14 18:31:00,796 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-green-p00906279
+2025-05-14 18:31:00,796 - utils.page_setting - DEBUG - [giglio] - 找到商品: Sunday Molded mules, URL: https://www.mytheresa.com/mo/en/men/balenciaga-sunday-molded-mules-black-p00906276
+2025-05-14 18:31:00,797 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-white-p00937108
+2025-05-14 18:31:00,797 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner Graffiti printed sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-graffiti-printed-sneakers-black-p00937106
+2025-05-14 18:31:00,799 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner Graffiti distressed sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-graffiti-distressed-sneakers-white-p00937107
+2025-05-14 18:31:00,799 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S Mold sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-mold-sneakers-black-p00856457
+2025-05-14 18:31:00,800 - utils.page_setting - DEBUG - [giglio] - 找到商品: Cargo mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-cargo-mesh-sneakers-beige-p00906283
+2025-05-14 18:31:00,800 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-white-p00906281
+2025-05-14 18:31:00,801 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-black-p00900180
+2025-05-14 18:31:00,801 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-worn-out-mesh-sneakers-multicoloured-p00926232
+2025-05-14 18:31:00,801 - utils.page_setting - DEBUG - [giglio] - 找到商品: Biker embossed leather knee-high boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-biker-embossed-leather-knee-high-boots-black-p00859154
+2025-05-14 18:31:00,801 - utils.page_setting - DEBUG - [giglio] - 找到商品: Romeo leather slippers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-romeo-leather-slippers-black-p00888848
+2025-05-14 18:31:00,802 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-multicoloured-p00850977
+2025-05-14 18:31:00,802 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL ski sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-ski-sneakers-black-p00896702
+2025-05-14 18:31:00,803 - utils.page_setting - DEBUG - [giglio] - 找到商品: Alaska Low snow boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-alaska-low-snow-boots-black-p00896713
+2025-05-14 18:31:00,803 - utils.page_setting - DEBUG - [giglio] - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-multicoloured-p00899058
+2025-05-14 18:31:00,804 - utils.page_setting - DEBUG - [giglio] - 找到商品: Bulldozer leather lace-up boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-bulldozer-leather-lace-up-boots-black-p00850827
+2025-05-14 18:31:00,804 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-black-p00850983
+2025-05-14 18:31:00,805 - utils.page_setting - DEBUG - [giglio] - 找到商品: Steroid Derby shoes, URL: https://www.mytheresa.com/mo/en/men/balenciaga-steroid-derby-shoes-black-p00871950
+2025-05-14 18:31:00,805 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-white-p00868281
+2025-05-14 18:31:00,806 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL mesh sneaker mules, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-mesh-sneaker-mules-black-p00856471
+2025-05-14 18:31:00,806 - utils.page_setting - DEBUG - [giglio] - 找到商品: Santiago leather boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-santiago-leather-boots-black-p00827562
+2025-05-14 18:31:00,807 - utils.page_setting - DEBUG - [giglio] - 找到商品: Santiago over-the-knee leather boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-santiago-over-the-knee-leather-boots-black-p00827558
+2025-05-14 18:31:00,807 - utils.page_setting - DEBUG - [giglio] - 找到商品: Paris denim slippers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-paris-denim-slippers-blue-p00827591
+2025-05-14 18:31:00,808 - utils.page_setting - DEBUG - [giglio] - 找到商品: x Crocs platform slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-x-crocs-platform-slides-black-p00824969
+2025-05-14 18:31:00,808 - utils.page_setting - DEBUG - [giglio] - 找到商品: 3XL mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-mesh-sneakers-red-p00807230
+2025-05-14 18:31:00,809 - utils.page_setting - DEBUG - [giglio] - 找到商品: Leopold satin flats, URL: https://www.mytheresa.com/mo/en/men/balenciaga-leopold-satin-flats-black-p00807241
+2025-05-14 18:31:00,809 - utils.page_setting - DEBUG - [giglio] - 找到商品: Technoclog rubber mules, URL: https://www.mytheresa.com/mo/en/men/balenciaga-technoclog-rubber-mules-black-p00807247
+2025-05-14 18:31:00,810 - utils.page_setting - DEBUG - [giglio] - 找到商品: Steroid lace-up boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-steroid-lace-up-boots-blue-p00766853
+2025-05-14 18:31:00,810 - utils.page_setting - DEBUG - [giglio] - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-black-p00766848
+2025-05-14 18:31:00,811 - utils.page_setting - DEBUG - [giglio] - 找到商品: Logo leather slippers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-logo-leather-slippers-black-p00777669
+2025-05-14 18:31:00,811 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-white-p00747707
+2025-05-14 18:31:00,812 - utils.page_setting - DEBUG - [giglio] - 找到商品: Speed Lace-Up sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-lace-up-sneakers-black-p00741990
+2025-05-14 18:31:00,812 - utils.page_setting - DEBUG - [giglio] - 找到商品: Speed 2.0 Graffiti sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-2-0-graffiti-sneakers-black-p00741562
+2025-05-14 18:31:00,812 - utils.page_setting - DEBUG - [giglio] - 找到商品: Speed 2.0 lace-up sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-2-0-lace-up-sneakers-black-p00721775
+2025-05-14 18:31:00,813 - utils.page_setting - DEBUG - [giglio] - 找到商品: Paris canvas low-top sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-paris-canvas-low-top-sneakers-beige-p00725252
+2025-05-14 18:31:00,813 - utils.page_setting - DEBUG - [giglio] - 找到商品: Speed 2.0 sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-2-0-sneakers-black-p00721772
+2025-05-14 18:31:00,815 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-black-p00721768
+2025-05-14 18:31:00,816 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-white-p00700928
+2025-05-14 18:31:00,816 - utils.page_setting - DEBUG - [giglio] - 找到商品: Cosy BB leather slippers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-cosy-bb-leather-slippers-black-p00655755
+2025-05-14 18:31:00,817 - utils.page_setting - DEBUG - [giglio] - 找到商品: Bouncer mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-defender-mesh-sneakers-black-p00655748
+2025-05-14 18:31:00,817 - utils.page_setting - DEBUG - [giglio] - 找到商品: Bouncer mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-defender-sneakers-beige-p00655749
+2025-05-14 18:31:00,818 - utils.page_setting - DEBUG - [giglio] - 找到商品: Political Campaign Furry slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-political-campaign-furry-slides-beige-p00636445
+2025-05-14 18:31:00,818 - utils.page_setting - DEBUG - [giglio] - 找到商品: Crocs™ boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-crocstm-boots-black-p00635908
+2025-05-14 18:31:00,819 - utils.page_setting - DEBUG - [giglio] - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-green-p00585104
+2025-05-14 18:31:00,819 - utils.page_setting - DEBUG - [giglio] - 找到商品: Political Campaign Furry slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-political-campaign-furry-slides-grey-p00585082
+2025-05-14 18:31:00,819 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-white-p00585100
+2025-05-14 18:31:00,820 - utils.page_setting - DEBUG - [giglio] - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-beige-p00569596
+2025-05-14 18:31:00,820 - utils.page_setting - DEBUG - [giglio] - 找到商品: Pool logo rubber slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-pool-logo-rubber-slides-beige-p00556511
+2025-05-14 18:31:00,821 - utils.page_setting - DEBUG - [giglio] - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-black-p00513601
+2025-05-14 18:31:00,821 - utils.page_setting - DEBUG - [giglio] - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-black-p00486655
+2025-05-14 18:31:00,822 - utils.page_setting - DEBUG - [giglio] - 找到商品: Tractor leather boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-tractor-leather-boots-black-p00493719
+2025-05-14 18:31:00,822 - utils.page_setting - DEBUG - [giglio] - 找到商品: Speed sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-sneakers-black-p00458883
+2025-05-14 18:31:00,823 - utils.page_setting - DEBUG - [giglio] - 找到商品: Speed 2.0 logo sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-2-0-logo-sneakers-black-p00458886
+2025-05-14 18:31:00,824 - utils.page_setting - DEBUG - [giglio] - 找到商品: Alaska High suede boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-alaska-high-suede-boots-white-p00955188
+2025-05-14 18:31:00,824 - utils.page_setting - DEBUG - [giglio] - 找到商品: Cargo mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-cargo-mesh-sneakers-white-p00906284
+2025-05-14 18:31:00,825 - utils.page_setting - INFO - [giglio] - 共解析到 88 个商品
+2025-05-14 18:31:00,826 - utils.page_setting - INFO - [giglio] - 监控开始，共获取到 88 个商品信息
+2025-05-14 18:31:00,828 - utils.page_setting - INFO - [giglio] - mytheresa - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\mytheresa\inventory\balenciaga_inventory_20250514_183100.json
+2025-05-14 18:31:00,829 - utils.page_setting - INFO - [giglio] - 已保存88个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\mytheresa\inventory\balenciaga_inventory_20250514_183100.json
+2025-05-14 18:31:00,830 - utils.page_setting - INFO - [giglio] - 未检测到库存变化
+2025-05-14 18:31:00,830 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:31:00,832 - utils.page_setting - INFO - [giglio] - mytheresa - 监控任务完成，日志已保存
+2025-05-14 18:31:04,868 - utils.page_setting - INFO - [giglio] - 商品名称: CIRCUIT SNEAKER
+2025-05-14 18:31:04,876 - utils.page_setting - INFO - [giglio] - 找到 7 个尺码元素
+2025-05-14 18:31:04,876 - utils.page_setting - INFO - [giglio] - 商品 'CIRCUIT SNEAKER' 共有 6 种尺码
+2025-05-14 18:31:04,877 - utils.page_setting - INFO - [giglio] - 尺码: 39, 库存状态: available
+2025-05-14 18:31:04,877 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:31:04,878 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:31:04,878 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:31:04,878 - utils.page_setting - INFO - [giglio] - 尺码: 43, 库存状态: available
+2025-05-14 18:31:04,879 - utils.page_setting - INFO - [giglio] - 尺码: 44, 库存状态: available
+2025-05-14 18:31:04,882 - utils.page_setting - INFO - [giglio] - 成功获取商品 'CIRCUIT SNEAKER' 的库存信息，共 6 种尺码
+2025-05-14 18:31:04,882 - utils.page_setting - INFO - [giglio] - 正在获取商品 [8/12]: SNEAKER 3XL
+2025-05-14 18:31:07,831 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/333111
+2025-05-14 18:31:15,271 - utils.page_setting - INFO - [giglio] - 商品名称: SNEAKER 3XL
+2025-05-14 18:31:15,280 - utils.page_setting - INFO - [giglio] - 找到 1 个尺码元素
+2025-05-14 18:31:15,281 - utils.page_setting - INFO - [giglio] - 商品 'SNEAKER 3XL' 共有 1 种尺码
+2025-05-14 18:31:15,281 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:31:15,283 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER 3XL' 的库存信息，共 1 种尺码
+2025-05-14 18:31:15,283 - utils.page_setting - INFO - [giglio] - 正在获取商品 [9/12]: SNEAKER TRACK
+2025-05-14 18:31:16,991 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/329455
+2025-05-14 18:31:24,572 - utils.page_setting - INFO - [giglio] - 商品名称: MESH AND NYLON TRACK SNEAKER
+2025-05-14 18:31:24,580 - utils.page_setting - INFO - [giglio] - 找到 1 个尺码元素
+2025-05-14 18:31:24,580 - utils.page_setting - INFO - [giglio] - 商品 'MESH AND NYLON TRACK SNEAKER' 共有 1 种尺码
+2025-05-14 18:31:24,581 - utils.page_setting - INFO - [giglio] - 尺码: 41, 库存状态: available
+2025-05-14 18:31:24,583 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER TRACK' 的库存信息，共 1 种尺码
+2025-05-14 18:31:24,583 - utils.page_setting - INFO - [giglio] - 正在获取商品 [10/12]: PHANTOM SNEAKER
+2025-05-14 18:31:26,496 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244576
+2025-05-14 18:31:31,802 - utils.page_setting - INFO - [giglio] - 商品名称: PHANTOM MESH SNEAKER
+2025-05-14 18:31:31,810 - utils.page_setting - INFO - [giglio] - 找到 1 个尺码元素
+2025-05-14 18:31:31,811 - utils.page_setting - INFO - [giglio] - 商品 'PHANTOM MESH SNEAKER' 共有 1 种尺码
+2025-05-14 18:31:31,812 - utils.page_setting - INFO - [giglio] - 尺码: 45, 库存状态: available
+2025-05-14 18:31:31,813 - utils.page_setting - INFO - [giglio] - 成功获取商品 'PHANTOM SNEAKER' 的库存信息，共 1 种尺码
+2025-05-14 18:31:31,814 - utils.page_setting - INFO - [giglio] - 正在获取商品 [11/12]: SNEAKER RUNNER
+2025-05-14 18:31:33,603 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244474
+2025-05-14 18:31:41,487 - utils.page_setting - INFO - [giglio] - 商品名称: MESH AND NYLON RUNNER SNEAKER
+2025-05-14 18:31:41,497 - utils.page_setting - INFO - [giglio] - 找到 4 个尺码元素
+2025-05-14 18:31:41,498 - utils.page_setting - INFO - [giglio] - 商品 'MESH AND NYLON RUNNER SNEAKER' 共有 3 种尺码
+2025-05-14 18:31:41,499 - utils.page_setting - INFO - [giglio] - 尺码: 39, 库存状态: available
+2025-05-14 18:31:41,500 - utils.page_setting - INFO - [giglio] - 尺码: 40, 库存状态: available
+2025-05-14 18:31:41,500 - utils.page_setting - INFO - [giglio] - 尺码: 42, 库存状态: available
+2025-05-14 18:31:41,502 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER RUNNER' 的库存信息，共 3 种尺码
+2025-05-14 18:31:41,502 - utils.page_setting - INFO - [giglio] - 正在获取商品 [12/12]: SNEAKER TRACK HIKE
+2025-05-14 18:31:44,433 - utils.page_setting - INFO - [giglio] - 正在获取商品库存信息: https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/237063
+2025-05-14 18:31:53,004 - utils.page_setting - INFO - [giglio] - 商品名称: SNEAKER TRACK HIKE
+2025-05-14 18:31:53,013 - utils.page_setting - INFO - [giglio] - 找到 1 个尺码元素
+2025-05-14 18:31:53,014 - utils.page_setting - INFO - [giglio] - 商品 'SNEAKER TRACK HIKE' 共有 1 种尺码
+2025-05-14 18:31:53,014 - utils.page_setting - INFO - [giglio] - 尺码: 39, 库存状态: available
+2025-05-14 18:31:53,016 - utils.page_setting - INFO - [giglio] - 成功获取商品 'SNEAKER TRACK HIKE' 的库存信息，共 1 种尺码
+2025-05-14 18:31:53,017 - utils.page_setting - INFO - [giglio] - 库存信息获取完成，成功: 12/12
+2025-05-14 18:31:53,020 - utils.page_setting - INFO - [giglio] - eleonora_bonucci - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\inventory\balenciaga_inventory_20250514_183153.json
+2025-05-14 18:31:53,020 - utils.page_setting - INFO - [giglio] - 已保存12个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\inventory\balenciaga_inventory_20250514_183153.json
+2025-05-14 18:31:53,021 - utils.page_setting - INFO - [giglio] - 未检测到库存变化
+2025-05-14 18:31:53,023 - utils.page_setting - INFO - [giglio] - eleonora_bonucci - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\summary\inventory_summary_eleonora_bonucci_20250514_183153.txt
+2025-05-14 18:31:53,025 - utils.page_setting - INFO - [giglio] - eleonora_bonucci - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\eleonora_bonucci\json_summary\inventory_summary_20250514_183153.json
+2025-05-14 18:31:53,026 - utils.page_setting - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-14 18:31:53,027 - utils.page_setting - INFO - [giglio] - eleonora_bonucci - 监控任务完成，日志已保存

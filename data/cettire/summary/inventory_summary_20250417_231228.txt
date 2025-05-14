@@ -1,0 +1,485 @@
+******CettireMonitor - 库存监控********
+产品名称: Speed 2.0 Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-speed-20-lace-up-sneakers-945673002
+价格：
+存货情况：
+--（1）sold out：FR39；FR40；FR41；FR42；FR43；FR44；FR46
+--（2）only one left：FR45
+-------------------------------------------
+产品名称: 3XL Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-3xl-lace-up-sneakers-945627513
+价格：
+存货情况：
+--（1）only one left：IT39；IT40；IT41；IT42；IT44；IT46
+--（2）only two left：IT43；IT45
+-------------------------------------------
+产品名称: 3XL Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-3xl-lace-up-sneakers-943222557
+价格：
+存货情况：
+--（1）only left 4：FR40；FR41
+--（2）only one left：FR45
+--（3）only two left：FR39；FR42；FR43；FR44
+-------------------------------------------
+产品名称: Track Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-track-lace-up-sneakers-939185090
+价格：
+存货情况：
+--（1）sold out：FR39；FR41；FR42；FR43；FR44；FR45；FR46；FR47
+--（2）only one left：FR40
+-------------------------------------------
+产品名称: Track Signature Sneakers - https://www.cettire.com/it/products/balenciaga-track-signature-sneakers-943229487
+价格：
+存货情况：
+--（1）sold out：FR34；FR34.5；FR35.5；FR36；FR36.5；FR37；FR37.5；FR38；FR38.5；FR39；FR39.5；FR40；FR40.5；FR41；FR41.5；FR42
+--（2）only one left：FR35
+-------------------------------------------
+产品名称: X Crocs Logo Embossed Sandals - https://www.cettire.com/it/products/balenciaga-x-crocs-logo-embossed-sandals-940366308
+价格：
+存货情况：
+--（1）sold out：FR45
+--（2）only left 3：FR42；FR43
+--（3）only one left：FR40；FR41
+--（4）only two left：FR39；FR44
+-------------------------------------------
+产品名称: 3XL Knitted Sock Sneakers - https://www.cettire.com/it/products/balenciaga-3xl-knitted-sock-sneakers-933480589
+价格：
+存货情况：
+--（1）sold out：FR39；FR45；FR46
+--（2）only one left：FR41；FR42；FR43；FR44
+--（3）only two left：FR40
+-------------------------------------------
+产品名称: Stapler Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-stapler-lace-up-sneakers-944668822
+价格：
+存货情况：
+--（1）sold out：FR38；FR38.5；FR39.5；FR40.5；FR41.5；FR42.5；FR43.5；FR44.5；FR45.5；FR46.5；FR47
+--（2）only one left：FR39；FR40；FR41；FR44；FR46
+--（3）only two left：FR42；FR43；FR45
+-------------------------------------------
+产品名称: 3XL Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-3xl-lace-up-sneakers-935673280
+价格：
+存货情况：
+--（1）sold out：FR39；FR40；FR41；FR42；FR43；FR46
+--（2）only one left：FR44；FR45
+-------------------------------------------
+产品名称: Sport 3XL Slip-On Sneakers - https://www.cettire.com/it/products/balenciaga-3xl-slip-on-sneakers-943205411
+价格：
+存货情况：
+--（1）sold out：FR46
+--（2）only left 3：FR44
+--（3）only left 4：FR45
+--（4）only left 6：FR40；FR42；FR43
+--（5）only left 7：FR41
+--（6）only two left：FR39
+-------------------------------------------
+产品名称: Cagole Ankle Boots - https://www.cettire.com/it/products/balenciaga-cagole-ankle-boots-944220631
+价格：
+存货情况：
+--（1）sold out：FR42；FR43；FR44
+--（2）only one left：FR40
+-------------------------------------------
+产品名称: Speed Sock Sneakers - https://www.cettire.com/it/products/balenciaga-speed-sock-sneakers-90609779
+价格：
+存货情况：
+--（1）sold out：FR38；FR38.5；FR39；FR39.5；FR40.5；FR41；FR41.5；FR42；FR42.5；FR43；FR43.5；FR44；FR44.5；FR45；FR45.5；FR46；FR46.5；FR47；FR48
+--（2）only one left：FR40
+-------------------------------------------
+产品名称: Runner 2 Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-runner-2-lace-up-sneakers-943911050
+价格：
+存货情况：
+--（1）sold out：FR38；FR38.5；FR39.5；FR40.5；FR41.5；FR42.5；FR43.5；FR44.5；FR45；FR45.5；FR46；FR46.5；FR47
+--（2）only left 3：FR40
+--（3）only one left：FR39；FR41；FR42；FR43；FR44
+-------------------------------------------
+产品名称: Triple S Sneakers - https://www.cettire.com/it/products/balenciaga-triple-s-sneakers-943330568
+价格：
+存货情况：
+--（1）sold out：FR39；FR42；FR43；FR45；FR46
+--（2）only one left：FR40；FR41；FR44
+-------------------------------------------
+产品名称: Circuit Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-circuit-lace-up-sneakers-943746935
+价格：
+存货情况：
+--（1）sold out：FR38
+--（2）only left 3：FR45
+--（3）only left 4：FR42；FR43
+--（4）only one left：FR41；FR44；FR46
+--（5）only two left：FR39；FR40
+-------------------------------------------
+产品名称: Stapler Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-stapler-sneakers-943746926
+价格：
+存货情况：
+--（1）sold out：FR39；FR41；FR42；FR43；FR44
+--（2）only one left：FR40
+-------------------------------------------
+产品名称: Circuit Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-circuit-lace-up-sneakers-943762091
+价格：
+存货情况：
+--（1）sold out：FR42
+--（2）only left 3：FR37；FR39
+--（3）only one left：FR35；FR36；FR38；FR41
+--（4）only two left：FR40
+-------------------------------------------
+产品名称: Mesh Panelled Lace-Up Sneakers - https://www.cettire.com/it/products/runner-sneakers-balenciaga-synthetic-beige-943762012
+价格：
+存货情况：
+--（1）sold out：EU36；EU37；EU38；EU39；EU40；EU41；EU42
+--（2）only one left：EU35
+-------------------------------------------
+产品名称: 3XL Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-3xl-low-top-sneakers-937213148
+价格：
+存货情况：
+--（1）sold out：FR38；FR38.5；FR39；FR39.5；FR40；FR40.5；FR41；FR41.5；FR42.5；FR43.5；FR44；FR44.5；FR45；FR45.5；FR46；FR46.5；FR47；FR48；FR49
+--（2）only two left：FR42；FR43
+-------------------------------------------
+产品名称: Triple S Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-triple-s-sneakers-943583697
+价格：
+存货情况：
+--（1）sold out：FR44；FR46
+--（2）only left 3：FR40；FR45
+--（3）only left 4：FR41
+--（4）only one left：FR39；FR42；FR43
+-------------------------------------------
+产品名称: 3 XL Slip-On Sneakers - https://www.cettire.com/it/products/balenciaga-3-xl-slip-on-sneakers-943355749
+价格：
+存货情况：
+--（1）sold out：EU41；EU42
+--（2）only left 3：EU37
+--（3）only one left：EU34；EU35；EU36；EU38；EU39；EU40
+-------------------------------------------
+产品名称: Sport 3XL Slip-On Sneakers - https://www.cettire.com/it/products/balenciaga-sport-3xl-slip-on-sneakers-943330577
+价格：
+存货情况：
+--（1）sold out：FR46
+--（2）only left 4：FR40；FR43
+--（3）only left 5：FR41；FR44
+--（4）only left 6：FR42
+--（5）only one left：FR39
+--（6）only two left：FR45
+-------------------------------------------
+产品名称: Phantom Logo Printed Sneakers - https://www.cettire.com/it/products/balenciaga-phantom-logo-printed-sneakers-915548488
+价格：
+存货情况：
+--（1）sold out：FR39；FR40；FR42；FR43；FR44；FR45；FR46；FR47
+--（2）only one left：FR41
+-------------------------------------------
+产品名称: Runner Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-943221918
+价格：
+存货情况：
+--（1）sold out：FR39；FR40；FR42；FR43；FR44；FR45；FR46
+--（2）only left 4：FR41
+-------------------------------------------
+产品名称: Runner Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-runner-laced-sneakers-942096816
+价格：
+存货情况：
+--（1）sold out：IT42；IT43；IT44；IT45；IT46
+--（2）only left 3：IT41
+--（3）only one left：IT39
+--（4）only two left：IT40
+-------------------------------------------
+产品名称: Runner Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-943205753
+价格：
+存货情况：
+--（1）sold out：FR42；FR43；FR44
+--（2）only one left：FR40；FR41
+-------------------------------------------
+产品名称: Runner Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-942460259
+价格：
+存货情况：
+--（1）sold out：FR35；FR41；FR42
+--（2）only left 3：FR36
+--（3）only left 4：FR37
+--（4）only one left：FR38
+--（5）only two left：FR39；FR40
+-------------------------------------------
+产品名称: Logo Detailed Slip-On Sandals - https://www.cettire.com/it/products/balenciaga-logo-detailed-slip-on-sandals-939828754
+价格：
+存货情况：
+--（1）sold out：FR41；FR42；FR43；FR44；FR45；FR46
+--（2）only one left：FR39；FR40
+-------------------------------------------
+产品名称: Speed Sneakers - https://www.cettire.com/it/products/balenciaga-speed-sneakers-98459393
+价格：
+存货情况：
+--（1）sold out：FR36；FR36.5；FR37；FR37.5；FR38；FR38.5；FR39.5；FR40.5；FR41.5；FR42.5；FR43.5；FR44.5；FR45；FR45.5；FR46；FR46.5；FR47；FR48
+--（2）only left 10：FR43
+--（3）only left 3：FR44
+--（4）only left 8：FR41
+--（5）only left 9：FR42
+--（6）only one left：FR40
+--（7）only two left：FR39
+-------------------------------------------
+产品名称: Graffiti Runner Sneakers - https://www.cettire.com/it/products/balenciaga-graffiti-runner-sneakers-932994478
+价格：
+存货情况：
+--（1）sold out：FR41；FR42；FR43；FR44；FR46
+--（2）only one left：FR40；FR45
+-------------------------------------------
+产品名称: Steroid Derby Shoes - https://www.cettire.com/it/products/balenciaga-steroid-derby-shoes-933478917
+价格：
+存货情况：
+--（1）sold out：FR42；FR43；FR44
+--（2）only one left：FR39；FR40；FR41
+-------------------------------------------
+产品名称: Circuit Low-Top Sneakers - https://www.cettire.com/it/products/balenciaga-circuit-low-top-sneakers-941596582
+价格：
+存货情况：
+--（1）only left 3：FR41
+--（2）only left 5：FR40
+--（3）only left 6：FR39
+--（4）only one left：FR36；FR42
+--（5）only two left：FR35；FR37；FR38
+-------------------------------------------
+产品名称: Track.2 Sneakers - https://www.cettire.com/it/products/balenciaga-track2-sneakers-90517766
+价格：
+存货情况：
+--（1）sold out：FR42；FR43；FR44；FR45；FR46
+--（2）only one left：FR39；FR40；FR41
+-------------------------------------------
+产品名称: Logo Printed Slip-On Slides - https://www.cettire.com/it/products/balenciaga-logo-printed-slides-921728651
+价格：
+存货情况：
+--（1）sold out：FR39；FR43；FR44
+--（2）only one left：FR40；FR41；FR42
+-------------------------------------------
+产品名称: Logo Embossed Slides - https://www.cettire.com/it/products/balenciaga-logo-embossed-slides-926610747
+价格：
+存货情况：
+--（1）sold out：IT39；IT40
+--（2）only one left：IT41；IT42；IT43；IT44
+-------------------------------------------
+产品名称: Sunday Buckled Mules - https://www.cettire.com/it/products/balenciaga-sunday-buckled-mules-933324020
+价格：
+存货情况：
+--（1）sold out：FR38；FR38.5；FR39.5；FR40；FR40.5；FR41；FR41.5；FR42；FR42.5；FR43；FR43.5；FR44；FR44.5；FR45；FR45.5；FR46；FR47；FR48；FR49
+--（2）only one left：FR39
+-------------------------------------------
+产品名称: X Crocs™ Logo Embossed Sandals - https://www.cettire.com/it/products/balenciaga-x-crocs-logo-embossed-sandals-940695359
+价格：
+存货情况：
+--（1）sold out：FR40；FR44；FR45
+--（2）only left 3：FR41
+--（3）only one left：FR39；FR43
+--（4）only two left：FR42
+-------------------------------------------
+产品名称: Triple S Sneakers - https://www.cettire.com/it/products/balenciaga-triple-s-sneakers-92673889
+价格：
+存货情况：
+--（1）sold out：FR38；FR38.5；FR39.5；FR40.5；FR41；FR41.5；FR42；FR42.5；FR43；FR43.5；FR44；FR44.5；FR45；FR45.5；FR46；FR46.5；FR47；FR47.5；FR48；FR48.5；FR49
+--（2）only one left：FR39；FR40
+-------------------------------------------
+产品名称: Speed Sneakers - https://www.cettire.com/it/products/balenciaga-speed-sneakers-94989946
+价格：
+存货情况：
+--（1）sold out：FR38；FR38.5；FR39；FR39.5；FR40.5；FR41.5；FR42；FR42.5；FR43；FR43.5；FR44；FR44.5；FR45；FR45.5；FR46；FR46.5；FR47；FR47.5；FR48；FR48.5；FR49
+--（2）only one left：FR40；FR41
+-------------------------------------------
+产品名称: Speed 2.0 Sneakers - https://www.cettire.com/it/products/balenciaga-speed-20-sneakers-940220446
+价格：
+存货情况：
+--（1）sold out：FR40；FR41；FR42；FR43；FR44；FR46
+--（2）only one left：FR39；FR45
+-------------------------------------------
+产品名称: Runner Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-938480160
+价格：
+存货情况：
+--（1）sold out：FR38；FR39；FR42；FR43；FR44；FR45；FR46；FR47
+--（2）only one left：FR40；FR41
+-------------------------------------------
+产品名称: Runner Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-940062085
+价格：
+存货情况：
+--（1）sold out：IT38；IT42；IT43；IT44；IT45；IT46
+--（2）only one left：IT39；IT41
+--（3）only two left：IT40
+-------------------------------------------
+产品名称: Track Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-track-sneakers-939631169
+价格：
+存货情况：
+--（1）sold out：FR39；FR43；FR44；FR45；FR46
+--（2）only one left：FR40；FR42
+--（3）only two left：FR41
+-------------------------------------------
+产品名称: Runner 2 Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-runner-2-laced-sneakers-939203915
+价格：
+存货情况：
+--（1）sold out：FR38；FR46
+--（2）only left 3：FR41
+--（3）only one left：FR39；FR40；FR42；FR44；FR45
+--（4）only two left：FR43
+-------------------------------------------
+产品名称: Track.2 Sneakers - https://www.cettire.com/it/products/balenciaga-track2-sneakers-919473398
+价格：
+存货情况：
+--（1）sold out：FR39；FR40；FR42；FR43；FR44；FR45
+--（2）only one left：FR41
+-------------------------------------------
+产品名称: Double Buckled Slippers - https://www.cettire.com/it/products/balenciaga-double-buckled-slippers-937213075
+价格：
+存货情况：
+--（1）sold out：FR38；FR38.5；FR39；FR39.5；FR40.5；FR41.5；FR42.5；FR43.5；FR44.5；FR45；FR45.5；FR46；FR47；FR48；FR49
+--（2）only left 3：FR41
+--（3）only one left：FR40；FR43；FR44
+--（4）only two left：FR42
+-------------------------------------------
+产品名称: 3 XL Low-Top Sneakers - https://www.cettire.com/it/products/balenciaga-3-xl-low-top-sneakers-930852118
+价格：
+存货情况：
+--（1）sold out：FR40；FR41；FR42；FR47
+--（2）only left 3：FR44
+--（3）only left 5：FR45
+--（4）only one left：FR39；FR43
+--（5）only two left：FR46
+-------------------------------------------
+产品名称: Runner Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-934587763
+价格：
+存货情况：
+--（1）sold out：FR39；FR41；FR42；FR43；FR44；FR45；FR46；FR47
+--（2）only one left：FR40
+-------------------------------------------
+产品名称: Steroid Combat Boots - https://www.cettire.com/it/products/balenciaga-steroid-combat-boots-933511979
+价格：
+存货情况：
+--（1）sold out：FR45
+--（2）only left 3：FR39；FR41；FR42
+--（3）only left 4：FR40
+--（4）only one left：FR43；FR44
+-------------------------------------------
+产品名称: Men's Sunday Mules - https://www.cettire.com/it/products/balenciaga-mens-sunday-mules-933196512
+价格：
+存货情况：
+--（1）sold out：FR38；FR38.5；FR39.5；FR40.5；FR41.5；FR42；FR42.5；FR43；FR43.5；FR44；FR44.5；FR45；FR45.5；FR46；FR47；FR48；FR49
+--（2）only one left：FR39；FR40；FR41
+-------------------------------------------
+产品名称: Runner Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-931637964
+价格：
+存货情况：
+--（1）sold out：FR39；FR42
+--（2）only left 3：FR43
+--（3）only left 4：FR44
+--（4）only left 5：FR45
+--（5）only one left：FR40；FR41；FR46；FR47；FR48
+-------------------------------------------
+产品名称: Runner Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-931597437
+价格：
+存货情况：
+--（1）sold out：FR36；FR36.5；FR37；FR37.5；FR38；FR38.5；FR39.5；FR40；FR40.5；FR41；FR41.5；FR42；FR42.5；FR43；FR43.5；FR44；FR44.5；FR45；FR45.5；FR46；FR46.5；FR47
+--（2）only one left：FR39
+-------------------------------------------
+产品名称: 3XL Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-3xl-lace-up-sneakers-924959259
+价格：
+存货情况：
+--（1）sold out：FR36；FR37；FR38；FR38.5；FR39.5；FR40.5；FR41.5；FR42.5；FR43.5；FR44.5；FR45.5；FR46.5；FR47；FR47.5；FR48；FR48.5；FR49
+--（2）only left 3：FR41；FR45
+--（3）only left 4：FR42；FR43
+--（4）only left 6：FR44
+--（5）only one left：FR39；FR40
+--（6）only two left：FR46
+-------------------------------------------
+产品名称: 3xl Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-3xl-lace-up-sneakers-924959257
+价格：
+存货情况：
+--（1）sold out：FR39；FR40；FR41；FR42；FR43；FR44；FR45；FR47
+--（2）only one left：FR46
+-------------------------------------------
+产品名称: Runner Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-925331953
+价格：
+存货情况：
+--（1）sold out：IT36；IT36.5；IT37；IT37.5；IT38；IT38.5；IT39；IT39.5；IT40.5；IT41；IT41.5；IT42；IT42.5；IT43；IT43.5；IT44；IT44.5；IT45；IT45.5；IT46；IT46.5；IT47
+--（2）only two left：IT40
+-------------------------------------------
+产品名称: Triple S Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-triple-s-lace-up-sneakers-925331665
+价格：
+存货情况：
+--（1）sold out：IT36；IT36.5；IT37；IT37.5；IT38；IT38.5；IT39；IT39.5；IT40；IT40.5；IT41；IT41.5；IT42；IT42.5；IT43；IT43.5；IT44.5；IT45.5；IT46；IT46.5；IT47
+--（2）only one left：IT45
+--（3）only two left：IT44
+-------------------------------------------
+产品名称: Cosy BB-Monogram Slippers - https://www.cettire.com/it/products/balenciaga-cosy-bb-slippers-924987635
+价格：
+存货情况：
+--（1）sold out：FR38；FR38.5；FR39；FR39.5；FR40.5；FR41；FR41.5；FR42；FR42.5；FR43；FR43.5；FR44；FR44.5；FR45；FR45.5；FR46；FR47；FR48；FR49
+--（2）only one left：FR40
+-------------------------------------------
+产品名称: Cagole Slip-On Slides - https://www.cettire.com/it/products/balenciaga-cagole-slides-921728606
+价格：
+存货情况：
+--（1）sold out：FR36；FR36.5；FR37；FR37.5；FR38；FR38.5；FR39；FR39.5；FR40.5；FR41.5；FR42；FR42.5；FR43；FR43.5；FR44；FR44.5；FR45；FR45.5；FR46；FR46.5；FR47
+--（2）only one left：FR40；FR41
+-------------------------------------------
+产品名称: Speed 2.0 Sole-Printed Sock Sneakers - https://www.cettire.com/it/products/balenciaga-speed-20-sole-printed-sock-sneakers-919006413
+价格：
+存货情况：
+--（1）sold out：FR34；FR38；FR38.5；FR39.5；FR40.5；FR41.5；FR42；FR42.5；FR43.5；FR44；FR44.5；FR45.5；FR46.5；FR47；FR48
+--（2）only left 3：FR39
+--（3）only left 4：FR45
+--（4）only one left：FR40；FR41
+--（5）only two left：FR43；FR46
+-------------------------------------------
+产品名称: Triple S Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-triple-s-sneakers-918454112
+价格：
+存货情况：
+--（1）sold out：FR35；FR41；FR42；FR43；FR44；FR45；FR46；FR47
+--（2）only one left：FR39；FR40
+-------------------------------------------
+产品名称: Logo Printed Pool Slides - https://www.cettire.com/it/products/balenciaga-logo-pool-slide-sandals-90498875
+价格：
+存货情况：
+--（1）sold out：FR38.5；FR39；FR39.5；FR40.5；FR41.5；FR42；FR42.5；FR43.5；FR44.5；FR45；FR45.5；FR46；FR46.5；FR47；FR48；FR49
+--（2）only left 3：FR40；FR41
+--（3）only one left：FR38；FR43；FR44
+-------------------------------------------
+产品名称: Track.2 Sneakers - https://www.cettire.com/it/products/balenciaga-track2-sneakers-918076778
+价格：
+存货情况：
+--（1）sold out：FR39；FR39.5；FR40.5；FR41.5；FR42；FR42.5；FR43.5；FR44；FR44.5；FR45；FR45.5；FR46；FR46.5；FR47；FR47.5；FR48；FR48.5；FR49
+--（2）only one left：FR40；FR41；FR43
+-------------------------------------------
+产品名称: Defender Worn-Out Effect Sneakers - https://www.cettire.com/it/products/balenciaga-defender-worn-out-effect-sneaker-917040293
+价格：
+存货情况：
+--（1）sold out：FR34；FR34.5；FR35；FR35.5；FR36；FR36.5；FR37；FR37.5；FR38；FR38.5；FR39.5；FR40；FR40.5；FR41；FR41.5；FR42；FR42.5；FR43；FR43.5；FR44；FR44.5；FR45；FR45.5；FR46；FR46.5；FR47；FR47.5；FR48；FR49
+--（2）only one left：FR39
+-------------------------------------------
+产品名称: Trooper Ankle Boots - https://www.cettire.com/it/products/balenciaga-square-toe-ankle-boots-911873020
+价格：
+存货情况：
+--（1）sold out：FR38；FR38.5；FR38/2；FR39.5；FR39/2；FR40；FR40.5；FR40/2；FR41；FR41.5；FR41/2；FR42；FR42.5；FR42/2；FR43；FR43.5；FR43/2；FR44；FR44.5；FR44/2；FR45；FR45.5；FR45/2；FR46；FR46.5；FR47；FR47.5；FR48；FR48.5；FR49
+--（2）only two left：FR39
+-------------------------------------------
+产品名称: Track Faded Sneakers - https://www.cettire.com/it/products/balenciaga-track-faded-sneakers-910551125
+价格：
+存货情况：
+--（1）sold out：FR39；FR41；FR42；FR43；FR44；FR45
+--（2）only one left：FR40
+-------------------------------------------
+产品名称: Logo Printed Pool Slides - https://www.cettire.com/it/products/balenciaga-logo-printed-pool-slides-95433599
+价格：
+存货情况：
+--（1）sold out：FR39；FR40；FR42；FR43；FR44；FR45；FR46；FR47
+--（2）only left 3：FR41
+-------------------------------------------
+产品名称: Logo Detailed Pool Slides - https://www.cettire.com/it/products/balenciaga-logo-sandals-92849461
+价格：
+存货情况：
+--（1）sold out：FR39.5；FR40.5；FR41；FR41.5；FR42；FR42.5；FR43；FR43.5；FR44；FR44.5；FR45；FR45.5；FR46；FR46.5；FR47；FR47.5；FR48；FR48.5；FR49
+--（2）only one left：FR39
+--（3）only two left：FR40
+-------------------------------------------
+产品名称: Track Sneakers - https://www.cettire.com/it/products/balenciaga-track-sneakers-93238867
+价格：
+存货情况：
+--（1）sold out：FR38；FR38.5；FR39.5；FR40.5；FR41；FR41.5；FR42；FR42.5；FR43；FR43.5；FR44.5；FR45；FR45.5；FR46；FR46.5；FR47；FR47.5；FR48；FR48.5
+--（2）only one left：FR39；FR40；FR44
+-------------------------------------------
+产品名称: Speed 2.0 Sneakers - https://www.cettire.com/it/products/balenciaga-speed-20-sneakers-96171661
+价格：
+存货情况：
+--（1）sold out：FR36；FR36.5；FR37；FR37.5；FR38；FR38.5；FR39；FR39.5；FR40.5；FR41；FR41.5；FR42；FR42.5；FR43；FR43.5；FR44；FR44.5；FR45；FR45.5；FR46；FR46.5；FR48
+--（2）only left 5：FR47
+--（3）only one left：FR40
+-------------------------------------------
+产品名称: Speed Sock Sneakers - https://www.cettire.com/it/products/balenciaga-speed-lt-sneakers-96093625
+价格：
+存货情况：
+--（1）sold out：FR35；FR35.5；FR36；FR36.5；FR37；FR37.5；FR38；FR38.5；FR39.5；FR40.5；FR41.5；FR42.5；FR43；FR43.5；FR44.5；FR44/45；FR45.5；FR46；FR46.5；FR47；FR47.5；FR48；FR49
+--（2）only left 13：FR45
+--（3）only one left：FR41；FR44
+--（4）only two left：FR39；FR40；FR42
+-------------------------------------------

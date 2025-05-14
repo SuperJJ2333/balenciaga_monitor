@@ -1,0 +1,92 @@
+2025-05-13 17:11:42,257 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\mytheresa\mytheresa_20250513_171142.log
+2025-05-13 17:11:42,257 - utils.page_setting - INFO - 未找到历史库存数据目录: E:\pythonProject\outsource\balenciaga_monitor\data\mytheresa\inventory
+2025-05-13 17:11:42,258 - utils.page_setting - INFO - mytheresa - 库存监控已初始化
+2025-05-13 17:11:42,260 - utils.page_setting - INFO - 开始监控 https://api.mytheresa.com/api
+2025-05-13 17:11:42,261 - utils.page_setting - INFO - 正在获取商品目录: https://api.mytheresa.com/api
+2025-05-13 17:11:48,389 - utils.page_setting - INFO - 找到 78 个商品元素
+2025-05-13 17:11:48,392 - utils.page_setting - DEBUG - 开始解析商品目录数据
+2025-05-13 17:12:06,406 - utils.page_setting - DEBUG - 找到商品: Sunday leather clogs, URL: https://www.mytheresa.com/mo/en/men/balenciaga-sunday-leather-clogs-black-p00889954
+2025-05-13 17:12:07,372 - utils.page_setting - DEBUG - 找到商品: 6XL mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-6xl-mesh-sneakers-multicoloured-p01057371
+2025-05-13 17:12:09,471 - utils.page_setting - DEBUG - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-black-p01032584
+2025-05-13 17:12:09,471 - utils.page_setting - DEBUG - 找到商品: Track Trail Laces sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-trail-laces-sneakers-orange-p01032586
+2025-05-13 17:12:09,471 - utils.page_setting - DEBUG - 找到商品: Monday 3B Sports Icon leather sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-monday-3b-sports-icon-leather-sneakers-black-p01040998
+2025-05-13 17:12:09,472 - utils.page_setting - DEBUG - 找到商品: Circuit sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-circuit-sneakers-yellow-p01010155
+2025-05-13 17:12:09,473 - utils.page_setting - DEBUG - 找到商品: 3XL chain-detail mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-chain-detail-mesh-sneakers-grey-p01032583
+2025-05-13 17:12:09,473 - utils.page_setting - DEBUG - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-white-p00806790
+2025-05-13 17:12:09,473 - utils.page_setting - DEBUG - 找到商品: Sunday suede mules, URL: https://www.mytheresa.com/mo/en/men/balenciaga-sunday-suede-mules-brown-p00888846
+2025-05-13 17:12:09,474 - utils.page_setting - DEBUG - 找到商品: x Crocs Jibbitz clogs, URL: https://www.mytheresa.com/mo/en/men/balenciaga-x-crocs-jibbitz-clogs-black-p01010123
+2025-05-13 17:12:09,474 - utils.page_setting - DEBUG - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-multicoloured-p00888849
+2025-05-13 17:12:09,474 - utils.page_setting - DEBUG - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-multicoloured-p00963454
+2025-05-13 17:12:09,475 - utils.page_setting - DEBUG - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-multicoloured-p00970247
+2025-05-13 17:12:09,475 - utils.page_setting - DEBUG - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-grey-p00981020
+2025-05-13 17:12:09,475 - utils.page_setting - DEBUG - 找到商品: 10XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-10xl-sneakers-grey-p00948315
+2025-05-13 17:12:09,476 - utils.page_setting - DEBUG - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-distressed-sneakers-black-p00798279
+2025-05-13 17:12:09,476 - utils.page_setting - DEBUG - 找到商品: 3XL Extreme Graffiti sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-extreme-graffiti-sneakers-multicoloured-p00948306
+2025-05-13 17:12:09,476 - utils.page_setting - DEBUG - 找到商品: Bouncer sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-bouncer-sneakers-black-p00798287
+2025-05-13 17:12:09,477 - utils.page_setting - DEBUG - 找到商品: Pool logo rubber slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-pool-logo-rubber-slides-black-p00444559
+2025-05-13 17:12:09,477 - utils.page_setting - DEBUG - 找到商品: Monday leather sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-monday-3b-sports-icon-leather-sneakers-white-p01032582
+2025-05-13 17:12:09,478 - utils.page_setting - DEBUG - 找到商品: Circuit sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-circuit-sneakers-black-p01010156
+2025-05-13 17:12:09,478 - utils.page_setting - DEBUG - 找到商品: Opera leather Derby shoes, URL: https://www.mytheresa.com/mo/en/men/balenciaga-opera-leather-derby-shoes-black-p01010138
+2025-05-13 17:12:09,479 - utils.page_setting - DEBUG - 找到商品: Triple S Sporty leather sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sporty-leather-sneakers-black-p01010143
+2025-05-13 17:12:09,479 - utils.page_setting - DEBUG - 找到商品: 3X mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3x-mesh-sneakers-black-p00971229
+2025-05-13 17:12:09,479 - utils.page_setting - DEBUG - 找到商品: Stapler sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-stapler-sneakers-beige-p00971230
+2025-05-13 17:12:09,480 - utils.page_setting - DEBUG - 找到商品: Strike leather boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-strike-leather-boots-black-p00971231
+2025-05-13 17:12:09,480 - utils.page_setting - DEBUG - 找到商品: Alaska Fur High suede boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-alaska-fur-high-suede-boots-black-p00955186
+2025-05-13 17:12:09,480 - utils.page_setting - DEBUG - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-white-p00963452
+2025-05-13 17:12:09,480 - utils.page_setting - DEBUG - 找到商品: 10XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-10xl-sneakers-white-p00948313
+2025-05-13 17:12:09,480 - utils.page_setting - DEBUG - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-green-p00906279
+2025-05-13 17:12:09,481 - utils.page_setting - DEBUG - 找到商品: Sunday Molded mules, URL: https://www.mytheresa.com/mo/en/men/balenciaga-sunday-molded-mules-black-p00906276
+2025-05-13 17:12:09,481 - utils.page_setting - DEBUG - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-white-p00937108
+2025-05-13 17:12:09,481 - utils.page_setting - DEBUG - 找到商品: Runner Graffiti printed sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-graffiti-printed-sneakers-black-p00937106
+2025-05-13 17:12:09,481 - utils.page_setting - DEBUG - 找到商品: Runner Graffiti distressed sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-graffiti-distressed-sneakers-white-p00937107
+2025-05-13 17:12:09,481 - utils.page_setting - DEBUG - 找到商品: Triple S Mold sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-mold-sneakers-black-p00856457
+2025-05-13 17:12:09,482 - utils.page_setting - DEBUG - 找到商品: Cargo mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-cargo-mesh-sneakers-beige-p00906283
+2025-05-13 17:12:09,482 - utils.page_setting - DEBUG - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-white-p00906281
+2025-05-13 17:12:09,482 - utils.page_setting - DEBUG - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-black-p00900180
+2025-05-13 17:12:09,482 - utils.page_setting - DEBUG - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-worn-out-mesh-sneakers-multicoloured-p00926232
+2025-05-13 17:12:09,482 - utils.page_setting - DEBUG - 找到商品: Biker embossed leather knee-high boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-biker-embossed-leather-knee-high-boots-black-p00859154
+2025-05-13 17:12:09,483 - utils.page_setting - DEBUG - 找到商品: Romeo leather slippers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-romeo-leather-slippers-black-p00888848
+2025-05-13 17:12:09,483 - utils.page_setting - DEBUG - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-multicoloured-p00850977
+2025-05-13 17:12:09,483 - utils.page_setting - DEBUG - 找到商品: 3XL ski sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-ski-sneakers-black-p00896702
+2025-05-13 17:12:09,483 - utils.page_setting - DEBUG - 找到商品: Alaska Low snow boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-alaska-low-snow-boots-black-p00896713
+2025-05-13 17:12:09,483 - utils.page_setting - DEBUG - 找到商品: Runner sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-runner-sneakers-multicoloured-p00899058
+2025-05-13 17:12:09,484 - utils.page_setting - DEBUG - 找到商品: Bulldozer leather lace-up boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-bulldozer-leather-lace-up-boots-black-p00850827
+2025-05-13 17:12:09,484 - utils.page_setting - DEBUG - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-black-p00850983
+2025-05-13 17:12:09,484 - utils.page_setting - DEBUG - 找到商品: Steroid Derby shoes, URL: https://www.mytheresa.com/mo/en/men/balenciaga-steroid-derby-shoes-black-p00871950
+2025-05-13 17:12:09,484 - utils.page_setting - DEBUG - 找到商品: 3XL sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-sneakers-white-p00868281
+2025-05-13 17:12:09,484 - utils.page_setting - DEBUG - 找到商品: 3XL mesh sneaker mules, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-mesh-sneaker-mules-black-p00856471
+2025-05-13 17:12:09,484 - utils.page_setting - DEBUG - 找到商品: x Crocs platform slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-x-crocs-platform-slides-black-p00824969
+2025-05-13 17:12:09,485 - utils.page_setting - DEBUG - 找到商品: 3XL mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-3xl-mesh-sneakers-red-p00807230
+2025-05-13 17:12:09,485 - utils.page_setting - DEBUG - 找到商品: Leopold satin flats, URL: https://www.mytheresa.com/mo/en/men/balenciaga-leopold-satin-flats-black-p00807241
+2025-05-13 17:12:09,485 - utils.page_setting - DEBUG - 找到商品: Steroid lace-up boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-steroid-lace-up-boots-blue-p00766853
+2025-05-13 17:12:09,485 - utils.page_setting - DEBUG - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-black-p00766848
+2025-05-13 17:12:09,485 - utils.page_setting - DEBUG - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-white-p00747707
+2025-05-13 17:12:09,486 - utils.page_setting - DEBUG - 找到商品: Speed Lace-Up sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-lace-up-sneakers-black-p00741990
+2025-05-13 17:12:09,486 - utils.page_setting - DEBUG - 找到商品: Speed 2.0 Graffiti sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-2-0-graffiti-sneakers-black-p00741562
+2025-05-13 17:12:09,487 - utils.page_setting - DEBUG - 找到商品: Speed 2.0 lace-up sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-2-0-lace-up-sneakers-black-p00721775
+2025-05-13 17:12:09,488 - utils.page_setting - DEBUG - 找到商品: Speed 2.0 sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-2-0-sneakers-black-p00721772
+2025-05-13 17:12:09,488 - utils.page_setting - DEBUG - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-black-p00721768
+2025-05-13 17:12:09,488 - utils.page_setting - DEBUG - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-white-p00700928
+2025-05-13 17:12:09,489 - utils.page_setting - DEBUG - 找到商品: Cosy BB leather slippers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-cosy-bb-leather-slippers-black-p00655755
+2025-05-13 17:12:09,489 - utils.page_setting - DEBUG - 找到商品: Bouncer mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-defender-mesh-sneakers-black-p00655748
+2025-05-13 17:12:09,490 - utils.page_setting - DEBUG - 找到商品: Bouncer mesh sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-defender-sneakers-beige-p00655749
+2025-05-13 17:12:09,491 - utils.page_setting - DEBUG - 找到商品: Political Campaign Furry slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-political-campaign-furry-slides-beige-p00636445
+2025-05-13 17:12:09,491 - utils.page_setting - DEBUG - 找到商品: Crocs™ boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-crocstm-boots-black-p00635908
+2025-05-13 17:12:09,491 - utils.page_setting - DEBUG - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-green-p00585104
+2025-05-13 17:12:09,491 - utils.page_setting - DEBUG - 找到商品: Political Campaign Furry slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-political-campaign-furry-slides-grey-p00585082
+2025-05-13 17:12:09,492 - utils.page_setting - DEBUG - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-white-p00585100
+2025-05-13 17:12:09,492 - utils.page_setting - DEBUG - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-beige-p00569596
+2025-05-13 17:12:09,492 - utils.page_setting - DEBUG - 找到商品: Pool logo rubber slides, URL: https://www.mytheresa.com/mo/en/men/balenciaga-pool-logo-rubber-slides-beige-p00556511
+2025-05-13 17:12:09,492 - utils.page_setting - DEBUG - 找到商品: Track sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-track-sneakers-black-p00513601
+2025-05-13 17:12:09,492 - utils.page_setting - DEBUG - 找到商品: Triple S sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-triple-s-sneakers-black-p00486655
+2025-05-13 17:12:09,493 - utils.page_setting - DEBUG - 找到商品: Tractor leather boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-tractor-leather-boots-black-p00493719
+2025-05-13 17:12:09,493 - utils.page_setting - DEBUG - 找到商品: Speed sneakers, URL: https://www.mytheresa.com/mo/en/men/balenciaga-speed-sneakers-black-p00458883
+2025-05-13 17:12:09,493 - utils.page_setting - DEBUG - 找到商品: Combat Strike canvas lace-up boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-strike-canvas-combat-boots-black-p01008910
+2025-05-13 17:12:09,493 - utils.page_setting - DEBUG - 找到商品: Alaska High suede boots, URL: https://www.mytheresa.com/mo/en/men/balenciaga-alaska-high-suede-boots-white-p00955188
+2025-05-13 17:12:09,493 - utils.page_setting - INFO - 共解析到 78 个商品
+2025-05-13 17:12:11,539 - utils.page_setting - INFO - 监控开始，共获取到 78 个商品信息
+2025-05-13 17:12:11,555 - utils.page_setting - INFO - mytheresa - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\mytheresa\inventory\balenciaga_inventory_20250513_171211.json
+2025-05-13 17:12:11,556 - utils.page_setting - INFO - 已保存78个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\mytheresa\inventory\balenciaga_inventory_20250513_171211.json
+2025-05-13 17:12:11,556 - utils.page_setting - INFO - 没有历史库存数据，无法检测变化
+2025-05-13 17:12:11,556 - utils.page_setting - INFO - 监控结束，关闭浏览器
+2025-05-13 17:12:12,281 - utils.page_setting - INFO - mytheresa - 监控任务完成，日志已保存

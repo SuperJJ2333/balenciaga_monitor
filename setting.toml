@@ -1,0 +1,5 @@
+[ding_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=868adf19bfcfa6416bbdf81a1e01a05a654ab690538fa8c8536c0da9546efc41"
+
+[ding_secret]
+secret = "SEC97c09604aae37ad5cea269808315f2e96c5b0780376a1388cc78f5cf6b7b6b3b"

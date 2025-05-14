@@ -1,0 +1,51 @@
+******DuomoMonitor - 库存监控********
+产品名称: Balenciaga Pool Slide - https://backendocean.ilduomo.it/flats/63160-balenciaga1190-grey-white.html
+价格：¥2,357.61
+存货情况：
+-- (1) available​: 41; 42; 43; 44; 45
+-------------------------------------------
+产品名称: Balenciaga Runner - https://backendocean.ilduomo.it/sneakers/62867-balenciaga1474-grey-blue-orange.html
+价格：¥6,852.78
+存货情况：
+-- (1) available​: 42; 43; 44; 45
+-------------------------------------------
+产品名称: Balenciaga Pool Slide - https://backendocean.ilduomo.it/sandals/62761-balenciaga1090-black-white.html
+价格：¥2,357.61
+存货情况：
+-- (1) available​: 41; 42; 43; 44
+-------------------------------------------
+产品名称: Balenciaga Runner 2 Sneakers - https://backendocean.ilduomo.it/sneakers/62122-balenciaga9402-white-blue-mix.html
+价格：¥6,475.56
+存货情况：
+-- (1) available​: 41; 42; 43; 44; 45
+-------------------------------------------
+产品名称: Balenciaga 3xl Sneakers - https://backendocean.ilduomo.it/sneakers/61048-balenciaga9237-white-grey-green-yel.html
+价格：¥7,041.39
+存货情况：
+-- (1) available​: 41; 42; 43; 44; 45
+-------------------------------------------
+产品名称: Balenciaga Alaska Slipper - https://backendocean.ilduomo.it/flats/61049-balenciaga2200-brown-white.html
+价格：¥3,740.74
+存货情况：
+-- (1) available​: 41; 43
+-------------------------------------------
+产品名称: Balenciaga 6XL Sneakers - https://backendocean.ilduomo.it/sneakers/60494-balenciaga1937-gry-whit-gren-fl-yel.html
+价格：¥6,915.65
+存货情况：
+-- (1) available​: 43; 44
+-------------------------------------------
+产品名称: Balenciaga Track Gradient Sneakers - https://backendocean.ilduomo.it/sneakers/56311-balenciaga1220-grey-taupe.html
+价格：¥6,255.52
+存货情况：
+-- (1) available​: 43
+-------------------------------------------
+产品名称: Balenciaga Pool Slide Logo Shoes - https://backendocean.ilduomo.it/flats/51394-balenciaga1006-black-white.html
+价格：¥2,389.04
+存货情况：
+-- (1) available​: 41
+-------------------------------------------
+产品名称: Balenciaga Sunday Mule - https://backendocean.ilduomo.it/flats/57930-balenciaga2090-beige-off-white.html
+价格：¥3,168.62
+存货情况：
+-- (1) available​: 44
+-------------------------------------------

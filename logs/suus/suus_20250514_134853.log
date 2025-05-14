@@ -1,0 +1,20 @@
+2025-05-14 13:48:53,936 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\suus\suus_20250514_134853.log
+2025-05-14 13:48:53,937 - utils.page_setting - INFO - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\suus\inventory\balenciaga_inventory_20250512_181933.json
+2025-05-14 13:48:53,937 - utils.page_setting - INFO - suus - 库存监控已初始化
+2025-05-14 13:48:53,966 - utils.page_setting - ERROR - 初始化浏览器失败: 
+出现未知错误。
+详情: Error while parsing request of 'Browser.close'
+方法: Browser.close
+参数: {'_timeout': 30}
+提示: 出现这个错误可能意味着程序有bug，请把错误信息和重现方法告知作者，谢谢。
+报告网站: https://gitee.com/g1879/DrissionPage/issues
+版本: 4.1.0.18
+2025-05-14 13:48:53,966 - utils.page_setting - INFO - 尝试使用备选方式初始化浏览器...
+2025-05-14 13:48:53,999 - utils.page_setting - ERROR - 备选方式初始化浏览器也失败: 
+出现未知错误。
+详情: Cannot find default execution context
+方法: Runtime.evaluate
+参数: {'expression': 'document.readyState;', '_timeout': 3}
+提示: 出现这个错误可能意味着程序有bug，请把错误信息和重现方法告知作者，谢谢。
+报告网站: https://gitee.com/g1879/DrissionPage/issues
+版本: 4.1.0.18

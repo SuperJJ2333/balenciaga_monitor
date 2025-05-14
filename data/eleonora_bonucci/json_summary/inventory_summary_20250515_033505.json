@@ -1,0 +1,148 @@
+{
+  "monitor": "Eleonora_bonucciMonitor",
+  "timestamp": "2025-05-15T03:35:05.925670",
+  "total_products": 9,
+  "products": [
+    {
+      "name": "STAPLER SNEAKER",
+      "url": "https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358838",
+      "price": "€ 950.00",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "40",
+            "41",
+            "42",
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "STAPLER SNEAKER",
+      "url": "https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/359003",
+      "price": "€ 950.00",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "40",
+            "41",
+            "42",
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SNEAKER 3XL",
+      "url": "https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/356352",
+      "price": "€ 975.00",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "40",
+            "41",
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CIRCUIT SNEAKER",
+      "url": "https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352935",
+      "price": "€ 895.00",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SNEAKER 3XL",
+      "url": "https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/333111",
+      "price": "€ 975.00",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SNEAKER TRACK",
+      "url": "https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/329455",
+      "price": "€ 895.00",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PHANTOM SNEAKER",
+      "url": "https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244576",
+      "price": "€ 695.00",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SNEAKER RUNNER",
+      "url": "https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244474",
+      "price": "€ 950.00",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "39",
+            "40",
+            "42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SNEAKER TRACK HIKE",
+      "url": "https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/237063",
+      "price": "€ 1,150.00",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "39"
+          ]
+        }
+      ]
+    }
+  ]
+}

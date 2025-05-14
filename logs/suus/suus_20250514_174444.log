@@ -1,0 +1,187 @@
+2025-05-14 17:44:44,921 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\suus\suus_20250514_174444.log
+2025-05-14 17:44:44,923 - utils.page_setting - INFO - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\suus\inventory\balenciaga_inventory_20250512_181933.json
+2025-05-14 17:44:44,923 - utils.page_setting - INFO - suus - 库存监控已初始化
+2025-05-14 17:44:46,348 - utils.page_setting - INFO - suus - 浏览器页面已初始化
+2025-05-14 17:44:46,348 - utils.page_setting - INFO - 开始监控 https://www.suus.es/product-tag/guidi/
+2025-05-14 17:44:46,349 - utils.page_setting - INFO - 正在获取商品目录: https://www.suus.es/product-tag/guidi/
+2025-05-14 17:44:56,008 - utils.page_setting - INFO - 找到 28 个商品元素
+2025-05-14 17:44:56,008 - utils.page_setting - DEBUG - 开始解析商品目录数据
+2025-05-14 17:44:56,016 - utils.page_setting - DEBUG - 找到商品: GUIDI 5212BZV M HORSE FULL GRAIN BLACK, URL: https://www.suus.es/product/guidi-5212bzv-m-horse-full-grain-black/
+2025-05-14 17:44:56,018 - utils.page_setting - DEBUG - 找到商品: GUIDI 20MCALF TREKKING BOOT, URL: https://www.suus.es/product/guidi-20mcalf-trekking-boot/
+2025-05-14 17:44:56,020 - utils.page_setting - DEBUG - 找到商品: GUIDI PL2WZ HORSE OLD, URL: https://www.suus.es/product/guidi-pl2wz-horse-old/
+2025-05-14 17:44:56,021 - utils.page_setting - DEBUG - 找到商品: GUIDI ZO08V HORSE BLAKE UNKLE BOOT, URL: https://www.suus.es/product/guidi-zo08v-horse-blake-unkle-boot/
+2025-05-14 17:44:56,023 - utils.page_setting - DEBUG - 找到商品: GUIDI GR056V HORSE BACK ZIP  BIG DADDY BOOT, URL: https://www.suus.es/product/guidi-gr056v-horse-back-zip-big-daddy-boot/
+2025-05-14 17:44:56,025 - utils.page_setting - DEBUG - 找到商品: GUIDI GR05FVR_RU ZIPPED BIG DADDY BOOT, URL: https://www.suus.es/product/guidi-gr05fvr_ru-zipped-big-daddy-boot/
+2025-05-14 17:44:56,033 - utils.page_setting - DEBUG - 找到商品: GUIDI BOX06 SQUARE BUCKET BAG GROPPONE FULL GRAIN, URL: https://www.suus.es/product/guidi-box06-square-bucket-bag-groppone-full-grain/
+2025-05-14 17:44:56,035 - utils.page_setting - DEBUG - 找到商品: GUIDI SZ01 TOTE BAG SOFT HORSE FULL GRAIN, URL: https://www.suus.es/product/guidi-sz01-tote-bag-soft-horse-full-grain/
+2025-05-14 17:44:56,037 - utils.page_setting - DEBUG - 找到商品: GUIDI M10 MESSENGER BAG SOFT HORSE FULL GRAIN, URL: https://www.suus.es/product/guidi-m10-messenger-bag-soft-horse-full-grain/
+2025-05-14 17:44:56,039 - utils.page_setting - DEBUG - 找到商品: GUIDI DBP06 SOFT HORSE FULL GRAIN, URL: https://www.suus.es/product/guidi-dbp06-soft-horse-full-grain-2/
+2025-05-14 17:44:56,041 - utils.page_setting - DEBUG - 找到商品: GUIDI 993 HORSE FULL GRAIN, URL: https://www.suus.es/product/guidi-993-horse-full-grain/
+2025-05-14 17:44:56,045 - utils.page_setting - DEBUG - 找到商品: GUIDI GJ06 HORSE FULL GRAIN, URL: https://www.suus.es/product/guidi-gj06-horse-full-grain/
+2025-05-14 17:44:56,049 - utils.page_setting - DEBUG - 找到商品: GUIDI 796LV HORSE FULL GRAIN, URL: https://www.suus.es/product/guidi-796lv-horse-full-grain/
+2025-05-14 17:44:56,052 - utils.page_setting - DEBUG - 找到商品: GUIDI 76V HORSE FULL GRAIN CHELSEA BOOT Black, URL: https://www.suus.es/product/guidi-76v-horse-full-grain-chelsea-boot-black/
+2025-05-14 17:44:56,054 - utils.page_setting - DEBUG - 找到商品: GUIDI PL1 HORSE FULL GRAIN UNISEX FRONT ZIP BOOTS, URL: https://www.suus.es/product/guidi-pl1-horse-full-grain-unisex-front-zip-boots/
+2025-05-14 17:44:56,056 - utils.page_setting - DEBUG - 找到商品: GUIDI 795V_N HORSE FULL GRAIN UNISEX LACE UP BOOTS WITH RUBBER SOLE, URL: https://www.suus.es/product/guidi-795v_n-horse-full-grain-unisex-lace-up-boots-with-rubber-sole/
+2025-05-14 17:44:56,058 - utils.page_setting - DEBUG - 找到商品: GUIDI 788ZIX HORSE FULL GRAIN UNISEX BACK ZIP MID BOOT, URL: https://www.suus.es/product/guidi-788zix-horse-full-grain-unisex-back-zip-mid-boot/
+2025-05-14 17:44:56,062 - utils.page_setting - DEBUG - 找到商品: GUIDI 788V GOAT FULL GRAIN UNISEX BACK ZIP HIFH BOOT WITH SOLE RUBBER, URL: https://www.suus.es/product/guidi-788v-goat-full-grain-unisex-back-zip-hifh-boot-with-sole-rubber/
+2025-05-14 17:44:56,066 - utils.page_setting - DEBUG - 找到商品: GUIDI  FRONT ZIP BOOTS, SOLE RUBBER PLS HORSE FULL GRAIN, URL: https://www.suus.es/product/guidi-front-zip-boots-sole-rubber-pls-horse-full-grain/
+2025-05-14 17:44:56,068 - utils.page_setting - DEBUG - 找到商品: GUIDI 796 BACK ZIP BOOT, SOLE LEATHER KANGAROO FULL GRAIN, URL: https://www.suus.es/product/guidi-796-back-zip-boot-sole-leather-kangaroo-full-grain/
+2025-05-14 17:44:56,069 - utils.page_setting - DEBUG - 找到商品: GUIDI 96X CHELSEA BOOTS HORSE FULL GRAIN SOLE LEATHER, URL: https://www.suus.es/product/guidi-96x-chelsea-boots-horse-full-grain-sole-leather/
+2025-05-14 17:44:56,071 - utils.page_setting - DEBUG - 找到商品: GUIDI 210WZ FRONT ZIP ARMY BOOT HORSE REVERSE, URL: https://www.suus.es/product/guidi-210wz-front-zip-army-boot-horse-reverse/
+2025-05-14 17:44:56,073 - utils.page_setting - DEBUG - 找到商品: GUIDI  PT3 KANGAROO FULL GRAN WALLET, URL: https://www.suus.es/product/guidi-pt3-kangaroo-full-gran-wallet/
+2025-05-14 17:44:56,075 - utils.page_setting - DEBUG - 找到商品: GUIDI PT3 KANGAROO FULL GRAIN WALLET, URL: https://www.suus.es/product/guidi-pt3-kangaroo-full-grain-wallet/
+2025-05-14 17:44:56,079 - utils.page_setting - DEBUG - 找到商品: GUIDI 16M SHOES UNI ONE PIECE DERBY, SOLE LEATHER, URL: https://www.suus.es/product/guidi-16m-shoes-uni-one-piece-derby-sole-leather/
+2025-05-14 17:44:56,082 - utils.page_setting - DEBUG - 找到商品: GUIDI 986M SHOES UNI BACK ZIP BOOT SOLE LEATHER, URL: https://www.suus.es/product/guidi-986m-shoes-uni-back-zip-boot-sole-leather/
+2025-05-14 17:44:56,085 - utils.page_setting - DEBUG - 找到商品: GUIDI NT20V M BISON FULL GRAIN CV31T, URL: https://www.suus.es/product/guidi-nt20v-m-bison-full-grain-cv31t/
+2025-05-14 17:44:56,087 - utils.page_setting - DEBUG - 找到商品: GUIDI PKT04 KANGAROO FULL GRAIN CV09T, URL: https://www.suus.es/product/guidi-pkt04-kangaroo-full-grain-cv09t/
+2025-05-14 17:44:56,088 - utils.page_setting - INFO - 共解析到 28 个商品
+2025-05-14 17:44:56,088 - utils.page_setting - INFO - 监控开始，共获取到 28 个商品信息
+2025-05-14 17:44:56,088 - utils.page_setting - INFO - 正在获取商品 [1/28]: GUIDI 5212BZV M HORSE FULL GRAIN BLACK
+2025-05-14 17:44:57,856 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-5212bzv-m-horse-full-grain-black/
+2025-05-14 17:45:05,053 - utils.page_setting - INFO - 商品名称: GUIDI 5212BZV M HORSE FULL GRAIN BLACK
+2025-05-14 17:45:05,071 - utils.page_setting - INFO - 商品 'GUIDI 5212BZV M HORSE FULL GRAIN BLACK' 共有 3 种尺码
+2025-05-14 17:45:05,071 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 17:45:05,071 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:45:05,071 - utils.page_setting - INFO - 尺码: 44, 库存状态: available
+2025-05-14 17:45:05,071 - utils.page_setting - INFO - 正在获取商品 [2/28]: GUIDI 20MCALF TREKKING BOOT
+2025-05-14 17:45:06,965 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-20mcalf-trekking-boot/
+2025-05-14 17:45:10,779 - utils.page_setting - INFO - 商品名称: GUIDI 20MCALF TREKKING BOOT
+2025-05-14 17:45:10,789 - utils.page_setting - INFO - 商品 'GUIDI 20MCALF TREKKING BOOT' 共有 1 种尺码
+2025-05-14 17:45:10,789 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:45:10,789 - utils.page_setting - INFO - 正在获取商品 [3/28]: GUIDI PL2WZ HORSE OLD
+2025-05-14 17:45:11,696 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-pl2wz-horse-old/
+2025-05-14 17:45:15,448 - utils.page_setting - INFO - 商品名称: GUIDI PL2WZ HORSE OLD
+2025-05-14 17:45:15,469 - utils.page_setting - INFO - 商品 'GUIDI PL2WZ HORSE OLD' 共有 3 种尺码
+2025-05-14 17:45:15,469 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 17:45:15,469 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:45:15,469 - utils.page_setting - INFO - 尺码: 44, 库存状态: available
+2025-05-14 17:45:15,469 - utils.page_setting - INFO - 正在获取商品 [4/28]: GUIDI ZO08V HORSE BLAKE UNKLE BOOT
+2025-05-14 17:45:16,372 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-zo08v-horse-blake-unkle-boot/
+2025-05-14 17:45:19,465 - utils.page_setting - INFO - 商品名称: GUIDI ZO08V HORSE BLAKE UNKLE BOOT
+2025-05-14 17:45:19,479 - utils.page_setting - INFO - 商品 'GUIDI ZO08V HORSE BLAKE UNKLE BOOT' 共有 1 种尺码
+2025-05-14 17:45:19,479 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:45:19,479 - utils.page_setting - INFO - 正在获取商品 [5/28]: GUIDI GR056V HORSE BACK ZIP  BIG DADDY BOOT
+2025-05-14 17:45:21,943 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-gr056v-horse-back-zip-big-daddy-boot/
+2025-05-14 17:45:25,996 - utils.page_setting - INFO - 商品名称: GUIDI GR056V HORSE BACK ZIP BIG DADDY BOOT
+2025-05-14 17:45:26,016 - utils.page_setting - INFO - 商品 'GUIDI GR056V HORSE BACK ZIP BIG DADDY BOOT' 共有 2 种尺码
+2025-05-14 17:45:26,016 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 17:45:26,016 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:45:26,016 - utils.page_setting - INFO - 正在获取商品 [6/28]: GUIDI GR05FVR_RU ZIPPED BIG DADDY BOOT
+2025-05-14 17:45:28,277 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-gr05fvr_ru-zipped-big-daddy-boot/
+2025-05-14 17:45:36,462 - utils.page_setting - INFO - 商品名称: GUIDI GR05FVR_RU ZIPPED BIG DADDY BOOT
+2025-05-14 17:45:36,475 - utils.page_setting - INFO - 商品 'GUIDI GR05FVR_RU ZIPPED BIG DADDY BOOT' 共有 1 种尺码
+2025-05-14 17:45:36,475 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 17:45:36,475 - utils.page_setting - INFO - 正在获取商品 [7/28]: GUIDI BOX06 SQUARE BUCKET BAG GROPPONE FULL GRAIN
+2025-05-14 17:45:38,419 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-box06-square-bucket-bag-groppone-full-grain/
+2025-05-14 17:45:46,151 - utils.page_setting - INFO - 商品名称: GUIDI BOX06 SQUARE BUCKET BAG GROPPONE FULL GRAIN
+2025-05-14 17:45:46,163 - utils.page_setting - WARNING - 商品 'GUIDI BOX06 SQUARE BUCKET BAG GROPPONE FULL GRAIN' 未找到尺码信息
+2025-05-14 17:45:46,163 - utils.page_setting - INFO - 正在获取商品 [8/28]: GUIDI SZ01 TOTE BAG SOFT HORSE FULL GRAIN
+2025-05-14 17:45:48,780 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-sz01-tote-bag-soft-horse-full-grain/
+2025-05-14 17:45:53,125 - utils.page_setting - INFO - 商品名称: GUIDI SZ01 TOTE BAG SOFT HORSE FULL GRAIN
+2025-05-14 17:45:53,138 - utils.page_setting - WARNING - 商品 'GUIDI SZ01 TOTE BAG SOFT HORSE FULL GRAIN' 未找到尺码信息
+2025-05-14 17:45:53,138 - utils.page_setting - INFO - 正在获取商品 [9/28]: GUIDI M10 MESSENGER BAG SOFT HORSE FULL GRAIN
+2025-05-14 17:45:53,943 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-m10-messenger-bag-soft-horse-full-grain/
+2025-05-14 17:46:00,906 - utils.page_setting - INFO - 商品名称: GUIDI M10 MESSENGER BAG SOFT HORSE FULL GRAIN
+2025-05-14 17:46:00,916 - utils.page_setting - WARNING - 商品 'GUIDI M10 MESSENGER BAG SOFT HORSE FULL GRAIN' 未找到尺码信息
+2025-05-14 17:46:00,916 - utils.page_setting - INFO - 正在获取商品 [10/28]: GUIDI DBP06 SOFT HORSE FULL GRAIN
+2025-05-14 17:46:02,145 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-dbp06-soft-horse-full-grain-2/
+2025-05-14 17:46:06,635 - utils.page_setting - INFO - 商品名称: GUIDI DBP06 SOFT HORSE FULL GRAIN
+2025-05-14 17:46:06,647 - utils.page_setting - WARNING - 商品 'GUIDI DBP06 SOFT HORSE FULL GRAIN' 未找到尺码信息
+2025-05-14 17:46:06,648 - utils.page_setting - INFO - 正在获取商品 [11/28]: GUIDI 993 HORSE FULL GRAIN
+2025-05-14 17:46:07,920 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-993-horse-full-grain/
+2025-05-14 17:46:10,729 - utils.page_setting - INFO - 商品名称: GUIDI 993 HORSE FULL GRAIN
+2025-05-14 17:46:10,748 - utils.page_setting - INFO - 商品 'GUIDI 993 HORSE FULL GRAIN' 共有 1 种尺码
+2025-05-14 17:46:10,748 - utils.page_setting - INFO - 尺码: 44, 库存状态: available
+2025-05-14 17:46:10,748 - utils.page_setting - INFO - 正在获取商品 [12/28]: GUIDI GJ06 HORSE FULL GRAIN
+2025-05-14 17:46:13,004 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-gj06-horse-full-grain/
+2025-05-14 17:46:18,276 - utils.page_setting - INFO - 商品名称: GUIDI GJ06 HORSE FULL GRAIN
+2025-05-14 17:46:18,285 - utils.page_setting - INFO - 商品 'GUIDI GJ06 HORSE FULL GRAIN' 共有 1 种尺码
+2025-05-14 17:46:18,285 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:46:18,285 - utils.page_setting - INFO - 正在获取商品 [13/28]: GUIDI 796LV HORSE FULL GRAIN
+2025-05-14 17:46:18,843 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-796lv-horse-full-grain/
+2025-05-14 17:46:27,134 - utils.page_setting - INFO - 商品名称: GUIDI 796LV HORSE FULL GRAIN
+2025-05-14 17:46:27,144 - utils.page_setting - INFO - 商品 'GUIDI 796LV HORSE FULL GRAIN' 共有 1 种尺码
+2025-05-14 17:46:27,144 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:46:27,144 - utils.page_setting - INFO - 正在获取商品 [14/28]: GUIDI 76V HORSE FULL GRAIN CHELSEA BOOT Black
+2025-05-14 17:46:29,330 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-76v-horse-full-grain-chelsea-boot-black/
+2025-05-14 17:46:33,235 - utils.page_setting - INFO - 商品名称: GUIDI 76V HORSE FULL GRAIN CHELSEA BOOT Black
+2025-05-14 17:46:33,254 - utils.page_setting - INFO - 商品 'GUIDI 76V HORSE FULL GRAIN CHELSEA BOOT Black' 共有 3 种尺码
+2025-05-14 17:46:33,254 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 17:46:33,254 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:46:33,254 - utils.page_setting - INFO - 尺码: 44, 库存状态: available
+2025-05-14 17:46:33,254 - utils.page_setting - INFO - 正在获取商品 [15/28]: GUIDI PL1 HORSE FULL GRAIN UNISEX FRONT ZIP BOOTS
+2025-05-14 17:46:34,264 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-pl1-horse-full-grain-unisex-front-zip-boots/
+2025-05-14 17:46:37,571 - utils.page_setting - INFO - 商品名称: GUIDI PL1 HORSE FULL GRAIN UNISEX FRONT ZIP BOOTS
+2025-05-14 17:46:37,596 - utils.page_setting - INFO - 商品 'GUIDI PL1 HORSE FULL GRAIN UNISEX FRONT ZIP BOOTS' 共有 2 种尺码
+2025-05-14 17:46:37,596 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 17:46:37,596 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:46:37,597 - utils.page_setting - INFO - 正在获取商品 [16/28]: GUIDI 795V_N HORSE FULL GRAIN UNISEX LACE UP BOOTS WITH RUBBER SOLE
+2025-05-14 17:46:40,030 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-795v_n-horse-full-grain-unisex-lace-up-boots-with-rubber-sole/
+2025-05-14 17:46:43,331 - utils.page_setting - INFO - 商品名称: GUIDI 795V_N HORSE FULL GRAIN UNISEX LACE UP BOOTS WITH RUBBER SOLE
+2025-05-14 17:46:43,344 - utils.page_setting - INFO - 商品 'GUIDI 795V_N HORSE FULL GRAIN UNISEX LACE UP BOOTS WITH RUBBER SOLE' 共有 1 种尺码
+2025-05-14 17:46:43,344 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:46:43,345 - utils.page_setting - INFO - 正在获取商品 [17/28]: GUIDI 788ZIX HORSE FULL GRAIN UNISEX BACK ZIP MID BOOT
+2025-05-14 17:46:46,045 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-788zix-horse-full-grain-unisex-back-zip-mid-boot/
+2025-05-14 17:46:53,364 - utils.page_setting - INFO - 商品名称: GUIDI 788ZIX HORSE FULL GRAIN UNISEX BACK ZIP MID BOOT
+2025-05-14 17:46:53,377 - utils.page_setting - INFO - 商品 'GUIDI 788ZIX HORSE FULL GRAIN UNISEX BACK ZIP MID BOOT' 共有 1 种尺码
+2025-05-14 17:46:53,377 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:46:53,378 - utils.page_setting - INFO - 正在获取商品 [18/28]: GUIDI 788V GOAT FULL GRAIN UNISEX BACK ZIP HIFH BOOT WITH SOLE RUBBER
+2025-05-14 17:46:55,081 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-788v-goat-full-grain-unisex-back-zip-hifh-boot-with-sole-rubber/
+2025-05-14 17:46:59,339 - utils.page_setting - INFO - 商品名称: GUIDI 788V GOAT FULL GRAIN UNISEX BACK ZIP HIFH BOOT WITH SOLE RUBBER
+2025-05-14 17:46:59,349 - utils.page_setting - INFO - 商品 'GUIDI 788V GOAT FULL GRAIN UNISEX BACK ZIP HIFH BOOT WITH SOLE RUBBER' 共有 1 种尺码
+2025-05-14 17:46:59,349 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 17:46:59,349 - utils.page_setting - INFO - 正在获取商品 [19/28]: GUIDI  FRONT ZIP BOOTS, SOLE RUBBER PLS HORSE FULL GRAIN
+2025-05-14 17:46:59,914 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-front-zip-boots-sole-rubber-pls-horse-full-grain/
+2025-05-14 17:47:10,733 - utils.page_setting - INFO - 商品名称: GUIDI FRONT ZIP BOOTS, SOLE RUBBER PLS HORSE FULL GRAIN
+2025-05-14 17:47:10,742 - utils.page_setting - INFO - 商品 'GUIDI FRONT ZIP BOOTS, SOLE RUBBER PLS HORSE FULL GRAIN' 共有 1 种尺码
+2025-05-14 17:47:10,742 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:47:10,742 - utils.page_setting - INFO - 正在获取商品 [20/28]: GUIDI 796 BACK ZIP BOOT, SOLE LEATHER KANGAROO FULL GRAIN
+2025-05-14 17:47:13,473 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-796-back-zip-boot-sole-leather-kangaroo-full-grain/
+2025-05-14 17:47:17,926 - utils.page_setting - INFO - 商品名称: GUIDI 796 BACK ZIP BOOT, SOLE LEATHER KANGAROO FULL GRAIN
+2025-05-14 17:47:17,940 - utils.page_setting - INFO - 商品 'GUIDI 796 BACK ZIP BOOT, SOLE LEATHER KANGAROO FULL GRAIN' 共有 1 种尺码
+2025-05-14 17:47:17,940 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:47:17,940 - utils.page_setting - INFO - 正在获取商品 [21/28]: GUIDI 96X CHELSEA BOOTS HORSE FULL GRAIN SOLE LEATHER
+2025-05-14 17:47:19,268 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-96x-chelsea-boots-horse-full-grain-sole-leather/
+2025-05-14 17:47:26,472 - utils.page_setting - INFO - 商品名称: GUIDI 96X CHELSEA BOOTS HORSE FULL GRAIN SOLE LEATHER
+2025-05-14 17:47:26,490 - utils.page_setting - INFO - 商品 'GUIDI 96X CHELSEA BOOTS HORSE FULL GRAIN SOLE LEATHER' 共有 2 种尺码
+2025-05-14 17:47:26,490 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 17:47:26,490 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:47:26,490 - utils.page_setting - INFO - 正在获取商品 [22/28]: GUIDI 210WZ FRONT ZIP ARMY BOOT HORSE REVERSE
+2025-05-14 17:47:27,809 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-210wz-front-zip-army-boot-horse-reverse/
+2025-05-14 17:47:32,493 - utils.page_setting - INFO - 商品名称: GUIDI 210WZ FRONT ZIP ARMY BOOT HORSE REVERSE
+2025-05-14 17:47:32,509 - utils.page_setting - INFO - 商品 'GUIDI 210WZ FRONT ZIP ARMY BOOT HORSE REVERSE' 共有 2 种尺码
+2025-05-14 17:47:32,509 - utils.page_setting - INFO - 尺码: 42, 库存状态: available
+2025-05-14 17:47:32,509 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:47:32,510 - utils.page_setting - INFO - 正在获取商品 [23/28]: GUIDI  PT3 KANGAROO FULL GRAN WALLET
+2025-05-14 17:47:34,736 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-pt3-kangaroo-full-gran-wallet/
+2025-05-14 17:47:38,384 - utils.page_setting - INFO - 商品名称: GUIDI PT3 KANGAROO FULL GRAN WALLET
+2025-05-14 17:47:38,406 - utils.page_setting - WARNING - 商品 'GUIDI PT3 KANGAROO FULL GRAN WALLET' 未找到尺码信息
+2025-05-14 17:47:38,406 - utils.page_setting - INFO - 正在获取商品 [24/28]: GUIDI PT3 KANGAROO FULL GRAIN WALLET
+2025-05-14 17:47:39,673 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-pt3-kangaroo-full-grain-wallet/
+2025-05-14 17:47:46,279 - utils.page_setting - INFO - 商品名称: GUIDI PT3 KANGAROO FULL GRAIN WALLET
+2025-05-14 17:47:46,293 - utils.page_setting - WARNING - 商品 'GUIDI PT3 KANGAROO FULL GRAIN WALLET' 未找到尺码信息
+2025-05-14 17:47:46,294 - utils.page_setting - INFO - 正在获取商品 [25/28]: GUIDI 16M SHOES UNI ONE PIECE DERBY, SOLE LEATHER
+2025-05-14 17:47:48,056 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-16m-shoes-uni-one-piece-derby-sole-leather/
+2025-05-14 17:47:52,475 - utils.page_setting - INFO - 商品名称: GUIDI 16M SHOES UNI ONE PIECE DERBY, SOLE LEATHER
+2025-05-14 17:47:52,489 - utils.page_setting - INFO - 商品 'GUIDI 16M SHOES UNI ONE PIECE DERBY, SOLE LEATHER' 共有 1 种尺码
+2025-05-14 17:47:52,489 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:47:52,489 - utils.page_setting - INFO - 正在获取商品 [26/28]: GUIDI 986M SHOES UNI BACK ZIP BOOT SOLE LEATHER
+2025-05-14 17:47:54,429 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-986m-shoes-uni-back-zip-boot-sole-leather/
+2025-05-14 17:48:00,062 - utils.page_setting - INFO - 商品名称: GUIDI 986M SHOES UNI BACK ZIP BOOT SOLE LEATHER
+2025-05-14 17:48:00,078 - utils.page_setting - INFO - 商品 'GUIDI 986M SHOES UNI BACK ZIP BOOT SOLE LEATHER' 共有 2 种尺码
+2025-05-14 17:48:00,079 - utils.page_setting - INFO - 尺码: 43, 库存状态: available
+2025-05-14 17:48:00,079 - utils.page_setting - INFO - 尺码: 44, 库存状态: available
+2025-05-14 17:48:00,079 - utils.page_setting - INFO - 正在获取商品 [27/28]: GUIDI NT20V M BISON FULL GRAIN CV31T
+2025-05-14 17:48:01,126 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-nt20v-m-bison-full-grain-cv31t/
+2025-05-14 17:48:05,510 - utils.page_setting - INFO - 商品名称: GUIDI NT20V M BISON FULL GRAIN CV31T
+2025-05-14 17:48:05,521 - utils.page_setting - INFO - 商品 'GUIDI NT20V M BISON FULL GRAIN CV31T' 共有 1 种尺码
+2025-05-14 17:48:05,521 - utils.page_setting - INFO - 尺码: 44, 库存状态: available
+2025-05-14 17:48:05,521 - utils.page_setting - INFO - 正在获取商品 [28/28]: GUIDI PKT04 KANGAROO FULL GRAIN CV09T
+2025-05-14 17:48:07,470 - utils.page_setting - INFO - 正在获取商品库存信息: https://www.suus.es/product/guidi-pkt04-kangaroo-full-grain-cv09t/
+2025-05-14 17:48:11,840 - utils.page_setting - INFO - 商品名称: GUIDI PKT04 KANGAROO FULL GRAIN CV09T
+2025-05-14 17:48:11,851 - utils.page_setting - WARNING - 商品 'GUIDI PKT04 KANGAROO FULL GRAIN CV09T' 未找到尺码信息
+2025-05-14 17:48:11,854 - utils.page_setting - INFO - suus - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\suus\inventory\balenciaga_inventory_20250514_174811.json
+2025-05-14 17:48:11,854 - utils.page_setting - INFO - 已保存21个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\suus\inventory\balenciaga_inventory_20250514_174811.json
+2025-05-14 17:48:11,854 - utils.page_setting - INFO - 未检测到库存变化
+2025-05-14 17:48:11,854 - utils.page_setting - INFO - 监控结束，关闭浏览器
+2025-05-14 17:48:12,861 - utils.page_setting - INFO - suus - 监控任务完成，日志已保存

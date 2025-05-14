@@ -1,0 +1,17 @@
+2025-05-15 03:28:54,401 - INFO - [grifo210] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\grifo210\grifo210_20250515_032854.log
+2025-05-15 03:28:54,402 - INFO - [grifo210] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\grifo210\inventory\balenciaga_inventory_20250514_183443.json
+2025-05-15 03:28:54,403 - INFO - [grifo210] - grifo210 - 库存监控已初始化
+2025-05-15 03:28:54,404 - INFO - [grifo210] - 开始监控 https://www.grifo210.com/en-ww/collections/men-maison-margiela
+2025-05-15 03:28:54,404 - INFO - [grifo210] - 正在获取商品目录: https://www.grifo210.com/en-ww/collections/men-maison-margiela
+2025-05-15 03:29:00,152 - INFO - [grifo210] - 找到 2 个商品元素
+2025-05-15 03:29:00,152 - DEBUG - [grifo210] - 找到商品: Replica sneakers, URL: https://www.grifo210.com/en-ww/products/maison-margiela-replica-sneakers-s57ws0505p8153-ha771?_pos=1&_fid=1a3212224&_ss=c
+2025-05-15 03:29:00,153 - DEBUG - [grifo210] - 找到商品: Replica sneakers, URL: https://www.grifo210.com/en-ww/products/maison-margiela-replica-sneakers-s57ws0236p1895-101?_pos=2&_fid=1a3212224&_ss=c
+2025-05-15 03:29:00,153 - INFO - [grifo210] - 共解析到 2 个商品
+2025-05-15 03:29:00,154 - INFO - [grifo210] - 监控开始，共获取到 2 个商品信息
+2025-05-15 03:29:00,157 - INFO - [grifo210] - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\grifo210\inventory\balenciaga_inventory_20250515_032900.json
+2025-05-15 03:29:00,157 - INFO - [grifo210] - 已保存2个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\grifo210\inventory\balenciaga_inventory_20250515_032900.json
+2025-05-15 03:29:00,159 - INFO - [grifo210] - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\grifo210\changes\inventory_changes_20250515_032900.json
+2025-05-15 03:29:00,159 - INFO - [grifo210] - 检测到库存变化: 2个新商品, 2个下架商品, 0个库存变化
+2025-05-15 03:29:00,159 - INFO - [grifo210] - 检测到库存变化，已保存到变更记录
+2025-05-15 03:29:00,159 - INFO - [grifo210] - 监控结束，关闭浏览器
+2025-05-15 03:29:00,159 - INFO - [grifo210] - grifo210 - 监控任务完成，日志已保存

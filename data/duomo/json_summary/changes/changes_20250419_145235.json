@@ -1,0 +1,42 @@
+{
+  "timestamp": "20250419_145235",
+  "current_data_file": "inventory_summary_20250419_124221.json",
+  "monitor": "DuomoMonitor",
+  "changes": {
+    "new_products": [
+      {
+        "name": "Balenciaga Monday Sneakers PRO",
+        "url": "https://backendocean.ilduomo.it/sneakers/63225-balenciaga9110-white-black-grey.html",
+        "price": "¥5,972.61",
+        "inventory_status": [
+          {
+            "status": "available",
+            "status_index": 1,
+            "sizes": [
+              "44",
+              "45"
+            ]
+          }
+        ]
+      }
+    ],
+    "removed_products": [
+      {
+        "name": "Balenciaga Monday Sneakers",
+        "url": "https://www.ilduomo.it/product/63225-balenciaga9110-white-black-grey",
+        "price": "¥5,972.61",
+        "inventory_status": [
+          {
+            "status": "available",
+            "status_index": 1,
+            "sizes": [
+              "44",
+              "45"
+            ]
+          }
+        ]
+      }
+    ],
+    "stock_changes": []
+  }
+}

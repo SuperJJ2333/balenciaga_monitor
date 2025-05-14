@@ -1,0 +1,10 @@
+2025-05-14 13:39:54,563 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\suus\suus_20250514_133954.log
+2025-05-14 13:39:54,565 - utils.page_setting - INFO - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\suus\inventory\balenciaga_inventory_20250512_181933.json
+2025-05-14 13:39:54,565 - utils.page_setting - INFO - suus - 库存监控已初始化
+2025-05-14 13:39:54,587 - utils.page_setting - ERROR - 初始化浏览器失败: 
+浏览器版本太旧或此浏览器不支持接管。
+版本: 4.1.0.18
+2025-05-14 13:39:54,587 - utils.page_setting - INFO - 尝试使用备选方式初始化浏览器...
+2025-05-14 13:39:54,618 - utils.page_setting - ERROR - 备选方式初始化浏览器也失败: 
+浏览器版本太旧或此浏览器不支持接管。
+版本: 4.1.0.18

@@ -1,0 +1,313 @@
+{
+  "monitor": "SuusMonitor",
+  "timestamp": "2025-04-19T12:41:49.068007",
+  "total_products": 21,
+  "products": [
+    {
+      "name": "GUIDI 5212BZV M HORSE FULL GRAIN BLACK",
+      "url": "https://www.suus.es/product/guidi-5212bzv-m-horse-full-grain-black/",
+      "price": "1.275,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "42",
+            "43",
+            "44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI 20MCALF TREKKING BOOT",
+      "url": "https://www.suus.es/product/guidi-20mcalf-trekking-boot/",
+      "price": "1.106,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI PL2WZ HORSE OLD",
+      "url": "https://www.suus.es/product/guidi-pl2wz-horse-old/",
+      "price": "1.554,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "42",
+            "43",
+            "44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI ZO08V HORSE BLAKE UNKLE BOOT",
+      "url": "https://www.suus.es/product/guidi-zo08v-horse-blake-unkle-boot/",
+      "price": "1.260,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI GR056V HORSE BACK ZIP  BIG DADDY BOOT",
+      "url": "https://www.suus.es/product/guidi-gr056v-horse-back-zip-big-daddy-boot/",
+      "price": "1.484,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "42",
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI GR05FVR_RU ZIPPED BIG DADDY BOOT",
+      "url": "https://www.suus.es/product/guidi-gr05fvr_ru-zipped-big-daddy-boot/",
+      "price": "1.652,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI 993 HORSE FULL GRAIN",
+      "url": "https://www.suus.es/product/guidi-993-horse-full-grain/",
+      "price": "882,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI GJ06 HORSE FULL GRAIN",
+      "url": "https://www.suus.es/product/guidi-gj06-horse-full-grain/",
+      "price": "1.512,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI 796LV HORSE FULL GRAIN",
+      "url": "https://www.suus.es/product/guidi-796lv-horse-full-grain/",
+      "price": "1.204,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI 76V HORSE FULL GRAIN CHELSEA BOOT Black",
+      "url": "https://www.suus.es/product/guidi-76v-horse-full-grain-chelsea-boot-black/",
+      "price": "1.204,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "42",
+            "43",
+            "44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI PL1 HORSE FULL GRAIN UNISEX FRONT ZIP BOOTS",
+      "url": "https://www.suus.es/product/guidi-pl1-horse-full-grain-unisex-front-zip-boots/",
+      "price": "1.344,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "42",
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI 795V_N HORSE FULL GRAIN UNISEX LACE UP BOOTS WITH RUBBER SOLE",
+      "url": "https://www.suus.es/product/guidi-795v_n-horse-full-grain-unisex-lace-up-boots-with-rubber-sole/",
+      "price": "1.078,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI 788ZIX HORSE FULL GRAIN UNISEX BACK ZIP MID BOOT",
+      "url": "https://www.suus.es/product/guidi-788zix-horse-full-grain-unisex-back-zip-mid-boot/",
+      "price": "1.624,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI 788V GOAT FULL GRAIN UNISEX BACK ZIP HIFH BOOT WITH SOLE RUBBER",
+      "url": "https://www.suus.es/product/guidi-788v-goat-full-grain-unisex-back-zip-hifh-boot-with-sole-rubber/",
+      "price": "1.288,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI  FRONT ZIP BOOTS, SOLE RUBBER PLS HORSE FULL GRAIN",
+      "url": "https://www.suus.es/product/guidi-front-zip-boots-sole-rubber-pls-horse-full-grain/",
+      "price": "1.344,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI 796 BACK ZIP BOOT, SOLE LEATHER KANGAROO FULL GRAIN",
+      "url": "https://www.suus.es/product/guidi-796-back-zip-boot-sole-leather-kangaroo-full-grain/",
+      "price": "1.302,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI 96X CHELSEA BOOTS HORSE FULL GRAIN SOLE LEATHER",
+      "url": "https://www.suus.es/product/guidi-96x-chelsea-boots-horse-full-grain-sole-leather/",
+      "price": "1.106,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "42",
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI 210WZ FRONT ZIP ARMY BOOT HORSE REVERSE",
+      "url": "https://www.suus.es/product/guidi-210wz-front-zip-army-boot-horse-reverse/",
+      "price": "1.176,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "42",
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI 16M SHOES UNI ONE PIECE DERBY, SOLE LEATHER",
+      "url": "https://www.suus.es/product/guidi-16m-shoes-uni-one-piece-derby-sole-leather/",
+      "price": "840,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI 986M SHOES UNI BACK ZIP BOOT SOLE LEATHER",
+      "url": "https://www.suus.es/product/guidi-986m-shoes-uni-back-zip-boot-sole-leather/",
+      "price": "966,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "42",
+            "43",
+            "44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GUIDI NT20V M BISON FULL GRAIN CV31T",
+      "url": "https://www.suus.es/product/guidi-nt20v-m-bison-full-grain-cv31t/",
+      "price": "1.428,00 €",
+      "inventory_status": [
+        {
+          "status": "available",
+          "status_index": 1,
+          "sizes": [
+            "44"
+          ]
+        }
+      ]
+    }
+  ]
+}

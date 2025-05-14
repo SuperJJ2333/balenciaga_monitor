@@ -1,0 +1,46 @@
+******Eleonora_bonucciMonitor - 库存监控********
+产品名称: STAPLER SNEAKER - https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358838
+价格：€ 950.00
+存货情况：
+--（1）available：40；41；42；43
+-------------------------------------------
+产品名称: STAPLER SNEAKER - https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/359003
+价格：€ 950.00
+存货情况：
+--（1）available：40；41；42；43
+-------------------------------------------
+产品名称: SNEAKER 3XL - https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/356352
+价格：€ 975.00
+存货情况：
+--（1）available：40；41；43
+-------------------------------------------
+产品名称: CIRCUIT SNEAKER - https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352935
+价格：€ 895.00
+存货情况：
+--（1）available：39；40；41；42；43；44
+-------------------------------------------
+产品名称: SNEAKER 3XL - https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/333111
+价格：€ 975.00
+存货情况：
+--（1）available：40
+-------------------------------------------
+产品名称: SNEAKER TRACK - https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/329455
+价格：€ 895.00
+存货情况：
+--（1）available：41
+-------------------------------------------
+产品名称: PHANTOM SNEAKER - https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244576
+价格：€ 695.00
+存货情况：
+--（1）available：45
+-------------------------------------------
+产品名称: SNEAKER RUNNER - https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244474
+价格：€ 950.00
+存货情况：
+--（1）available：39；40；42
+-------------------------------------------
+产品名称: SNEAKER TRACK HIKE - https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/237063
+价格：€ 1,150.00
+存货情况：
+--（1）available：39
+-------------------------------------------

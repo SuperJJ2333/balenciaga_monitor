@@ -1,0 +1,1142 @@
+{
+  "monitor": "MrPorterMonitor",
+  "timestamp": "2025-04-19T00:03:15.289583",
+  "total_products": 40,
+  "products": [
+    {
+      "name": "Monday Leather Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/monday-leather-sneakers/46376663162855661",
+      "price": "GBP785.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 41"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 42",
+            "EU 43",
+            "EU 44",
+            "EU 45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Distressed Rubber and Mesh Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/runner-distressed-rubber-and-mesh-sneakers/1647597339812883",
+      "price": "GBP930.00",
+      "inventory_status": [
+        {
+          "status": "only two left",
+          "status_index": 1,
+          "sizes": [
+            "EU 40",
+            "EU 44",
+            "EU 45"
+          ]
+        },
+        {
+          "status": "available",
+          "status_index": 2,
+          "sizes": [
+            "EU 41",
+            "EU 42",
+            "EU 43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "+ Crocs™ Embellished Rubber Mules",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/slippers/plus-crocs™-embellished-rubber-mules/1647597358411483",
+      "price": "GBP785.00",
+      "inventory_status": [
+        {
+          "status": "only one left",
+          "status_index": 1,
+          "sizes": [
+            "EU 40",
+            "EU 41",
+            "EU 43",
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 2,
+          "sizes": [
+            "EU 42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3XL Distressed Mesh and Rubber Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/3xl-distressed-mesh-and-rubber-sneakers/1647597309861148",
+      "price": "GBP910.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 41",
+            "EU 43",
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 45"
+          ]
+        },
+        {
+          "status": "coming soon",
+          "status_index": 3,
+          "sizes": [
+            "EU 46",
+            "EU 47"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Track Trail Logo-Print TPU and Shell Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/track-trail-logo-print-tpu-and-shell-sneakers/46376663162855652",
+      "price": "GBP930.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 43"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 42",
+            "EU 44",
+            "EU 45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Strike Distressed Leather Boots",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/lace-up-boots/strike-distressed-leather-boots/1647597349662337",
+      "price": "GBP1050.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 41",
+            "EU 42"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 43",
+            "EU 44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stapler Distressed Mesh and Rubber Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/stapler-distressed-mesh-and-rubber-sneakers/1647597349662385",
+      "price": "GBP880.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 41",
+            "EU 42"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 43",
+            "EU 44",
+            "EU 45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Alaska Logo-Print Quilted Nylon Slippers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/slippers/alaska-logo-print-quilted-nylon-slippers/1647597358411490",
+      "price": "GBP575.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 42",
+            "EU 43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "10XL Distressed Metallic Mesh and Leather Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/10xl-distressed-metallic-mesh-and-leather-sneakers/1647597345321365",
+      "price": "GBP1050.00",
+      "inventory_status": [
+        {
+          "status": "only one left",
+          "status_index": 1,
+          "sizes": [
+            "EU 39",
+            "EU 45"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 2,
+          "sizes": [
+            "EU 40",
+            "EU 41",
+            "EU 44"
+          ]
+        },
+        {
+          "status": "available",
+          "status_index": 3,
+          "sizes": [
+            "EU 42",
+            "EU 43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3XL Distressed Faux Suede and Mesh Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/3xl-distressed-faux-suede-and-mesh-sneakers/1647597332920117",
+      "price": "GBP900.00",
+      "inventory_status": [
+        {
+          "status": "only one left",
+          "status_index": 1,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 45"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 2,
+          "sizes": [
+            "EU 41",
+            "EU 42",
+            "EU 43",
+            "EU 44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Distressed Nylon, Suede and Rubber Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/runner-distressed-nylon-suede-and-rubber-sneakers/1647597322258638",
+      "price": "GBP930.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 44",
+            "EU 45"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 3,
+          "sizes": [
+            "EU 40"
+          ]
+        },
+        {
+          "status": "available",
+          "status_index": 4,
+          "sizes": [
+            "EU 41",
+            "EU 42",
+            "EU 43"
+          ]
+        },
+        {
+          "status": "coming soon",
+          "status_index": 5,
+          "sizes": [
+            "EU 46",
+            "EU 47",
+            "EU 48"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bouncer Mesh and Rubber Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/bouncer-mesh-and-rubber-sneakers/38063312419017134",
+      "price": "GBP1050.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 42",
+            "EU 45"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 41",
+            "EU 43",
+            "EU 44"
+          ]
+        },
+        {
+          "status": "coming soon",
+          "status_index": 3,
+          "sizes": [
+            "EU 46",
+            "EU 47"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Triple S Mesh, Faux Suede and Faux Leather Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/triple-s-mesh-faux-suede-and-faux-leather-sneakers/1647597301835204",
+      "price": "GBP930.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 42"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 3,
+          "sizes": [
+            "EU 39",
+            "EU 43",
+            "EU 45",
+            "EU 46"
+          ]
+        },
+        {
+          "status": "available",
+          "status_index": 4,
+          "sizes": [
+            "EU 40",
+            "EU 41"
+          ]
+        },
+        {
+          "status": "coming soon",
+          "status_index": 5,
+          "sizes": [
+            "EU 47"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Alaska Faux Shearling-Lined Suede Boots",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/biker-boots/alaska-faux-shearling-lined-suede-boots/1647597345321368",
+      "price": "GBP1600.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 41",
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 42",
+            "EU 43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bulldozer Embellished Leather Boots",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/chelsea-boots/bulldozer-embellished-leather-boots/1647597322258635",
+      "price": "GBP1550.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 41",
+            "EU 42",
+            "EU 43"
+          ]
+        },
+        {
+          "status": "coming soon",
+          "status_index": 3,
+          "sizes": [
+            "EU 45",
+            "EU 46"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Speed Stretch-Knit Slip-On Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/high-top-sneakers/speed-stretch-knit-slip-on-sneakers/44733502651444031",
+      "price": "GBP735.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 42",
+            "EU 43",
+            "EU 44",
+            "EU 45",
+            "EU 46",
+            "EU 47"
+          ]
+        },
+        {
+          "status": "available",
+          "status_index": 2,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "+ Crocs Logo-Embossed EVA Slides",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/summer-shoes/plus-crocs-logo-embossed-eva-slides/1647597345321366",
+      "price": "GBP400.00",
+      "inventory_status": [
+        {
+          "status": "only one left",
+          "status_index": 1,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 41",
+            "EU 42",
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 2,
+          "sizes": [
+            "EU 43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Triple S Clear Sole Mesh, Nubuck and Leather Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/triple-s-clear-sole-mesh-nubuck-and-leather-sneakers/22831760541602290",
+      "price": "GBP930.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 42",
+            "EU 43",
+            "EU 44",
+            "EU 45",
+            "EU 46"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rubber clogs",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/summer-shoes/rubber-clogs/1647597336984961",
+      "price": "GBP550.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 45"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 40",
+            "EU 43",
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 3,
+          "sizes": [
+            "EU 41",
+            "EU 42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rubber Derby Shoes",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/derby-shoes/rubber-derby-shoes/1647597301835237",
+      "price": "GBP870.00",
+      "inventory_status": [
+        {
+          "status": "only one left",
+          "status_index": 1,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 41",
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 2,
+          "sizes": [
+            "EU 42",
+            "EU 43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Alaska Shearling Boots",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/chelsea-boots/alaska-shearling-boots/1647597345321367",
+      "price": "GBP1150.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 40",
+            "EU 43",
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39",
+            "EU 41"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 3,
+          "sizes": [
+            "EU 42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Distressed Panelled Leather and Rubber Boots",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/chelsea-boots/distressed-panelled-leather-and-rubber-boots/1647597322258633",
+      "price": "GBP4400.00",
+      "inventory_status": [
+        {
+          "status": "only one left",
+          "status_index": 1,
+          "sizes": [
+            "EU 41",
+            "EU 43"
+          ]
+        },
+        {
+          "status": "coming soon",
+          "status_index": 2,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 42",
+            "EU 44",
+            "EU 45",
+            "EU 46"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3XL Logo-Appliquéd Faux Leather and Canvas-Trimmed Scuba Sandals",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/summer-shoes/3xl-logo-appliqued-faux-leather-and-canvas-trimmed-scuba-sandals/1647597336991497",
+      "price": "GBP795.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 44",
+            "EU 45"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 40",
+            "EU 41",
+            "EU 42",
+            "EU 43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Logo-Embroidered Faux Shearling Slides",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/slides/logo-embroidered-faux-shearling-slides/32027475399416358",
+      "price": "GBP585.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 39",
+            "EU 46"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 40",
+            "EU 41",
+            "EU 44",
+            "EU 45"
+          ]
+        },
+        {
+          "status": "available",
+          "status_index": 3,
+          "sizes": [
+            "EU 42",
+            "EU 43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sunday Suede Mules",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/summer-shoes/sunday-suede-mules/1647597332920123",
+      "price": "GBP675.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 41",
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 43"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 3,
+          "sizes": [
+            "EU 42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sunday Leather Mules",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/summer-shoes/sunday-leather-mules/1647597332920118",
+      "price": "GBP675.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 41",
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 43"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 3,
+          "sizes": [
+            "EU 42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Speed 2.0 Stretch-Knit Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/high-top-sneakers/speed-20-stretch-knit-sneakers/1647597322036341",
+      "price": "GBP815.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 41",
+            "EU 44",
+            "EU 46"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 42"
+          ]
+        },
+        {
+          "status": "coming soon",
+          "status_index": 3,
+          "sizes": [
+            "EU 43",
+            "EU 45",
+            "EU 47"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Logo-Detailed Rubber Slides",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/slides/logo-detailed-rubber-slides/13452677149734261",
+      "price": "GBP360.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 40",
+            "EU 41",
+            "EU 44",
+            "EU 45",
+            "EU 46",
+            "EU 47"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39",
+            "EU 42"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 3,
+          "sizes": [
+            "EU 43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Romeo Collapsible-Heel Patent-Leather Loafers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/loafers/romeo-collapsible-heel-patent-leather-loafers/1647597332920120",
+      "price": "GBP775.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 42"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 41",
+            "EU 43",
+            "EU 44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Logo-Embossed Rubber Slides",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/slides/logo-embossed-rubber-slides/1647597336984954",
+      "price": "GBP370.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 41",
+            "EU 43",
+            "EU 44",
+            "EU 45"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3XL Mesh and Rubber Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/3xl-mesh-and-rubber-sneakers/1647597319271008",
+      "price": "GBP910.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 40",
+            "EU 41",
+            "EU 42",
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39"
+          ]
+        },
+        {
+          "status": "only two left",
+          "status_index": 3,
+          "sizes": [
+            "EU 43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "+ Crocs™ Faux Fur EVA Clogs",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/summer-shoes/plus-crocs™-faux-fur-eva-clogs/1647597332920125",
+      "price": "GBP675.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 40",
+            "EU 43",
+            "EU 44"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 41",
+            "EU 42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Speed 3.0 Logo-Jacquard Stretch-Knit Slip-On Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/high-top-sneakers/speed-30-logo-jacquard-stretch-knit-slip-on-sneakers/18706561955792284",
+      "price": "GBP815.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 41",
+            "EU 43",
+            "EU 44",
+            "EU 45",
+            "EU 46",
+            "EU 47"
+          ]
+        },
+        {
+          "status": "available",
+          "status_index": 2,
+          "sizes": [
+            "EU 42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EVA Lace-Up Boots",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/lace-up-boots/eva-lace-up-boots/1647597301835178",
+      "price": "GBP1200.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 41",
+            "EU 42"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 43",
+            "EU 44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Triple S Rhinestone-Embellished Microfibre Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/triple-s-rhinestone-embellished-microfibre-sneakers/1647597332920124",
+      "price": "GBP2150.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 40",
+            "EU 41",
+            "EU 42"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Triple S Piercing Mesh, Rubber and Leather Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/triple-s-piercing-mesh-rubber-and-leather-sneakers/1647597332920128",
+      "price": "GBP1200.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 41",
+            "EU 42",
+            "EU 43"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hummer Leather Boots",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/biker-boots/hummer-leather-boots/1647597291535182",
+      "price": "GBP1350.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 41",
+            "EU 42",
+            "EU 43",
+            "EU 44",
+            "EU 45",
+            "EU 46"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "+ Crocs Rubber Boots",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/chelsea-boots/plus-crocs-rubber-boots/32027475399416360",
+      "price": "GBP775.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 41",
+            "EU 42",
+            "EU 43",
+            "EU 44",
+            "EU 45"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Speed 2.0 Logo-Print Stretch-Knit Slides",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/slides/speed-20-logo-print-stretch-knit-slides/1647597309861136",
+      "price": "GBP615.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 40",
+            "EU 41",
+            "EU 42",
+            "EU 43",
+            "EU 44",
+            "EU 45"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 39"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Speed Recycled Stretch-Knit Slip-On Sneakers",
+      "url": "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/high-top-sneakers/speed-recycled-stretch-knit-slip-on-sneakers/18706561955792275",
+      "price": "GBP735.00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU 39",
+            "EU 40",
+            "EU 41",
+            "EU 42",
+            "EU 43",
+            "EU 44",
+            "EU 45",
+            "EU 46"
+          ]
+        },
+        {
+          "status": "only one left",
+          "status_index": 2,
+          "sizes": [
+            "EU 47"
+          ]
+        }
+      ]
+    }
+  ]
+}

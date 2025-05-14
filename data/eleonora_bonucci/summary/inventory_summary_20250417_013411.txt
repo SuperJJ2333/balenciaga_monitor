@@ -1,0 +1,6 @@
+******EleonoraBonucciMonitor - 库存监控********
+产品名称: BALENCIAGA - https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/237063
+价格：€ 1,150.00
+存货情况：
+--（1）available：39；41
+-------------------------------------------

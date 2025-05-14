@@ -1,0 +1,15 @@
+2025-05-15 03:34:20,604 - INFO - [giglio] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\giglio\giglio_20250515_033420.log
+2025-05-15 03:34:20,606 - INFO - [giglio] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\giglio\inventory\balenciaga_inventory_20250515_032910.json
+2025-05-15 03:34:20,606 - INFO - [giglio] - giglio - 库存监控已初始化
+2025-05-15 03:34:20,607 - INFO - [giglio] - 开始监控 https://www.giglio.com/en-us/balenciaga/men.html?_gl=1*1fxjw4l*_up*MQ..&category=8&gclid=CjwKCAjw--K_BhB5EiwAuwYoynemd70DtOPlR5NfGVCI_MD0CV577lXDMZjwaNVDEs7gZ8CrA91gQBoCivUQAvD_BwE
+2025-05-15 03:34:20,608 - INFO - [giglio] - 正在获取商品目录: https://www.giglio.com/en-us/balenciaga/men.html?_gl=1*1fxjw4l*_up*MQ..&category=8&gclid=CjwKCAjw--K_BhB5EiwAuwYoynemd70DtOPlR5NfGVCI_MD0CV577lXDMZjwaNVDEs7gZ8CrA91gQBoCivUQAvD_BwE
+2025-05-15 03:34:36,293 - INFO - [giglio] - 找到 2 个商品元素
+2025-05-15 03:34:36,294 - DEBUG - [giglio] - 找到商品: Sneakers men, URL: https://www.giglio.com/en-us/shoes-men_sneakers-balenciaga-825601w3xch.html?cSel=001
+2025-05-15 03:34:36,295 - DEBUG - [giglio] - 找到商品: Sneakers men, URL: https://www.giglio.com/en-us/shoes-men_sneakers-balenciaga-542023w2la2.html?cSel=001
+2025-05-15 03:34:36,295 - INFO - [giglio] - 共解析到 2 个商品
+2025-05-15 03:34:36,295 - INFO - [giglio] - 监控开始，共获取到 2 个商品信息
+2025-05-15 03:34:36,298 - INFO - [giglio] - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\giglio\inventory\balenciaga_inventory_20250515_033436.json
+2025-05-15 03:34:36,298 - INFO - [giglio] - 已保存2个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\giglio\inventory\balenciaga_inventory_20250515_033436.json
+2025-05-15 03:34:36,298 - INFO - [giglio] - 未检测到库存变化
+2025-05-15 03:34:36,298 - INFO - [giglio] - 监控结束，关闭浏览器
+2025-05-15 03:34:36,298 - INFO - [giglio] - giglio - 监控任务完成，日志已保存

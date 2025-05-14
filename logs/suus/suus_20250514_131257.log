@@ -1,0 +1,3 @@
+2025-05-14 13:12:57,407 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\suus\suus_20250514_131257.log
+2025-05-14 13:12:57,408 - utils.page_setting - INFO - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\suus\inventory\balenciaga_inventory_20250512_181933.json
+2025-05-14 13:12:57,408 - utils.page_setting - INFO - suus - 库存监控已初始化

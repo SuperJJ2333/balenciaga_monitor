@@ -1,0 +1,33 @@
+{
+  "new_products": [
+    {
+      "id": "Replica sneakers_maison-margiela-replica-sneakers-s57ws0505p8153-ha771?_pos=1&_fid=0f836c48a&_ss=c",
+      "name": "Replica sneakers",
+      "url": "https://www.grifo210.com/en-ww/products/maison-margiela-replica-sneakers-s57ws0505p8153-ha771?_pos=1&_fid=0f836c48a&_ss=c",
+      "price": "$613.00",
+      "inventory": {}
+    },
+    {
+      "id": "Replica sneakers_maison-margiela-replica-sneakers-s57ws0236p1895-101?_pos=2&_fid=0f836c48a&_ss=c",
+      "name": "Replica sneakers",
+      "url": "https://www.grifo210.com/en-ww/products/maison-margiela-replica-sneakers-s57ws0236p1895-101?_pos=2&_fid=0f836c48a&_ss=c",
+      "price": "$524.00",
+      "inventory": {}
+    }
+  ],
+  "removed_products": [
+    {
+      "id": "Replica sneakers_maison-margiela-replica-sneakers-s57ws0505p8153-ha771?_pos=1&_fid=da9ff28ca&_ss=c",
+      "name": "Replica sneakers",
+      "url": "https://www.grifo210.com/en-ww/products/maison-margiela-replica-sneakers-s57ws0505p8153-ha771?_pos=1&_fid=da9ff28ca&_ss=c",
+      "price": "$613.00"
+    },
+    {
+      "id": "Replica sneakers_maison-margiela-replica-sneakers-s57ws0236p1895-101?_pos=2&_fid=da9ff28ca&_ss=c",
+      "name": "Replica sneakers",
+      "url": "https://www.grifo210.com/en-ww/products/maison-margiela-replica-sneakers-s57ws0236p1895-101?_pos=2&_fid=da9ff28ca&_ss=c",
+      "price": "$524.00"
+    }
+  ],
+  "inventory_changes": []
+}

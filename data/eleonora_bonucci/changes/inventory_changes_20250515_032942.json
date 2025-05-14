@@ -1,0 +1,24 @@
+{
+  "new_products": [],
+  "removed_products": [
+    {
+      "id": "SNEAKER 3XL_358126",
+      "name": "SNEAKER 3XL",
+      "url": "https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/358126",
+      "price": "€ 975.00"
+    },
+    {
+      "id": "SNEAKER 3XL_352208",
+      "name": "SNEAKER 3XL",
+      "url": "https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/352208",
+      "price": "€ 975.00"
+    },
+    {
+      "id": "SNEAKER 3XL_354721",
+      "name": "SNEAKER 3XL",
+      "url": "https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/354721",
+      "price": "€ 975.00"
+    }
+  ],
+  "inventory_changes": []
+}

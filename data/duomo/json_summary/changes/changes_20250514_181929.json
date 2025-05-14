@@ -1,0 +1,23 @@
+{
+  "timestamp": "20250514_181929",
+  "current_data_file": "inventory_summary_20250514_180911.json",
+  "monitor": "DuomoMonitor",
+  "changes": {
+    "new_products": [],
+    "removed_products": [
+      {
+        "name": "Balenciaga 6XL Sneakers",
+        "url": "https://www.ilduomo.it/product/60494-balenciaga1937-gry-whit-gren-fl-yel",
+        "price": "¥4,840.95",
+        "inventory_status": []
+      },
+      {
+        "name": "Balenciaga Sunday Mule",
+        "url": "https://www.ilduomo.it/product/57930-balenciaga2090-beige-off-white",
+        "price": "¥3,168.62",
+        "inventory_status": []
+      }
+    ],
+    "stock_changes": []
+  }
+}

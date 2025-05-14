@@ -1,0 +1,48 @@
+{
+  "new_products": [],
+  "removed_products": [],
+  "inventory_changes": [
+    {
+      "id": "Runner 2 Lace-Up Sneakers_balenciaga-runner-2-lace-up-sneakers-943911050",
+      "name": "Runner 2 Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-2-lace-up-sneakers-943911050",
+      "price": "€516,86",
+      "size_changes": [
+        {
+          "size": "FR39",
+          "type": "changed",
+          "previous_status": "only left 1",
+          "current_status": "only left 2"
+        }
+      ]
+    },
+    {
+      "id": "Circuit Lace-Up Sneakers_balenciaga-circuit-lace-up-sneakers-943762091",
+      "name": "Circuit Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-circuit-lace-up-sneakers-943762091",
+      "price": "€543,17",
+      "size_changes": [
+        {
+          "size": "FR39",
+          "type": "changed",
+          "previous_status": "only left 3",
+          "current_status": "only left 2"
+        }
+      ]
+    },
+    {
+      "id": "Runner Lace-Up Sneakers_balenciaga-runner-lace-up-sneakers-942460259",
+      "name": "Runner Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-942460259",
+      "price": "€748,13",
+      "size_changes": [
+        {
+          "size": "FR39",
+          "type": "changed",
+          "previous_status": "only left 1",
+          "current_status": "only left 2"
+        }
+      ]
+    }
+  ]
+}

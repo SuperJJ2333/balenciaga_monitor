@@ -1,0 +1,25 @@
+{
+  "timestamp": "20250514_181929",
+  "current_data_file": "inventory_summary_20250514_181104.json",
+  "monitor": "Eleonora_bonucciMonitor",
+  "changes": {
+    "new_products": [
+      {
+        "name": "PHANTOM SNEAKER",
+        "url": "https://eleonorabonucci.com/en/balenciaga/men/footwear/sneakers/244576",
+        "price": "€ 695.00",
+        "inventory_status": [
+          {
+            "status": "available",
+            "status_index": 1,
+            "sizes": [
+              "45"
+            ]
+          }
+        ]
+      }
+    ],
+    "removed_products": [],
+    "stock_changes": []
+  }
+}

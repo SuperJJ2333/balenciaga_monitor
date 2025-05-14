@@ -1,0 +1,59 @@
+2025-05-14 00:22:30,029 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\rickowens\rickowens_20250514_002230.log
+2025-05-14 00:22:30,030 - utils.page_setting - INFO - 未找到历史库存数据目录: E:\pythonProject\outsource\balenciaga_monitor\data\rickowens\inventory
+2025-05-14 00:22:30,030 - utils.page_setting - INFO - rickowens - 库存监控已初始化
+2025-05-14 00:22:31,406 - utils.page_setting - INFO - rickowens - 浏览器页面已初始化
+2025-05-14 00:22:31,406 - utils.page_setting - INFO - 开始监控 https://www.rickowens.eu/en/MO/search?f%5Bcategories%5D%5B%5D=60&gender=men&q=HOLLYWOOD
+2025-05-14 00:22:31,406 - utils.page_setting - INFO - 正在获取商品目录: https://www.rickowens.eu/en/MO/search?f%5Bcategories%5D%5B%5D=60&gender=men&q=HOLLYWOOD
+2025-05-14 00:22:37,651 - utils.page_setting - INFO - 找到 52 个商品元素
+2025-05-14 00:22:52,091 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/rr01e5843lslch0-810
+2025-05-14 00:22:52,767 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/rr01e5843lslvs0-340
+2025-05-14 00:22:54,371 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/rr01e5843lslvs0-410
+2025-05-14 00:22:55,032 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/rr01e5855lco-1111
+2025-05-14 00:23:39,436 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/rr01e5855lco-34341
+2025-05-14 00:23:40,762 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/rr01e5855lco-911
+2025-05-14 00:23:40,765 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/rr01e5855lco-999
+2025-05-14 00:23:40,768 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/rr01e5865lba-411
+2025-05-14 00:23:40,770 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/rr01e5891lch-8111
+2025-05-14 00:23:40,772 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/rr01e5894lct-34341
+2025-05-14 00:23:40,774 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/rr01e5897lchlvs-8111
+2025-05-14 00:23:40,776 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5809lbypa-09
+2025-05-14 00:23:40,778 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5809lhlm-68
+2025-05-14 00:23:40,780 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5812lvsw1-151
+2025-05-14 00:23:40,782 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5813loow1-09
+2025-05-14 00:23:40,784 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5814lco-111111
+2025-05-14 00:23:40,786 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5814lco-9191
+2025-05-14 00:23:40,788 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5820lgy-09
+2025-05-14 00:23:40,790 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5825loogr0-140
+2025-05-14 00:23:40,791 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5828loo-09
+2025-05-14 00:23:40,794 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5832loo-99
+2025-05-14 00:23:40,796 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5848loogr-09
+2025-05-14 00:23:40,798 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5850lge-09
+2025-05-14 00:23:40,800 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5851loo-09
+2025-05-14 00:23:40,802 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5851loo-14
+2025-05-14 00:23:40,803 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5854loo-09
+2025-05-14 00:23:40,805 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5855lco-911
+2025-05-14 00:23:40,807 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5855lco-999
+2025-05-14 00:23:40,810 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5859lco-911
+2025-05-14 00:23:40,812 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5860lbh-8181
+2025-05-14 00:23:40,814 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5860loo-99
+2025-05-14 00:23:40,815 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5864loo-99
+2025-05-14 00:23:40,817 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5866loo-99
+2025-05-14 00:23:40,819 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5867loow1-99
+2025-05-14 00:23:40,821 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5868lco-911
+2025-05-14 00:23:40,823 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5869lge-09
+2025-05-14 00:23:40,826 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5869lge-34
+2025-05-14 00:23:40,828 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5874loo-09
+2025-05-14 00:23:40,830 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5875loo-09
+2025-05-14 00:23:40,832 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5878loo-09
+2025-05-14 00:23:40,834 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5881lwn-99
+2025-05-14 00:23:40,836 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5884lge-99
+2025-05-14 00:23:40,837 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5886lvsw1-411
+2025-05-14 00:23:40,841 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5888lco-91
+2025-05-14 00:23:40,843 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5890lco-6611
+2025-05-14 00:23:40,845 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5890lco-911
+2025-05-14 00:23:40,846 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5890lgy-1511
+2025-05-14 00:23:40,848 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5891lco-3411
+2025-05-14 00:23:40,850 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5891lco-911
+2025-05-14 00:23:40,852 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5891lvs-6411
+2025-05-14 00:23:40,855 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5892llppw2-911
+2025-05-14 00:23:40,859 - utils.page_setting - DEBUG - 找到商品: RICK OWENS, URL: https://www.rickowens.eu/en/MO/men/products/ru01e5893lcow2-911

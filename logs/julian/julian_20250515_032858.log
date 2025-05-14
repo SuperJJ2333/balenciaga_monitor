@@ -1,0 +1,29 @@
+2025-05-15 03:28:58,424 - INFO - [julian] - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\julian\julian_20250515_032858.log
+2025-05-15 03:28:58,426 - INFO - [julian] - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\julian\inventory\balenciaga_inventory_20250514_183441.json
+2025-05-15 03:28:58,426 - INFO - [julian] - julian - 库存监控已初始化
+2025-05-15 03:28:58,427 - INFO - [julian] - 开始监控 https://www.julian-fashion.com/en-hk/men/designer/balenciaga/shoes
+2025-05-15 03:28:58,428 - INFO - [julian] - 正在获取商品目录: https://www.julian-fashion.com/en-hk/men/designer/balenciaga/shoes
+2025-05-15 03:29:01,253 - INFO - [julian] - 找到 16 个商品元素
+2025-05-15 03:29:01,254 - DEBUG - [julian] - 找到商品: 'Runner 2.0' sneakers, URL: https://www.julian-fashion.com/en-hk/product/312011/balenciaga/sneakers/runner_20_sneakers
+2025-05-15 03:29:01,257 - DEBUG - [julian] - 找到商品: '3XL' sneakers, URL: https://www.julian-fashion.com/en-hk/product/312009/balenciaga/sneakers/3xl_sneakers
+2025-05-15 03:29:01,257 - DEBUG - [julian] - 找到商品: 'Track Trail Laces' sneakers, URL: https://www.julian-fashion.com/en-hk/product/312008/balenciaga/sneakers/track_trail_laces_sneakers
+2025-05-15 03:29:01,257 - DEBUG - [julian] - 找到商品: 'Runner' sneakers, URL: https://www.julian-fashion.com/en-hk/product/312007/balenciaga/sneakers/runner_sneakers
+2025-05-15 03:29:01,259 - DEBUG - [julian] - 找到商品: 'Circuit' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309743/balenciaga/sneakers/circuit_sneakers
+2025-05-15 03:29:01,259 - DEBUG - [julian] - 找到商品: '3XL' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309895/balenciaga/sneakers/3xl_sneakers
+2025-05-15 03:29:01,260 - DEBUG - [julian] - 找到商品: 'Triple S Sporty' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309894/balenciaga/sneakers/triple_s_sporty_sneakers
+2025-05-15 03:29:01,260 - DEBUG - [julian] - 找到商品: 'Triple S Sporty' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309893/balenciaga/sneakers/triple_s_sporty_sneakers
+2025-05-15 03:29:01,261 - DEBUG - [julian] - 找到商品: 'Runner' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309892/balenciaga/sneakers/runner_sneakers
+2025-05-15 03:29:01,262 - DEBUG - [julian] - 找到商品: 'Circuit' sneakers, URL: https://www.julian-fashion.com/en-hk/product/309891/balenciaga/sneakers/circuit_sneakers
+2025-05-15 03:29:01,262 - DEBUG - [julian] - 找到商品: 'Alaska' sabots, URL: https://www.julian-fashion.com/en-hk/product/305111/balenciaga/sabot/alaska_sabots
+2025-05-15 03:29:01,263 - DEBUG - [julian] - 找到商品: 'Pool Slide' sandals, URL: https://www.julian-fashion.com/en-hk/product/305110/balenciaga/slides/pool_slide_sandals
+2025-05-15 03:29:01,264 - DEBUG - [julian] - 找到商品: '3XL' sneakers, URL: https://www.julian-fashion.com/en-hk/product/303214/balenciaga/sneakers/3xl_sneakers
+2025-05-15 03:29:01,265 - DEBUG - [julian] - 找到商品: '3XL' sneakers, URL: https://www.julian-fashion.com/en-hk/product/303275/balenciaga/sneakers/3xl_sneakers
+2025-05-15 03:29:01,265 - DEBUG - [julian] - 找到商品: 'Runner' sneakers, URL: https://www.julian-fashion.com/en-hk/product/283942/balenciaga/sneakers/runner_sneakers
+2025-05-15 03:29:01,265 - DEBUG - [julian] - 找到商品: 'Track' sneakers, URL: https://www.julian-fashion.com/en-hk/product/250562/balenciaga/sneakers/track_sneakers
+2025-05-15 03:29:01,266 - INFO - [julian] - 共解析到 16 个商品
+2025-05-15 03:29:01,267 - INFO - [julian] - 监控开始，共获取到 16 个商品信息
+2025-05-15 03:29:01,268 - INFO - [julian] - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\julian\inventory\balenciaga_inventory_20250515_032901.json
+2025-05-15 03:29:01,269 - INFO - [julian] - 已保存9个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\julian\inventory\balenciaga_inventory_20250515_032901.json
+2025-05-15 03:29:01,269 - INFO - [julian] - 未检测到库存变化
+2025-05-15 03:29:01,269 - INFO - [julian] - 监控结束，关闭浏览器
+2025-05-15 03:29:01,269 - INFO - [julian] - julian - 监控任务完成，日志已保存

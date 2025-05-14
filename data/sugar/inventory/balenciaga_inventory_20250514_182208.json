@@ -1,0 +1,77 @@
+{
+  "\"Monday Shoe\" sneakers_monday_shoe_sneakers": {
+    "name": "\"Monday Shoe\" sneakers",
+    "url": "https://www.sugar.it/en-IT/product/181864/balenciaga/sneakers/monday_shoe_sneakers",
+    "price": "€ 850",
+    "inventory": {
+      "41 IT": "available",
+      "42 IT": "available",
+      "43 IT": "available",
+      "44 IT": "available",
+      "45 IT": "available"
+    },
+    "timestamp": "2025-05-14T18:22:08.944048"
+  },
+  "\"Tractor\" platform loafers_tractor_platform_loafers": {
+    "name": "\"Tractor\" platform loafers",
+    "url": "https://www.sugar.it/en-IT/product/181860/balenciaga/derby_shoes/tractor_platform_loafers",
+    "price": "€ 1.050",
+    "inventory": {
+      "44 IT": "available"
+    },
+    "timestamp": "2025-05-14T18:22:08.944048"
+  },
+  "\"3XL\" sneakers_3xl_sneakers": {
+    "name": "\"3XL\" sneakers",
+    "url": "https://www.sugar.it/en-IT/product/168751/balenciaga/sneakers/3xl_sneakers",
+    "price": "€ 975-10%€ 878",
+    "inventory": {
+      "42 IT": "available"
+    },
+    "timestamp": "2025-05-14T18:22:08.944048"
+  },
+  "\"6XL\" sneakers_6xl_sneakers": {
+    "name": "\"6XL\" sneakers",
+    "url": "https://www.sugar.it/en-IT/product/180141/balenciaga/sneakers/6xl_sneakers",
+    "price": "€ 995",
+    "inventory": {
+      "40 IT": "available",
+      "41 IT": "available",
+      "42 IT": "available",
+      "43 IT": "available",
+      "44 IT": "available"
+    },
+    "timestamp": "2025-05-14T18:22:08.944048"
+  },
+  "X Crocs rubber ankle boots™_x_crocs_rubber_ankle_bootsT": {
+    "name": "X Crocs rubber ankle boots™",
+    "url": "https://www.sugar.it/en-IT/product/180149/balenciaga/boots/x_crocs_rubber_ankle_bootsT",
+    "price": "€ 650",
+    "inventory": {
+      "41 IT": "available",
+      "44 IT": "available"
+    },
+    "timestamp": "2025-05-14T18:22:08.944048"
+  },
+  "\"Circuit\" sneakers_circuit_sneakers": {
+    "name": "\"Circuit\" sneakers",
+    "url": "https://www.sugar.it/en-IT/product/180152/balenciaga/sneakers/circuit_sneakers",
+    "price": "€ 895",
+    "inventory": {
+      "40 IT": "available",
+      "42 IT": "available",
+      "43 IT": "available",
+      "44 IT": "available"
+    },
+    "timestamp": "2025-05-14T18:22:08.944048"
+  },
+  "Logo slides_logo_slides": {
+    "name": "Logo slides",
+    "url": "https://www.sugar.it/en-IT/product/139120/balenciaga/sandals/logo_slides",
+    "price": "€ 325",
+    "inventory": {
+      "42 IT": "available"
+    },
+    "timestamp": "2025-05-14T18:22:08.944048"
+  }
+}

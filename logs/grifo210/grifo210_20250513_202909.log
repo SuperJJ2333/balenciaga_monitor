@@ -1,0 +1,7 @@
+2025-05-13 20:29:09,644 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\grifo210\grifo210_20250513_202909.log
+2025-05-13 20:29:09,644 - utils.page_setting - INFO - 未找到历史库存数据目录: E:\pythonProject\outsource\balenciaga_monitor\data\grifo210\inventory
+2025-05-13 20:29:09,645 - utils.page_setting - INFO - grifo210 - 库存监控已初始化
+2025-05-13 20:29:09,647 - utils.page_setting - INFO - 开始监控 https://www.grifo210.com/en-ww/collections/men-maison-margiela
+2025-05-13 20:29:09,648 - utils.page_setting - INFO - 正在获取商品目录: https://www.grifo210.com/en-ww/collections/men-maison-margiela
+2025-05-13 20:33:05,685 - utils.page_setting - INFO - 监控结束，关闭浏览器
+2025-05-13 20:33:05,686 - utils.page_setting - INFO - grifo210 - 监控任务完成，日志已保存

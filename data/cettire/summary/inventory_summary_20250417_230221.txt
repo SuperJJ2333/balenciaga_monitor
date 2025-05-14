@@ -1,0 +1,40 @@
+******CettireMonitor - 库存监控********
+产品名称: Speed 2.0 Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-speed-20-lace-up-sneakers-945673002
+价格：
+存货情况：
+--（1）sold out：FR39；FR40；FR41；FR42；FR43；FR44；FR46
+--（2）only one left：FR45
+-------------------------------------------
+产品名称: 3XL Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-3xl-lace-up-sneakers-945627513
+价格：
+存货情况：
+--（1）only one left：IT39；IT40；IT41；IT42；IT44；IT46
+--（2）only two left：IT43；IT45
+-------------------------------------------
+产品名称: 3XL Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-3xl-lace-up-sneakers-943222557
+价格：
+存货情况：
+--（1）only left 4：FR40；FR41
+--（2）only one left：FR45
+--（3）only two left：FR39；FR42；FR43；FR44
+-------------------------------------------
+产品名称: Track Lace-Up Sneakers - https://www.cettire.com/it/products/balenciaga-track-lace-up-sneakers-939185090
+价格：
+存货情况：
+--（1）sold out：FR39；FR41；FR42；FR43；FR44；FR45；FR46；FR47
+--（2）only one left：FR40
+-------------------------------------------
+产品名称: Track Signature Sneakers - https://www.cettire.com/it/products/balenciaga-track-signature-sneakers-943229487
+价格：
+存货情况：
+--（1）sold out：FR34；FR34.5；FR35.5；FR36；FR36.5；FR37；FR37.5；FR38；FR38.5；FR39；FR39.5；FR40；FR40.5；FR41；FR41.5；FR42
+--（2）only one left：FR35
+-------------------------------------------
+产品名称: X Crocs Logo Embossed Sandals - https://www.cettire.com/it/products/balenciaga-x-crocs-logo-embossed-sandals-940366308
+价格：
+存货情况：
+--（1）sold out：FR45
+--（2）only left 3：FR42；FR43
+--（3）only one left：FR40；FR41
+--（4）only two left：FR39；FR44
+-------------------------------------------

@@ -1,0 +1,8 @@
+2025-05-13 20:05:08,783 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\giglio\giglio_20250513_200508.log
+2025-05-13 20:05:08,784 - utils.page_setting - INFO - 未找到历史库存数据目录: E:\pythonProject\outsource\balenciaga_monitor\data\giglio\inventory
+2025-05-13 20:05:08,784 - utils.page_setting - INFO - giglio - 库存监控已初始化
+2025-05-13 20:05:08,786 - utils.page_setting - INFO - 开始监控 https://www.giglio.com/en-us/balenciaga/men.html?_gl=1*1fxjw4l*_up*MQ..&category=8&gclid=CjwKCAjw--K_BhB5EiwAuwYoynemd70DtOPlR5NfGVCI_MD0CV577lXDMZjwaNVDEs7gZ8CrA91gQBoCivUQAvD_BwE
+2025-05-13 20:05:08,787 - utils.page_setting - INFO - 正在获取商品目录: https://www.giglio.com/en-us/balenciaga/men.html?_gl=1*1fxjw4l*_up*MQ..&category=8&gclid=CjwKCAjw--K_BhB5EiwAuwYoynemd70DtOPlR5NfGVCI_MD0CV577lXDMZjwaNVDEs7gZ8CrA91gQBoCivUQAvD_BwE
+2025-05-13 20:05:19,001 - utils.page_setting - INFO - 找到 2 个商品元素
+2025-05-13 20:07:51,710 - utils.page_setting - INFO - 监控结束，关闭浏览器
+2025-05-13 20:07:51,711 - utils.page_setting - INFO - giglio - 监控任务完成，日志已保存

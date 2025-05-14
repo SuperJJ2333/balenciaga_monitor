@@ -1,0 +1,35 @@
+{
+  "timestamp": "20250419_150012",
+  "current_data_file": "inventory_summary_20250419_135233.json",
+  "monitor": "DuomoMonitor",
+  "changes": {
+    "new_products": [],
+    "removed_products": [],
+    "stock_changes": [
+      {
+        "name": "Balenciaga Monday Sneakers",
+        "url": "https://www.ilduomo.it/product/63225-balenciaga9110-white-black-grey",
+        "price": "¥5,972.61",
+        "inventory_status": [
+          {
+            "status": "available",
+            "status_index": 1,
+            "sizes": [
+              "44",
+              "45",
+              "46"
+            ]
+          }
+        ],
+        "size_changes": [
+          {
+            "size": "46",
+            "from": "",
+            "to": "available",
+            "type": "stock_in"
+          }
+        ]
+      }
+    ]
+  }
+}

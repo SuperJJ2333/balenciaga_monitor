@@ -1,0 +1,6 @@
+2025-05-14 13:28:01,502 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\antonioli\antonioli_20250514_132801.log
+2025-05-14 13:28:01,503 - utils.page_setting - INFO - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\antonioli\inventory\balenciaga_inventory_20250513_144757.json
+2025-05-14 13:28:01,503 - utils.page_setting - INFO - antonioli - 库存监控已初始化
+2025-05-14 13:28:01,527 - utils.page_setting - ERROR - 初始化浏览器失败: 浏览器版本太旧或此浏览器不支持接管。
+2025-05-14 13:28:01,527 - utils.page_setting - INFO - 尝试使用备选方式初始化浏览器...
+2025-05-14 13:28:01,543 - utils.page_setting - ERROR - 备选方式初始化浏览器也失败: 浏览器版本太旧或此浏览器不支持接管。

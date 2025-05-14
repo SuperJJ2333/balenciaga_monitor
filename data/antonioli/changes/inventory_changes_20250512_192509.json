@@ -1,0 +1,175 @@
+{
+  "new_products": [
+    {
+      "id": "leopold flat ballerinas_products",
+      "name": "leopold flat ballerinas",
+      "url": "https://antonioli.eu/en-us/products/man-balenciaga-shoes-loafers-flats-810884w11m0-1000?_pos=1&_fid=9458117b1&_ss=c",
+      "price": "$925",
+      "inventory": {
+        "36": "available",
+        "40": "available"
+      }
+    },
+    {
+      "id": "trtactor loafers_products",
+      "name": "trtactor loafers",
+      "url": "https://antonioli.eu/en-us/products/man-balenciaga-shoes-loafers-flats-825735wbsa8-1010?_pos=2&_fid=9458117b1&_ss=c",
+      "price": "$1,230",
+      "inventory": {
+        "40": "available",
+        "41": "available",
+        "42": "available",
+        "43": "available",
+        "44": "available"
+      }
+    },
+    {
+      "id": "stomper derbies_products",
+      "name": "stomper derbies",
+      "url": "https://antonioli.eu/en-us/products/man-balenciaga-shoes-lace-ups-807326wcda0-1000?_pos=3&_fid=9458117b1&_ss=c",
+      "price": "$1,405",
+      "inventory": {
+        "41": "available",
+        "44": "available",
+        "45": "available"
+      }
+    },
+    {
+      "id": "crocs collaboration mule jibbitz_products",
+      "name": "crocs collaboration mule jibbitz",
+      "url": "https://antonioli.eu/en-us/products/man-balenciaga-shoes-mules-720857w0foy-1000?_pos=4&_fid=9458117b1&_ss=c",
+      "price": "$930",
+      "inventory": {
+        "39": "available",
+        "41": "available",
+        "43": "available",
+        "44": "available"
+      }
+    },
+    {
+      "id": "giant boots 80mm_products",
+      "name": "giant boots 80mm",
+      "url": "https://antonioli.eu/en-us/products/man-balenciaga-shoes-boots-813689wcda1-1000?_pos=5&_fid=9458117b1&_ss=c",
+      "price": "$2,330",
+      "inventory": {
+        "40": "available",
+        "41": "available",
+        "42": "available"
+      }
+    },
+    {
+      "id": "speed 2.0 lt sneakers_products",
+      "name": "speed 2.0 lt sneakers",
+      "url": "https://antonioli.eu/en-us/products/man-balenciaga-shoes-sneakers-617239w2db2-1015?_pos=6&_fid=9458117b1&_ss=c",
+      "price": "$930",
+      "inventory": {
+        "39": "available",
+        "40": "available",
+        "41": "available",
+        "45": "available",
+        "46": "available"
+      }
+    },
+    {
+      "id": "runner sneakers_products",
+      "name": "runner sneakers",
+      "url": "https://antonioli.eu/en-us/products/man-balenciaga-shoes-sneakers-772774w3rbt-1000?_pos=7&_fid=9458117b1&_ss=c",
+      "price": "$1,110",
+      "inventory": {
+        "40": "available",
+        "46": "available"
+      }
+    },
+    {
+      "id": "3xl sneakers_products",
+      "name": "3xl sneakers",
+      "url": "https://antonioli.eu/en-us/products/man-balenciaga-shoes-sneakers-734734w3xl4-9191?_pos=8&_fid=9458117b1&_ss=c",
+      "price": "$1,125",
+      "inventory": {
+        "45": "available"
+      }
+    },
+    {
+      "id": "circuit sneakers_products",
+      "name": "circuit sneakers",
+      "url": "https://antonioli.eu/en-us/products/man-balenciaga-shoes-sneakers-793945wflgy-9100?_pos=10&_fid=9458117b1&_ss=c",
+      "price": "$1,015",
+      "inventory": {
+        "45": "available"
+      }
+    },
+    {
+      "id": "stapler sneakers_products",
+      "name": "stapler sneakers",
+      "url": "https://antonioli.eu/en-us/products/man-balenciaga-shoes-sneakers-803681w3st4-1000?_pos=11&_fid=9458117b1&_ss=c",
+      "price": "$1,085",
+      "inventory": {
+        "44": "available",
+        "45": "available"
+      }
+    }
+  ],
+  "removed_products": [
+    {
+      "id": "leopold flat ballerinas_designer-balenciaga",
+      "name": "leopold flat ballerinas",
+      "url": "https://antonioli.eu/en-us/collections/designer-balenciaga/man",
+      "price": "$925"
+    },
+    {
+      "id": "trtactor loafers_designer-balenciaga",
+      "name": "trtactor loafers",
+      "url": "https://antonioli.eu/en-us/collections/designer-balenciaga/man",
+      "price": "$1,230"
+    },
+    {
+      "id": "stomper derbies_designer-balenciaga",
+      "name": "stomper derbies",
+      "url": "https://antonioli.eu/en-us/collections/designer-balenciaga/man",
+      "price": "$1,405"
+    },
+    {
+      "id": "crocs collaboration mule jibbitz_designer-balenciaga",
+      "name": "crocs collaboration mule jibbitz",
+      "url": "https://antonioli.eu/en-us/collections/designer-balenciaga/man",
+      "price": "$930"
+    },
+    {
+      "id": "giant boots 80mm_designer-balenciaga",
+      "name": "giant boots 80mm",
+      "url": "https://antonioli.eu/en-us/collections/designer-balenciaga/man",
+      "price": "$2,330"
+    },
+    {
+      "id": "speed 2.0 lt sneakers_designer-balenciaga",
+      "name": "speed 2.0 lt sneakers",
+      "url": "https://antonioli.eu/en-us/collections/designer-balenciaga/man",
+      "price": "$930"
+    },
+    {
+      "id": "runner sneakers_designer-balenciaga",
+      "name": "runner sneakers",
+      "url": "https://antonioli.eu/en-us/collections/designer-balenciaga/man",
+      "price": "$1,110"
+    },
+    {
+      "id": "3xl sneakers_designer-balenciaga",
+      "name": "3xl sneakers",
+      "url": "https://antonioli.eu/en-us/collections/designer-balenciaga/man",
+      "price": "$1,125"
+    },
+    {
+      "id": "circuit sneakers_designer-balenciaga",
+      "name": "circuit sneakers",
+      "url": "https://antonioli.eu/en-us/collections/designer-balenciaga/man",
+      "price": "$1,015"
+    },
+    {
+      "id": "stapler sneakers_designer-balenciaga",
+      "name": "stapler sneakers",
+      "url": "https://antonioli.eu/en-us/collections/designer-balenciaga/man",
+      "price": "$1,085"
+    }
+  ],
+  "inventory_changes": []
+}

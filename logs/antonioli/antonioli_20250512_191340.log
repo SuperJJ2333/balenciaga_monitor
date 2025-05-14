@@ -1,0 +1,7 @@
+2025-05-12 19:13:40,240 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\antonioli\antonioli_20250512_191340.log
+2025-05-12 19:13:40,241 - utils.page_setting - INFO - 未找到历史库存数据目录: E:\pythonProject\outsource\balenciaga_monitor\data\antonioli\inventory
+2025-05-12 19:13:40,241 - utils.page_setting - INFO - antonioli - 库存监控已初始化
+2025-05-12 19:13:40,244 - utils.page_setting - INFO - 开始监控 https://antonioli.eu/en-us/collections/designer-balenciaga/man?grid-switcher=4&filter.p.m.elastick.department=SHOES&filter.v.price.gte=&filter.v.price.lte=
+2025-05-12 19:13:40,245 - utils.page_setting - INFO - 正在获取商品目录: https://antonioli.eu/en-us/collections/designer-balenciaga/man?grid-switcher=4&filter.p.m.elastick.department=SHOES&filter.v.price.gte=&filter.v.price.lte=
+2025-05-12 19:14:37,180 - utils.page_setting - INFO - 监控结束，关闭浏览器
+2025-05-12 19:14:37,180 - utils.page_setting - INFO - antonioli - 监控任务完成，日志已保存

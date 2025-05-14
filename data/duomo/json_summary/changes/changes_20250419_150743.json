@@ -1,0 +1,99 @@
+{
+  "timestamp": "20250419_150743",
+  "current_data_file": "inventory_summary_20250419_135233.json",
+  "monitor": "DuomoMonitor",
+  "changes": {
+    "new_products": [
+      {
+        "name": "Balenciaga Runner 2 Sneakers PRO",
+        "url": "https://www.ilduomo.it/product/62122-balenciaga9402-white-blue-mix",
+        "price": "¥6,475.56",
+        "inventory_status": [
+          {
+            "status": "available",
+            "status_index": 1,
+            "sizes": [
+              "41",
+              "42",
+              "43",
+              "44",
+              "45"
+            ]
+          }
+        ]
+      }
+    ],
+    "removed_products": [
+      {
+        "name": "Balenciaga Runner 2 Sneakers",
+        "url": "https://www.ilduomo.it/product/62122-balenciaga9402-white-blue-mix",
+        "price": "¥6,475.56",
+        "inventory_status": [
+          {
+            "status": "available",
+            "status_index": 1,
+            "sizes": [
+              "41",
+              "42",
+              "43",
+              "44",
+              "45"
+            ]
+          }
+        ]
+      }
+    ],
+    "stock_changes": [
+      {
+        "name": "Balenciaga Monday Sneakers",
+        "url": "https://www.ilduomo.it/product/63225-balenciaga9110-white-black-grey",
+        "price": "¥5,972.61",
+        "inventory_status": [
+          {
+            "status": "available",
+            "status_index": 1,
+            "sizes": [
+              "44",
+              "45",
+              "46"
+            ]
+          }
+        ],
+        "size_changes": [
+          {
+            "size": "46",
+            "from": "",
+            "to": "available",
+            "type": "stock_in"
+          }
+        ]
+      },
+      {
+        "name": "Balenciaga Pool Slide",
+        "url": "https://www.ilduomo.it/product/62761-balenciaga1090-black-white",
+        "price": "¥2,357.61",
+        "inventory_status": [
+          {
+            "status": "available",
+            "status_index": 1,
+            "sizes": [
+              "41",
+              "42",
+              "43",
+              "44",
+              "45"
+            ]
+          }
+        ],
+        "size_changes": [
+          {
+            "size": "45",
+            "from": "",
+            "to": "available",
+            "type": "stock_in"
+          }
+        ]
+      }
+    ]
+  }
+}

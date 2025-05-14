@@ -1,0 +1,24 @@
+{
+  "new_products": [],
+  "removed_products": [],
+  "inventory_changes": [
+    {
+      "id": "'Pool Slide' sandals_pool_slide_sandals",
+      "name": "'Pool Slide' sandals",
+      "url": "https://www.julian-fashion.com/en-hk/product/305110/balenciaga/slides/pool_slide_sandals",
+      "price": "$ 321.00",
+      "size_changes": [
+        {
+          "size": "43 IT",
+          "type": "removed",
+          "previous_status": "available"
+        },
+        {
+          "size": "45 IT",
+          "type": "removed",
+          "previous_status": "available"
+        }
+      ]
+    }
+  ]
+}

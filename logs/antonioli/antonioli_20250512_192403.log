@@ -1,0 +1,27 @@
+2025-05-12 19:24:03,907 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\antonioli\antonioli_20250512_192403.log
+2025-05-12 19:24:03,911 - utils.page_setting - INFO - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\antonioli\inventory\balenciaga_inventory_20250512_191552.json
+2025-05-12 19:24:03,911 - utils.page_setting - INFO - antonioli - 库存监控已初始化
+2025-05-12 19:24:04,079 - utils.page_setting - INFO - antonioli - 浏览器页面已初始化
+2025-05-12 19:24:04,081 - utils.page_setting - INFO - 开始监控 https://antonioli.eu/en-us/collections/designer-balenciaga/man?grid-switcher=4&filter.p.m.elastick.department=SHOES&filter.v.price.gte=&filter.v.price.lte=
+2025-05-12 19:24:04,083 - utils.page_setting - INFO - 正在获取商品目录: https://antonioli.eu/en-us/collections/designer-balenciaga/man?grid-switcher=4&filter.p.m.elastick.department=SHOES&filter.v.price.gte=&filter.v.price.lte=
+2025-05-12 19:24:11,858 - utils.page_setting - INFO - 找到 11 个商品元素
+2025-05-12 19:25:03,569 - utils.page_setting - DEBUG - 找到商品: leopold flat ballerinas, URL: https://antonioli.eu/en-us/products/man-balenciaga-shoes-loafers-flats-810884w11m0-1000?_pos=1&_fid=9458117b1&_ss=c
+2025-05-12 19:25:07,610 - utils.page_setting - DEBUG - 找到商品: trtactor loafers, URL: https://antonioli.eu/en-us/products/man-balenciaga-shoes-loafers-flats-825735wbsa8-1010?_pos=2&_fid=9458117b1&_ss=c
+2025-05-12 19:25:07,615 - utils.page_setting - DEBUG - 找到商品: stomper derbies, URL: https://antonioli.eu/en-us/products/man-balenciaga-shoes-lace-ups-807326wcda0-1000?_pos=3&_fid=9458117b1&_ss=c
+2025-05-12 19:25:07,616 - utils.page_setting - DEBUG - 找到商品: crocs collaboration mule jibbitz, URL: https://antonioli.eu/en-us/products/man-balenciaga-shoes-mules-720857w0foy-1000?_pos=4&_fid=9458117b1&_ss=c
+2025-05-12 19:25:07,621 - utils.page_setting - DEBUG - 找到商品: giant boots 80mm, URL: https://antonioli.eu/en-us/products/man-balenciaga-shoes-boots-813689wcda1-1000?_pos=5&_fid=9458117b1&_ss=c
+2025-05-12 19:25:07,624 - utils.page_setting - DEBUG - 找到商品: speed 2.0 lt sneakers, URL: https://antonioli.eu/en-us/products/man-balenciaga-shoes-sneakers-617239w2db2-1015?_pos=6&_fid=9458117b1&_ss=c
+2025-05-12 19:25:07,626 - utils.page_setting - DEBUG - 找到商品: runner sneakers, URL: https://antonioli.eu/en-us/products/man-balenciaga-shoes-sneakers-772774w3rbt-1000?_pos=7&_fid=9458117b1&_ss=c
+2025-05-12 19:25:07,630 - utils.page_setting - DEBUG - 找到商品: 3xl sneakers, URL: https://antonioli.eu/en-us/products/man-balenciaga-shoes-sneakers-734734w3xl4-9191?_pos=8&_fid=9458117b1&_ss=c
+2025-05-12 19:25:07,632 - utils.page_setting - DEBUG - 找到商品: circuit sneakers, URL: https://antonioli.eu/en-us/products/man-balenciaga-shoes-sneakers-793945wflgy-1000?_pos=9&_fid=9458117b1&_ss=c
+2025-05-12 19:25:07,636 - utils.page_setting - DEBUG - 找到商品: circuit sneakers, URL: https://antonioli.eu/en-us/products/man-balenciaga-shoes-sneakers-793945wflgy-9100?_pos=10&_fid=9458117b1&_ss=c
+2025-05-12 19:25:07,639 - utils.page_setting - DEBUG - 找到商品: stapler sneakers, URL: https://antonioli.eu/en-us/products/man-balenciaga-shoes-sneakers-803681w3st4-1000?_pos=11&_fid=9458117b1&_ss=c
+2025-05-12 19:25:07,639 - utils.page_setting - INFO - 共解析到 11 个商品
+2025-05-12 19:25:09,067 - utils.page_setting - INFO - 监控开始，共获取到 11 个商品信息
+2025-05-12 19:25:09,073 - utils.page_setting - INFO - antonioli - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\antonioli\inventory\balenciaga_inventory_20250512_192509.json
+2025-05-12 19:25:09,073 - utils.page_setting - INFO - 已保存10个商品的库存信息到 E:\pythonProject\outsource\balenciaga_monitor\data\antonioli\inventory\balenciaga_inventory_20250512_192509.json
+2025-05-12 19:25:09,078 - utils.page_setting - INFO - antonioli - 数据已保存到 E:\pythonProject\outsource\balenciaga_monitor\data\antonioli\changes\inventory_changes_20250512_192509.json
+2025-05-12 19:25:09,078 - utils.page_setting - INFO - 检测到库存变化: 10个新商品, 10个下架商品, 0个库存变化
+2025-05-12 19:25:09,078 - utils.page_setting - INFO - 检测到库存变化，已保存到变更记录
+2025-05-12 19:25:09,079 - utils.page_setting - INFO - 监控结束，关闭浏览器
+2025-05-12 19:25:09,932 - utils.page_setting - INFO - antonioli - 监控任务完成，日志已保存

@@ -1,0 +1,3 @@
+2025-05-14 13:18:45,547 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\antonioli\antonioli_20250514_131845.log
+2025-05-14 13:18:45,548 - utils.page_setting - INFO - 加载了上次的库存数据: E:\pythonProject\outsource\balenciaga_monitor\data\antonioli\inventory\balenciaga_inventory_20250513_144757.json
+2025-05-14 13:18:45,548 - utils.page_setting - INFO - antonioli - 库存监控已初始化

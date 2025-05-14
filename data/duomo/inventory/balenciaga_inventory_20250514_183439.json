@@ -1,0 +1,72 @@
+{
+  "63160_Balenciaga Pool Slide": {
+    "id": "63160",
+    "name": "Balenciaga Pool Slide",
+    "url": "https://www.ilduomo.it/product/63160-balenciaga1190-grey-white",
+    "price": "¥1,650.33",
+    "inventory": {
+      "42": "2",
+      "43": "1",
+      "44": "2"
+    },
+    "timestamp": "2025-05-14T18:34:39.189580"
+  },
+  "62867_Balenciaga Runner": {
+    "id": "62867",
+    "name": "Balenciaga Runner",
+    "url": "https://www.ilduomo.it/product/62867-balenciaga1474-grey-blue-orange",
+    "price": "¥4,796.95",
+    "inventory": {
+      "42": "2"
+    },
+    "timestamp": "2025-05-14T18:34:39.189580"
+  },
+  "62761_Balenciaga Pool Slide": {
+    "id": "62761",
+    "name": "Balenciaga Pool Slide",
+    "url": "https://www.ilduomo.it/product/62761-balenciaga1090-black-white",
+    "price": "¥1,650.33",
+    "inventory": {
+      "41": "2",
+      "42": "1",
+      "43": "2"
+    },
+    "timestamp": "2025-05-14T18:34:39.189580"
+  },
+  "62122_Balenciaga Runner 2 Sneakers": {
+    "id": "62122",
+    "name": "Balenciaga Runner 2 Sneakers",
+    "url": "https://www.ilduomo.it/product/62122-balenciaga9402-white-blue-mix",
+    "price": "¥4,532.89",
+    "inventory": {
+      "41": "1",
+      "43": "3",
+      "44": "2",
+      "45": "1"
+    },
+    "timestamp": "2025-05-14T18:34:39.189580"
+  },
+  "61048_Balenciaga 3xl Sneakers": {
+    "id": "61048",
+    "name": "Balenciaga 3xl Sneakers",
+    "url": "https://www.ilduomo.it/product/61048-balenciaga9237-white-grey-green-yel",
+    "price": "¥4,928.97",
+    "inventory": {
+      "41": "1",
+      "42": "2",
+      "43": "1",
+      "45": "1"
+    },
+    "timestamp": "2025-05-14T18:34:39.189580"
+  },
+  "61049_Balenciaga Alaska Slipper": {
+    "id": "61049",
+    "name": "Balenciaga Alaska Slipper",
+    "url": "https://www.ilduomo.it/product/61049-balenciaga2200-brown-white",
+    "price": "¥2,618.52",
+    "inventory": {
+      "41": "1"
+    },
+    "timestamp": "2025-05-14T18:34:39.189580"
+  }
+}

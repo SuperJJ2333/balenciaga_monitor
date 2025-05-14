@@ -1,0 +1,37 @@
+{
+  "monitor": "DuomoMonitor",
+  "timestamp": "2025-05-14T18:19:46.495785",
+  "total_products": 5,
+  "products": [
+    {
+      "name": "Balenciaga Pool Slide",
+      "url": "https://www.ilduomo.it/product/63160-balenciaga1190-grey-white",
+      "price": "¥1,650.33",
+      "inventory_status": []
+    },
+    {
+      "name": "Balenciaga Runner",
+      "url": "https://www.ilduomo.it/product/62867-balenciaga1474-grey-blue-orange",
+      "price": "¥4,796.95",
+      "inventory_status": []
+    },
+    {
+      "name": "Balenciaga Pool Slide",
+      "url": "https://www.ilduomo.it/product/62761-balenciaga1090-black-white",
+      "price": "¥1,650.33",
+      "inventory_status": []
+    },
+    {
+      "name": "Balenciaga Runner 2 Sneakers",
+      "url": "https://www.ilduomo.it/product/62122-balenciaga9402-white-blue-mix",
+      "price": "¥4,532.89",
+      "inventory_status": []
+    },
+    {
+      "name": "Balenciaga 3xl Sneakers",
+      "url": "https://www.ilduomo.it/product/61048-balenciaga9237-white-grey-green-yel",
+      "price": "¥4,928.97",
+      "inventory_status": []
+    }
+  ]
+}

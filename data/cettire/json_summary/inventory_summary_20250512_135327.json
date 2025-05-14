@@ -1,0 +1,2597 @@
+{
+  "monitor": "CettireMonitor",
+  "timestamp": "2025-05-12T13:53:27.165320",
+  "total_products": 70,
+  "products": [
+    {
+      "name": "3XL Extreme Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-3xl-extreme-lace-up-sneakers-946305516",
+      "price": "€849,71",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR40",
+            "FR44"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR43",
+            "FR45",
+            "FR46"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR41",
+            "FR42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3XL Panelled Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-3xl-panelled-lace-up-sneakers-946280200",
+      "price": "€853,13",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38",
+            "FR38.5",
+            "FR39",
+            "FR39.5",
+            "FR40.5",
+            "FR41.5",
+            "FR42.5",
+            "FR43.5",
+            "FR44.5",
+            "FR45.5",
+            "FR46.5",
+            "FR47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR42",
+            "FR44",
+            "FR45",
+            "FR46"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR41",
+            "FR43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Speed 2.0 Sock Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-speed-20-sock-sneakers-946239170",
+      "price": "€660,71",
+      "inventory_status": [
+        {
+          "status": "1",
+          "status_index": 1,
+          "sizes": [
+            "FR46"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR40"
+          ]
+        },
+        {
+          "status": "4",
+          "status_index": 3,
+          "sizes": [
+            "FR42",
+            "FR44",
+            "FR45"
+          ]
+        },
+        {
+          "status": "5",
+          "status_index": 4,
+          "sizes": [
+            "FR41"
+          ]
+        },
+        {
+          "status": "6",
+          "status_index": 5,
+          "sizes": [
+            "FR43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sunday Slip-On Mules",
+      "url": "https://www.cettire.com/it/products/balenciaga-sunday-slip-on-mules-942533660",
+      "price": "€417,38",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "IT38",
+            "IT38.5",
+            "IT39",
+            "IT39.5",
+            "IT40.5",
+            "IT41.5",
+            "IT42.5",
+            "IT43.5",
+            "IT44.5",
+            "IT45",
+            "IT45.5",
+            "IT46",
+            "IT46.5",
+            "IT47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "IT40",
+            "IT41",
+            "IT43",
+            "IT44"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "IT42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Speed 2.0 Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-speed-20-lace-up-sneakers-946150088",
+      "price": "€660,71",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR40",
+            "FR41",
+            "FR42",
+            "FR43",
+            "FR44",
+            "FR45"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR46"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Track Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-track-lace-up-sneakers-945673010",
+      "price": "€681,19",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR40",
+            "FR43",
+            "FR45",
+            "FR46",
+            "FR47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR44"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR41",
+            "FR42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Circuit Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-circuit-lace-up-sneakers-945740953",
+      "price": "€642,16",
+      "inventory_status": [
+        {
+          "status": "1",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR40",
+            "FR41",
+            "FR44",
+            "FR45"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 2,
+          "sizes": [
+            "FR42",
+            "FR43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "6XL Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-6xl-low-top-sneakers-945723975",
+      "price": "€775,69",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR40",
+            "FR41",
+            "FR42",
+            "FR43",
+            "FR44"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Circuit Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-circuit-lace-up-sneakers-945723983",
+      "price": "€673,31",
+      "inventory_status": [
+        {
+          "status": "1",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR42",
+            "FR46"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR41",
+            "FR43",
+            "FR45"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 3,
+          "sizes": [
+            "FR44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "X Crocs Ankle Boots",
+      "url": "https://www.cettire.com/it/products/balenciaga-x-crocs-ankle-boots-945740823",
+      "price": "€442,53",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR45"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR41",
+            "FR42",
+            "FR43",
+            "FR44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3XL Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-3xl-lace-up-sneakers-943222557",
+      "price": "€748,13",
+      "inventory_status": [
+        {
+          "status": "1",
+          "status_index": 1,
+          "sizes": [
+            "FR43"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR42",
+            "FR44"
+          ]
+        },
+        {
+          "status": "4",
+          "status_index": 3,
+          "sizes": [
+            "FR40",
+            "FR41",
+            "FR45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Track Signature Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-track-signature-sneakers-943229487",
+      "price": "€563,85",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR34",
+            "FR34.5",
+            "FR35.5",
+            "FR36",
+            "FR36.5",
+            "FR37",
+            "FR37.5",
+            "FR38",
+            "FR38.5",
+            "FR39",
+            "FR39.5",
+            "FR40",
+            "FR40.5",
+            "FR41",
+            "FR41.5",
+            "FR42"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR35"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stapler Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-stapler-lace-up-sneakers-944082734",
+      "price": "€706,56",
+      "inventory_status": [
+        {
+          "status": "1",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR40",
+            "FR42",
+            "FR44",
+            "FR45",
+            "FR46"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 2,
+          "sizes": [
+            "FR41",
+            "FR43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "X Crocs Logo Embossed Sandals",
+      "url": "https://www.cettire.com/it/products/balenciaga-x-crocs-logo-embossed-sandals-940366308",
+      "price": "€269,59",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR45"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR41",
+            "FR43"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR39",
+            "FR42",
+            "FR44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3XL Knitted Sock Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-3xl-knitted-sock-sneakers-933480589",
+      "price": "€558,69",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR45",
+            "FR46"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR41",
+            "FR42",
+            "FR43",
+            "FR44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sport 3XL Slip-On Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-3xl-slip-on-sneakers-943205411",
+      "price": "€720,56",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR46"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 3,
+          "sizes": [
+            "FR44"
+          ]
+        },
+        {
+          "status": "4",
+          "status_index": 4,
+          "sizes": [
+            "FR45"
+          ]
+        },
+        {
+          "status": "6",
+          "status_index": 5,
+          "sizes": [
+            "FR40",
+            "FR42",
+            "FR43"
+          ]
+        },
+        {
+          "status": "7",
+          "status_index": 6,
+          "sizes": [
+            "FR41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cagole Ankle Boots",
+      "url": "https://www.cettire.com/it/products/balenciaga-cagole-ankle-boots-944220631",
+      "price": "€1.039,50",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR42",
+            "FR43",
+            "FR44"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Speed Sock Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-speed-sock-sneakers-90609779",
+      "price": "€606,38",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38",
+            "FR38.5",
+            "FR39",
+            "FR39.5",
+            "FR40.5",
+            "FR41",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR46.5",
+            "FR47",
+            "FR48"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner 2 Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-2-lace-up-sneakers-943911050",
+      "price": "€516,86",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38",
+            "FR38.5",
+            "FR39.5",
+            "FR40.5",
+            "FR41.5",
+            "FR42.5",
+            "FR43.5",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR46.5",
+            "FR47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR41",
+            "FR42",
+            "FR43",
+            "FR44"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR39"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 4,
+          "sizes": [
+            "FR40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Triple S Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-triple-s-sneakers-943330568",
+      "price": "€696,94",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR42",
+            "FR45",
+            "FR46"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR41",
+            "FR43",
+            "FR44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Circuit Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-circuit-lace-up-sneakers-943746935",
+      "price": "€626,50",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR41",
+            "FR42",
+            "FR44",
+            "FR46"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR39",
+            "FR40"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 4,
+          "sizes": [
+            "FR45"
+          ]
+        },
+        {
+          "status": "4",
+          "status_index": 5,
+          "sizes": [
+            "FR43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Circuit Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-circuit-lace-up-sneakers-943762091",
+      "price": "€543,17",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR42"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR35",
+            "FR38",
+            "FR41"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR36",
+            "FR37",
+            "FR39",
+            "FR40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mesh Panelled Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/runner-sneakers-balenciaga-synthetic-beige-943762012",
+      "price": "€748,13",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU36",
+            "EU37",
+            "EU38",
+            "EU39",
+            "EU40",
+            "EU41",
+            "EU42"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "EU35"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3XL Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-3xl-low-top-sneakers-937213148",
+      "price": "€705,22",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38",
+            "FR38.5",
+            "FR39",
+            "FR39.5",
+            "FR40",
+            "FR40.5",
+            "FR41",
+            "FR41.5",
+            "FR42.5",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR46.5",
+            "FR47",
+            "FR48",
+            "FR49"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 2,
+          "sizes": [
+            "FR42",
+            "FR43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Triple S Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-triple-s-sneakers-943583697",
+      "price": "€696,94",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR42",
+            "FR43",
+            "FR44",
+            "FR46"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 3,
+          "sizes": [
+            "FR40",
+            "FR41",
+            "FR45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3 XL Slip-On Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-3-xl-slip-on-sneakers-943355749",
+      "price": "€582,75",
+      "inventory_status": [
+        {
+          "status": "1",
+          "status_index": 1,
+          "sizes": [
+            "EU34",
+            "EU35",
+            "EU36",
+            "EU41"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 2,
+          "sizes": [
+            "EU37",
+            "EU39",
+            "EU40",
+            "EU42"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 3,
+          "sizes": [
+            "EU38"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sport 3XL Slip-On Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-sport-3xl-slip-on-sneakers-943330577",
+      "price": "€720,56",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR46"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR45"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR43"
+          ]
+        },
+        {
+          "status": "4",
+          "status_index": 4,
+          "sizes": [
+            "FR40",
+            "FR41"
+          ]
+        },
+        {
+          "status": "5",
+          "status_index": 5,
+          "sizes": [
+            "FR44"
+          ]
+        },
+        {
+          "status": "6",
+          "status_index": 6,
+          "sizes": [
+            "FR42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Phantom Logo Printed Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-phantom-logo-printed-sneakers-915548488",
+      "price": "€608,13",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR40",
+            "FR42",
+            "FR43",
+            "FR44",
+            "FR45",
+            "FR46",
+            "FR47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-943221918",
+      "price": "€748,13",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR40",
+            "FR42",
+            "FR43",
+            "FR44",
+            "FR45",
+            "FR46"
+          ]
+        },
+        {
+          "status": "4",
+          "status_index": 2,
+          "sizes": [
+            "FR41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-laced-sneakers-942096816",
+      "price": "€759,94",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "IT42",
+            "IT43",
+            "IT44",
+            "IT45",
+            "IT46"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "IT39"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "IT40"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 4,
+          "sizes": [
+            "IT41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-943205753",
+      "price": "€748,13",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR42",
+            "FR43",
+            "FR44"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-942460259",
+      "price": "€748,13",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR41",
+            "FR42"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR40"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 3,
+          "sizes": [
+            "FR36"
+          ]
+        },
+        {
+          "status": "5",
+          "status_index": 4,
+          "sizes": [
+            "FR35",
+            "FR37"
+          ]
+        },
+        {
+          "status": "9",
+          "status_index": 5,
+          "sizes": [
+            "FR38"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-lace-up-sneakers-942675027",
+      "price": "€605,50",
+      "inventory_status": [
+        {
+          "status": "1",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR40",
+            "FR41",
+            "FR44",
+            "FR45",
+            "FR46"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 2,
+          "sizes": [
+            "FR42",
+            "FR43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Logo Detailed Slip-On Sandals",
+      "url": "https://www.cettire.com/it/products/balenciaga-logo-detailed-slip-on-sandals-939828754",
+      "price": "€223,30",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR41",
+            "FR42",
+            "FR43",
+            "FR44",
+            "FR45",
+            "FR46"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Speed Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-speed-sneakers-98459393",
+      "price": "€783,13",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR36",
+            "FR36.5",
+            "FR37",
+            "FR37.5",
+            "FR38",
+            "FR38.5",
+            "FR39.5",
+            "FR40.5",
+            "FR41.5",
+            "FR42.5",
+            "FR43.5",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR46.5",
+            "FR47",
+            "FR48"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR39"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 4,
+          "sizes": [
+            "FR44"
+          ]
+        },
+        {
+          "status": "8",
+          "status_index": 5,
+          "sizes": [
+            "FR41",
+            "FR43"
+          ]
+        },
+        {
+          "status": "9",
+          "status_index": 6,
+          "sizes": [
+            "FR42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Graffiti Runner Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-graffiti-runner-sneakers-932994478",
+      "price": "€962,50",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR41",
+            "FR42",
+            "FR43",
+            "FR46"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR44",
+            "FR45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Steroid Derby Shoes",
+      "url": "https://www.cettire.com/it/products/balenciaga-steroid-derby-shoes-933478917",
+      "price": "€457,38",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR43",
+            "FR44"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR40",
+            "FR42"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Track.2 Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-track2-sneakers-90517766",
+      "price": "€783,13",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR42",
+            "FR43",
+            "FR44",
+            "FR45",
+            "FR46"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR40",
+            "FR41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Logo Printed Slip-On Slides",
+      "url": "https://www.cettire.com/it/products/balenciaga-logo-printed-slides-921728651",
+      "price": "€494,59",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR43",
+            "FR44"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR41",
+            "FR42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Logo Embossed Slides",
+      "url": "https://www.cettire.com/it/products/balenciaga-logo-embossed-slides-926610747",
+      "price": "€393,75",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "IT39",
+            "IT40"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "IT41",
+            "IT42",
+            "IT43",
+            "IT44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sunday Buckled Mules",
+      "url": "https://www.cettire.com/it/products/balenciaga-sunday-buckled-mules-933324020",
+      "price": "€486,50",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38",
+            "FR38.5",
+            "FR39.5",
+            "FR40",
+            "FR40.5",
+            "FR41",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR47",
+            "FR48",
+            "FR49"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "X Crocs™ Logo Embossed Sandals",
+      "url": "https://www.cettire.com/it/products/balenciaga-x-crocs-logo-embossed-sandals-940695359",
+      "price": "€272,30",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR40",
+            "FR44",
+            "FR45"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR43"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR42"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 4,
+          "sizes": [
+            "FR41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Speed Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-speed-sneakers-94989946",
+      "price": "€783,13",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38",
+            "FR38.5",
+            "FR39",
+            "FR39.5",
+            "FR40.5",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR46.5",
+            "FR47",
+            "FR47.5",
+            "FR48",
+            "FR48.5",
+            "FR49"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-938480160",
+      "price": "€681,63",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38",
+            "FR39",
+            "FR42",
+            "FR43",
+            "FR44",
+            "FR45",
+            "FR46",
+            "FR47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 3,
+          "sizes": [
+            "FR41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-940062085",
+      "price": "€717,06",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "IT38",
+            "IT41",
+            "IT42",
+            "IT43",
+            "IT44",
+            "IT45",
+            "IT46"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "IT39",
+            "IT40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner 2 Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-2-laced-sneakers-939203915",
+      "price": "€625,85",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38",
+            "FR46"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR43",
+            "FR44"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR40",
+            "FR41",
+            "FR45"
+          ]
+        },
+        {
+          "status": "7",
+          "status_index": 4,
+          "sizes": [
+            "FR42"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Double Buckled Slippers",
+      "url": "https://www.cettire.com/it/products/balenciaga-double-buckled-slippers-937213075",
+      "price": "€288,05",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38",
+            "FR38.5",
+            "FR39",
+            "FR39.5",
+            "FR40.5",
+            "FR41.5",
+            "FR42.5",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR47",
+            "FR48",
+            "FR49"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR42",
+            "FR43"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 3,
+          "sizes": [
+            "FR41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3 XL Low-Top Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-3-xl-low-top-sneakers-930852118",
+      "price": "€720,56",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR40",
+            "FR41",
+            "FR42",
+            "FR47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR43"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR46"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 4,
+          "sizes": [
+            "FR44"
+          ]
+        },
+        {
+          "status": "5",
+          "status_index": 5,
+          "sizes": [
+            "FR45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-934587763",
+      "price": "€748,13",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR41",
+            "FR42",
+            "FR43",
+            "FR44",
+            "FR45",
+            "FR46",
+            "FR47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Steroid Combat Boots",
+      "url": "https://www.cettire.com/it/products/balenciaga-steroid-combat-boots-933511979",
+      "price": "€587,70",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR43",
+            "FR44",
+            "FR45"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR41",
+            "FR42"
+          ]
+        },
+        {
+          "status": "4",
+          "status_index": 3,
+          "sizes": [
+            "FR40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Men's Sunday Mules",
+      "url": "https://www.cettire.com/it/products/balenciaga-mens-sunday-mules-933196512",
+      "price": "€408,36",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38",
+            "FR38.5",
+            "FR39",
+            "FR39.5",
+            "FR40.5",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR47",
+            "FR48",
+            "FR49"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3XL Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-3xl-low-top-sneakers-931110437",
+      "price": "€725,16",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR36",
+            "FR36.5",
+            "FR37",
+            "FR37.5",
+            "FR38",
+            "FR38.5",
+            "FR39.5",
+            "FR40.5",
+            "FR41.5",
+            "FR42.5",
+            "FR43.5",
+            "FR44.5",
+            "FR45.5",
+            "FR46",
+            "FR46.5",
+            "FR47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR45"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR40"
+          ]
+        },
+        {
+          "status": "4",
+          "status_index": 4,
+          "sizes": [
+            "FR41"
+          ]
+        },
+        {
+          "status": "6",
+          "status_index": 5,
+          "sizes": [
+            "FR43"
+          ]
+        },
+        {
+          "status": "7",
+          "status_index": 6,
+          "sizes": [
+            "FR42"
+          ]
+        },
+        {
+          "status": "8",
+          "status_index": 7,
+          "sizes": [
+            "FR44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-932101994",
+      "price": "€723,19",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR35",
+            "FR35.5",
+            "FR36",
+            "FR36.5",
+            "FR37",
+            "FR37.5",
+            "FR38",
+            "FR38.5",
+            "FR39.5",
+            "FR40",
+            "FR40.5",
+            "FR41",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45",
+            "FR46",
+            "FR47",
+            "FR48"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-931637964",
+      "price": "€748,13",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR42"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR41",
+            "FR45",
+            "FR47",
+            "FR48"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR43",
+            "FR44",
+            "FR46"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-931597437",
+      "price": "€831,25",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR36",
+            "FR36.5",
+            "FR37",
+            "FR37.5",
+            "FR38",
+            "FR38.5",
+            "FR39.5",
+            "FR40",
+            "FR40.5",
+            "FR41",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR46.5",
+            "FR47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3XL Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-3-xl-low-top-sneakers-930852062",
+      "price": "€748,13",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR36",
+            "FR36.5",
+            "FR37",
+            "FR37.5",
+            "FR38",
+            "FR38.5",
+            "FR39.5",
+            "FR40.5",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45.5",
+            "FR46.5",
+            "FR47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR40",
+            "FR46"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR41",
+            "FR45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-931638263",
+      "price": "€748,13",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "EU34",
+            "EU35",
+            "EU36",
+            "EU37",
+            "EU38",
+            "EU42"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "EU40",
+            "EU41"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 3,
+          "sizes": [
+            "EU39"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3xl Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-3xl-lace-up-sneakers-924959257",
+      "price": "€720,56",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR40",
+            "FR41",
+            "FR42",
+            "FR43",
+            "FR44",
+            "FR45",
+            "FR47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR46"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Runner Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-runner-lace-up-sneakers-925331953",
+      "price": "€825,32",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "IT36",
+            "IT36.5",
+            "IT37",
+            "IT37.5",
+            "IT38",
+            "IT38.5",
+            "IT39",
+            "IT39.5",
+            "IT40.5",
+            "IT41",
+            "IT41.5",
+            "IT42",
+            "IT42.5",
+            "IT43",
+            "IT43.5",
+            "IT44",
+            "IT44.5",
+            "IT45",
+            "IT45.5",
+            "IT46",
+            "IT46.5",
+            "IT47"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 2,
+          "sizes": [
+            "IT40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cosy BB-Monogram Slippers",
+      "url": "https://www.cettire.com/it/products/balenciaga-cosy-bb-slippers-924987635",
+      "price": "€462,00",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38",
+            "FR38.5",
+            "FR39",
+            "FR39.5",
+            "FR40.5",
+            "FR41",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR47",
+            "FR48",
+            "FR49"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cagole Slip-On Slides",
+      "url": "https://www.cettire.com/it/products/balenciaga-cagole-slides-921728606",
+      "price": "€623,42",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR36",
+            "FR36.5",
+            "FR37",
+            "FR37.5",
+            "FR38",
+            "FR38.5",
+            "FR39",
+            "FR39.5",
+            "FR40.5",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR46.5",
+            "FR47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Speed 2.0 Sole-Printed Sock Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-speed-20-sole-printed-sock-sneakers-919006413",
+      "price": "€649,69",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR34",
+            "FR38",
+            "FR38.5",
+            "FR39.5",
+            "FR40.5",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45.5",
+            "FR46.5",
+            "FR47",
+            "FR48"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR41"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR43",
+            "FR46"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 4,
+          "sizes": [
+            "FR39"
+          ]
+        },
+        {
+          "status": "4",
+          "status_index": 5,
+          "sizes": [
+            "FR45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Triple S Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-triple-s-sneakers-918454112",
+      "price": "€875,92",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR35",
+            "FR41",
+            "FR42",
+            "FR43",
+            "FR44",
+            "FR45",
+            "FR46",
+            "FR47"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR40"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Logo Printed Pool Slides",
+      "url": "https://www.cettire.com/it/products/balenciaga-logo-pool-slide-sandals-90498875",
+      "price": "€227,50",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38",
+            "FR38.5",
+            "FR39",
+            "FR39.5",
+            "FR40.5",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43",
+            "FR43.5",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR46.5",
+            "FR47",
+            "FR48",
+            "FR49"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR41",
+            "FR44"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Track.2 Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-track2-sneakers-918076778",
+      "price": "€743,75",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR39.5",
+            "FR40.5",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR46.5",
+            "FR47",
+            "FR47.5",
+            "FR48",
+            "FR48.5",
+            "FR49"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR40",
+            "FR41",
+            "FR43"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Defender Worn-Out Effect Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-defender-worn-out-effect-sneaker-917040293",
+      "price": "€996,04",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR34",
+            "FR34.5",
+            "FR35",
+            "FR35.5",
+            "FR36",
+            "FR36.5",
+            "FR37",
+            "FR37.5",
+            "FR38",
+            "FR38.5",
+            "FR39.5",
+            "FR40",
+            "FR40.5",
+            "FR41",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR46.5",
+            "FR47",
+            "FR47.5",
+            "FR48",
+            "FR49"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trooper Ankle Boots",
+      "url": "https://www.cettire.com/it/products/balenciaga-square-toe-ankle-boots-911873020",
+      "price": "€492,19",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR38",
+            "FR38.5",
+            "FR38/2",
+            "FR39.5",
+            "FR39/2",
+            "FR40",
+            "FR40.5",
+            "FR40/2",
+            "FR41",
+            "FR41.5",
+            "FR41/2",
+            "FR42",
+            "FR42.5",
+            "FR42/2",
+            "FR43",
+            "FR43.5",
+            "FR43/2",
+            "FR44",
+            "FR44.5",
+            "FR44/2",
+            "FR45",
+            "FR45.5",
+            "FR45/2",
+            "FR46",
+            "FR46.5",
+            "FR47",
+            "FR47.5",
+            "FR48",
+            "FR48.5",
+            "FR49"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 2,
+          "sizes": [
+            "FR39"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Logo Printed Pool Slides",
+      "url": "https://www.cettire.com/it/products/balenciaga-logo-printed-pool-slides-95433599",
+      "price": "€227,50",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39",
+            "FR40",
+            "FR42",
+            "FR43",
+            "FR44",
+            "FR45",
+            "FR46",
+            "FR47"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 2,
+          "sizes": [
+            "FR41"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Track Lace-Up Sneakers",
+      "url": "https://www.cettire.com/it/products/balenciaga-track-sneakers-93673188",
+      "price": "€689,06",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR36",
+            "FR37",
+            "FR38",
+            "FR40.5",
+            "FR41.5",
+            "FR42.5",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39",
+            "FR40",
+            "FR41",
+            "FR42",
+            "FR43",
+            "FR47",
+            "FR48"
+          ]
+        },
+        {
+          "status": "3",
+          "status_index": 3,
+          "sizes": [
+            "FR46"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Logo Detailed Pool Slides",
+      "url": "https://www.cettire.com/it/products/balenciaga-logo-sandals-92849461",
+      "price": "€284,38",
+      "inventory_status": [
+        {
+          "status": "sold out",
+          "status_index": 1,
+          "sizes": [
+            "FR39.5",
+            "FR40.5",
+            "FR41",
+            "FR41.5",
+            "FR42",
+            "FR42.5",
+            "FR43",
+            "FR43.5",
+            "FR44",
+            "FR44.5",
+            "FR45",
+            "FR45.5",
+            "FR46",
+            "FR46.5",
+            "FR47",
+            "FR47.5",
+            "FR48",
+            "FR48.5",
+            "FR49"
+          ]
+        },
+        {
+          "status": "1",
+          "status_index": 2,
+          "sizes": [
+            "FR39"
+          ]
+        },
+        {
+          "status": "2",
+          "status_index": 3,
+          "sizes": [
+            "FR40"
+          ]
+        }
+      ]
+    }
+  ]
+}

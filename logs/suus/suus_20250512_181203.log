@@ -1,0 +1,14 @@
+2025-05-12 18:12:03,547 - utils.page_setting - INFO - 日志文件已创建: E:\pythonProject\outsource\balenciaga_monitor\logs\suus\suus_20250512_181203.log
+2025-05-12 18:12:03,548 - utils.page_setting - INFO - 未找到历史库存数据文件
+2025-05-12 18:12:03,549 - utils.page_setting - INFO - suus - 库存监控已初始化
+2025-05-12 18:12:04,872 - utils.page_setting - INFO - suus - 浏览器页面已初始化
+2025-05-12 18:12:04,872 - utils.page_setting - INFO - 开始监控 https://www.suus.es/product-tag/guidi/
+2025-05-12 18:12:04,872 - utils.page_setting - INFO - 正在获取商品目录: https://www.suus.es/product-tag/guidi/
+2025-05-12 18:13:26,700 - utils.page_setting - ERROR - 获取商品目录过程中出错: 
+JavaScript运行错误。
+JS: function(){window.scrollTo(document.documentElement.scrollLeft, document.documentElement.scrollHeight/2);}
+详情: {'exceptionId': 1, 'text': 'Uncaught', 'lineNumber': 0, 'columnNumber': 53, 'scriptId': '8', 'exception': {'type': 'object', 'subtype': 'error', 'className': 'TypeError', 'description': "TypeError: Cannot read properties of null (reading 'scrollLeft')\n    at HTMLDocument.<anonymous> (<anonymous>:1:54)", 'objectId': '-6165899671573989992.4.3'}}
+版本: 4.1.0.17
+2025-05-12 18:13:26,702 - utils.page_setting - ERROR - 获取商品目录失败，终止监控
+2025-05-12 18:13:26,702 - utils.page_setting - INFO - 监控结束，关闭浏览器
+2025-05-12 18:13:27,727 - utils.page_setting - INFO - suus - 监控任务完成，日志已保存

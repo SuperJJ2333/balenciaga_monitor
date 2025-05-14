@@ -1,0 +1,49 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="27">
+            <item index="0" class="java.lang.String" itemvalue="pandas" />
+            <item index="1" class="java.lang.String" itemvalue="beautifulsoup4" />
+            <item index="2" class="java.lang.String" itemvalue="matplotlib" />
+            <item index="3" class="java.lang.String" itemvalue="numpy" />
+            <item index="4" class="java.lang.String" itemvalue="requests" />
+            <item index="5" class="java.lang.String" itemvalue="openpyxl" />
+            <item index="6" class="java.lang.String" itemvalue="notebook" />
+            <item index="7" class="java.lang.String" itemvalue="pytest" />
+            <item index="8" class="java.lang.String" itemvalue="fake-useragent" />
+            <item index="9" class="java.lang.String" itemvalue="black" />
+            <item index="10" class="java.lang.String" itemvalue="concurrent-futures" />
+            <item index="11" class="java.lang.String" itemvalue="flake8" />
+            <item index="12" class="java.lang.String" itemvalue="DrissionPage" />
+            <item index="13" class="java.lang.String" itemvalue="selenium" />
+            <item index="14" class="java.lang.String" itemvalue="lxml" />
+            <item index="15" class="java.lang.String" itemvalue="xlwt" />
+            <item index="16" class="java.lang.String" itemvalue="urllib3" />
+            <item index="17" class="java.lang.String" itemvalue="loguru" />
+            <item index="18" class="java.lang.String" itemvalue="xlrd" />
+            <item index="19" class="java.lang.String" itemvalue="python_dateutil" />
+            <item index="20" class="java.lang.String" itemvalue="spacy" />
+            <item index="21" class="java.lang.String" itemvalue="nltk" />
+            <item index="22" class="java.lang.String" itemvalue="bertopic" />
+            <item index="23" class="java.lang.String" itemvalue="sentence-transformers" />
+            <item index="24" class="java.lang.String" itemvalue="torch" />
+            <item index="25" class="java.lang.String" itemvalue="isort" />
+            <item index="26" class="java.lang.String" itemvalue="ntlm_auth" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E266" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="Stylelint" enabled="true" level="ERROR" enabled_by_default="true" />
+  </profile>
+</component>

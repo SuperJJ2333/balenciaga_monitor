@@ -70,3 +70,33 @@ def create_proxyauth_extension(proxy_host, proxy_port, proxy_username, proxy_pas
         background_file.write(background_js)
     return plugin_folder
 
+
+def set_switchy_omega(page):
+    """
+
+    :param page:
+
+    :return:
+    """
+    server_ip = 'us.ipcool.net'
+    passport = '2555'
+    username = "13727744565_187_0_0_session_5_1"
+    password = "lin2225427"
+
+    page.get("chrome-extension://padekgcemlokbadohgkifijomclgjgif/options.html#!/profile/proxy")
+
+    page.ele('x://input[@ng-model="proxyEditors[scheme].host"]').clear().input(server_ip)
+    page.ele('x://input[@ng-model="proxyEditors[scheme].port"]').clear().input(passport)
+
+    page.ele('x://button[@ng-click="editProxyAuth(scheme)"]').click(by_js=True)
+
+    page.ele('x://input[@ng-model="model"]').clear().click(by_js=True).input(username)
+    page.ele('x://input[@ng-model="auth.password"]').clear().click(by_js=True).input(password)
+
+    page.ele('x://button[@ng-disabled="!authForm.$valid"]').click(by_js=True)
+    page.ele('x://a[@ng-click="applyOptions()"]').click(by_js=True)
+
+    page.get('chrome-extension://padekgcemlokbadohgkifijomclgjgif/options.html#!/ui')
+
+    page.ele('x://button[@class="btn btn-default dropdown-toggle"]').click(by_js=True)
+

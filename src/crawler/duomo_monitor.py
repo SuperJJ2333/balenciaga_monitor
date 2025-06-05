@@ -4,8 +4,8 @@ MrPorter监控模块 - 负责监控MrPorter网站上Balenciaga鞋子的库存状
 """
 from datetime import datetime
 
-from utils.page_setting import *
-from common.monitor import Monitor
+from src.utils.page_setting import *
+from src.common.monitor import Monitor
 
 
 class DuomoMonitor(Monitor):
@@ -13,6 +13,7 @@ class DuomoMonitor(Monitor):
     Duomo网站监控类
     JSON数据 尺码在目录页
 
+    Session - API - GET
     负责爬取Duomo网站上Balenciaga品牌鞋子的商品列表和库存信息
     """
 

@@ -62,14 +62,17 @@ def configure_logger(monitor_name=None):
         logger = logging.getLogger("general_logger")
         
     logger.setLevel(logging.DEBUG)  # 设置日志级别
+    
+    # 设置为False以防止日志消息传播到父logger
+    logger.propagate = False
 
-    # 删除所有现有的处理器，确保不会重复添加
-    for handler in logger.handlers[:]:
-        logger.removeHandler(handler)
-        
+    # 清除现有的handlers以防止重复日志
+    if logger.handlers:
+        logger.handlers.clear()
+    
     # 创建控制台处理器
     console_handler = logging.StreamHandler()
-    console_handler.setLevel(logging.DEBUG)
+    console_handler.setLevel(logging.INFO)
 
     # 创建格式化器
     if monitor_name:

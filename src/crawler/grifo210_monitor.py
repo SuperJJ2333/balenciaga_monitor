@@ -2,11 +2,19 @@
 Grifo210监控模块 - 负责监控Grifo210网站上Balenciaga鞋子的库存状态
 该模块实现了对Grifo210网站的爬取、解析和数据保存功能
 """
+import os
+import sys
 from datetime import datetime
 from DrissionPage._elements.session_element import SessionElement
 
-from utils.page_setting import *
-from common.monitor import Monitor
+# 添加项目根目录到Python路径
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(os.path.dirname(current_dir))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+from src.utils.page_setting import *
+from src.common.monitor import Monitor
 
 
 class Grifo210Monitor(Monitor):
@@ -26,8 +34,6 @@ class Grifo210Monitor(Monitor):
         """
         # 更新监控器名称
         kwargs['monitor_name'] = 'grifo210'
-        kwargs[
-            'catalog_url'] = 'https://www.grifo210.com/en-ww/collections/men-maison-margiela'
 
         super().__init__(**kwargs)
 
@@ -126,31 +132,43 @@ class Grifo210Monitor(Monitor):
         返回:
             list: 商品信息列表，每个元素为包含name和url的字典
         """
-        self.logger.info(f"正在获取商品目录: {self.catalog_url}")
         try:
-            # 设置代理并访问页面
-            self.session.get(self.catalog_url, headers=self.headers, params=self.params, proxies=get_proxies('clash'))
 
-            # 检查页面响应
-            if not self.session.html.strip():
-                self.logger.error("获取页面失败：页面响应为空")
-                return []
+            products_list: list[dict] = []
+            for url in self.catalog_url:
 
-            # 尝试查找商品元素
-            try:
-                data = self.session.s_eles('x://div[@class="product"]')
+                # 设置代理并访问页面
+                self.session.get(url, headers=self.headers, proxies=get_proxies('clash'))
 
-                if not data:
-                    self.logger.error("未找到任何商品列表元素")
+                self.logger.info(f"正在获取商品目录: {url}")
+                # 检查页面响应
+                if not self.session.html.strip():
+                    self.logger.error("获取页面失败：页面响应为空")
                     return []
 
-                self.logger.info(f"找到 {len(data)} 个商品元素")
-                products_list: list[dict] = self.parse_inventory_catalog(data)
-                return products_list
+                # 尝试查找商品元素
+                try:
+                    data = self.session.s_eles('x://div[@class="product"]')
 
-            except Exception as e:
-                self.logger.error(f"处理商品目录元素时出错: {str(e)}")
-                return []
+                    if not data:
+                        self.logger.error("未找到任何商品列表元素")
+                        return []
+
+                    self.logger.debug(f"找到 {len(data)} 个商品元素")
+                    
+                    inventory_catalog_data = self.parse_inventory_catalog(data)
+
+                    if inventory_catalog_data:
+                        products_list += inventory_catalog_data
+                    else:
+                        self.logger.error("解析商品目录失败")
+                        return []
+                
+                except Exception as e:
+                    self.logger.error(f"处理商品目录元素时出错: {str(e)}")
+                    return []
+
+            return products_list
 
         except Exception as e:
             self.logger.error(f"获取商品目录过程中出错: {str(e)}")

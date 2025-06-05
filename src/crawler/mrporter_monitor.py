@@ -3,9 +3,11 @@ MrPorter监控模块 - 负责监控MrPorter网站上Balenciaga鞋子的库存状
 该模块实现了对MrPorter网站的爬取、解析和数据保存功能
 """
 from datetime import datetime
+import json
+import re
 
-from utils.page_setting import *
-from common.monitor import Monitor
+from src.utils.page_setting import *
+from src.common.monitor import Monitor
 
 
 class MrPorterMonitor(Monitor):
@@ -25,12 +27,39 @@ class MrPorterMonitor(Monitor):
         """
         # 更新监控器名称和目录URL
         kwargs['monitor_name'] = 'mrporter'
-        kwargs['catalog_url'] = 'https://www.mrporter.com/en-hk/mens/designer/balenciaga/shoes'
         
         super().__init__(**kwargs)
 
         # 初始化浏览器页面
-        self.page = self.init_page()
+        self.session = self.init_session()
+        # self.page = self.init_page()
+
+    @staticmethod
+    def _init_params():
+
+        cookies = {
+            'PIM-SESSION-ID': 'cF4Jq7hTj8jngRbS',
+        }
+
+        headers = {
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+            'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+            'cache-control': 'no-cache',
+            'pragma': 'no-cache',
+            'priority': 'u=0, i',
+            'referer': 'https://www.mrporter.com/en-hk/mens/designer/balenciaga/shoes',
+            'sec-ch-ua': '"Chromium";v="136", "Microsoft Edge";v="136", "Not.A/Brand";v="99"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-origin',
+            'service-worker-navigation-preload': 'true',
+            'upgrade-insecure-requests': '1',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0',
+        }
+
+        return headers, cookies
 
     def run(self):
         """
@@ -49,7 +78,6 @@ class MrPorterMonitor(Monitor):
             self.products_list = self.get_inventory_catalog()
             if not self.products_list:
                 self.logger.error("获取商品目录失败，终止监控")
-                self.page.quit()
                 return
 
             # 生成库存数据
@@ -70,23 +98,22 @@ class MrPorterMonitor(Monitor):
                 if changes:
                     self.logger.info("检测到库存变化，已保存到变更记录")
 
-                # 生成并保存库存监控总结
-                summary, summary_data = self.generate_inventory_summary()
-                # 保存总结数据
-                self.save_summary_data(summary)
+                # # 生成并保存库存监控总结
+                # summary, summary_data = self.generate_inventory_summary()
+                # # 保存总结数据
+                # self.save_summary_data(summary)
                 
-                # 保存JSON格式的总结
-                filename = f"inventory_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-                self.save_json_data(data=summary_data, filename=filename, category="json_summary")
-                
-                return summary_data
+                # # 保存JSON格式的总结
+                # filename = f"inventory_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+                # self.save_json_data(data=summary_data, filename=filename, category="json_summary")
+                #
+                return
 
         except Exception as e:
             self.logger.error(f"监控过程中出错: {str(e)}")
             return []
         finally:
             self.logger.info("监控结束，关闭浏览器")
-            self.page.quit()
 
     def get_inventory_catalog(self) -> list[dict]:
         """
@@ -97,52 +124,64 @@ class MrPorterMonitor(Monitor):
         返回:
             list: 商品信息列表，每个元素为包含name和url的字典
         """
-        self.logger.info(f"正在获取商品目录: {self.catalog_url}")
+
+        products_list: list[dict] = []
         try:
-            # 设置代理并访问页面
-            self.page.get(self.catalog_url)
-            # self.page.set.cookies(load_cookies('../data/mrporter_cookies.txt', self.logger))
-            
-            # 检查页面响应
-            if not self.page.html.strip():
-                self.logger.error("获取页面失败：页面响应为空")
-                return []
-                
-            self.logger.info("页面加载成功，开始查找商品信息")
+            for url in self.catalog_url:
+                header, cookies = self._init_params()
+                # 设置代理并访问页面
+                self.session.get(url, headers=header, proxies=None, cookies=cookies)
+                # self.page.get(url)
+                self.logger.info(f"正在获取商品目录: {url}")
 
-            # 尝试查找JSON数据
-            try:
-                # 使用更精确的XPath来查找JSON数据
-                script_elements = self.page.s_eles('xpath://script[@type="application/ld+json"]')
-                
-                if not script_elements:
-                    self.logger.error("未找到包含商品目录的script元素")
+                page = self.session
+
+                # 检查页面响应
+                if not page.html.strip():
+                    self.logger.error("获取页面失败：页面响应为空")
                     return []
-                
-                # 遍历所有script元素，查找包含商品目录的JSON数据
-                for script_ele in script_elements:
-                    script_frame = script_ele.text or script_ele.inner_html
-                    
-                    if not script_frame:
-                        continue
-                        
-                    try:
-                        data = json.loads(script_frame)
-                        # 检查这是否是我们需要的商品目录数据
-                        if data.get("@type") == "ItemList" and "Balenciaga" in data.get("name", ""):
-                            self.logger.info("找到商品目录JSON数据")
-                            products_list: list[dict] = self.parse_inventory_catalog(script_frame)
-                            return products_list
-                    except json.JSONDecodeError:
-                        continue
-                
-                self.logger.error("未找到有效的商品目录JSON数据")
-                return []
 
-            except Exception as e:
-                self.logger.error(f"处理商品目录元素时出错: {str(e)}")
-                return []
+                self.logger.info("页面加载成功，开始查找商品信息")
+
+                # 尝试查找JSON数据
+                try:
+                    # 使用更精确的XPath来查找JSON数据
+                    script_elements = page.s_eles('xpath://script[@type="application/ld+json"]')
+
+                    if not script_elements:
+                        self.logger.error("未找到包含商品目录的script元素")
+                        return []
+
+                    # 遍历所有script元素，查找包含商品目录的JSON数据
+                    for script_ele in script_elements:
+                        script_frame = script_ele.text or script_ele.inner_html
+
+                        if not script_frame:
+                            continue
+
+                        try:
+                            data = json.loads(script_frame)
+                            # 检查这是否是我们需要的商品目录数据
+                            if data.get("@type") == "ItemList" and "Balenciaga" in data.get("name", ""):
+                                self.logger.debug("找到商品目录JSON数据")
+                                
+                                inventory_catalog_data = self.parse_inventory_catalog(script_frame)
+
+                                if inventory_catalog_data:
+                                    products_list += inventory_catalog_data
+                                else:
+                                    self.logger.error("解析商品目录失败")
+                                    return []
                 
+                        except json.JSONDecodeError:
+                            continue
+
+                except Exception as e:
+                    self.logger.error(f"处理商品目录元素时出错: {str(e)}")
+                    return []
+
+            return products_list
+
         except Exception as e:
             self.logger.error(f"获取商品目录过程中出错: {str(e)}")
             return []
@@ -264,23 +303,34 @@ class MrPorterMonitor(Monitor):
                 url = product_data.get("url", "")
 
                 # 提取价格信息
-                price = product_data.get("offers", {}).get("priceSpecification", {}).get("price", "")
+                price = product_data.get("offers", {}).get("priceSpecification", {})
+                if isinstance(price, dict):
+                    price = price.get("price", "")
+                elif isinstance(price, list):
+                    price = price[0].get("price", "")
 
                 url_parts = url.rstrip('/').split('/')
                 unique_key = f"{name}_{url_parts[-1]}"
+
+                if url in self.product_url:
+                    key_monitoring = True
+                    self.logger.info(f"已获取重点检测对象信息: {name}, URL: {url}")
+                else:
+                    key_monitoring = False
 
                 if name and url:
                     product_info = {
                         "name": name,
                         "url": url,
                         "price": price,
-                        "inventory": {}
+                        "inventory": {},
+                        "key_monitoring": key_monitoring
                     }
                     self.inventory_data[unique_key] = product_info
                     products_list.append(product_info)
                     self.logger.debug(f"找到商品: {name}")
 
-            self.logger.info(f"共解析到 {len(products_list)} 个商品")
+            self.logger.debug(f"共解析到 {len(products_list)} 个商品")
             return products_list
             
         except json.JSONDecodeError as e:
@@ -445,6 +495,6 @@ class MrPorterMonitor(Monitor):
 
 if __name__ == '__main__':
     # 创建监控实例并运行
-    monitor = MrPorterMonitor(is_headless=True)
+    monitor = MrPorterMonitor(is_headless=False, proxy_type="clash", is_no_img=True, is_auto_port=False, load_mode="eager")
     monitor.run()
 

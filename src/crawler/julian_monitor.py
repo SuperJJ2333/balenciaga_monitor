@@ -2,6 +2,8 @@
 julian监控模块 - 负责监控julian网站上Balenciaga鞋子的库存状态
 该模块实现了对julian网站的爬取、解析和数据保存功能
 """
+import os
+import time
 from datetime import datetime
 from DrissionPage._elements.session_element import SessionElement
 
@@ -26,23 +28,23 @@ class JulianMonitor(Monitor):
         """
         # 更新监控器名称
         kwargs['monitor_name'] = 'julian'
-        kwargs['catalog_url'] = 'https://www.julian-fashion.com/en-hk/men/designer/balenciaga/shoes'
 
         super().__init__(**kwargs)
         
-        # self.page = self.init_page()
-        self.session = self.init_session()
+        self.page = self.init_page()
 
-        self.headers = self.init_params()
+        self.headers = self.init_params(self.project_path, self.logger)
 
     @staticmethod
-    def init_params():
+    def init_params(project_paths, logger):
         """
         初始化请求参数
         
         返回:
             dict: 包含headers的字典
         """
+
+        cookie_path = os.path.join(project_paths.COOKIES, 'julian_cookies.txt')
         headers = {
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
             'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
@@ -58,6 +60,7 @@ class JulianMonitor(Monitor):
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0',
+            'cookie': load_cookies(cookie_path, logger)
            }
         
         return headers
@@ -122,31 +125,47 @@ class JulianMonitor(Monitor):
         返回:
             list: 商品信息列表，每个元素为包含name和url的字典
         """
-        self.logger.info(f"正在获取商品目录: {self.catalog_url}")
+
+        products_list: list[dict] = []
         try:
-            # 设置代理并访问页面
-            self.session.get(self.catalog_url, headers=self.headers)
+            for url in self.catalog_url:
+                # 设置代理并访问页面
+                # self.session.get(self.catalog_url, headers=self.headers)
+                self.logger.info(f"正在获取商品目录: {url}")
+                tab = self.page.new_tab()
+                tab.get(url)
+                self.page.get_tab(-1).close()
 
-            # 检查页面响应
-            if not self.session.html.strip():
-                self.logger.error("获取页面失败：页面响应为空")
-                return []
+                page = self.page.latest_tab
 
-            # 尝试查找商品元素
-            try:
-                data = self.session.s_eles('tag:span@@class:product__actions row no-gutters')
-
-                if not data:
-                    self.logger.error("未找到任何商品列表元素")
+                # 检查页面响应
+                if not page.html.strip():
+                    self.logger.error("获取页面失败：页面响应为空")
                     return []
 
-                self.logger.info(f"找到 {len(data)} 个商品元素")
-                products_list: list[dict] = self.parse_inventory_catalog(data)
-                return products_list
+                # 尝试查找商品元素
+                try:
+                    data = page.s_eles('tag:span@@class:product__actions row no-gutters')
 
-            except Exception as e:
-                self.logger.error(f"处理商品目录元素时出错: {str(e)}")
-                return []
+                    if not data:
+                        self.logger.error("未找到任何商品列表元素")
+                        return []
+
+                    self.logger.debug(f"找到 {len(data)} 个商品元素")
+                    
+                    inventory_catalog_data = self.parse_inventory_catalog(data)
+
+                    if inventory_catalog_data:
+                        products_list += inventory_catalog_data
+                    else:
+                        self.logger.error("解析商品目录失败")
+                        return []
+                
+                except Exception as e:
+                    self.logger.error(f"处理商品目录元素时出错: {str(e)}")
+                    return []
+
+            return products_list
 
         except Exception as e:
             self.logger.error(f"获取商品目录过程中出错: {str(e)}")
@@ -204,11 +223,18 @@ class JulianMonitor(Monitor):
                         url_parts = url.rstrip('/').split('/')
                         unique_key = f"{name}_{url_parts[-1]}"
 
+                        if full_url in self.product_url:
+                            key_monitoring = True
+                            self.logger.info(f"已获取重点检测对象信息: {name}, URL: {full_url}")
+                        else:
+                            key_monitoring = False
+
                         product_info = {
                             "name": name,
                             "url": full_url,
                             "price": price,
-                            "inventory": sizes_dict
+                            "inventory": sizes_dict,
+                            "key_monitoring": key_monitoring
                         }
                         self.inventory_data[unique_key] = product_info
 
@@ -229,5 +255,5 @@ class JulianMonitor(Monitor):
 
 if __name__ == '__main__':
     # 创建监控实例并运行
-    monitor = JulianMonitor(is_headless=False)
+    monitor = JulianMonitor(is_headless=False, is_no_img=False, proxy_type="clash")
     monitor.run_with_log()

@@ -13,6 +13,25 @@
 - 串行执行爬虫任务，一个爬虫完成后再执行下一个
 - 自动检测库存变化
 - 每日生成库存汇总报告
+- 支持为特定网站爬虫配置代理
+
+## 系统改进说明
+
+系统最近进行了以下改进：
+
+1. 改进爬虫执行方式
+   - 使用爬虫类实例化的方式运行爬虫任务
+   - 为特定爬虫（如需要国外访问的网站）自动配置代理
+   - 保持串行执行模式，确保系统稳定性
+
+2. 优化代理配置管理
+   - 在调度器中集中配置各爬虫的代理设置
+   - 支持自动为需要代理的爬虫（如mrporter、antonioli等）配置clash代理
+   - 无需修改各爬虫文件，只需在调度器中设置代理映射
+
+3. 修复了文件路径
+   - 更新了寻找最新库存文件的路径格式
+   - 从`json_summary/inventory_summary_*.json`改为`inventory/balenciaga_inventory_*.json`
 
 ## 目录结构
 
@@ -68,6 +87,26 @@ python scheduler_runner.py
 - 爬虫之间有预设的等待时间（默认2秒）
 - 每个爬虫任务失败后会自动重试一次
 - 可以在日志中清晰查看每个爬虫的执行情况
+- 自动为需要代理的爬虫配置代理设置
+
+### 配置特定爬虫的代理
+
+可以在`scheduler.py`文件中的`proxy_map`字典中配置需要代理的爬虫：
+
+```python
+self.proxy_map = {
+    "antonioli_monitor": "clash",
+    "mrporter_monitor": "clash",
+    "giglio_monitor": "clash",
+    "grifo210_monitor": "clash",
+    # 可以根据需要添加更多需要代理的爬虫
+}
+```
+
+目前支持的代理类型：
+- clash: 使用本地Clash代理
+- pin_zan: 使用品赞代理
+- kuai_dai_li: 使用快代理
 
 ### 手动发送库存通知
 
@@ -86,7 +125,7 @@ python -m src.ding_sender.ding_sender [库存文件路径]
 python scheduler_runner.py
 
 # 手动发送指定库存文件的通知
-python -m src.ding_sender.ding_sender data/sugar/json_summary/inventory_summary_20250418_230733.json
+python -m src.ding_sender.ding_sender data/sugar/inventory/balenciaga_inventory_20250418_230733.json
 ```
 
 ## 消息格式
@@ -137,7 +176,13 @@ python -m src.ding_sender.ding_sender data/sugar/json_summary/inventory_summary_
 
 1. 在`src/crawler`下创建对应网站的爬虫模块，命名为`[网站名]_monitor.py`
 2. 继承`Monitor`基类并实现必要的方法
-3. 新的爬虫会被调度器自动识别并执行
+3. 在文件末尾添加以下代码块以支持直接运行：
+   ```python
+   if __name__ == '__main__':
+       monitor = 网站名Monitor(is_headless=True)
+       monitor.run_with_log()
+   ```
+4. 如果该网站需要代理，在调度器的`proxy_map`中添加相应配置
 
 ### 手动定时任务
 
@@ -165,16 +210,48 @@ python -m src.ding_sender.ding_sender data/sugar/json_summary/inventory_summary_
 
 目前支持的网站及其特点：
 - www.sugar.it: 国内直连，网页数据
-- www.antonioli.eu: 需要VPN，网页数据
+- www.antonioli.eu: 需要VPN，网页数据（已配置clash代理）
 - www.mytheresa.com: VPN（国内可直连但较慢），API接口
 - www.julian-fashion.com: 国内可直连但较慢，网页数据
-- www.giglio.com: 需要VPN，网页数据
-- www.grifo210.com: 需要VPN，网页数据
+- www.giglio.com: 需要VPN，网页数据（已配置clash代理）
+- www.grifo210.com: 需要VPN，网页数据（已配置clash代理）
 - www.d2-store.com: 国内直连，网页数据
 - www.rickowens.eu: 国内直连，网页数据加密，需要模拟
 - www.hermes.com: 国内直连，存在滑块验证码
 - www.eleonora-bonucci.com: 网页数据
 - www.duomo.it: 网页数据
 - www.suus.it: 网页数据
-- www.mrporter.com: 网页数据，需要VPN
+- www.mrporter.com: 网页数据，需要VPN（已配置clash代理）
 - www.cettire.com: 网页数据
+
+## 最近维护记录
+
+### 2025-05-16 系统功能更新
+
+1. **恢复爬虫类实例化执行方式**：
+   - 从直接运行Python文件改回为实例化爬虫类的方式
+   - 保留了串行执行流程，一个爬虫完成后再执行下一个
+   - 增加了对爬虫实例的错误处理和重试机制
+
+2. **增强代理配置功能**：
+   - 新增集中式代理配置，在调度器中统一管理需要代理的爬虫
+   - 为国外网站爬虫（antonioli、mrporter、giglio、grifo210等）自动配置clash代理
+   - 支持多种代理类型，可根据需要灵活配置
+
+3. **维持改进的文件路径**：
+   - 继续使用`inventory/balenciaga_inventory_*.json`作为库存文件的存储路径
+   - 保持查找最新库存文件的路径格式一致
+
+这些更新使系统在保持稳定性的同时，提供了更灵活的代理配置选项，特别适合需要访问国外网站的场景。
+
+以下网站的商品不能监控单独的商品尺寸，只能监控价格
+suus 
+mrporter
+----
+以下网站的商品不能监控单独的商品
+eleonora_bonucci
+grifo210
+hermes
+----
+以下网站不能监控多个页面，也不能监控单个商品
+cettire

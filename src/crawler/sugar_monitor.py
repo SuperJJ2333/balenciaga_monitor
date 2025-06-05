@@ -5,14 +5,14 @@ Sugar监控模块 - 负责监控Sugar网站上Balenciaga鞋子的库存状态
 from datetime import datetime
 from DrissionPage._elements.session_element import SessionElement
 
-from common.monitor import Monitor
+from src.common.monitor import Monitor
 
 
 class SugarMonitor(Monitor):
     """
     Sugar网站监控类
 
-    方法：Chrome - HTML - category
+    方法：Session - HTML - category
     负责爬取Sugar网站上Balenciaga品牌鞋子的商品列表和库存信息
     """
 
@@ -25,13 +25,12 @@ class SugarMonitor(Monitor):
         """
         # 更新监控器名称
         kwargs['monitor_name'] = 'sugar'
-        kwargs['catalog_url'] = 'https://www.sugar.it/en-IT/man/designer/balenciaga/shoes'
 
         super().__init__(**kwargs)
         
         # self.page = self.init_page()
-        self.session = self.init_session()
 
+        self.session = self.init_session()
         self.headers = self.init_params()
 
     @staticmethod
@@ -121,31 +120,42 @@ class SugarMonitor(Monitor):
         返回:
             list: 商品信息列表，每个元素为包含name和url的字典
         """
-        self.logger.info(f"正在获取商品目录: {self.catalog_url}")
+
+        products_list = []
         try:
-            # 设置代理并访问页面
-            self.session.get(self.catalog_url, headers=self.headers)
+            for url in self.catalog_url:
+                # 设置代理并访问页面
+                self.session.get(url, headers=self.headers)
+                self.logger.info(f"正在获取商品目录: {url}")
 
-            # 检查页面响应
-            if not self.session.html.strip():
-                self.logger.error("获取页面失败：页面响应为空")
-                return []
-
-            # 尝试查找商品元素
-            try:
-                data = self.session.s_eles('@class:product__wrapper')
-
-                if not data:
-                    self.logger.error("未找到任何商品列表元素")
+                # 检查页面响应
+                if not self.session.html.strip():
+                    self.logger.error("获取页面失败：页面响应为空")
                     return []
 
-                self.logger.info(f"找到 {len(data)} 个商品元素")
-                products_list: list[dict] = self.parse_inventory_catalog(data)
-                return products_list
+                # 尝试查找商品元素
+                try:
+                    data = self.session.s_eles('@class:product__wrapper')
 
-            except Exception as e:
-                self.logger.error(f"处理商品目录元素时出错: {str(e)}")
-                return []
+                    if not data:
+                        self.logger.error("未找到任何商品列表元素")
+                        return []
+
+                    self.logger.debug(f"找到 {len(data)} 个商品元素")
+                    
+                    inventory_catalog_data = self.parse_inventory_catalog(data)
+
+                    if inventory_catalog_data:
+                        products_list += inventory_catalog_data
+                    else:
+                        self.logger.error("解析商品目录失败")
+                        return []
+                
+                except Exception as e:
+                    self.logger.error(f"处理商品目录元素时出错: {str(e)}")
+                    return []
+
+            return products_list
 
         except Exception as e:
             self.logger.error(f"获取商品目录过程中出错: {str(e)}")
@@ -203,11 +213,18 @@ class SugarMonitor(Monitor):
                         url_parts = url.rstrip('/').split('/')
                         unique_key = f"{name}_{url_parts[-1]}"
 
+                        if full_url in self.product_url:
+                            key_monitoring = True
+                            self.logger.info(f"已获取重点检测对象信息: {name}, URL: {full_url}")
+                        else:
+                            key_monitoring = False
+
                         product_info = {
                             "name": name,
                             "url": full_url,
                             "price": price,
-                            "inventory": sizes_dict
+                            "inventory": sizes_dict,
+                            "key_monitoring": key_monitoring
                         }
                         self.inventory_data[unique_key] = product_info
 
@@ -228,5 +245,5 @@ class SugarMonitor(Monitor):
 
 if __name__ == '__main__':
     # 创建监控实例并运行
-    monitor = SugarMonitor(is_headless=False)
+    monitor = SugarMonitor(is_headless=True)
     monitor.run_with_log()

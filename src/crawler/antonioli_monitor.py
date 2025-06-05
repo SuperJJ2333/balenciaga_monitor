@@ -4,8 +4,16 @@ antonioli监控模块 - 负责监控antonioli网站上Balenciaga鞋子的库存�
 """
 from datetime import datetime
 from DrissionPage._elements.session_element import SessionElement
+import os
+import sys
 
-from common.monitor import Monitor
+# 添加项目根目录到Python路径
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+from src.common.monitor import Monitor
 
 
 class AntonioliMonitor(Monitor):
@@ -25,12 +33,12 @@ class AntonioliMonitor(Monitor):
         """
         # 更新监控器名称
         kwargs['monitor_name'] = 'antonioli'
-        kwargs['catalog_url'] = "https://antonioli.eu/en-us/collections/designer-balenciaga/man?grid-switcher=4&filter.p.m.elastick.department=SHOES&filter.v.price.gte=&filter.v.price.lte="
 
         super().__init__(**kwargs)
-        
-        self.page = self.init_page()
-        # self.session = self.init_session()
+
+        self.product_url = [self.normalize_url(url) for url in self.product_url]
+        # self.page = self.init_page()
+        self.session = self.init_session()
 
         self.headers = self.init_params()
 
@@ -110,7 +118,6 @@ class AntonioliMonitor(Monitor):
         except Exception as e:
             self.logger.error(f"监控过程中出错: {str(e)}")
         finally:
-            self.page.quit()
             self.logger.info("监控结束，关闭浏览器")
 
     def get_inventory_catalog(self) -> list[dict]:
@@ -122,31 +129,42 @@ class AntonioliMonitor(Monitor):
         返回:
             list: 商品信息列表，每个元素为包含name和url的字典
         """
-        self.logger.info(f"正在获取商品目录: {self.catalog_url}")
+
         try:
-            # 设置代理并访问页面
-            self.page.get(self.catalog_url)
-
-            # 检查页面响应
-            if not self.page.html.strip():
-                self.logger.error("获取页面失败：页面响应为空")
-                return []
-
-            # 尝试查找商品元素
-            try:
-                data = self.page.s_eles('@class:card-information')
-
-                if not data:
-                    self.logger.error("未找到任何商品列表元素")
+            products_list: list[dict] = []
+            for url in self.catalog_url:
+                self.logger.info(f"正在获取商品目录: {url}")
+                # 设置代理并访问页面
+                header = self.init_params()
+                self.session.get(url, headers=header, proxies=self.proxy_clash_url)
+                # 检查页面响应
+                if not self.session.html.strip():
+                    self.logger.error("获取页面失败：页面响应为空")
                     return []
 
-                self.logger.info(f"找到 {len(data)} 个商品元素")
-                products_list: list[dict] = self.parse_inventory_catalog(data)
-                return products_list
+                # 尝试查找商品元素
+                try:
+                    data = self.session.s_eles('@class:card-information')
 
-            except Exception as e:
-                self.logger.error(f"处理商品目录元素时出错: {str(e)}")
-                return []
+                    if not data:
+                        self.logger.error("未找到任何商品列表元素")
+                        return []
+
+                    self.logger.debug(f"找到 {len(data)} 个商品元素")
+                    
+                    inventory_catalog_data = self.parse_inventory_catalog(data)
+
+                    if inventory_catalog_data:
+                        products_list += inventory_catalog_data
+                    else:
+                        self.logger.error("解析商品目录失败")
+                        return []
+
+                except Exception as e:
+                    self.logger.error(f"处理商品目录元素时出错: {str(e)}")
+                    return []
+
+            return products_list
 
         except Exception as e:
             self.logger.error(f"获取商品目录过程中出错: {str(e)}")
@@ -164,7 +182,7 @@ class AntonioliMonitor(Monitor):
         """
         try:
             products_list = []
-            url_eles = self.page.s_eles('x://h3[@class="card__heading"]/a')
+            url_eles = self.session.s_eles('x://h3[@class="card__heading"]/a')
 
             # 提取每个商品的名称和URL
             for i, item in enumerate(catalog_eles):
@@ -174,7 +192,7 @@ class AntonioliMonitor(Monitor):
                     # 如果无法找到名称，记录警告并尝试下一个元素
                     if not name_ele:
                         # 替换新的catalog_eles
-                        catalog_eles = self.session.s_eles('@class^card-information')
+                        catalog_eles = self.page.s_eles('@class^card-information')
                         item = catalog_eles[i]
                         name_ele = item.s_ele('@class:tw-h3-reg tw-capitalize')
                         if not name_ele:
@@ -198,10 +216,16 @@ class AntonioliMonitor(Monitor):
                         if 'tw-line-through' not in size_item.attr('class'):
                             sizes_dict[size_label] = "available"
 
-                    if name and url:
-                        # 修正URL格式
-                        full_url = f"https://antonioli.eu{url}" if not url.startswith('http') else url
+                    # 修正URL格式
+                    full_url = f"https://antonioli.eu{url}" if not url.startswith('http') else url
 
+                    if self.normalize_url(full_url) in self.product_url:
+                        key_monitoring = True
+                        self.logger.info(f"已获取重点检测对象信息: {name}, URL: {full_url}")
+                    else:
+                        key_monitoring = False
+
+                    if name and url:
                         url_parts = url.rstrip('/').split('/')
                         unique_key = f"{name}_{url_parts[-2]}"
 
@@ -209,7 +233,8 @@ class AntonioliMonitor(Monitor):
                             "name": name,
                             "url": full_url,
                             "price": price,
-                            "inventory": sizes_dict
+                            "inventory": sizes_dict,
+                            "key_monitoring": key_monitoring
                         }
                         self.inventory_data[unique_key] = product_info
 
@@ -230,5 +255,5 @@ class AntonioliMonitor(Monitor):
 
 if __name__ == '__main__':
     # 创建监控实例并运行
-    monitor = AntonioliMonitor(is_headless=True, proxy_type="clash")
+    monitor = AntonioliMonitor(is_headless=False, proxy_type="clash", is_no_img=False)
     monitor.run_with_log()

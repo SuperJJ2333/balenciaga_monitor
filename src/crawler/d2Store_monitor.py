@@ -2,10 +2,19 @@
 D2Store监控模块 - 负责监控D2Store网站上Balenciaga鞋子的库存状态
 该模块实现了对D2Store网站的爬取、解析和数据保存功能
 """
+import os
+import sys
+import re
 from datetime import datetime
 from DrissionPage._elements.session_element import SessionElement
 
-from common.monitor import Monitor
+# 添加项目根目录到Python路径
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(os.path.dirname(current_dir))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+from src.common.monitor import Monitor
 
 
 class D2StoreMonitor(Monitor):
@@ -25,11 +34,9 @@ class D2StoreMonitor(Monitor):
         """
         # 更新监控器名称
         kwargs['monitor_name'] = 'd2store'
-        kwargs['catalog_url'] = 'https://www.d2-store.com/en/men/designer/maison-margiela/sneakers'
 
         super().__init__(**kwargs)
-        
-        # self.page = self.init_page()
+
         self.session = self.init_session()
 
         self.headers = self.init_params()
@@ -121,32 +128,42 @@ class D2StoreMonitor(Monitor):
         返回:
             list: 商品信息列表，每个元素为包含name和url的字典
         """
-        self.logger.info(f"正在获取商品目录: {self.catalog_url}")
+        products_list: list[dict] = []
+
         try:
-            # 设置代理并访问页面
-            self.session.get(self.catalog_url, headers=self.headers)
+            for url in self.catalog_url:
+                # 设置代理并访问页面
+                self.session.get(url, headers=self.headers)
+                self.logger.info(f"正在获取商品目录: {url}")
 
-            # 检查页面响应
-            if not self.session.html.strip():
-                self.logger.error("获取页面失败：页面响应为空")
-                return []
-
-            # 尝试查找商品元素
-            try:
-                data = self.session.s_eles('x://div[@class="cnt"]')
-
-                if not data:
-                    self.logger.error("未找到任何商品列表元素")
+                # 检查页面响应
+                if not self.session.html.strip():
+                    self.logger.error("获取页面失败：页面响应为空")
                     return []
 
-                self.logger.info(f"找到 {len(data)} 个商品元素")
-                products_list: list[dict] = self.parse_inventory_catalog(data)
-                return products_list
+                # 尝试查找商品元素
+                try:
+                    data = self.session.s_eles('x://div[@class="cnt"]')
 
-            except Exception as e:
-                self.logger.error(f"处理商品目录元素时出错: {str(e)}")
-                return []
+                    if not data:
+                        self.logger.error("未找到任何商品列表元素")
+                        return []
 
+                    self.logger.debug(f"找到 {len(data)} 个商品元素")
+                    
+                    inventory_catalog_data = self.parse_inventory_catalog(data)
+
+                    if inventory_catalog_data:
+                        products_list += inventory_catalog_data
+                    else:
+                        self.logger.error("解析商品目录失败")
+                        return []
+                
+                except Exception as e:
+                    self.logger.error(f"处理商品目录元素时出错: {str(e)}")
+                    return []
+
+            return products_list
         except Exception as e:
             self.logger.error(f"获取商品目录过程中出错: {str(e)}")
             return []
@@ -193,11 +210,18 @@ class D2StoreMonitor(Monitor):
                         url_parts = url.rstrip('/').split('/')
                         unique_key = f"{name}_{url_parts[-1]}"
 
+                        if full_url in self.product_url:
+                            key_monitoring = True
+                            self.logger.info(f"已获取重点检测对象信息: {name}, URL: {full_url}")
+                        else:
+                            key_monitoring = False
+
                         product_info = {
                             "name": name,
                             "url": full_url,
                             "price": price,
-                            "inventory": sizes_dict
+                            "inventory": sizes_dict,
+                            "key_monitoring": key_monitoring
                         }
                         self.inventory_data[unique_key] = product_info
 

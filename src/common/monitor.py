@@ -10,13 +10,16 @@ import shutil
 from abc import ABC, abstractmethod
 from datetime import datetime
 from typing import Dict, List, Any, Optional, Tuple
+from urllib.parse import urlparse, urlunparse
+import re
 
 import requests
 from DrissionPage import ChromiumPage, ChromiumOptions, SessionPage, SessionOptions
 
 from common.project_path import ProjectPaths
 from utils.page_setting import configure_logger, load_cookies, random_sleep
-from utils.proxy_setting import *
+from utils.proxy_setting import create_proxyauth_extension, set_switchy_omega
+from utils.utils import load_toml
 
 
 class Monitor(ABC):
@@ -46,7 +49,7 @@ class Monitor(ABC):
         """
         # 初始化项目根目录
         self.project_path = ProjectPaths()
-        
+
         # 监控网站名称，子类需要设置
         self.monitor_name = kwargs.get('monitor_name', "base_monitor")
         # 商品目录URL，子类需要设置
@@ -64,7 +67,9 @@ class Monitor(ABC):
 
         # 上次的库存数据，用于对比变化
         self.previous_inventory = {}
-        
+
+        self.page: ChromiumPage | None = None
+
         ## 可选参数处理
         self._handle_params(**kwargs)
         # 初始化代理
@@ -76,6 +81,14 @@ class Monitor(ABC):
 
         # 保存数据的根目录
         self.data_root = self.project_path.DATA
+
+        self.url_config = load_toml(os.path.join(self.project_path.CONFIG, 'url_monitor.toml'), self.logger)
+
+        if self.monitor_name in self.url_config:
+            url_config = self.url_config[self.monitor_name]
+            # 配置网页的URL
+            self.catalog_url = url_config[f"{self.monitor_name}_category_url"]
+            self.product_url = url_config[f"{self.monitor_name}_specific_url"] if f"{self.monitor_name}_specific_url" in url_config else None
 
         # 加载上次的库存数据用于对比
         self._load_previous_inventory()
@@ -93,9 +106,9 @@ class Monitor(ABC):
         # 是否使用图片
         self.is_no_img = kwargs.get('is_no_img', True)
         # 是否自动切换端口
-        self.is_auto_port = kwargs.get('is_auto_port', False)
+        self.is_auto_port = kwargs.get('is_auto_port', True)
 
-        self.load_mode = kwargs.get('load_mode', 'eager')
+        self.load_mode: [str] = kwargs.get('load_mode', 'normal')
 
     def _setup_logger(self):
         """
@@ -107,27 +120,35 @@ class Monitor(ABC):
         # 获取基础logger，传入监控器名称
         logger = configure_logger(self.monitor_name)
         
+        # 确保不重复输出到根logger
+        logger.propagate = False
+
+        # 检查是否已经有文件处理器，防止重复添加
+        has_file_handler = any(isinstance(handler, logging.FileHandler) for handler in logger.handlers)
+        if has_file_handler:
+            return logger
+
         # 确保日志目录存在
         log_dir = os.path.join(self.project_path.LOGS, self.monitor_name)
         self._ensure_dir(log_dir)
-        
+
         # 创建日志文件名（使用时间戳）
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         log_file = os.path.join(log_dir, f"{self.monitor_name}_{timestamp}.log")
-        
+
         # 创建文件处理器
         file_handler = logging.FileHandler(log_file, encoding='utf-8')
         file_handler.setLevel(logging.DEBUG)
-        
+
         # 设置格式 - 使用与控制台相同的格式，monitor_name已经在控制台格式中设置
         formatter = logging.Formatter(f'%(asctime)s - %(levelname)s - [{self.monitor_name}] - %(message)s')
         file_handler.setFormatter(formatter)
-        
+
         # 添加到logger
         logger.addHandler(file_handler)
-        
-        logger.info(f"日志文件已创建: {log_file}")
-        
+
+        logger.debug(f"日志文件已创建: {log_file}")
+
         return logger
 
     def _init_proxy(self) -> None:
@@ -138,11 +159,17 @@ class Monitor(ABC):
         self.proxy_pin_zan_url = 'https://service.ipzan.com/core-extract?num=1&no=20250418922716594779&minute=1&pool=quality&secret=go1ouj73e1lf2h'
 
         # clash代理地址
-        self.proxy_clash_url = 'http://127.0.0.1:7890'
+        self.proxy_clash_url = {'http': 'http://127.0.0.1:7890', 'https': 'http://127.0.0.1:7890'}
 
-        allowed_values = {"clash", "pin_zan", "kuai_dai_li"}
+        # ipcool代理地址
+        self.ipcool_url = {
+            'http': 'http://{}:{}@us.ipcool.net:2555'.format("13727744565_187_0_0_session_5_1", "lin2225427"),
+            'https': 'http://{}:{}@us.ipcool.net:2555'.format("13727744565_187_0_0_session_5_1", "lin2225427")
+            }
+
+        allowed_values = {"clash", "pin_zan", "kuai_dai_li", "ipcool", None}
         if self.proxy_type and self.proxy_type not in allowed_values:
-            raise ValueError("proxy_type must be one of 'clash', 'pin_zan', 'kuai_dai_li'")
+            raise ValueError("proxy_type must be one of 'clash', 'pin_zan', 'kuai_dai_li', 'ipcool'")
 
     def init_page(self) -> ChromiumPage:
         """
@@ -158,25 +185,33 @@ class Monitor(ABC):
         option.mute(True)
 
         # 设置加载模式为eager以加快加载速度
+        allowed_values = {"normal", "eager", "none", None}
+        if self.load_mode and self.load_mode not in allowed_values:
+            raise ValueError("load_mode 只允许在 {'normal', 'eager', 'none', None}")
+
         option.set_load_mode(self.load_mode)
-        
+
         # 禁用图片加载以提高性能
         option.no_imgs(self.is_no_img)
-        
+
         # 根据配置决定是否使用无头模式
         option.headless(self.is_headless)
-        
-        # 根据配置决定是否自动切换端口
-        if self.is_auto_port:
-            option.auto_port()
 
-        browser_path_dir = r'D:\Software\chrome64_107.0.5304.122\chrome\Chrome-bin\chrome.exe'
-        option.set_browser_path(browser_path_dir)
-        
+        # 根据配置决定是否自动切换端口
+        if self.monitor_name != "julian" and self.is_auto_port:
+            option.auto_port(self.is_auto_port)
+
+        if self.monitor_name == "julian" or self.monitor_name == "mrporter":
+            option.set_local_port(19999)
+
+        option.ignore_certificate_errors(True)
+
+        option.incognito(self.is_auto_port)
+
         # 设置代理
         if self.proxy_type:
             if self.proxy_type == "clash":
-                option.set_proxy(self.proxy_clash_url)
+                option.set_proxy(self.proxy_clash_url['http'])
             elif self.proxy_type == "pin_zan":
                 option.set_proxy(self._fetch_proxy(self.proxy_pin_zan_url))
             elif self.proxy_type == "kuai_dai_li":
@@ -190,6 +225,8 @@ class Monitor(ABC):
                 # 快代理直连
                 tunnel = "d122.kdltps.com:15818"
                 option.set_proxy("http://" + tunnel)
+            elif self.proxy_type == "ipcool":
+                option.add_extension(r"E:\pythonProject\extension\Proxy-SwitchyOmega-Chromium-2.5.20")
 
         # 设置用户代理头，确保格式正确
         user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0"
@@ -197,7 +234,11 @@ class Monitor(ABC):
 
         # 创建并返回浏览器页面
         page = ChromiumPage(option)
-        self.logger.info(f"{self.monitor_name} - 浏览器页面已初始化")
+
+        if self.proxy_type == "ipcool" and self.page:
+            set_switchy_omega(page)
+
+        self.logger.debug(f"{self.monitor_name} - 浏览器页面已初始化")
         return page
 
     def init_session(self) -> SessionPage:
@@ -232,17 +273,17 @@ class Monitor(ABC):
             filename = f"{self.monitor_name}_{timestamp}.json"
         elif not filename.endswith('.json'):
             filename = f"{filename}.json"
-        
+
         # 构建保存路径
         save_dir = os.path.join(self.data_root, self.monitor_name, category)
         self._ensure_dir(save_dir)
         file_path = os.path.join(save_dir, filename)
-        
+
         # 保存数据到JSON文件
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
-        
-        self.logger.info(f"数据已保存到 {file_path}")
+
+        self.logger.debug(f"数据已保存到 {file_path}")
 
         return file_path
 
@@ -273,7 +314,7 @@ class Monitor(ABC):
         self.logger.info(f"{self.monitor_name} - 数据已保存到 {file_path}")
 
         return file_path
-        
+
     def save_log_to_file(self):
         """
         将当前日志保存到文件
@@ -281,7 +322,7 @@ class Monitor(ABC):
         保存在self.project_path.LOGS/{self.monitor_name}/目录下
         """
         # 日志已经在初始化时配置为同时写入文件，此方法用于运行结束时记录日志完成的信息
-        self.logger.info(f"{self.monitor_name} - 监控任务完成，日志已保存")
+        self.logger.debug(f"{self.monitor_name} - 监控任务完成，日志已保存")
 
     def create_inventory_data(self):
         """
@@ -295,7 +336,7 @@ class Monitor(ABC):
         successful_products = 0
         for i, product in enumerate(self.products_list):
             try:
-                self.logger.info(f"正在获取商品 [{i + 1}/{len(self.products_list)}]: {product['name']}")
+                self.logger.debug(f"正在获取商品 [{i + 1}/{len(self.products_list)}]: {product['name']}")
                 # 随机延迟，避免被网站反爬
                 random_sleep(1, 3)
 
@@ -362,6 +403,9 @@ class Monitor(ABC):
             if "price" not in item:
                 item["price"] = ""
 
+            if "key_monitoring" not in item:
+                item["key_monitoring"] = False
+
             # 确保inventory字段是字典类型
             if "inventory" in item and not isinstance(item["inventory"], dict):
                 self.logger.warning(
@@ -395,7 +439,7 @@ class Monitor(ABC):
         try:
             with open(latest_file, 'r', encoding='utf-8') as f:
                 self.previous_inventory = json.load(f)
-            self.logger.info(f"加载了上次的库存数据: {latest_file}")
+            self.logger.debug(f"加载了上次的库存数据: {latest_file}")
         except Exception as e:
             self.logger.error(f"加载历史库存数据出错: {str(e)}")
 
@@ -423,12 +467,31 @@ class Monitor(ABC):
 
         # 标准化当前库存数据
         current = self._normalize_inventory_data(current_inventory)
+        
+        # 检查数据有效性
+        if len(current) < 5:  # 假设正常情况下至少应有5个商品
+            self.logger.warning(f"当前获取到的商品数量异常少({len(current)}个)，不进行变化检测")
+            return None
+            
+        if len(self.previous_inventory) < 5:  # 上次爬取的数据异常少
+            self.logger.warning(f"上次爬取的商品数量异常少({len(self.previous_inventory)}个)，不进行变化检测")
+            return None
+            
+        # 检查数据量差异是否异常
+        current_count = len(current)
+        previous_count = len(self.previous_inventory)
+        diff_percentage = abs(current_count - previous_count) / max(current_count, previous_count) * 100
+        
+        if diff_percentage > 50:  # 如果数据量相差超过50%，可能是爬取异常
+            self.logger.warning(f"当前数据({current_count}个)与上次数据({previous_count}个)相差{diff_percentage:.1f}%，超过阈值，不进行变化检测")
+            return None
 
         # 检测变化
         changes = {
             "new_products": [],  # 新上架的商品
             "removed_products": [],  # 下架的商品
-            "inventory_changes": []  # 库存变化
+            "inventory_changes": [],  # 库存变化
+            "key_product_changes": []  # 重点监控商品的变化
         }
 
         # 检测新上架的商品
@@ -457,6 +520,16 @@ class Monitor(ABC):
             if key in self.previous_inventory:
                 prev_inventory = self.previous_inventory[key].get("inventory", {})
                 curr_inventory = item.get("inventory", {})
+                
+                # 检查价格变化
+                prev_price = self.previous_inventory[key].get("price", "")
+                curr_price = item.get("price", "")
+                price_change = None
+                if prev_price != curr_price and prev_price and curr_price:
+                    price_change = {
+                        "from": prev_price,
+                        "to": curr_price
+                    }
 
                 # 检测尺码变化
                 size_changes = []
@@ -470,11 +543,18 @@ class Monitor(ABC):
                             "status": status
                         })
                     elif prev_inventory[size] != status:
+                        change_type = "changed"
+                        # 特别标记补货和售罄情况
+                        if prev_inventory[size].lower() in ["sold out", "out of stock"] and status.lower() in ["in stock", "available"]:
+                            change_type = "stock_in"  # 补货
+                        elif prev_inventory[size].lower() in ["in stock", "available"] and status.lower() in ["sold out", "out of stock"]:
+                            change_type = "stock_out"  # 售罄
+                            
                         size_changes.append({
                             "size": size,
-                            "type": "changed",
-                            "previous_status": prev_inventory[size],
-                            "current_status": status
+                            "type": change_type,
+                            "from": prev_inventory[size],
+                            "to": status
                         })
 
                 # 检测移除尺码
@@ -486,14 +566,25 @@ class Monitor(ABC):
                             "previous_status": status
                         })
 
-                if size_changes:
-                    changes["inventory_changes"].append({
+                if size_changes or price_change:
+                    change_info = {
                         "id": key,
                         "name": item.get("name", ""),
                         "url": item.get("url", ""),
-                        "price": item.get("price", ""),
-                        "size_changes": size_changes
-                    })
+                        "price": item.get("price", "")
+                    }
+                    
+                    if size_changes:
+                        change_info["size_changes"] = size_changes
+                    
+                    if price_change:
+                        change_info["price_change"] = price_change
+                        
+                    changes["inventory_changes"].append(change_info)
+                    
+                    # 如果是重点监控商品，添加到key_product_changes
+                    if item.get("key_monitoring", False):
+                        changes["key_product_changes"].append(change_info)
 
         # 如果有变化，保存变化记录
         has_changes = (
@@ -506,7 +597,7 @@ class Monitor(ABC):
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             self.save_json_data(changes, f"inventory_changes_{timestamp}", category="changes")
             self.logger.info(
-                f"检测到库存变化: {len(changes['new_products'])}个新商品, {len(changes['removed_products'])}个下架商品, {len(changes['inventory_changes'])}个库存变化")
+                f"检测到库存变化: {len(changes['new_products'])}个新商品, {len(changes['removed_products'])}个下架商品, {len(changes['inventory_changes'])}个库存变化, {len(changes['key_product_changes'])}个重点商品变化")
         else:
             self.logger.info("未检测到库存变化")
 
@@ -562,6 +653,120 @@ class Monitor(ABC):
         finally:
             # 确保在方法结束时记录和保存日志
             self.save_log_to_file()
+            # 清理多余的日志和数据文件
+            self.cleanup_files()
+            if self.page and self.monitor_name != "julian" and not self.is_auto_port:
+                self.page.quit()
+            return len(self.inventory_data)
+
+    def cleanup_files(self, max_log_files=20, max_data_files=50, max_days_to_keep=30):
+        """
+        清理多余的日志和数据文件，保留最近的文件
+        
+        Args:
+            max_log_files (int): 保留的最大日志文件数量
+            max_data_files (int): 每个类别（inventory、changes等）保留的最大数据文件数量
+            max_days_to_keep (int): 文件保留的最大天数，超过此天数的文件将被删除，即使数量未超过上限
+        """
+        self.logger.info(f"开始清理多余的日志和数据文件...")
+        
+        # 计算截止时间
+        cutoff_time = datetime.now().timestamp() - (max_days_to_keep * 24 * 60 * 60)
+        
+        # 清理日志文件
+        log_dir = os.path.join(self.project_path.LOGS, self.monitor_name)
+        self._cleanup_dir_files(log_dir, "*.log", max_log_files, "日志", cutoff_time)
+        
+        # 清理数据目录下的各类数据文件
+        monitor_data_dir = os.path.join(self.data_root, self.monitor_name)
+        if os.path.exists(monitor_data_dir):
+            # 清理库存数据
+            inventory_dir = os.path.join(monitor_data_dir, "inventory")
+            self._cleanup_dir_files(inventory_dir, "*.json", max_data_files, "库存数据", cutoff_time)
+            
+            # 清理变更数据
+            changes_dir = os.path.join(monitor_data_dir, "changes")
+            self._cleanup_dir_files(changes_dir, "inventory_changes_*.json", max_data_files, "变更数据", cutoff_time)
+            
+            # 清理总结数据
+            summary_dir = os.path.join(monitor_data_dir, "summary")
+            self._cleanup_dir_files(summary_dir, "*.txt", max_data_files, "总结文件", cutoff_time)
+            self._cleanup_dir_files(summary_dir, "*.json", max_data_files, "总结JSON", cutoff_time)
+        
+        self.logger.debug("文件清理完成")
+
+    def _cleanup_dir_files(self, directory, pattern, max_files, file_type, cutoff_time=None):
+        """
+        清理指定目录下的文件，保留最新的文件
+        
+        Args:
+            directory (str): 要清理的目录
+            pattern (str): 文件匹配模式（如 "*.log"）
+            max_files (int): 保留的最大文件数量
+            file_type (str): 文件类型描述，用于日志
+            cutoff_time (float, optional): 时间戳，超过此时间的文件将被删除，即使数量未超过上限
+        """
+        if not os.path.exists(directory):
+            return
+            
+        # 获取所有匹配的文件
+        files = glob.glob(os.path.join(directory, pattern))
+        
+        if not files:
+            return
+            
+        # 根据文件类型选择排序方法
+        if "inventory" in file_type.lower() and len(files) > 0 and "balenciaga_inventory_" in os.path.basename(files[0]):
+            # 针对库存文件使用文件名中的时间戳排序
+            def extract_timestamp(filename):
+                match = re.search(r"balenciaga_inventory_(\d{8}_\d{6})\.json$", os.path.basename(filename))
+                if match:
+                    timestamp_str = match.group(1)
+                    try:
+                        # 将YYYYMMDD_HHMMSS格式转换为时间戳
+                        dt = datetime.strptime(timestamp_str, "%Y%m%d_%H%M%S")
+                        return dt.timestamp()
+                    except Exception:
+                        pass
+                # 如果无法提取时间戳，返回文件修改时间作为备选
+                return os.path.getmtime(filename)
+                
+            # 按照提取的时间戳排序（从新到旧）
+            files.sort(key=extract_timestamp, reverse=True)
+            self.logger.debug(f"使用文件名中的时间戳对 {file_type} 文件进行排序")
+        else:
+            # 其他文件类型使用修改时间排序
+            files.sort(key=os.path.getmtime, reverse=True)
+        
+        # 需要删除的文件列表
+        files_to_delete = []
+        
+        # 先保留最新的max_files个文件，将其余文件标记为待删除
+        if len(files) > max_files:
+            files_to_delete.extend(files[max_files:])
+            remaining_files = files[:max_files]
+        else:
+            remaining_files = files.copy()
+        
+        # 再检查剩余文件中是否有过期的文件
+        if cutoff_time:
+            expired_files = [f for f in remaining_files if os.path.getmtime(f) < cutoff_time]
+            files_to_delete.extend(expired_files)
+        
+        if not files_to_delete:
+            self.logger.debug(f"{file_type}文件不需要清理：{len(files)}/{max_files}个文件，均未过期")
+            return
+            
+        deleted_count = 0
+        for file in files_to_delete:
+            try:
+                os.remove(file)
+                deleted_count += 1
+            except Exception as e:
+                self.logger.warning(f"删除{file_type}文件失败: {file}, 错误: {str(e)}")
+                
+        if deleted_count > 0:
+            self.logger.debug(f"已清理 {deleted_count} 个{file_type}文件，保留 {len(files) - deleted_count} 个文件")
 
     @abstractmethod
     def run(self):
@@ -651,6 +856,12 @@ class Monitor(ABC):
 
         return summary_text, summary_data
 
+    @staticmethod
+    def normalize_url(url):
+        parsed = urlparse(url)
+        # 保留路径，忽略查询参数和片段
+        return urlunparse((parsed.scheme, parsed.netloc, parsed.path, '', '', ''))
+
 # if __name__ == '__main__':
-    # monitor = Monitor(is_headless=False)
-    # monitor._set_proxy()
+# monitor = Monitor(is_headless=False)
+# monitor._set_proxy()

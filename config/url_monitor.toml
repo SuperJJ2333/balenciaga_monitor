@@ -1,0 +1,115 @@
+# 请在配置文件里添加对应网站
+[sugar]
+sugar_category_url = [
+    "https://www.sugar.it/en-IT/man/designer/balenciaga/shoes",
+    "https://www.sugar.it/en-IT/man/designer/balenciaga/bags"
+    ]
+sugar_specific_url = [
+    "https://www.sugar.it/en-IT/product/180144/balenciaga/sneakers/3xl_sneakers"
+]
+
+
+[antonioli]
+antonioli_category_url = [
+    "https://antonioli.eu/collections/designer-balenciaga/man",
+]
+antonioli_specific_url = [
+    "https://antonioli.eu/en-us/products/man-balenciaga-shoes-loafers-flats-810884w11m0-1000?_pos=1&_fid=339b2fdee&_ss=c",
+]
+
+
+[d2store]
+d2store_category_url = [
+    "https://www.d2-store.com/en/men/designer/maison-margiela/sneakers",
+    "https://www.d2-store.com/en/all/categories/accessories/bags"
+]
+d2store_specific_url = [
+    "https://www.d2-store.com/en/product/maison-margiela-replica-sneakers-man-off-white-s57ws0513-p8170-ha839",
+]
+
+
+[giglio]
+giglio_category_url = [
+    "https://www.giglio.com/en-us/balenciaga/men.html?_gl=1*1fxjw4l*_up*MQ..&category=8&gclid=CjwKCAjw--K_BhB5EiwAuwYoynemd70DtOPlR5NfGVCI_MD0CV577lXDMZjwaNVDEs7gZ8CrA91gQBoCivUQAvD_BwE",
+    "https://www.giglio.com/en-us/adidas/men.html?_gl=1*q1qj9v*_up*MQ..&gclid=CjwKCAjw--K_BhB5EiwAuwYoynemd70DtOPlR5NfGVCI_MD0CV577lXDMZjwaNVDEs7gZ8CrA91gQBoCivUQAvD_BwE"
+]
+giglio_specific_url = [
+    "https://www.giglio.com/en-us/shoes-men_sneakers-adidas-originals-jh5435.html?cSel=022&_gl=1*optcfi*_up*MQ..&gclid=CjwKCAjw--K_BhB5EiwAuwYoynemd70DtOPlR5NfGVCI_MD0CV577lXDMZjwaNVDEs7gZ8CrA91gQBoCivUQAvD_BwE",
+]
+
+
+[julian]
+julian_category_url = [
+    "https://www.julian-fashion.com/en-hk/men/designer/balenciaga/shoes",
+]
+julian_specific_url = [
+    "https://www.julian-fashion.com/en-hk/product/312009/balenciaga/sneakers/3xl_sneakers",
+    ]
+
+
+[mrporter]
+mrporter_category_url = [
+    "https://www.mrporter.com/en-hk/mens/designer/balenciaga/shoes",
+    "https://www.mrporter.com/en-hk/mens/clothing/cashmere",
+]
+mrporter_specific_url = [
+    "https://www.mrporter.com/en-hk/mens/product/balenciaga/shoes/low-top-sneakers/runner-distressed-rubber-and-mesh-sneakers/1647597339812883",
+]
+
+
+[rickowens]
+rickowens_category_url = [
+    "https://www.rickowens.eu/en/MO/search?f%5Bcategories%5D%5B%5D=60&gender=men&q=HOLLYWOOD",
+    "https://www.rickowens.eu/en/MO/search?f%5Bcategories%5D%5B%5D=60&gender=men&page=2&q=HOLLYWOOD",
+]
+rickowens_specific_url = [
+    "https://www.rickowens.eu/en/MO/men/products/rr01e5843lslvs0-340",
+]
+
+
+[suus]
+suus_category_url = [
+    "https://www.suus.es/product-tag/guidi/",
+    "https://www.suus.es/product-category/women/",
+]
+suus_specific_url = [
+    "https://www.suus.es/product/guidi-5212bzv-m-horse-full-grain-black/",
+
+]
+
+
+[mytheresa]
+mytheresa_category_url = [
+    'https://www.mytheresa.com/mo/en/women/designers/bottega-veneta?categories=0003&sortBy=recommendation',
+    "https://www.mytheresa.com/mo/en/men/designers/balenciaga?categories=5076&sortBy=recommendation",
+    "https://www.mytheresa.com/mo/en/men/designers/moncler?categories=5076&sortBy=recommendation",
+    "https://www.mytheresa.com/mo/en/men/designers/drkshdw-by-rick-owens?categories=5076&sortBy=recommendation",
+    "https://www.mytheresa.com/mo/en/men/designers/loewe?categories=5076&sortBy=recommendation",
+    "https://www.mytheresa.com/mo/en/men/designers/rick-owens?categories=5076&sortBy=recommendation",
+]
+
+mytheresa_specific_url = [
+    "https://www.mytheresa.com/mo/en/women/bottega-veneta-astaire-knot-leather-loafers-burgundy-p01057305",
+    "https://www.mytheresa.com/mo/en/men/balenciaga-cosy-bb-leather-slippers-black-p00655755",
+]
+
+
+
+# 不能监控单独商品的网站
+[eleonora_bonucci]
+eleonora_bonucci_category_url = [
+    "https://eleonorabonucci.com/en/balenciaga/men?&f=eyJPcmRpbmFtZW50byI6MCwiQ2F0ZWdvcnkiOls1Ml0sIkJyYW5kIjpbXSwiQ29sb3IiOltdLCJTaXplIjpbXSwiVGFnbGlhIjpbXSwiU2FsZGkiOmZhbHNlLCJOdW92YUNvbGxlemlvbmUiOnRydWUsIktpZHNNZW4iOnRydWUsIktpZHNXb21lbiI6dHJ1ZSwiU2l6ZUtpZHMiOjAsIlNlcXVlbnphIjpbeyJGaWx0cm8iOjEsIlZhbG9yZSI6NTIsIkV2ZW50IjoiXC9EYXRlKDE3NDQxOTQ4NzQ1ODgpXC8ifV0sIkxibEZpbHRyb0tpZHNNb2JpbGUiOm51bGwsIkxibEZpbHRyb1NpemVLaWRzTW9iaWxlIjpudWxsfQ==",
+    "https://eleonorabonucci.com/en/men/new-collection/bags/handbags?start=1&f=eyJPcmRpbmFtZW50byI6MCwiQ2F0ZWdvcnkiOltdLCJCcmFuZCI6W10sIkNvbG9yIjpbXSwiU2l6ZSI6W10sIlRhZ2xpYSI6W10sIlNhbGRpIjpudWxsLCJOdW92YUNvbGxlemlvbmUiOm51bGwsIktpZHNNZW4iOnRydWUsIktpZHNXb21lbiI6dHJ1ZSwiU2l6ZUtpZHMiOjAsIlNlcXVlbnphIjpbXSwiTGJsRmlsdHJvS2lkc01vYmlsZSI6bnVsbCwiTGJsRmlsdHJvU2l6ZUtpZHNNb2JpbGUiOm51bGx9"
+]
+
+[grifo210]
+grifo210_category_url = [
+    "https://www.grifo210.com/en-ww/collections/men-maison-margiela?filter.p.m.custom.sotto_categoria=Sneakers",
+    "https://www.grifo210.com/en-ww/collections/men-maison-margiela",
+]
+
+[hermes]
+hermes_category_url = [
+    "https://www.hermes.com/hk/en/category/women/bags-and-small-leather-goods/bags-and-clutches/?facet_line=garden_party",
+    "https://www.hermes.com/hk/en/category/women/bags-and-small-leather-goods/luggage/#|",
+]

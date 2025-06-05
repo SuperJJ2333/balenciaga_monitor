@@ -5,7 +5,7 @@ RickOwens监控模块 - 负责监控RickOwens网站上Balenciaga鞋子的库存�
 from datetime import datetime
 from DrissionPage._elements.session_element import SessionElement
 
-from common.monitor import Monitor
+from src.common.monitor import Monitor
 
 
 class RickOwensMonitor(Monitor):
@@ -25,7 +25,6 @@ class RickOwensMonitor(Monitor):
         """
         # 更新监控器名称
         kwargs['monitor_name'] = 'rickowens'
-        kwargs['catalog_url'] = 'https://www.rickowens.eu/en/MO/search?f%5Bcategories%5D%5B%5D=60&gender=men&q=HOLLYWOOD'
 
         super().__init__(**kwargs)
         
@@ -122,31 +121,44 @@ class RickOwensMonitor(Monitor):
         返回:
             list: 商品信息列表，每个元素为包含name和url的字典
         """
-        self.logger.info(f"正在获取商品目录: {self.catalog_url}")
+
+        products_list: list[dict] = []
         try:
-            # 设置代理并访问页面
-            self.page.get(self.catalog_url)
+            for url in self.catalog_url:
+                tab = self.page.new_tab()
+                tab.get(url)
+                self.page.get_tab(-1).close()
 
-            # 检查页面响应
-            if not self.page.html.strip():
-                self.logger.error("获取页面失败：页面响应为空")
-                return []
+                self.logger.info(f"正在获取商品目录: {url}")
 
-            # 尝试查找商品元素
-            try:
-                data = self.page.s_eles('x://article[@class="product"]')
-
-                if not data:
-                    self.logger.error("未找到任何商品列表元素")
+                # 检查页面响应
+                if not tab.html.strip():
+                    self.logger.error("获取页面失败：页面响应为空")
                     return []
 
-                self.logger.info(f"找到 {len(data)} 个商品元素")
-                products_list: list[dict] = self.parse_inventory_catalog(data)
-                return products_list
+                # 尝试查找商品元素
+                try:
+                    data = tab.s_eles('x://article[@class="product"]')
 
-            except Exception as e:
-                self.logger.error(f"处理商品目录元素时出错: {str(e)}")
-                return []
+                    if not data:
+                        self.logger.error("未找到任何商品列表元素")
+                        return []
+
+                    self.logger.debug(f"找到 {len(data)} 个商品元素")
+                    
+                    inventory_catalog_data = self.parse_inventory_catalog(data)
+
+                    if inventory_catalog_data:
+                        products_list += inventory_catalog_data
+                    else:
+                        self.logger.error("解析商品目录失败")
+                        return []
+                
+                except Exception as e:
+                    self.logger.error(f"处理商品目录元素时出错: {str(e)}")
+                    return []
+
+            return products_list
 
         except Exception as e:
             self.logger.error(f"获取商品目录过程中出错: {str(e)}")
@@ -189,11 +201,18 @@ class RickOwensMonitor(Monitor):
                         url_parts = url.rstrip('/').split('/')
                         unique_key = f"{name}_{url_parts[-1]}"
 
+                        if full_url in self.product_url:
+                            key_monitoring = True
+                            self.logger.info(f"已获取重点检测对象信息: {name}, URL: {full_url}")
+                        else:
+                            key_monitoring = False
+
                         product_info = {
                             "name": unique_key,
                             "url": full_url,
                             "price": price,
-                            "inventory": sizes_dict
+                            "inventory": sizes_dict,
+                            "key_monitoring": key_monitoring
                         }
                         self.inventory_data[unique_key] = product_info
 
@@ -214,5 +233,5 @@ class RickOwensMonitor(Monitor):
 
 if __name__ == '__main__':
     # 创建监控实例并运行
-    monitor = RickOwensMonitor(is_headless=True, proxy_type="clash")
+    monitor = RickOwensMonitor(is_headless=False, proxy_type="clash")
     monitor.run_with_log()

@@ -2,11 +2,19 @@
 EleonoraBonucci监控模块 - 负责监控EleonoraBonucci网站上Balenciaga鞋子的库存状态
 该模块实现了对EleonoraBonucci网站的爬取、解析和数据保存功能
 """
+import os
+import sys
 from datetime import datetime
+
+# 添加项目根目录到Python路径
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(os.path.dirname(current_dir))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+from src.utils.page_setting import *
+from src.common.monitor import Monitor
 from DrissionPage._elements.session_element import SessionElement
-
-from common.monitor import Monitor
-
 
 class EleonoraBonucciMonitor(Monitor):
     """
@@ -25,7 +33,6 @@ class EleonoraBonucciMonitor(Monitor):
         """
         # 更新监控器名称
         kwargs['monitor_name'] = 'eleonora_bonucci'
-        kwargs['catalog_url'] = 'https://eleonorabonucci.com/en/balenciaga/men?&f=eyJPcmRpbmFtZW50byI6MCwiQ2F0ZWdvcnkiOls1Ml0sIkJyYW5kIjpbXSwiQ29sb3IiOltdLCJTaXplIjpbXSwiVGFnbGlhIjpbXSwiU2FsZGkiOmZhbHNlLCJOdW92YUNvbGxlemlvbmUiOnRydWUsIktpZHNNZW4iOnRydWUsIktpZHNXb21lbiI6dHJ1ZSwiU2l6ZUtpZHMiOjAsIlNlcXVlbnphIjpbeyJGaWx0cm8iOjEsIlZhbG9yZSI6NTIsIkV2ZW50IjoiXC9EYXRlKDE3NDQxOTQ4NzQ1ODgpXC8ifV0sIkxibEZpbHRyb0tpZHNNb2JpbGUiOm51bGwsIkxibEZpbHRyb1NpemVLaWRzTW9iaWxlIjpudWxsfQ=='
 
         super().__init__(**kwargs)
         self.session = self.init_session()
@@ -52,7 +59,6 @@ class EleonoraBonucciMonitor(Monitor):
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0',
-            'cookie': self.load_cookies(),
         }
         return headers
 
@@ -67,7 +73,7 @@ class EleonoraBonucciMonitor(Monitor):
         4. 关闭浏览器
         """
         try:
-            self.logger.info(f"开始监控 {self.catalog_url}")
+            self.logger.debug(f"开始监控 {self.catalog_url}")
 
             # 获取商品目录
             catalog_data = self.get_inventory_catalog()
@@ -86,7 +92,7 @@ class EleonoraBonucciMonitor(Monitor):
             self.logger.info(f"监控开始，共获取到 {len(self.products_list)} 个商品信息")
 
             # 生成库存数据
-            self.create_inventory_data()
+            # self.create_inventory_data()
 
             # 保存库存数据
             if self.inventory_data:
@@ -104,17 +110,17 @@ class EleonoraBonucciMonitor(Monitor):
                     self.logger.info("检测到库存变化，已保存到变更记录")
 
                 # 生成并保存库存监控总结
-                summary, summary_data = self.generate_inventory_summary()
+                # summary, summary_data = self.generate_inventory_summary()
                 # 打印总结到控制台
                 # print(summary)
                 # 保存总结数据
-                self.save_summary_data(summary)
+                # self.save_summary_data(summary)
                 
                 # 保存JSON格式的总结
-                filename = f"inventory_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-                self.save_json_data(data=summary_data, filename=filename, category="json_summary")
+                # filename = f"inventory_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+                # self.save_json_data(data=summary_data, filename=filename, category="json_summary")
                 
-                return summary_data
+                # return summary_data
             else:
                 self.logger.warning("未获取到任何库存信息，无法生成总结")
 
@@ -133,33 +139,45 @@ class EleonoraBonucciMonitor(Monitor):
         返回:
             list: 商品信息列表，每个元素为包含name和url的字典
         """
-        self.logger.info(f"正在获取商品目录: {self.catalog_url}")
+
+        products_list: list[dict] = []
         try:
-            # 设置代理并访问页面
-            self.session.get(self.catalog_url)
-            
-            # 检查页面响应
-            if not self.session.html.strip():
-                self.logger.error("获取页面失败：页面响应为空")
-                return []
+            for url in self.catalog_url:
+                header = self.init_params()
+                # 设置代理并访问页面
+                self.session.get(url, headers=header)
+                self.logger.info(f"正在获取商品目录: {url}")
 
-            # 尝试查找商品元素
-            try:
-                # 修改选择器以匹配所有商品项
-                img_frames = self.session.eles("@class=product-desc center")
-
-                if not img_frames:
-                    self.logger.error("未找到任何商品列表元素")
-          
+                # 检查页面响应
+                if not self.session.html.strip():
+                    self.logger.error("获取页面失败：页面响应为空")
                     return []
 
-                self.logger.info(f"找到 {len(img_frames)} 个商品元素")
-                products_list: list[dict] = self.parse_inventory_catalog(img_frames)
-                return products_list
+                # 尝试查找商品元素
+                try:
+                    # 修改选择器以匹配所有商品项
+                    img_frames = self.session.eles("@class=product-desc center")
 
-            except Exception as e:
-                self.logger.error(f"处理商品目录元素时出错: {str(e)}")
-                return []
+                    if not img_frames:
+                        self.logger.error("未找到任何商品列表元素")
+
+                        return []
+
+                    self.logger.debug(f"找到 {len(img_frames)} 个商品元素")
+                    
+                    inventory_catalog_data = self.parse_inventory_catalog(img_frames)
+
+                    if inventory_catalog_data:
+                        products_list += inventory_catalog_data
+                    else:
+                        self.logger.error("解析商品目录失败")
+                        return []
+                    
+                except Exception as e:
+                    self.logger.error(f"处理商品目录元素时出错: {str(e)}")
+                    return []
+
+            return products_list
 
         except Exception as e:
             self.logger.error(f"获取商品目录过程中出错: {str(e)}")
@@ -175,7 +193,7 @@ class EleonoraBonucciMonitor(Monitor):
         返回:
             dict: 商品的尺码和库存状态信息
         """
-        self.logger.info(f"正在获取商品库存信息: {url}")
+        self.logger.debug(f"正在获取商品库存信息: {url}")
         try:
             # 访问商品页面
             self.session.get(url)
@@ -230,12 +248,17 @@ class EleonoraBonucciMonitor(Monitor):
                     if name and url:
                         # 修正URL格式
                         full_url = f"https://eleonorabonucci.com{url}" if not url.startswith('http') else url
-                        
+
+                        url_parts = url.rstrip('/').split('/')
+                        unique_key = f"{name}_{url_parts[-1]}"
+
                         product_info = {
                             "name": name,
                             "url": full_url,
-                            "price": price
+                            "price": price,
+                            "inventory": {}
                         }
+                        self.inventory_data[unique_key] = product_info
                         products_list.append(product_info)
                         self.logger.debug(f"找到商品: {name}, URL: {full_url}")
                 except Exception as e:
@@ -270,7 +293,7 @@ class EleonoraBonucciMonitor(Monitor):
                 if not good_name_ele:
                     good_name_ele = session.ele('x://h2[contains(@class, "product-title")]')
                 good_name = good_name_ele.text if good_name_ele else "未知商品"
-                self.logger.info(f"商品名称: {good_name}")
+                self.logger.debug(f"商品名称: {good_name}")
             except Exception as e:
                 good_name = "未知商品"
                 self.logger.warning(f"获取商品名称失败: {str(e)}")
@@ -282,10 +305,10 @@ class EleonoraBonucciMonitor(Monitor):
                 
                 # 如果没有找到，尝试其他常见的尺码选择器
                 if not size_items:
-                    self.logger.info("尝试查找其他尺码选择器")
+                    self.logger.debug("尝试查找其他尺码选择器")
                     size_items = session.eles('x://select[contains(@class, "size-select")]/option')
                 
-                self.logger.info(f"找到 {len(size_items)} 个尺码元素")
+                self.logger.debug(f"找到 {len(size_items)} 个尺码元素")
                 
                 # 遍历每个尺码元素，提取尺码和库存状态
                 for item in size_items:
@@ -312,9 +335,9 @@ class EleonoraBonucciMonitor(Monitor):
             
             # 记录库存信息
             if inventory_info:
-                self.logger.info(f"商品 '{good_name}' 共有 {len(inventory_info)} 种尺码")
+                self.logger.debug(f"商品 '{good_name}' 共有 {len(inventory_info)} 种尺码")
                 for size, availability in inventory_info.items():
-                    self.logger.info(f"尺码: {size}, 库存状态: {availability}")
+                    self.logger.debug(f"尺码: {size}, 库存状态: {availability}")
             else:
                 self.logger.warning(f"商品 '{good_name}' 未找到尺码信息")
 
@@ -404,5 +427,5 @@ class EleonoraBonucciMonitor(Monitor):
 
 if __name__ == '__main__':
     # 创建监控实例并运行
-    monitor = EleonoraBonucciMonitor(is_headless=False)
+    monitor = EleonoraBonucciMonitor(is_headless=True)
     monitor.run()

@@ -1,19 +1,21 @@
 """
-EleonoraBonucci监控模块 - 负责监控EleonoraBonucci网站上Balenciaga鞋子的库存状态
-该模块实现了对EleonoraBonucci网站的爬取、解析和数据保存功能
+Cettire监控模块 - 负责监控Cettire网站上Balenciaga鞋子的库存状态
+该模块实现了对Cettire网站的爬取、解析和数据保存功能
 """
+import json
+import random
+import time
 from datetime import datetime
-from DrissionPage._elements.session_element import SessionElement
 
-from utils.page_setting import *
-from common.monitor import Monitor
+from src.utils.page_setting import *
+from src.common.monitor import Monitor
 
 
 class CettireMonitor(Monitor):
     """
     Cettire网站监控类
 
-    方法HTML - category - detail
+    方法 Chrome - HTML - category - detail
     负责爬取Cettire网站上Balenciaga品牌鞋子的商品列表和库存信息
     """
 
@@ -26,11 +28,11 @@ class CettireMonitor(Monitor):
         """
         # 更新监控器名称
         kwargs['monitor_name'] = 'cettire'
-        kwargs['catalog_url'] = 'https://www.cettire.com/it/collections/balenciaga?from=brand_list.brand_search&menu%5Bdepartment%5D=men&menu%5Bproduct_type%5D=&refinementList%5BSize%5D=&refinementList%5Btags%5D%5B0%5D=Shoes&page=2&sortBy=production_rep_cettire_vip_date_desc&configure%5BhitsPerPage%5D=96&configure%5Bdistinct%5D=1&configure%5Bfilters%5D=visibility%3AYES%20AND%20%28vipLevel%3A%200%20OR%20vipLevel%3A%20null%29%20AND%20eu_eur_price_f%20%3E%200'
-        
+        kwargs['catalog_url'] = r'https://6l0oqj41cq-2.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.4.0)%3B%20Browser%20(lite)%3B%20JS%20Helper%20(3.24.1)%3B%20react%20(16.8.6)%3B%20react-instantsearch%20(6.7.0)&x-algolia-api-key=ee556f77348dacc02278dafa57be6d34&x-algolia-application-id=6L0OQJ41CQ'
+
         super().__init__(**kwargs)
         
-        self.page = self.init_page()
+        # self.page = self.init_page()
         self.session = self.init_session()
 
         self.headers, self.json_data = self.init_params()
@@ -44,6 +46,7 @@ class CettireMonitor(Monitor):
             dict: 包含headers的字典
         """
         headers = {
+            'Accept': '*/*',
             'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
             'Cache-Control': 'no-cache',
             'Connection': 'keep-alive',
@@ -52,76 +55,16 @@ class CettireMonitor(Monitor):
             'Referer': 'https://www.cettire.com/',
             'Sec-Fetch-Dest': 'empty',
             'Sec-Fetch-Mode': 'cors',
-            'Sec-Fetch-Site': 'same-site',
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0',
-            'accept': '*/*',
-            'content-type': 'application/json',
-            'sec-ch-ua': '"Microsoft Edge";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+            'Sec-Fetch-Site': 'cross-site',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0',
+            'content-type': 'application/x-www-form-urlencoded',
+            'sec-ch-ua': '"Chromium";v="136", "Microsoft Edge";v="136", "Not.A/Brand";v="99"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
-        }
+            }
 
-        json_data = {
-            'operationName': 'catalogItemProductQuery',
-            'variables': {
-                'slugOrId': 'balenciaga-runner-2-lace-up-sneakers-950379984',
-                'lang': 'en_US',
-                'langVersion': '1.0',
-                'userPrefer': {
-                    'currencyCode': 'EUR',
-                    'countryCode': 'IT',
-                    'regionCode': 'eu',
-                },
-            },
-            'query': 'query catalogItemProductQuery($slugOrId: String!, $lang: String, $langVersion: String, $userPrefer: '
-                     'UserPreferInput) {\n  catalogItemProduct(slugOrId: $slugOrId, userPrefer: $userPrefer) {\n    product {'
-                     '\n      _id\n      productId\n      title\n      slug\n      description\n      vendor\n      '
-                     'isLowQuantity\n      isSoldOut\n      isBackorder\n      sku\n      barcode\n      productType\n      '
-                     'vip {\n        level\n        __typename\n      }\n      metafields {\n        description\n        '
-                     'key\n        namespace\n        scope\n        value\n        valueType\n        __typename\n      }\n  '
-                     '    pricing {\n        currency {\n          code\n          __typename\n        }\n        '
-                     'displayPrice\n        minPrice\n        maxPrice\n        __typename\n      }\n      shop {\n        '
-                     'currency {\n          code\n          __typename\n        }\n        __typename\n      }\n      '
-                     'primaryImage {\n        URLs {\n          large\n          medium\n          original\n          '
-                     'small\n          thumbnail\n          __typename\n        }\n        priority\n        productId\n      '
-                     '  variantId\n        __typename\n      }\n      media {\n        priority\n        productId\n        '
-                     'variantId\n        URLs {\n          thumbnail\n          small\n          medium\n          large\n    '
-                     '      original\n          originalWebp\n          mediumWebp\n          largeWebp\n          '
-                     '__typename\n        }\n        __typename\n      }\n      tags {\n        nodes {\n          name\n     '
-                     '     slug\n          position\n          metafields {\n            key\n            value\n            '
-                     '__typename\n          }\n          __typename\n        }\n        __typename\n      }\n      variants {'
-                     '\n        _id\n        variantId\n        title\n        optionTitle\n        index\n        sku\n      '
-                     '  barcode\n        pricing {\n          compareAtPrice {\n            displayAmount\n            '
-                     '__typename\n          }\n          price\n          currency {\n            code\n            '
-                     '__typename\n          }\n          displayPrice\n          __typename\n        }\n        '
-                     'currencyPrices {\n          price\n          currencyCode\n          compareAtPrice\n          '
-                     'regionCode\n          finalSale\n          __typename\n        }\n        canBackorder\n        '
-                     'inventoryAvailableToSell\n        isBackorder\n        isSoldOut\n        isLowQuantity\n        '
-                     'options {\n          _id\n          variantId\n          title\n          index\n          pricing {\n  '
-                     '          compareAtPrice {\n              displayAmount\n              __typename\n            }\n      '
-                     '      price\n            currency {\n              code\n              __typename\n            }\n      '
-                     '      displayPrice\n            __typename\n          }\n          optionTitle\n          '
-                     'canBackorder\n          inventoryAvailableToSell\n          isBackorder\n          isSoldOut\n          '
-                     'isLowQuantity\n          media {\n            priority\n            productId\n            variantId\n  '
-                     '          URLs {\n              thumbnail\n              small\n              medium\n              '
-                     'large\n              original\n              __typename\n            }\n            __typename\n        '
-                     '  }\n          metafields {\n            description\n            key\n            namespace\n          '
-                     '  scope\n            value\n            valueType\n            __typename\n          }\n          '
-                     'primaryImage {\n            URLs {\n              large\n              medium\n              original\n '
-                     '             small\n              thumbnail\n              __typename\n            }\n            '
-                     'priority\n            productId\n            variantId\n            __typename\n          }\n          '
-                     '__typename\n        }\n        media {\n          priority\n          productId\n          variantId\n  '
-                     '        URLs {\n            thumbnail\n            small\n            medium\n            large\n       '
-                     '     original\n            __typename\n          }\n          __typename\n        }\n        metafields '
-                     '{\n          description\n          key\n          namespace\n          scope\n          value\n        '
-                     '  valueType\n          __typename\n        }\n        primaryImage {\n          URLs {\n            '
-                     'large\n            medium\n            original\n            small\n            thumbnail\n            '
-                     '__typename\n          }\n          priority\n          productId\n          variantId\n          '
-                     '__typename\n        }\n        size\n        color\n        __typename\n      }\n      seoTitle\n      '
-                     'seoDescription\n      seoUrl\n      lang(lang: $lang, langVersion: $langVersion)\n      __typename\n    '
-                     '}\n    __typename\n  }\n}\n',
-        }
-        
+        json_data = '{"requests":[{"indexName":"production_rep_cettire_vip_date_desc","params":"distinct=1&facetFilters=%5B%22tags%3AShoes%22%2C%5B%22department%3Amen%22%5D%2C%5B%22vendor%3ABalenciaga%22%5D%5D&facets=%5B%22Color%22%2C%22Size%22%2C%22department%22%2C%22product_type%22%2C%22tags%22%2C%22vendor%22%5D&filters=visibility%3AYES%20AND%20(vipLevel%3A%200%20OR%20vipLevel%3A%20null)%20AND%20eu_eur_price_f%20%3E%200&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&highlightPreTag=%3Cais-highlight-0000000000%3E&hitsPerPage=96&maxValuesPerFacet=10000&page=1&query="},{"indexName":"production_rep_cettire_vip_date_desc","params":"analytics=false&clickAnalytics=false&distinct=1&facetFilters=%5B%22tags%3AShoes%22%2C%5B%22vendor%3ABalenciaga%22%5D%5D&facets=department&filters=visibility%3AYES%20AND%20(vipLevel%3A%200%20OR%20vipLevel%3A%20null)%20AND%20eu_eur_price_f%20%3E%200&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&highlightPreTag=%3Cais-highlight-0000000000%3E&hitsPerPage=0&maxValuesPerFacet=10000&page=0&query="},{"indexName":"production_rep_cettire_vip_date_desc","params":"analytics=false&clickAnalytics=false&distinct=1&facetFilters=%5B%22tags%3AShoes%22%2C%5B%22department%3Amen%22%5D%5D&facets=vendor&filters=visibility%3AYES%20AND%20(vipLevel%3A%200%20OR%20vipLevel%3A%20null)%20AND%20eu_eur_price_f%20%3E%200&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&highlightPreTag=%3Cais-highlight-0000000000%3E&hitsPerPage=0&maxValuesPerFacet=10000&page=0&query="}]}'
+
         return headers, json_data
 
     def run(self):
@@ -152,8 +95,6 @@ class CettireMonitor(Monitor):
                 return
 
             self.logger.info(f"监控开始，共获取到 {len(self.products_list)} 个商品信息")
-            # 生成库存数据
-            self.create_inventory_data()
 
             # 保存库存数据
             if self.inventory_data:
@@ -170,15 +111,15 @@ class CettireMonitor(Monitor):
                     self.logger.info("检测到库存变化，已保存到变更记录")
 
                 # 生成并保存库存监控总结
-                summary, summary_data = self.generate_inventory_summary()
+                # summary, summary_data = self.generate_inventory_summary()
                 # 打印总结到控制台
-                print(summary)
-                self.save_summary_data(summary)
+                # print(summary)
+                # self.save_summary_data(summary)
 
-                filename = f"inventory_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-                self.save_json_data(data=summary_data, filename=filename, category="json_summary")
+                # filename = f"inventory_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+                # self.save_json_data(data=summary_data, filename=filename, category="json_summary")
                 
-                return summary_data
+                return
             else:
                 self.logger.warning("未获取到任何库存信息，无法生成总结")
 
@@ -186,7 +127,6 @@ class CettireMonitor(Monitor):
             self.logger.error(f"监控过程中出错: {str(e)}")
         finally:
             self.logger.info("监控结束，关闭浏览器")
-            self.page.quit()
 
     def get_inventory_catalog(self) -> list[dict]:
         """
@@ -198,36 +138,34 @@ class CettireMonitor(Monitor):
             list: 商品信息列表，每个元素为包含name和url的字典
         """
         self.logger.info(f"正在获取商品目录: {self.catalog_url}")
+
+        products_list = []
         try:
             # 设置代理并访问页面
-            self.page.get(self.catalog_url)
-
+            self.session.post(self.catalog_url, headers=self.headers, data=self.json_data, proxies=self.ipcool_url)
             # 检查页面响应
-            if not self.page.html.strip():
+            if not self.session.html.strip():
                 self.logger.error("获取页面失败：页面响应为空")
                 return []
 
-            # 模拟人类滚动页面
-            for i in range(2):
-                self.page.scroll.to_half()
-                random_sleep(0.1, 0.9)
-                self.page.scroll.to_bottom()
-                random_sleep(0.1, 0.9)
-                self.page.scroll.to_half()
-                random_sleep(0.1, 0.9)
-                self.page.scroll.to_top()
-
             # 尝试查找商品元素
             try:
-                data = self.page.s_eles('@class^lazyload-wrapper')
+                data = self.session.json
 
                 if not data:
                     self.logger.error("未找到任何商品列表元素")
                     return []
 
-                self.logger.info(f"找到 {len(data)} 个商品元素")
-                products_list: list[dict] = self.parse_inventory_catalog(data)
-                return products_list
+                self.logger.debug(f"找到 {len(data)} 个商品元素")
+                
+                inventory_catalog_data = self.parse_inventory_catalog(data)
+
+                if inventory_catalog_data:
+                    products_list += inventory_catalog_data
+                    return products_list
+                else:
+                    self.logger.error("解析商品目录失败")
+                    return []
 
             except Exception as e:
                 self.logger.error(f"处理商品目录元素时出错: {str(e)}")
@@ -247,7 +185,7 @@ class CettireMonitor(Monitor):
         返回:
             dict: 商品的尺码和库存状态信息
         """
-        self.logger.info(f"正在获取商品库存信息: {url}")
+        self.logger.debug(f"正在获取商品库存信息: {url}")
         try:
             # 提取产品ID
             product_id = self._extract_product_id(url)
@@ -276,54 +214,47 @@ class CettireMonitor(Monitor):
             self.logger.error(f"获取商品库存信息过程中出错: {str(e)}")
             return {}
 
-    def parse_inventory_catalog(self, catalog_eles: list[SessionElement]) -> list[dict]:
+    def parse_inventory_catalog(self, catalog_eles: dict) -> list[dict]:
         """
         解析商品目录HTML数据，提取关键商品信息
         
         参数:
-            catalog_eles (element): 包含商品目录的element数据
+            catalog_eles (dict): 包含商品目录的element数据
         
         返回:
             list: 商品信息列表，每个元素为包含商品详细信息的字典
         """
         try:
+            json_data = catalog_eles.get('results')[0].get('hits')
             products_list = []
 
             # 提取每个商品的名称和URL
-            for i, item in enumerate(catalog_eles):
+            for i, item in enumerate(json_data):
                 try:
-                    self.page.scroll.down(int(uniform(100, 400)))
                     # 尝试多种选择器找到商品名称
-                    name_ele = item.s_ele('x://a/div/div/div[2]')
-                    # 如果无法找到名称，记录警告并尝试下一个元素
-                    if not name_ele:
-                        # 替换新的catalog_eles
-                        catalog_eles = self.page.s_eles('@class^lazyload-wrapper')
-                        item = catalog_eles[i]
-                        name_ele = item.ele('text:Balenciaga').next('tag=div')
-                        if not name_ele:
-                            self.logger.warning(f"无法找到商品名称元素，跳过此商品")
-                            continue
-
-                    name = name_ele.text
+                    name = item.get('title')
 
                     # 尝试多种选择器找到URL
-                    url_ele = item.s_ele('x://a')
-                    url = url_ele.attr('href')
+                    url = item.get('handle')
 
                     # 尝试多种选择器找到价格
-                    price_ele = item.s_ele('x://a/div/div/span/span')
-                    price = price_ele.text if price_ele else ""
+                    price = '€' + str(item.get('eu_eur_price_f'))
 
                     if name and url:
                         # 修正URL格式
-                        full_url = f"https://www.cettire.com{url}" if not url.startswith('http') else url
+                        full_url = f"https://www.cettire.com/it/products/{url}" if not url.startswith('http') else url
 
                         product_info = {
                             "name": name,
                             "url": full_url,
-                            "price": price
+                            "price": price,
+                            "inventory": {}
                         }
+
+                        unique_key = f"{name}_{url}"
+
+                        self.inventory_data[unique_key] = product_info
+
                         products_list.append(product_info)
                         self.logger.debug(f"找到商品: {name}, URL: {full_url}")
                 except Exception as e:
@@ -375,7 +306,7 @@ class CettireMonitor(Monitor):
                 self.logger.warning(f"商品 '{good_name}' 未找到尺码变体")
                 return inventory_info
 
-            self.logger.info(f"找到 {len(variants)} 个尺码变体")
+            self.logger.debug(f"找到 {len(variants)} 个尺码变体")
 
             # 遍历每个尺码变体，提取尺码和库存状态
             for variant in variants:
@@ -404,9 +335,9 @@ class CettireMonitor(Monitor):
 
             # 记录库存信息
             if inventory_info:
-                self.logger.info(f"商品 '{good_name}' 共有 {len(inventory_info)} 种尺码")
+                self.logger.debug(f"商品 '{good_name}' 共有 {len(inventory_info)} 种尺码")
                 for size, availability in inventory_info.items():
-                    self.logger.info(f"尺码: {size}, 库存状态: {availability}")
+                    self.logger.debug(f"尺码: {size}, 库存状态: {availability}")
             else:
                 self.logger.warning(f"商品 '{good_name}' 未找到尺码信息")
 
@@ -519,5 +450,5 @@ class CettireMonitor(Monitor):
 if __name__ == '__main__':
     # 创建监控实例并运行
     # 需要境外IP，国内IP也能使用，但速度会慢
-    monitor = CettireMonitor(is_headless=True, is_no_img=False, proxy_type="clash")
+    monitor = CettireMonitor(is_headless=False, proxy_type="clash")
     monitor.run()

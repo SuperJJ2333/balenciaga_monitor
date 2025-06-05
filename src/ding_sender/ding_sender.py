@@ -10,9 +10,10 @@ import os
 import sys
 import glob
 import re
+import traceback
 
-from common.project_path import ProjectPaths
-from common.logger import get_logger
+from src.common.project_path import ProjectPaths
+from src.common.logger import get_logger
 
 
 class DingSender:
@@ -41,85 +42,237 @@ class DingSender:
     @staticmethod
     def _extract_timestamp(filename: str) -> datetime:
         """
-        从文件名中提取时间戳（格式为 inventory_summary_YYYYMMDD_HHMMSS.json）
+        从文件名中提取时间戳
+        支持两种格式：
+        1. inventory_summary_YYYYMMDD_HHMMSS.json
+        2. balenciaga_inventory_YYYYMMDD_HHMMSS.json
         :param filename: str
         :return: 时间戳
         """
-        match = re.search(r'inventory_summary_(\d{8}_\d{6})\.json', os.path.basename(filename))
-        if match:
-            timestamp_str = match.group(1)
-            try:
-                return datetime.strptime(timestamp_str, "%Y%m%d_%H%M%S")
-            except ValueError:
-                # 如果时间戳格式不符合预期，回退到使用文件修改时间
-                return datetime.fromtimestamp(os.path.getmtime(filename))
-        return datetime.fromtimestamp(os.path.getmtime(filename))
+        # 尝试匹配两种可能的时间戳格式
+        match1 = re.search(r'inventory_summary_(\d{8}_\d{6})\.json', os.path.basename(filename))
+        match2 = re.search(r'balenciaga_inventory_(\d{8}_\d{6})\.json', os.path.basename(filename))
+        
+        if match1:
+            timestamp_str = match1.group(1)
+        elif match2:
+            timestamp_str = match2.group(1)
+        else:
+            # 如果找不到匹配的时间戳格式，回退到使用文件修改时间
+            return datetime.fromtimestamp(os.path.getmtime(filename))
+            
+        try:
+            return datetime.strptime(timestamp_str, "%Y%m%d_%H%M%S")
+        except ValueError:
+            # 如果时间戳格式不符合预期，回退到使用文件修改时间
+            return datetime.fromtimestamp(os.path.getmtime(filename))
 
     def find_previous_json(self, current_file, dir_path):
         """
         查找同一目录下的上一个JSON文件
+        支持两种命名格式：
+        1. inventory_summary_*.json
+        2. balenciaga_inventory_*.json
         """
-        # 获取目录下所有inventory_summary开头的JSON文件
-        all_files = glob.glob(os.path.join(dir_path, "inventory_summary_*.json"))
-
+        # 获取目录下所有符合条件的JSON文件
+        all_files1 = glob.glob(os.path.join(dir_path, "inventory_summary_*.json"))
+        all_files2 = glob.glob(os.path.join(dir_path, "balenciaga_inventory_*.json"))
+        
+        # 合并两种格式的文件列表
+        all_files = all_files1 + all_files2
+        
         if not all_files:
+            self.logger.warning(f"目录 {dir_path} 中没有找到符合条件的JSON文件")
             return None
 
         # 按时间戳排序（从新到旧）
         all_files.sort(key=self._extract_timestamp, reverse=True)
-
-        # 找出当前文件的索引
-        try:
-            current_index = all_files.index(current_file)
-        except ValueError:
-            self.logger.warning(f"当前文件 {current_file} 不在文件列表中，将使用最新的文件")
-            return all_files[1] if len(all_files) > 1 else None
-
-        # 如果当前文件已经是最新的文件（索引为0），则返回第二新的文件
-        if current_index == 0 and len(all_files) > 1:
-            self.logger.info(f"当前文件是最新文件，找到上一个文件: {all_files[1]}")
-            return all_files[1]
-        # 如果当前文件不是最新的文件，则返回比它更新的文件（索引更小的文件）
-        elif current_index > 0:
-            self.logger.info(f"当前文件不是最新文件，找到更新的文件: {all_files[current_index - 1]}")
-            return all_files[current_index - 1]
-
-        print("未找到合适的上一个文件")
-        return None
+        
+        # 去除当前文件
+        current_basename = os.path.basename(current_file)
+        filtered_files = [f for f in all_files if os.path.basename(f) != current_basename]
+        
+        if not filtered_files:
+            self.logger.warning(f"没有找到比 {current_file} 更早的文件")
+            return None
+            
+        # 返回比当前文件更早的第一个文件
+        self.logger.info(f"找到上一个文件: {filtered_files[0]}")
+        return filtered_files[0]
 
     @staticmethod
     def compare_inventory(current_data, previous_data):
-        """比较当前和上一次的库存数据，返回变化情况"""
+        """
+        比较当前和上一次的库存数据，返回变化情况
+        支持两种数据格式:
+        1. 带products字段的格式 (原有格式)
+        2. 键值对直接存储商品信息的格式 (新格式)
+        """
         changes = {
             "new_products": [],  # 新增产品
             "removed_products": [],  # 移除产品
-            "stock_changes": []  # 库存变化
+            "inventory_changes": [],  # 库存变化
+            "key_product_changes": []  # 重点监控商品的价格或尺寸变化
         }
 
         if not previous_data:
             # 如果没有上一次数据，则当前所有产品都视为新增
-            changes["new_products"] = current_data.get("products", [])
+            if "products" in current_data:
+                # 原有格式
+                changes["new_products"] = current_data.get("products", [])
+            else:
+                # 新格式: 将键值对转换为产品列表
+                for key, product in current_data.items():
+                    # 跳过非商品字段
+                    if key in ["monitor", "timestamp"]:
+                        continue
+                    changes["new_products"].append(product)
             return changes
 
-        # 获取当前和上一次的产品列表
-        current_products = {p.get("name"): p for p in current_data.get("products", [])}
-        previous_products = {p.get("name"): p for p in previous_data.get("products", [])}
+        # 处理原有格式的数据 (带products字段)
+        if "products" in current_data or "products" in previous_data:
+            current_products = {p.get("name"): p for p in current_data.get("products", [])}
+            previous_products = {p.get("name"): p for p in previous_data.get("products", [])}
+        else:
+            # 处理新格式的数据 (键值对直接存储商品信息)
+            current_products = {}
+            previous_products = {}
+            
+            # 提取当前商品数据
+            for key, product in current_data.items():
+                if key in ["monitor", "timestamp"]:
+                    continue
+                product_name = product.get("name", key)
+                current_products[product_name] = product
+                
+            # 提取上一次商品数据
+            for key, product in previous_data.items():
+                if key in ["monitor", "timestamp"]:
+                    continue
+                product_name = product.get("name", key)
+                previous_products[product_name] = product
 
-        # 找出新增产品
+        # 检查当前和上一次数据的商品数量差异
+        current_count = len(current_products)
+        previous_count = len(previous_products)
+        count_diff_ratio = abs(current_count - previous_count) / max(current_count, previous_count) if max(current_count, previous_count) > 0 else 0
+        
+        # 如果数据量差异过大（超过30%），可能是爬取异常，对重点监控商品特殊处理
+        is_data_suspicious = count_diff_ratio > 0.3
+        
+        # 找出新增产品（排除可能因爬取失败导致的"假新增"重点监控商品）
         for name, product in current_products.items():
             if name not in previous_products:
+                # 如果是重点监控商品且数据可疑，不将其标记为新增
+                is_key_product = product.get("key_monitoring", False)
+                if is_data_suspicious and is_key_product:
+                    # 记录为可疑新增，但不添加到新增列表
+                    continue
                 changes["new_products"].append(product)
 
-        # 找出移除产品
+        # 找出移除产品（排除可能因爬取失败导致的"假移除"重点监控商品）
         for name, product in previous_products.items():
             if name not in current_products:
+                # 如果是重点监控商品且数据可疑，不将其标记为移除
+                is_key_product = product.get("key_monitoring", False)
+                if is_data_suspicious and is_key_product:
+                    # 记录为可疑移除，但不添加到移除列表
+                    continue
                 changes["removed_products"].append(product)
 
-        # 找出库存变化
+        # 找出库存变化和重点监控商品的变化
         for name, current_product in current_products.items():
             if name in previous_products:
                 previous_product = previous_products[name]
+                is_key_product = current_product.get("key_monitoring", False)
+                has_changes = False
+                change_details = {"price_change": None, "size_changes": []}
+                
+                # 检查价格变化（仅对重点监控商品）
+                if is_key_product and "price" in current_product and "price" in previous_product:
+                    current_price = current_product["price"]
+                    previous_price = previous_product["price"]
+                    
+                    # 检查价格变化是否可疑（例如从空变为有值，或价格变化过大）
+                    price_change_suspicious = False
+                    if not previous_price and current_price:  # 从无价格变为有价格
+                        price_change_suspicious = True
+                    elif previous_price and current_price:
+                        # 尝试提取数值部分进行比较
+                        import re
+                        prev_num = re.search(r'[\d,.]+', previous_price)
+                        curr_num = re.search(r'[\d,.]+', current_price)
+                        
+                        if prev_num and curr_num:
+                            try:
+                                prev_val = float(prev_num.group().replace(',', ''))
+                                curr_val = float(curr_num.group().replace(',', ''))
+                                # 如果价格变化超过50%，可能是可疑的
+                                if abs(curr_val - prev_val) / max(curr_val, prev_val) > 0.5:
+                                    price_change_suspicious = True
+                            except (ValueError, ZeroDivisionError):
+                                # 如果无法解析为数字，仍然比较原始字符串
+                                if current_price != previous_price:
+                                    if is_data_suspicious:
+                                        price_change_suspicious = True
+                        
+                    # 只有在数据不可疑或价格变化不可疑的情况下才记录价格变化
+                    if current_price != previous_price and (not is_data_suspicious or not price_change_suspicious):
+                        change_details["price_change"] = {
+                            "from": previous_price,
+                            "to": current_price
+                        }
+                        has_changes = True
 
+                # 检查"inventory"字段 (新格式)
+                if "inventory" in current_product and "inventory" in previous_product:
+                    current_inventory = current_product["inventory"]
+                    previous_inventory = previous_product["inventory"]
+                    
+                    # 检查库存数据是否可疑
+                    inventory_suspicious = False
+                    if is_key_product and is_data_suspicious:
+                        # 如果尺码数量差异过大，可能是可疑的
+                        curr_size_count = len(current_inventory)
+                        prev_size_count = len(previous_inventory)
+                        if abs(curr_size_count - prev_size_count) / max(curr_size_count, prev_size_count) > 0.3 if max(curr_size_count, prev_size_count) > 0 else False:
+                            inventory_suspicious = True
+                    
+                    # 检查是否有变化
+                    if current_inventory != previous_inventory and (not is_key_product or not inventory_suspicious):
+                        size_changes = []
+                        
+                        # 检查每个尺码的变化
+                        all_sizes = set(current_inventory.keys()) | set(previous_inventory.keys())
+                        for size in all_sizes:
+                            curr_status = current_inventory.get(size, "Sold Out")
+                            prev_status = previous_inventory.get(size, "Sold Out")
+                            
+                            if curr_status != prev_status:
+                                size_change = {
+                                    "size": size,
+                                    "from": prev_status,
+                                    "to": curr_status,
+                                    "type": "stock_changed"
+                                }
+                                size_changes.append(size_change)
+                                change_details["size_changes"].append(size_change)
+                                has_changes = True
+                                
+                        if size_changes and not is_key_product:
+                            product_change = current_product.copy()
+                            product_change["size_changes"] = size_changes
+                            changes["inventory_changes"].append(product_change)
+                    
+                    # 处理重点监控商品的变化
+                    if is_key_product and has_changes and not inventory_suspicious:
+                        key_product_change = current_product.copy()
+                        key_product_change.update(change_details)
+                        changes["key_product_changes"].append(key_product_change)
+                    
+                    continue  # 如果已处理inventory字段，跳过下面的inventory_status处理
+                
+                # 处理"inventory_status"字段 (原有格式)
                 # 将当前产品的状态转换为更易于比较的格式
                 current_status = {}
                 for status_info in current_product.get("inventory_status", []):
@@ -136,38 +289,61 @@ class DingSender:
                     for size in sizes:
                         previous_status[size] = status
 
+                # 检查库存数据是否可疑
+                inventory_suspicious = False
+                if is_key_product and is_data_suspicious:
+                    # 如果尺码数量差异过大，可能是可疑的
+                    curr_size_count = len(current_status)
+                    prev_size_count = len(previous_status)
+                    if abs(curr_size_count - prev_size_count) / max(curr_size_count, prev_size_count) > 0.3 if max(curr_size_count, prev_size_count) > 0 else False:
+                        inventory_suspicious = True
+
                 # 检查状态变化
                 size_changes = []
 
-                # 1. 检查尺码从有库存变为缺货
-                for size, prev_status in previous_status.items():
-                    if prev_status.lower() != "sold out":
-                        curr_status = current_status.get(size, "")
-                        if curr_status.lower() == "sold out":
-                            size_changes.append({
-                                "size": size,
-                                "from": prev_status,
-                                "to": curr_status,
-                                "type": "stock_out"
-                            })
+                # 只有在数据不可疑或不是重点监控商品的情况下才进行详细的状态变化检查
+                if not (is_key_product and inventory_suspicious):
+                    # 1. 检查尺码从有库存变为缺货
+                    for size, prev_status in previous_status.items():
+                        if prev_status.lower() != "sold out":
+                            curr_status = current_status.get(size, "")
+                            if curr_status.lower() == "sold out":
+                                size_change = {
+                                    "size": size,
+                                    "from": prev_status,
+                                    "to": curr_status,
+                                    "type": "stock_out"
+                                }
+                                size_changes.append(size_change)
+                                change_details["size_changes"].append(size_change)
+                                has_changes = True
 
-                # 2. 检查尺码从缺货变为有库存
-                for size, curr_status in current_status.items():
-                    if curr_status.lower() != "sold out":
-                        prev_status = previous_status.get(size, "")
-                        if prev_status.lower() == "sold out" or size not in previous_status:
-                            size_changes.append({
-                                "size": size,
-                                "from": prev_status,
-                                "to": curr_status,
-                                "type": "stock_in"
-                            })
+                    # 2. 检查尺码从缺货变为有库存
+                    for size, curr_status in current_status.items():
+                        if curr_status.lower() != "sold out":
+                            prev_status = previous_status.get(size, "")
+                            if prev_status.lower() == "sold out" or size not in previous_status:
+                                size_change = {
+                                    "size": size,
+                                    "from": prev_status,
+                                    "to": curr_status,
+                                    "type": "stock_in"
+                                }
+                                size_changes.append(size_change)
+                                change_details["size_changes"].append(size_change)
+                                has_changes = True
 
-                # 如果有尺码变化，将产品添加到变化列表
-                if size_changes:
-                    product_change = current_product.copy()
-                    product_change["size_changes"] = size_changes
-                    changes["stock_changes"].append(product_change)
+                    # 如果有尺码变化，将产品添加到变化列表
+                    if size_changes and not is_key_product:
+                        product_change = current_product.copy()
+                        product_change["size_changes"] = size_changes
+                        changes["inventory_changes"].append(product_change)
+                
+                # 处理重点监控商品的变化
+                if is_key_product and has_changes and not inventory_suspicious:
+                    key_product_change = current_product.copy()
+                    key_product_change.update(change_details)
+                    changes["key_product_changes"].append(key_product_change)
 
         return changes
 
@@ -227,28 +403,97 @@ class DingSender:
         }
 
     def send_dingtalk_message(self, webhook_url, secret, message):
-        """发送钉钉消息"""
-        timestamp = str(round(time.time() * 1000))
-        secret_enc = secret.encode('utf-8')
-        string_to_sign = '{}\n{}'.format(timestamp, secret)
-        string_to_sign_enc = string_to_sign.encode('utf-8')
-        hmac_code = hmac.new(secret_enc, string_to_sign_enc, digestmod=hashlib.sha256).digest()
-        sign = urllib.parse.quote_plus(base64.b64encode(hmac_code))
+        """
+        发送钉钉消息
+        
+        Args:
+            webhook_url: 钉钉机器人的webhook URL
+            secret: 钉钉机器人的加签密钥
+            message: 要发送的markdown消息，包含title和text字段
+            
+        Returns:
+            dict: 钉钉API的响应结果
+        """
+        try:
+            self.logger.info("准备发送钉钉消息...")
+            
+            # 检查参数
+            if not webhook_url:
+                self.logger.error("钉钉webhook URL为空")
+                return {"errcode": 5000, "errmsg": "webhook URL为空"}
+                
+            if not secret:
+                self.logger.warning("钉钉加签密钥为空，可能会导致发送失败")
+                
+            if not message or not isinstance(message, dict):
+                self.logger.error("消息格式错误，应为字典类型")
+                return {"errcode": 5001, "errmsg": "消息格式错误"}
+            
+            # 生成签名
+            timestamp = str(round(time.time() * 1000))
+            secret_enc = secret.encode('utf-8')
+            string_to_sign = '{}\n{}'.format(timestamp, secret)
+            string_to_sign_enc = string_to_sign.encode('utf-8')
+            hmac_code = hmac.new(secret_enc, string_to_sign_enc, digestmod=hashlib.sha256).digest()
+            sign = urllib.parse.quote_plus(base64.b64encode(hmac_code))
 
-        url = f"{webhook_url}&timestamp={timestamp}&sign={sign}"
+            url = f"{webhook_url}&timestamp={timestamp}&sign={sign}"
+            self.logger.info(f"生成签名成功，目标URL长度: {len(url)}")
 
-        headers = {
-            'Content-Type': 'application/json',
-            'Charset': 'UTF-8'
-        }
+            headers = {
+                'Content-Type': 'application/json',
+                'Charset': 'UTF-8'
+            }
 
-        data = {
-            "msgtype": "markdown",
-            "markdown": message,
-        }
-
-        response = requests.post(url, headers=headers, data=json.dumps(data), proxies={'http': None, 'https': None})
-        return response.json()
+            data = {
+                "msgtype": "markdown",
+                "markdown": message,
+            }
+            
+            # 记录请求信息
+            self.logger.info(f"发送POST请求到钉钉API，数据大小: {len(json.dumps(data))} 字节")
+            
+            # 发送请求
+            try:
+                response = requests.post(
+                    url, 
+                    headers=headers, 
+                    data=json.dumps(data), 
+                    proxies={'http': None, 'https': None},
+                    timeout=10  # 设置超时时间
+                )
+                
+                # 检查HTTP状态码
+                if response.status_code != 200:
+                    self.logger.error(f"HTTP请求失败，状态码: {response.status_code}, 响应: {response.text}")
+                    return {"errcode": response.status_code, "errmsg": f"HTTP请求失败: {response.text}"}
+                    
+                # 解析响应
+                result = response.json()
+                self.logger.info(f"钉钉API响应: {result}")
+                
+                # 检查钉钉API返回的错误码
+                if result.get("errcode") != 0:
+                    self.logger.error(f"钉钉API返回错误: {result.get('errmsg', '未知错误')}")
+                else:
+                    self.logger.info("钉钉消息发送成功!")
+                    
+                return result
+                
+            except requests.exceptions.Timeout:
+                self.logger.error("请求超时，钉钉API未响应")
+                return {"errcode": 5002, "errmsg": "请求超时"}
+            except requests.exceptions.ConnectionError:
+                self.logger.error("网络连接错误，无法连接到钉钉API")
+                return {"errcode": 5003, "errmsg": "网络连接错误"}
+            except Exception as e:
+                self.logger.error(f"发送请求时出错: {str(e)}")
+                return {"errcode": 5004, "errmsg": f"发送请求时出错: {str(e)}"}
+                
+        except Exception as e:
+            self.logger.error(f"发送钉钉消息时出错: {str(e)}")
+            self.logger.error(f"错误详情: {traceback.format_exc()}")
+            return {"errcode": 5005, "errmsg": f"发送钉钉消息时出错: {str(e)}"}
 
     def save_changes_to_file(self, changes, current_data, file_path):
         """将变化情况保存到本地文件"""
@@ -340,7 +585,7 @@ class DingSender:
         # 记录变化统计
         new_count = len(changes["new_products"])
         removed_count = len(changes["removed_products"])
-        changed_count = len(changes["stock_changes"])
+        changed_count = len(changes["inventory_changes"])
         print(f"变化统计: 新增商品 {new_count}个, 下架商品 {removed_count}个, 库存变化商品 {changed_count}个")
 
         # 生成钉钉消息

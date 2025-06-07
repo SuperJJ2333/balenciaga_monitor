@@ -138,7 +138,7 @@ class Grifo210Monitor(Monitor):
             for url in self.catalog_url:
 
                 # 设置代理并访问页面
-                self.session.get(url, headers=self.headers, proxies=get_proxies('clash'))
+                self.session.get(url, headers=self.headers, proxies=self.ipcool_url)
 
                 self.logger.info(f"正在获取商品目录: {url}")
                 # 检查页面响应

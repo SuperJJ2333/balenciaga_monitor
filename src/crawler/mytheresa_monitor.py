@@ -2,8 +2,12 @@
 Mytheresa监控模块 - 负责监控Mytheresa网站上Balenciaga鞋子的库存状态
 该模块实现了对Mytheresa网站的爬取、解析和数据保存功能
 """
+import json
+import math
 import time
 from datetime import datetime
+from urllib.parse import urlparse, parse_qs
+
 from DrissionPage._elements import chromium_element
 
 from src.common.monitor import Monitor
@@ -31,10 +35,11 @@ class MytheresaMonitor(Monitor):
         super().__init__(**kwargs)
         
         # 初始化浏览器页面
-        self.page = self.init_page()
+        # self.page = self.init_page()
+        self.session = self.init_session()
 
     @staticmethod
-    def init_params():
+    def init_params(section: str, categories: str, slug: str, page_num: int):
         headers = {
             'accept': '*/*',
             'accept-language': 'en',
@@ -55,14 +60,32 @@ class MytheresaMonitor(Monitor):
             'x-geo': 'US',
             'x-nsu': 'false',
             'x-region': 'CA',
-            'x-section': 'men',
+            'x-section': section,
             'x-store': 'MO',
-            'x-tracking-variables': 'analyticsId=GA1.1.1748533487.1746616564,browser=Edge,browserLanguage=zh,campaign=unknown,channel=en-mo,channel_country=MO,channel_language=en,countOfPageViews=1,countOfSessions=1,cdf=000,csf=000,cdf_1=0,cdf_2=0,cdf_3=0,csf_1=0,csf_2=0,csf_3=0,department=men,devicePlatform=web,deviceSystem=Windows,deviceType=desktop,emailHash=unknown,environment=production,ipAddress=141.11.251.99,loggedStatus=false,mytuuid=940ac349-6e0e-497b-905a-add7ce84ce50,level_0=men,level_1=men_designer_000895,pageId=men_designer_000895,pageType=designer,referral=unknown,sessionId=undefined,source=unknown,url=https://www.mytheresa.com/mo/en/men/designers/balenciaga,queryParams=categories%3D5076%26sortBy%3Drecommendation,version=4.12.0-rc.7,experience_globalBlue_closed=false,experience_pocketBanner1_pocketBanner1_seen=false,experience_pocketBanner2_pocketBanner2_seen=false,experience_topLevelBanner_tlb_db_trust_delay_seen=true,experience_pocketbanner2_pocketbanner2_seen=true,experience_pocketbanner1_pocketbanner1_seen=true,monetateId=5.44754319.1746616152436',
         }
 
-        data = '{"query":"query XProductListingPageQuery($categories: [String], $colors: [String], $designers: [String], $fta: Boolean, $materials: [String], $page: Int, $patterns: [String], $reductionRange: [String], $saleStatus: SaleStatusEnum, $size: Int, $sizesHarmonized: [String], $slug: String, $sort: String) {\\n  xProductListingPage(categories: $categories, colors: $colors, designers: $designers, fta: $fta, materials: $materials, page: $page, patterns: $patterns, reductionRange: $reductionRange, saleStatus: $saleStatus, size: $size, sizesHarmonized: $sizesHarmonized, slug: $slug, sort: $sort) {\\n    id\\n    alternateUrls {\\n      language\\n      store\\n      url\\n    }\\n    breadcrumb {\\n      id\\n      name\\n      slug\\n    }\\n    combinedDepartmentGroupAndCategoryErpID\\n    department\\n    designerErpId\\n    displayName\\n    facets {\\n      categories {\\n        name\\n        options {\\n          id\\n          name\\n          slug\\n          children {\\n            id\\n            name\\n            slug\\n            children {\\n              id\\n              name\\n              slug\\n            }\\n          }\\n        }\\n        activeValue\\n      }\\n      designers {\\n        name\\n        options {\\n          value\\n          slug\\n        }\\n        activeValue\\n      }\\n      colors {\\n        name\\n        options {\\n          value\\n        }\\n        activeValue\\n      }\\n      fta {\\n        activeValue\\n        name\\n        options {\\n          value\\n        }\\n        visibility\\n      }\\n      materials {\\n        activeValue\\n        name\\n        options {\\n          value\\n        }\\n        visibility\\n      }\\n      patterns {\\n        name\\n        options {\\n          value\\n        }\\n        activeValue\\n      }\\n      reductionRange {\\n        activeValue\\n        name\\n        options {\\n          value\\n        }\\n        unit\\n        visibility\\n      }\\n      saleStatus {\\n        activeValue\\n        name\\n        options {\\n          value\\n        }\\n        visibility\\n      }\\n      sizesHarmonized {\\n        name\\n        options {\\n          value\\n        }\\n        activeValue\\n      }\\n    }\\n    isMonetisationExcluded\\n    isSalePage\\n    pagination {\\n      ...paginationData\\n    }\\n    products {\\n      ...productData\\n    }\\n    sort {\\n      currentParam\\n      params\\n    }\\n  }\\n}\\n\\nfragment paginationData on XPagination {\\n  currentPage\\n  itemsPerPage\\n  totalItems\\n  totalPages\\n}\\n\\nfragment priceData on XSharedPrice {\\n  currencyCode\\n  currencySymbol\\n  discount\\n  discountEur\\n  extraDiscount\\n  finalDuties\\n  hint\\n  includesVAT\\n  isPriceModifiedByRegionalRules\\n  original\\n  originalDuties\\n  originalDutiesEur\\n  originalEur\\n  percentage\\n  regionalRulesModifications {\\n    priceColor\\n  }\\n  regular\\n  vatPercentage\\n}\\n\\nfragment productData on XSharedProduct {\\n  color\\n  combinedCategoryErpID\\n  combinedCategoryName\\n  department\\n  description\\n  designer\\n  designerErpId\\n  designerInfo {\\n    designerId\\n    displayName\\n    slug\\n  }\\n  displayImages\\n  enabled\\n  features\\n  fta\\n  hasMultipleSizes\\n  hasSizeChart\\n  hasStock\\n  isComingSoon\\n  isInWishlist\\n  isPurchasable\\n  isSizeRelevant\\n  labelObjects {\\n    id\\n    label\\n  }\\n  labels\\n  mainPrice\\n  mainWaregroup\\n  name\\n  price {\\n    ...priceData\\n  }\\n  priceDescription\\n  promotionLabels {\\n    label\\n    type\\n  }\\n  seasonCode\\n  sellerOrigin\\n  sets\\n  sizeAndFit\\n  sizesOnStock\\n  sizeTag\\n  sizeType\\n  sku\\n  slug\\n  variants {\\n    allVariants {\\n      availability {\\n        hasStock\\n        lastStockQuantityHint\\n      }\\n      isInWishlist\\n      size\\n      sizeHarmonized\\n      sku\\n    }\\n    availability {\\n      hasStock\\n      lastStockQuantityHint\\n    }\\n    isInWishlist\\n    price {\\n      currencyCode\\n      currencySymbol\\n      discount\\n      discountEur\\n      extraDiscount\\n      includesVAT\\n      isPriceModifiedByRegionalRules\\n      original\\n      originalEur\\n      percentage\\n      regionalRulesModifications {\\n        priceColor\\n      }\\n      vatPercentage\\n    }\\n    size\\n    sizeHarmonized\\n    sku\\n  }\\n}\\n","variables":{"categories":["5076"],"colors":[],"designers":[],"fta":null,"materials":[],"page":1,"patterns":[],"reductionRange":[],"saleStatus":null,"size":100,"sizesHarmonized":[],"slug":"/designers/balenciaga","sort":"recommendation"}}'
+        data = '{"query":"query XProductListingPageQuery($categories: [String], $colors: [String], $designers: [String], $fta: Boolean, $materials: [String], $page: Int, $patterns: [String], $reductionRange: [String], $saleStatus: SaleStatusEnum, $size: Int, $sizesHarmonized: [String], $slug: String, $sort: String) {\\n  xProductListingPage(categories: $categories, colors: $colors, designers: $designers, fta: $fta, materials: $materials, page: $page, patterns: $patterns, reductionRange: $reductionRange, saleStatus: $saleStatus, size: $size, sizesHarmonized: $sizesHarmonized, slug: $slug, sort: $sort) {\\n    id\\n    alternateUrls {\\n      language\\n      store\\n      url\\n    }\\n    breadcrumb {\\n      id\\n      name\\n      slug\\n    }\\n    combinedDepartmentGroupAndCategoryErpID\\n    department\\n    designerErpId\\n    displayName\\n    facets {\\n      categories {\\n        name\\n        options {\\n          id\\n          name\\n          slug\\n          children {\\n            id\\n            name\\n            slug\\n            children {\\n              id\\n              name\\n              slug\\n            }\\n          }\\n        }\\n        activeValue\\n      }\\n      designers {\\n        name\\n        options {\\n          value\\n          slug\\n        }\\n        activeValue\\n      }\\n      colors {\\n        name\\n        options {\\n          value\\n        }\\n        activeValue\\n      }\\n      fta {\\n        activeValue\\n        name\\n        options {\\n          value\\n        }\\n        visibility\\n      }\\n      materials {\\n        activeValue\\n        name\\n        options {\\n          value\\n        }\\n        visibility\\n      }\\n      patterns {\\n        name\\n        options {\\n          value\\n        }\\n        activeValue\\n      }\\n      reductionRange {\\n        activeValue\\n        name\\n        options {\\n          value\\n        }\\n        unit\\n        visibility\\n      }\\n      saleStatus {\\n        activeValue\\n        name\\n        options {\\n          value\\n        }\\n        visibility\\n      }\\n      sizesHarmonized {\\n        name\\n        options {\\n          value\\n        }\\n        activeValue\\n      }\\n    }\\n    isMonetisationExcluded\\n    isSalePage\\n    pagination {\\n      ...paginationData\\n    }\\n    products {\\n      ...productData\\n    }\\n    sort {\\n      currentParam\\n      params\\n    }\\n  }\\n}\\n\\nfragment paginationData on XPagination {\\n  currentPage\\n  itemsPerPage\\n  totalItems\\n  totalPages\\n}\\n\\nfragment priceData on XSharedPrice {\\n  currencyCode\\n  currencySymbol\\n  discount\\n  discountEur\\n  extraDiscount\\n  finalDuties\\n  hint\\n  includesVAT\\n  isPriceModifiedByRegionalRules\\n  original\\n  originalDuties\\n  originalDutiesEur\\n  originalEur\\n  percentage\\n  regionalRulesModifications {\\n    priceColor\\n  }\\n  regular\\n  vatPercentage\\n}\\n\\nfragment productData on XSharedProduct {\\n  color\\n  combinedCategoryErpID\\n  combinedCategoryName\\n  department\\n  description\\n  designer\\n  designerErpId\\n  designerInfo {\\n    designerId\\n    displayName\\n    slug\\n  }\\n  displayImages\\n  enabled\\n  features\\n  fta\\n  hasMultipleSizes\\n  hasSizeChart\\n  hasStock\\n  isComingSoon\\n  isInWishlist\\n  isPurchasable\\n  isSizeRelevant\\n  labelObjects {\\n    id\\n    label\\n  }\\n  labels\\n  mainPrice\\n  mainWaregroup\\n  name\\n  price {\\n    ...priceData\\n  }\\n  priceDescription\\n  promotionLabels {\\n    label\\n    type\\n  }\\n  seasonCode\\n  sellerOrigin\\n  sets\\n  sizeAndFit\\n  sizesOnStock\\n  sizeTag\\n  sizeType\\n  sku\\n  slug\\n  variants {\\n    allVariants {\\n      availability {\\n        hasStock\\n        lastStockQuantityHint\\n      }\\n      isInWishlist\\n      size\\n      sizeHarmonized\\n      sku\\n    }\\n    availability {\\n      hasStock\\n      lastStockQuantityHint\\n    }\\n    isInWishlist\\n    price {\\n      currencyCode\\n      currencySymbol\\n      discount\\n      discountEur\\n      extraDiscount\\n      includesVAT\\n      isPriceModifiedByRegionalRules\\n      original\\n      originalEur\\n      percentage\\n      regionalRulesModifications {\\n        priceColor\\n      }\\n      vatPercentage\\n    }\\n    size\\n    sizeHarmonized\\n    sku\\n  }\\n}\\n","variables":{"categories":["5076"],"colors":[],"designers":[],"fta":null,"materials":[],"page":1,"patterns":[],"reductionRange":[],"saleStatus":null,"size":120,"sizesHarmonized":[],"slug":"/designers/balenciaga","sort":"recommendation"}}'
 
-        return headers, data
+        # 1. 解析为字典对象
+        data = json.loads(data)
+
+        # 2. 更新变量值
+        data["variables"]["categories"] = [categories]
+
+        data["variables"]["slug"] = slug
+
+        data["variables"]["page"] = page_num
+
+        # 3. 处理查询字符串中的转义问题（可选）
+        # 如果您需要修改查询中的内容，先解码查询字符串
+        decoded_query = data["query"].encode().decode('unicode_escape')
+        data["query"] = decoded_query
+
+        # 4. 需要时重新序列化为字符串
+        # 如果需要传输数据，可以安全地转换回字符串
+        json_str = json.dumps(data)
+
+        return headers, json_str
 
     def run(self):
         """
@@ -118,33 +141,10 @@ class MytheresaMonitor(Monitor):
                 if len(self.inventory_data) < 5:  # 假设正常情况下至少应有5个商品
                     self.logger.warning(f"获取到的商品数量异常少({len(self.inventory_data)}个)，可能是爬取不完整，不保存数据")
                     return 0  # 返回0表示爬取异常
-                
-                # 检查爬取完整性
-                url_success_rate = stats["url_success"] / stats["url_total"] if stats["url_total"] > 0 else 0
-                
+
                 # 标准化库存数据
                 normalized_data = self._normalize_inventory_data(self.inventory_data)
-                
-                # 检查与预期数量的差异
-                if stats["expected_product_count"] > 0:
-                    product_diff_rate = abs(stats["actual_product_count"] - stats["expected_product_count"]) / stats["expected_product_count"]
-                    if product_diff_rate > 0.3 and url_success_rate < 1.0:  # 如果商品数量差异超过30%且有URL爬取失败
-                        self.logger.warning(f"爬取结果与预期差异较大 (差异率: {product_diff_rate:.1%})，且URL成功率为 {url_success_rate:.1%}，不进行变化比较")
-                        # 仍然保存数据，但不进行变化比较
-                        data_file = f"balenciaga_inventory_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-                        saved_path = self.save_json_data(normalized_data, data_file)
-                        self.logger.info(f"已保存{len(normalized_data)}个商品的库存信息到 {saved_path}")
-                        return len(normalized_data)  # 返回爬取的商品数量
-                
-                # 检查上次爬取是否为空或异常少
-                if self.previous_inventory and len(self.previous_inventory) < 5:
-                    self.logger.warning("上次爬取的数据异常少，本次将不与其比较变化")
-                    # 先保存当前数据，但不进行变化检测
-                    data_file = f"balenciaga_inventory_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-                    saved_path = self.save_json_data(normalized_data, data_file)
-                    self.logger.info(f"已保存{len(normalized_data)}个商品的库存信息到 {saved_path}")
-                    return len(normalized_data)  # 返回爬取的商品数量
-                
+
                 # 保存标准化后的数据
                 data_file = f"balenciaga_inventory_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
                 saved_path = self.save_json_data(normalized_data, data_file)
@@ -176,70 +176,144 @@ class MytheresaMonitor(Monitor):
             list: 商品信息列表，每个元素为包含name和url的字典
         """
         products_list = []
-        self.url_success_count = 0
         url_total_count = len(self.catalog_url)
 
         try:
             for url_index, url in enumerate(self.catalog_url):
                 self.logger.info(f"正在获取商品目录 [{url_index + 1}/{url_total_count}]: {url}")
-                try:
-                    tab = self.page.new_tab()
-                    tab.get(url, timeout=60)
-                    tab.wait.eles_loaded('x://div[@class="item"]', timeout=60)
 
-                    # 尝试查找商品元素
-                    try:
-                        tab.scroll.to_bottom()
+                data, headers = self.generate_payload(url, 1)
 
-                        category_items = tab.s_eles('x://div[@class="item"]') + tab.s_eles('x://div[@class="item item--soldout"]')
+                self.session.post('https://api.mytheresa.com/api', headers=headers, data=data, proxies=self.ipcool_url)
 
-                        self.logger.info(f"找到 {len(category_items)} 个商品元素")
-                        url_products = self.parse_inventory_catalog_html(category_items)
-                        products_list.extend(url_products)
+                response = self.session.json['data']['xProductListingPage']['products']
+                self.logger.debug(f"找到 {len(response)} 个商品元素")
 
-                        show_more_button = tab.ele('@text():Show more')
+                url_products = self.parse_inventory_catalog(response)
+                products_list.extend(url_products)
 
-                        # 判断是否存在"Show more"按钮
-                        if show_more_button:
-                            self.loop_through_button(tab, show_more_button, products_list)
-                            
-                        self.url_success_count += 1
-                        self.logger.info(f"URL {url} 爬取成功，获取到 {len(url_products)} 个商品")
+                total_items = self.session.json['data']['xProductListingPage']['pagination']['totalItems']
 
-                    except Exception as e:
-                        self.logger.error(f"处理URL {url} 的商品目录元素时出错: {str(e)}")
-                        # 继续处理下一个URL，而不是直接返回空列表
-                except Exception as e:
-                    self.logger.error(f"获取URL {url} 时出错: {str(e)}")
-                    # 继续处理下一个URL，而不是直接返回空列表
-                finally:
-                    # 关闭当前标签页，释放资源
-                    try:
-                        tab.close()
-                    except:
-                        pass
+                self.logger.info(f"获取到 {len(url_products)} 个商品, 共 {math.ceil(total_items/120)} 页")
 
-            # 在所有URL处理完成后，检查成功率
-            if self.url_success_count == 0:
-                self.logger.error(f"所有URL ({url_total_count}个) 都爬取失败")
-                return []
-                
-            success_rate = self.url_success_count / url_total_count
-            if success_rate < 0.5:  # 如果成功率低于50%
-                self.logger.warning(f"URL爬取成功率过低: {success_rate:.1%} ({self.url_success_count}/{url_total_count})")
-                
-            self.logger.info(f"共爬取了 {url_total_count} 个URL，成功 {self.url_success_count} 个，获取到 {len(products_list)} 个商品")
-            
-            # 如果产品数量异常少，记录警告
-            if len(products_list) < 5 and self.url_success_count > 0:
-                self.logger.warning(f"爬取到的商品数量异常少 ({len(products_list)}个)，可能是爬取不完整")
-                
+                # 判断是否存在"Show more"按钮
+                if int(total_items) > 120:
+                    url_products = self.loop_each_catalog_item(url, total_items)
+                    products_list.extend(url_products)
+
+                self.logger.info(f"URL {url} 爬取成功，获取到 {len(url_products)} 个商品")
+
             return products_list
-
         except Exception as e:
             self.logger.error(f"获取商品目录过程中出错: {str(e)}")
             # 即使出现全局错误，也返回已经获取到的产品列表，而不是空列表
             return products_list
+
+        # try:
+        #     for url_index, url in enumerate(self.catalog_url):
+        #         self.logger.info(f"正在获取商品目录 [{url_index + 1}/{url_total_count}]: {url}")
+        #         try:
+        #             tab = self.page.new_tab()
+        #             tab.get(url, timeout=60)
+        #             tab.wait.eles_loaded('x://div[@class="item"]', timeout=60)
+        #
+        #             # 尝试查找商品元素
+        #             try:
+        #                 tab.scroll.to_bottom()
+        #
+        #                 category_items = tab.s_eles('x://div[@class="item"]') + tab.s_eles('x://div[@class="item item--soldout"]')
+        #
+        #                 self.logger.info(f"找到 {len(category_items)} 个商品元素")
+        #                 url_products = self.parse_inventory_catalog_html(category_items)
+        #                 products_list.extend(url_products)
+        #
+        #                 show_more_button = tab.ele('@text():Show more')
+        #
+        #                 # 判断是否存在"Show more"按钮
+        #                 if show_more_button:
+        #                     self.loop_through_button(tab, show_more_button, products_list)
+        #
+        #                 self.url_success_count += 1
+        #                 self.logger.info(f"URL {url} 爬取成功，获取到 {len(url_products)} 个商品")
+        #
+        #             except Exception as e:
+        #                 self.logger.error(f"处理URL {url} 的商品目录元素时出错: {str(e)}")
+        #                 # 继续处理下一个URL，而不是直接返回空列表
+        #         except Exception as e:
+        #             self.logger.error(f"获取URL {url} 时出错: {str(e)}")
+        #             # 继续处理下一个URL，而不是直接返回空列表
+        #         finally:
+        #             # 关闭当前标签页，释放资源
+        #             try:
+        #                 tab.close()
+        #             except:
+        #                 pass
+        #
+        #     # 在所有URL处理完成后，检查成功率
+        #     if self.url_success_count == 0:
+        #         self.logger.error(f"所有URL ({url_total_count}个) 都爬取失败")
+        #         return []
+        #
+        #     success_rate = self.url_success_count / url_total_count
+        #     if success_rate < 0.5:  # 如果成功率低于50%
+        #         self.logger.warning(f"URL爬取成功率过低: {success_rate:.1%} ({self.url_success_count}/{url_total_count})")
+        #
+        #     self.logger.info(f"共爬取了 {url_total_count} 个URL，成功 {self.url_success_count} 个，获取到 {len(products_list)} 个商品")
+        #
+        #     # 如果产品数量异常少，记录警告
+        #     if len(products_list) < 5 and self.url_success_count > 0:
+        #         self.logger.warning(f"爬取到的商品数量异常少 ({len(products_list)}个)，可能是爬取不完整")
+        #
+        #     return products_list
+        #
+        # except Exception as e:
+        #     self.logger.error(f"获取商品目录过程中出错: {str(e)}")
+        #     # 即使出现全局错误，也返回已经获取到的产品列表，而不是空列表
+        #     return products_list
+
+    def generate_payload(self, url: str, page_num: int):
+        """
+        生成请求参数和请求头
+        :param url:
+        :return:
+        """
+        parsed = urlparse(url)
+        # 提取各部分：
+        # 获取性别分类（men）
+        path_parts = parsed.path.split('/')
+
+        gender = path_parts[3]  # 路径第4个元素（索引3）
+
+        designer = path_parts[-2] + '/' + path_parts[-1].split('?')[0]  # 最后一个路径元素，去除可能携带的查询参数
+
+        query_params = parse_qs(parsed.query)
+        category_id = query_params.get('categories', [''])[0]
+
+        headers, data = self.init_params(gender, category_id, designer, page_num=page_num)
+
+        return data, headers
+
+    def loop_each_catalog_item(self, url: str, total_items: int) -> list:
+        """
+
+        :param total_items:
+        :param url:
+        :return:
+        """
+        products_list = []
+        for i in range(2, math.ceil(total_items/120) + 1):
+            if i != 1:
+                data, headers = self.generate_payload(url, i)
+
+                self.session.post('https://api.mytheresa.com/api', headers=headers, data=data, proxies=self.ipcool_url)
+
+                response = self.session.json['data']['xProductListingPage']['products']
+
+                url_products = self.parse_inventory_catalog(response)
+                products_list.extend(url_products)
+                self.logger.info(f"获取到 {len(url_products)} 个商品, 第{i}/{math.ceil(total_items/120)}页")
+
+        return products_list
 
     def parse_inventory_catalog(self, catalog_items: dict) -> list:
         """
@@ -298,7 +372,7 @@ class MytheresaMonitor(Monitor):
                     self.logger.warning(f"解析单个商品时出错: {str(e)}")
                     continue
 
-            self.logger.info(f"共解析到 {len(products)} 个商品")
+            self.logger.debug(f"共解析到 {len(products)} 个商品")
             return products
 
         except Exception as e:
@@ -444,6 +518,6 @@ class MytheresaMonitor(Monitor):
 if __name__ == '__main__':
     # 创建监控实例并运行
     # 需要境外IP代理
-    monitor = MytheresaMonitor(is_headless=True, is_auto_port=False, load_mode='normal', proxy_type=None)
+    monitor = MytheresaMonitor(is_headless=True, is_auto_port=False, load_mode='normal', proxy_type='ipcool')
     monitor.run_with_log()
 

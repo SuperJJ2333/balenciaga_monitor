@@ -136,7 +136,7 @@ class AntonioliMonitor(Monitor):
                 self.logger.info(f"正在获取商品目录: {url}")
                 # 设置代理并访问页面
                 header = self.init_params()
-                self.session.get(url, headers=header, proxies=self.proxy_clash_url)
+                self.session.get(url, headers=header, proxies=self.ipcool_url)
                 # 检查页面响应
                 if not self.session.html.strip():
                     self.logger.error("获取页面失败：页面响应为空")

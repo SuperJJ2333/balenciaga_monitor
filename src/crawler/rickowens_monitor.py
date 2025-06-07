@@ -233,5 +233,6 @@ class RickOwensMonitor(Monitor):
 
 if __name__ == '__main__':
     # 创建监控实例并运行
-    monitor = RickOwensMonitor(is_headless=False, proxy_type="clash")
+    monitor = RickOwensMonitor(is_headless=False, proxy_type=None, is_auto_port=False,
+                               load_mode="normal", is_no_img=False)
     monitor.run_with_log()

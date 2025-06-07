@@ -120,7 +120,7 @@ class SuusMonitor(Monitor):
             for url in self.catalog_url:
                 header = self._init_params()
                 # 设置代理并访问页面
-                self.session.get(url, headers=header, proxies=self.proxy_clash_url)
+                self.session.get(url, headers=header, proxies=self.ipcool_url)
                 self.logger.debug(f"正在获取商品目录: {url}")
 
                 # 检查页面响应

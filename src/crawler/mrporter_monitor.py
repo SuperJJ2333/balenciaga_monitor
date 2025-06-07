@@ -2,9 +2,12 @@
 MrPorter监控模块 - 负责监控MrPorter网站上Balenciaga鞋子的库存状态
 该模块实现了对MrPorter网站的爬取、解析和数据保存功能
 """
+import os
 from datetime import datetime
 import json
 import re
+from curl_cffi import requests
+
 
 from src.utils.page_setting import *
 from src.common.monitor import Monitor
@@ -35,7 +38,7 @@ class MrPorterMonitor(Monitor):
         # self.page = self.init_page()
 
     @staticmethod
-    def _init_params():
+    def _init_params(url):
 
         cookies = {
             'PIM-SESSION-ID': 'cF4Jq7hTj8jngRbS',
@@ -47,16 +50,16 @@ class MrPorterMonitor(Monitor):
             'cache-control': 'no-cache',
             'pragma': 'no-cache',
             'priority': 'u=0, i',
-            'referer': 'https://www.mrporter.com/en-hk/mens/designer/balenciaga/shoes',
+            'referer': url,
             'sec-ch-ua': '"Chromium";v="136", "Microsoft Edge";v="136", "Not.A/Brand";v="99"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
             'sec-fetch-dest': 'empty',
             'sec-fetch-mode': 'cors',
             'sec-fetch-site': 'same-origin',
-            'service-worker-navigation-preload': 'true',
             'upgrade-insecure-requests': '1',
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0',
+            # 'cookie': 'PIM-SESSION-ID=cF4Jq7hTj8jngRbS',
         }
 
         return headers, cookies
@@ -128,9 +131,14 @@ class MrPorterMonitor(Monitor):
         products_list: list[dict] = []
         try:
             for url in self.catalog_url:
-                header, cookies = self._init_params()
+                headers, cookies = self._init_params(url)
                 # 设置代理并访问页面
-                self.session.get(url, headers=header, proxies=None, cookies=cookies)
+                response = requests.get(url, cookies=cookies, headers=headers)
+                save_path = os.path.join(self.data_root, f"{self.name}.html")
+                with open(save_path, 'w', encoding='utf-8') as file:
+                    file.write(response.text)
+
+                self.session.get(save_path)
                 # self.page.get(url)
                 self.logger.info(f"正在获取商品目录: {url}")
 
@@ -141,44 +149,35 @@ class MrPorterMonitor(Monitor):
                     self.logger.error("获取页面失败：页面响应为空")
                     return []
 
-                self.logger.info("页面加载成功，开始查找商品信息")
+                self.logger.debug("页面加载成功，开始查找商品信息")
 
-                # 尝试查找JSON数据
-                try:
-                    # 使用更精确的XPath来查找JSON数据
-                    script_elements = page.s_eles('xpath://script[@type="application/ld+json"]')
+                # 使用更精确的XPath来查找JSON数据
+                script_elements = page.s_eles('xpath://script[@type="application/ld+json"]')
 
-                    if not script_elements:
-                        self.logger.error("未找到包含商品目录的script元素")
-                        return []
-
-                    # 遍历所有script元素，查找包含商品目录的JSON数据
-                    for script_ele in script_elements:
-                        script_frame = script_ele.text or script_ele.inner_html
-
-                        if not script_frame:
-                            continue
-
-                        try:
-                            data = json.loads(script_frame)
-                            # 检查这是否是我们需要的商品目录数据
-                            if data.get("@type") == "ItemList" and "Balenciaga" in data.get("name", ""):
-                                self.logger.debug("找到商品目录JSON数据")
-                                
-                                inventory_catalog_data = self.parse_inventory_catalog(script_frame)
-
-                                if inventory_catalog_data:
-                                    products_list += inventory_catalog_data
-                                else:
-                                    self.logger.error("解析商品目录失败")
-                                    return []
-                
-                        except json.JSONDecodeError:
-                            continue
-
-                except Exception as e:
-                    self.logger.error(f"处理商品目录元素时出错: {str(e)}")
+                if not script_elements:
+                    self.logger.error("未找到包含商品目录的script元素")
                     return []
+
+                # 遍历所有script元素，查找包含商品目录的JSON数据
+                for script_ele in script_elements:
+                    script_frame = script_ele.text or script_ele.inner_html
+
+                    data = json.loads(script_frame)
+                    # 检查这是否是我们需要的商品目录数据
+                    if data.get("@type") == "ItemList":
+                        self.logger.debug("找到商品目录JSON数据")
+
+                        inventory_catalog_data = self.parse_inventory_catalog(script_frame)
+                        self.logger.info(f"共找到 {len(inventory_catalog_data)} 个商品")
+
+                        if inventory_catalog_data:
+                            products_list += inventory_catalog_data
+                        else:
+                            self.logger.error("解析商品目录失败")
+                            return []
+                    else:
+                        self.logger.debug("当前script元素不是包含商品目录的JSON数据")
+                        return []
 
             return products_list
 

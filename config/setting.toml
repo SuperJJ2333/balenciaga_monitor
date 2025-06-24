@@ -1,0 +1,60 @@
+[test_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=2e44c3eb21dba8008a9709d47a5882c821885140f4651edac61d71fdc7e1dc31"
+secret = "SECc02c5e7299c3061d683e9dcc0122b7dd5d8c0117b1a05879bd4c8e0e2cce8e5c"
+
+[antonioli_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=868adf19bfcfa6416bbdf81a1e01a05a654ab690538fa8c8536c0da9546efc41"
+secret = "SEC97c09604aae37ad5cea269808315f2e96c5b0780376a1388cc78f5cf6b7b6b3b"
+
+[cettire_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=123295735b5303bd83af6828f00e0e87146a67d9c849d0ba9d2095ba934130bd"
+secret = "SEC442a4ea65487c0cd5562e7fa3666324dbd68f5a7ddb2b30a75cb849cbfdd9d75"
+
+[d2Store_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=d2490379ca9be8cc422cbbcad6a64f84ab94ed748d0306f395bdd9e8596eedc5"
+secret = "SEC288dd42ee0d2010cc78d87e77c458dc573f5dbf75d0dec7d2556e23ddc98eaac"
+
+[duomo_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=b316828e4777a2abef7dc492caba06f3f5e12fd8a0e355782c3823a34d564d58"
+secret = "SEC2c092c7e2dda47f539bc54a42db4aa9a28286fd6efea8c46f48b2cf38d23fa08"
+
+[eleonora_bonucci_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=c475d00d58ae2fa6bbfeab7ed38f00e98557282683f39d6b6ce9f46b178efea9"
+secret = "SECdf43c44b29d45021e3fe59a9dbb6a19934cbf1873586b4e7fd062d16d11312bb"
+
+[giglio_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=28e5e7dcc16c789dd6a9e9f431111ce2434f4387b18f779b05df343f3f9d085e"
+secret = "SEC344f160d3d8ccde3e71d7b063d000cd12d1690a49a0120ad4db131d8c9c43faa"
+
+[grifo210_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=e013484287fbb754f39492b3141538cf95b4eacc577fdc5f05c4922d7f31becb"
+secret = "SEC5352fccfb590ec01ae00efdb5498441372710fd458a4b21b94329a542085d187"
+
+[hermes_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=0abff5c3379909fb7aedc2ba658a63ec1c7a03e3238f669364972b3ba15b9463"
+secret = "SEC0b0699b224dd1661aae1988b5d73e43c80c628596096cffe133d21ca716fe955"
+
+[julian_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=d5b02bbb60fc533eb8cc39676509b574360dca489dc21140c59f6347b7271576"
+secret = "SECde206051cc80f44f30d7e6f823c93c0435d33dfef387c89f70e10991f635e424"
+
+[mrporter_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=e4459d86b33f9f9a725be789db7d16e1377b2c196e83d2db979aed96d327b1f9"
+secret = "SEC9c613a92f4ce9b0af22d51fb112c50e6d0935f56150612b580dc6b7234564005"
+
+[mytheresa_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=502e95b235d226887c25eb7aab3b7f3b12b3f280c5b87a50b1dd5720c07097c1"
+secret = "SEC8f0d56f2cea9c3d73cc1644f9b25bce3ef630cb4b1e566c6178df086456d7751"
+
+[rickowens_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=2626c5b5b762960275ac88f8f55ead28268ad93a7c82fc97c9ede37ba224e313"
+secret = "SEC8a1a057c4357cd65f8e4bc92b506a52f27ce45a92b4dc5cb8066b9c33e6e90c6"
+
+[sugar_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=e08a5bf1e2107f387340dd695695f286e0ba16357dc0044a0e8a575dd287eac5"
+secret = "SEC9752b184650edc7a9c59103febfcf67cd4113af33457d816259da7fbfd36f212"
+
+[suus_monitor_url]
+url = "https://oapi.dingtalk.com/robot/send?access_token=334de879ba564eb28b21c442358d825b9092dc47d72ade7f3b0c7b22a6aa0944"
+secret = "SEC9bc5478209f5d22fef099309e6d4a33162e655d340a85a1256b1ed1b42f07162"
+

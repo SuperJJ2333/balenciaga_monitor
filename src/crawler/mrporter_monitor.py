@@ -30,7 +30,7 @@ class MrPorterMonitor(Monitor):
         """
         # 更新监控器名称和目录URL
         kwargs['monitor_name'] = 'mrporter'
-        
+
         super().__init__(**kwargs)
 
         # 初始化浏览器页面
@@ -41,7 +41,9 @@ class MrPorterMonitor(Monitor):
     def _init_params(url):
 
         cookies = {
-            'PIM-SESSION-ID': 'cF4Jq7hTj8jngRbS',
+            'PIM-SESSION-ID': 'tkfWs9bxVmhMpDWL',
+            'bm_s': 'YAAQEvAgF089vX2XAQAAkquphQOkaZhJPzAoCGDKStb5pSyke3vQaiWyWbjOP59TR11kZy6oOvpuPJllN2VB66/f1VZnCf4nHkfwHmlY7/iayrUK33FV5oHyGQlAaouj4xBpjHN9EIGjwdc7urZj4THeZy2cNg1wwaxPLKD/peE5x1Dx+EkqVzvG7BdMaIn6+PQXILhEei/o7N1wIYQB3Lk508fNGbilmdLuc+vbV5B+X8ilGdAXFSyHtDX/VixmKtObJKKB4mZPafhX56eHI143X06T9ZFR06fRFMVVERDdcBOyioxry6n6sIGaBintFDRF/kueHC1Qlih3v+butRXQofx7+6MSkJrr4BnuecAPpCHoBR34bVzmz7xcs6021x0M3QGVO5N75E2TUm4VoBi/rIoWtV2azn8sJ7j2V6A0dfhesgzS0cleUhPGH1wt9//hzRSIYkYrsI4Bp7+7j2ArhhHye+108GHF5rNSuzSQiL40NL1alOYIq1Rx/r970mE9ioxt0ZrIBl1ekYU59IaPTQgsUHruNpRdLEAnZF7OfGP0NWCR+YKwKM508Sw0',
+
         }
 
         headers = {
@@ -51,15 +53,16 @@ class MrPorterMonitor(Monitor):
             'pragma': 'no-cache',
             'priority': 'u=0, i',
             'referer': url,
-            'sec-ch-ua': '"Chromium";v="136", "Microsoft Edge";v="136", "Not.A/Brand";v="99"',
+            'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
             'sec-fetch-dest': 'empty',
             'sec-fetch-mode': 'cors',
             'sec-fetch-site': 'same-origin',
+            'service-worker-navigation-preload': 'true',
             'upgrade-insecure-requests': '1',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0',
-            # 'cookie': 'PIM-SESSION-ID=cF4Jq7hTj8jngRbS',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+            # 'cookie': 'PIM-SESSION-ID=tkfWs9bxVmhMpDWL',
         }
 
         return headers, cookies
@@ -76,7 +79,7 @@ class MrPorterMonitor(Monitor):
         """
         try:
             self.logger.info(f"开始监控 {self.catalog_url}")
-            
+
             # 获取商品目录
             self.products_list = self.get_inventory_catalog()
             if not self.products_list:
@@ -90,7 +93,7 @@ class MrPorterMonitor(Monitor):
             if self.inventory_data:
                 # 标准化库存数据
                 normalized_data = self._normalize_inventory_data(self.inventory_data)
-                
+
                 # 保存标准化后的数据
                 data_file = f"balenciaga_inventory_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
                 saved_path = self.save_json_data(normalized_data, data_file)
@@ -105,7 +108,7 @@ class MrPorterMonitor(Monitor):
                 # summary, summary_data = self.generate_inventory_summary()
                 # # 保存总结数据
                 # self.save_summary_data(summary)
-                
+
                 # # 保存JSON格式的总结
                 # filename = f"inventory_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
                 # self.save_json_data(data=summary_data, filename=filename, category="json_summary")
@@ -133,7 +136,7 @@ class MrPorterMonitor(Monitor):
             for url in self.catalog_url:
                 headers, cookies = self._init_params(url)
                 # 设置代理并访问页面
-                response = requests.get(url, cookies=cookies, headers=headers)
+                response = requests.get(url, cookies=cookies, headers=headers, proxies=self.ipcool_url)
                 save_path = os.path.join(self.data_root, f"{self.name}.html")
                 with open(save_path, 'w', encoding='utf-8') as file:
                     file.write(response.text)
@@ -331,7 +334,7 @@ class MrPorterMonitor(Monitor):
 
             self.logger.debug(f"共解析到 {len(products_list)} 个商品")
             return products_list
-            
+
         except json.JSONDecodeError as e:
             self.logger.error(f"JSON解析错误: {str(e)}")
             return []
@@ -399,7 +402,7 @@ class MrPorterMonitor(Monitor):
             dict: 库存总结JSON数据
         """
         summary_text = f"******{self.monitor_name.capitalize()}Monitor - 库存监控********\n"
-        
+
         timestamp = datetime.now().isoformat()
         summary_data = {
             "monitor": f"{self.monitor_name.capitalize()}Monitor",
@@ -407,15 +410,15 @@ class MrPorterMonitor(Monitor):
             "total_products": len(self.inventory_data),
             "products": []
         }
-        
+
         if not self.inventory_data:
             summary_text += "无库存数据\n"
             return summary_text, summary_data
-        
+
         for product_name, product_data in self.inventory_data.items():
             url = product_data.get('url', '')
             inventory = product_data.get('inventory', {})
-            
+
             # 从products_list中查找价格信息
             price_info = ""
             for product in self.products_list:
@@ -425,12 +428,12 @@ class MrPorterMonitor(Monitor):
                     if price and currency:
                         price_info = f"{currency}{price}"
                     break
-            
+
             # 添加产品基本信息到摘要
             summary_text += f"产品名称: {product_name} - {url}\n"
             summary_text += f"价格：{price_info}\n"
             summary_text += "存货情况：\n"
-            
+
             # 准备JSON产品数据
             product_json = {
                 "name": product_name,
@@ -438,26 +441,26 @@ class MrPorterMonitor(Monitor):
                 "price": price_info,
                 "inventory_status": []
             }
-            
+
             # 动态收集所有出现的库存状态
             status_dict = {}
-            
+
             # 优先顺序：先售罄，然后是库存数量从低到高
             priority_order = ["sold out", "only one left", "only two left", "low in stock"]
-            
+
             # 预先定义这些常见状态，确保它们按照优先级排序
             for status in priority_order:
                 status_dict[status] = []
-            
+
             # 填充库存状态字典
             for size, status in inventory.items():
                 if status not in status_dict:
                     status_dict[status] = []
                 status_dict[status].append(size)
-            
+
             # 按状态添加到摘要
             status_index = 1
-            
+
             # 先添加优先级高的状态
             for status in priority_order:
                 if status in status_dict and status_dict[status]:
@@ -471,7 +474,7 @@ class MrPorterMonitor(Monitor):
                     status_index += 1
                     # 处理完后从字典中移除，避免重复
                     del status_dict[status]
-            
+
             # 再添加其余状态（主要是available和自定义状态）
             for status, sizes in status_dict.items():
                 if sizes:  # 只有当该状态下有尺码时才添加
@@ -483,12 +486,12 @@ class MrPorterMonitor(Monitor):
                         "sizes": sizes
                     })
                     status_index += 1
-            
+
             summary_text += "-------------------------------------------\n"
-            
+
             # 添加产品到JSON数据
             summary_data["products"].append(product_json)
-        
+
         return summary_text, summary_data
 
 

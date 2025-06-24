@@ -3,6 +3,8 @@ MrPorter监控模块 - 负责监控MrPorter网站上Balenciaga鞋子的库存状
 该模块实现了对MrPorter网站的爬取、解析和数据保存功能
 """
 from datetime import datetime
+from urllib.parse import urlparse, parse_qs
+
 
 from src.utils.page_setting import *
 from src.common.monitor import Monitor
@@ -27,11 +29,13 @@ class DuomoMonitor(Monitor):
         """
         # 更新监控器名称
         kwargs['monitor_name'] = 'duomo'
-        kwargs['catalog_url'] = 'https://www.ilduomo.it/api/categoryProducts'
 
         super().__init__(**kwargs)
 
-    def init_params(self):
+        self.base_url = 'https://www.ilduomo.it/api/categoryProducts'
+        self.session = self.init_session()
+
+    def init_params(self, url):
         headers = {
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
             'accept-language': 'zh-CN,zh;q=0.9',
@@ -49,14 +53,21 @@ class DuomoMonitor(Monitor):
             'cookie': self.load_cookies()
             }
 
-        params = {
-            'id_category': '6',
-            'page': '1',
-            'order': 'product.position.desc',
-            'q': 'Categories-shoes',
-            'id_designer': '15',
-        }
-        return headers, params
+        # 使用正则表达式匹配/designer/后面的数字
+        match = re.search(r'/designer/(\d+)', url)
+
+        if match:
+            designer_id = match.group(1)  # 返回匹配到的数字
+
+            params = {
+                'id_category': '6',
+                'page': '1',
+                'order': 'product.position.desc',
+                'q': '',
+                'id_designer': designer_id
+            }
+
+            return headers, params
 
     def run(self):
         """
@@ -77,14 +88,16 @@ class DuomoMonitor(Monitor):
                 self.logger.error("获取商品目录失败，终止监控")
                 return
 
-            # 解析商品目录
-            self.products_list = self.parse_inventory_catalog(catalog_data)
-            self.logger.info(f"监控完成，共获取到 {len(self.products_list)} 个商品信息")
+            self.logger.info(f"监控完成，共获取到 {len(catalog_data)} 个商品信息")
 
-            if self.products_list:
-                summary = self.generate_inventory_summary()
-                # print(summary)  # 打印到控制台
-                self.save_summary_data(data=summary)
+            # 保存提取的商品信息到文件
+            if self.inventory_data:
+                # 标准化库存数据
+                normalized_data = self._normalize_inventory_data(self.inventory_data)
+                # 保存标准化后的数据
+                data_file = f"balenciaga_inventory_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+                saved_path = self.save_json_data(normalized_data, data_file)
+                self.logger.info(f"已保存{len(normalized_data)}个商品的库存信息到 {saved_path}")
 
         except Exception as e:
             self.logger.error(f"监控过程中出错: {str(e)}")
@@ -100,26 +113,43 @@ class DuomoMonitor(Monitor):
         返回:
             list: 商品信息列表，每个元素为包含name和url的字典
         """
-        self.logger.info(f"正在获取商品目录: {self.catalog_url}")
+        products_list: list = []
         try:
-            headers, params = self.init_params()
-            session = self.init_session()
-            # 设置代理并访问页面
-            session.get('https://www.ilduomo.it/api/categoryProducts', params=params, headers=headers)
+            for url in self.catalog_url:
+                self.logger.info(f"正在获取商品目录: {url}")
+                headers, params = self.init_params(url)
 
-            # 检查页面响应
-            if not session.json:
-                self.logger.error("获取页面失败：页面响应为空")
-                return {}
+                # 设置代理并访问页面
+                self.session.get(self.base_url, params=params, headers=headers)
 
-            # 尝试查找JSON数据
-            try:
-                data = session.json
-                return data
+                # 检查页面响应
+                if not self.session.json:
+                    self.logger.error("获取页面失败：页面响应为空")
+                    return {}
 
-            except Exception as e:
-                self.logger.error(f"处理商品目录元素时出错: {str(e)}")
-                return {}
+                # 尝试查找JSON数据
+                try:
+                    data = self.session.json
+
+                    if not data:
+                        self.logger.error("未找到任何商品列表元素")
+                        return []
+
+                    self.logger.debug(f"找到 {len(data)} 个商品元素")
+
+                    inventory_catalog_data = self.parse_inventory_catalog(data)
+
+                    if inventory_catalog_data:
+                        products_list += inventory_catalog_data
+                    else:
+                        self.logger.error("解析商品目录失败")
+                        return []
+
+                except Exception as e:
+                    self.logger.error(f"处理商品目录元素时出错: {str(e)}")
+                    return {}
+
+            return products_list
 
         except Exception as e:
             self.logger.error(f"获取商品目录过程中出错: {str(e)}")
@@ -140,6 +170,8 @@ class DuomoMonitor(Monitor):
             if not catalog_data or 'psdata' not in catalog_data or 'products' not in catalog_data['psdata']:
                 self.logger.error("商品目录数据格式错误或为空")
                 return []
+
+            products_list = []
             
             # 提取商品列表
             products = catalog_data['psdata']['products']
@@ -160,6 +192,7 @@ class DuomoMonitor(Monitor):
                     product_info["url"] = 'https://www.ilduomo.it/product/' + match.group(2)
                 else:
                     self.logger.warning(f"无法解析商品链接: {product.get('link', '')}")
+
                 ### 提取尺码和库存信息
                 sizes_inventory = {}
                 if "aviable_size" in product:
@@ -178,17 +211,11 @@ class DuomoMonitor(Monitor):
                 ### 创造库存信息
                 unique_key = f"{product_info['id']}_{product_info['name']}"
                 self.inventory_data[unique_key] = product_info
+
+                products_list.append(product_info)
                 self.logger.debug(f"解析商品: {product_info['name']}, 尺码数量: {len(product_info['inventory'])}")
             
-            # 保存提取的商品信息到文件
-            if self.inventory_data:
-                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                # 检验库存数据格式
-                normalized_data = self._normalize_inventory_data(self.inventory_data)
-                save_path = self.save_json_data(normalized_data, f"balenciaga_inventory_{timestamp}.json", "inventory")
-                self.logger.info(f"商品目录数据已保存到: {save_path}")
-            
-            return self.inventory_data
+            return products_list
             
         except Exception as e:
             self.logger.error(f"解析商品目录数据时出错: {str(e)}")

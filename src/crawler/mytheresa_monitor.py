@@ -190,6 +190,8 @@ class MytheresaMonitor(Monitor):
                 self.logger.debug(f"找到 {len(response)} 个商品元素")
 
                 url_products = self.parse_inventory_catalog(response)
+                if not url_products:
+                    return []
                 products_list.extend(url_products)
 
                 total_items = self.session.json['data']['xProductListingPage']['pagination']['totalItems']
@@ -199,6 +201,8 @@ class MytheresaMonitor(Monitor):
                 # 判断是否存在"Show more"按钮
                 if int(total_items) > 120:
                     url_products = self.loop_each_catalog_item(url, total_items)
+                    if not url_products:
+                        return []
                     products_list.extend(url_products)
 
                 self.logger.info(f"URL {url} 爬取成功，获取到 {len(url_products)} 个商品")

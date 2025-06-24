@@ -5,7 +5,10 @@ Cettire监控模块 - 负责监控Cettire网站上Balenciaga鞋子的库存状�
 import json
 import random
 import time
+import urllib.parse
+from urllib.parse import urlparse
 from datetime import datetime
+from curl_cffi import requests
 
 from src.utils.page_setting import *
 from src.common.monitor import Monitor
@@ -28,17 +31,17 @@ class CettireMonitor(Monitor):
         """
         # 更新监控器名称
         kwargs['monitor_name'] = 'cettire'
-        kwargs['catalog_url'] = r'https://6l0oqj41cq-2.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.4.0)%3B%20Browser%20(lite)%3B%20JS%20Helper%20(3.24.1)%3B%20react%20(16.8.6)%3B%20react-instantsearch%20(6.7.0)&x-algolia-api-key=ee556f77348dacc02278dafa57be6d34&x-algolia-application-id=6L0OQJ41CQ'
+        # kwargs['catalog_url'] = r'https://6l0oqj41cq-2.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.4.0)%3B%20Browser%20(lite)%3B%20JS%20Helper%20(3.24.1)%3B%20react%20(16.8.6)%3B%20react-instantsearch%20(6.7.0)&x-algolia-api-key=ee556f77348dacc02278dafa57be6d34&x-algolia-application-id=6L0OQJ41CQ'
 
         super().__init__(**kwargs)
         
         # self.page = self.init_page()
         self.session = self.init_session()
+        self.base_url = 'https://6l0oqj41cq-2.algolianet.com/1/indexes/*/queries?x-algolia-agent=Algolia%20for%20JavaScript%20(4.4.0)%3B%20Browser%20(lite)%3B%20JS%20Helper%20(3.24.1)%3B%20react%20(16.8.6)%3B%20react-instantsearch%20(6.7.0)&x-algolia-api-key=ee556f77348dacc02278dafa57be6d34&x-algolia-application-id=6L0OQJ41CQ'
 
-        self.headers, self.json_data = self.init_params()
+        # self.headers, self.json_data = self.init_params()
 
-    @staticmethod
-    def init_params():
+    def init_params(self, url):
         """
         初始化请求参数
         
@@ -63,9 +66,49 @@ class CettireMonitor(Monitor):
             'sec-ch-ua-platform': '"Windows"',
             }
 
-        json_data = '{"requests":[{"indexName":"production_rep_cettire_vip_date_desc","params":"distinct=1&facetFilters=%5B%22tags%3AShoes%22%2C%5B%22department%3Amen%22%5D%2C%5B%22vendor%3ABalenciaga%22%5D%5D&facets=%5B%22Color%22%2C%22Size%22%2C%22department%22%2C%22product_type%22%2C%22tags%22%2C%22vendor%22%5D&filters=visibility%3AYES%20AND%20(vipLevel%3A%200%20OR%20vipLevel%3A%20null)%20AND%20eu_eur_price_f%20%3E%200&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&highlightPreTag=%3Cais-highlight-0000000000%3E&hitsPerPage=96&maxValuesPerFacet=10000&page=1&query="},{"indexName":"production_rep_cettire_vip_date_desc","params":"analytics=false&clickAnalytics=false&distinct=1&facetFilters=%5B%22tags%3AShoes%22%2C%5B%22vendor%3ABalenciaga%22%5D%5D&facets=department&filters=visibility%3AYES%20AND%20(vipLevel%3A%200%20OR%20vipLevel%3A%20null)%20AND%20eu_eur_price_f%20%3E%200&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&highlightPreTag=%3Cais-highlight-0000000000%3E&hitsPerPage=0&maxValuesPerFacet=10000&page=0&query="},{"indexName":"production_rep_cettire_vip_date_desc","params":"analytics=false&clickAnalytics=false&distinct=1&facetFilters=%5B%22tags%3AShoes%22%2C%5B%22department%3Amen%22%5D%5D&facets=vendor&filters=visibility%3AYES%20AND%20(vipLevel%3A%200%20OR%20vipLevel%3A%20null)%20AND%20eu_eur_price_f%20%3E%200&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&highlightPreTag=%3Cais-highlight-0000000000%3E&hitsPerPage=0&maxValuesPerFacet=10000&page=0&query="}]}'
+        str_data = '{"requests":[{"indexName":"production_rep_cettire_vip_date_desc","params":"distinct=1&facetFilters=%5B%22tags%3AShoes%22%2C%5B%22department%3Amen%22%5D%2C%5B%22vendor%3ARick%20Owens%22%5D%5D&facets=%5B%22Color%22%2C%22Size%22%2C%22department%22%2C%22product_type%22%2C%22tags%22%2C%22vendor%22%5D&filters=visibility%3AYES%20AND%20(vipLevel%3A%200%20OR%20vipLevel%3A%20null)%20AND%20eu_eur_price_f%20%3E%200&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&highlightPreTag=%3Cais-highlight-0000000000%3E&hitsPerPage=96&maxValuesPerFacet=10000&page=0&query="},{"indexName":"production_rep_cettire_vip_date_desc","params":"analytics=false&clickAnalytics=false&distinct=1&facetFilters=%5B%22tags%3AShoes%22%2C%5B%22vendor%3ARick%20Owens%22%5D%5D&facets=department&filters=visibility%3AYES%20AND%20(vipLevel%3A%200%20OR%20vipLevel%3A%20null)%20AND%20eu_eur_price_f%20%3E%200&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&highlightPreTag=%3Cais-highlight-0000000000%3E&hitsPerPage=0&maxValuesPerFacet=10000&page=0&query="},{"indexName":"production_rep_cettire_vip_date_desc","params":"analytics=false&clickAnalytics=false&distinct=1&facetFilters=%5B%22tags%3AShoes%22%2C%5B%22department%3Amen%22%5D%5D&facets=vendor&filters=visibility%3AYES%20AND%20(vipLevel%3A%200%20OR%20vipLevel%3A%20null)%20AND%20eu_eur_price_f%20%3E%200&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&highlightPreTag=%3Cais-highlight-0000000000%3E&hitsPerPage=0&maxValuesPerFacet=10000&page=0&query="}]}'
+
+        vendor: str = self.transform_brand_name(url)
+        json_data = self.parse_json_data(json.loads(str_data), vendor)
 
         return headers, json_data
+
+    @staticmethod
+    def parse_json_data(json_data: dict, vendor: str) -> str:
+        """
+        处理request参数
+        :param vendor: 需要添加的产品名称
+        :param json_data: 整体参数
+        :return:
+        """
+        hits = json_data['requests']
+
+        for i, request in enumerate(hits):
+            if i > 1:
+                break
+            # 2. 解析params查询字符串为字典
+            params_dict = dict(urllib.parse.parse_qsl(request['params']))
+
+            # 4. 更新facetFilters
+            if 'facetFilters' in params_dict:
+                # 解码并解析JSON字符串
+                facet_filters = json.loads(params_dict['facetFilters'])
+
+                # 更新其他过滤条件
+                for j, item in enumerate(facet_filters):
+                    if "vendor" in item[0] and isinstance(item, list):
+                        facet_filters[j] = [f"vendor:{vendor}"]
+
+                # 重新编码为JSON字符串
+                params_dict['facetFilters'] = json.dumps(facet_filters)
+
+            # 6. 将params字典转换回查询字符串
+            request['params'] = urllib.parse.urlencode(params_dict, doseq=True)
+
+        # 转换回JSON字符串
+        updated_data = json.dumps({'requests': hits}, separators=(',', ':'))
+
+        return updated_data
 
     def run(self):
         """
@@ -141,35 +184,38 @@ class CettireMonitor(Monitor):
 
         products_list = []
         try:
-            # 设置代理并访问页面
-            self.session.post(self.catalog_url, headers=self.headers, data=self.json_data, proxies=self.ipcool_url)
-            # 检查页面响应
-            if not self.session.html.strip():
-                self.logger.error("获取页面失败：页面响应为空")
-                return []
-
-            # 尝试查找商品元素
-            try:
-                data = self.session.json
-
-                if not data:
-                    self.logger.error("未找到任何商品列表元素")
+            for url in self.catalog_url:
+                headers, json_data = self.init_params(url)
+                # 设置代理并访问页面
+                self.session.post(self.base_url, headers=headers, data=json_data, proxies=self.ipcool_url)
+                # 检查页面响应
+                if not self.session.html.strip():
+                    self.logger.error("获取页面失败：页面响应为空")
                     return []
 
-                self.logger.debug(f"找到 {len(data)} 个商品元素")
-                
-                inventory_catalog_data = self.parse_inventory_catalog(data)
+                # 尝试查找商品元素
+                try:
+                    data = self.session.json
 
-                if inventory_catalog_data:
-                    products_list += inventory_catalog_data
-                    return products_list
-                else:
-                    self.logger.error("解析商品目录失败")
+                    if not data:
+                        self.logger.error("未找到任何商品列表元素")
+                        return []
+
+                    self.logger.debug(f"找到 {len(data)} 个商品元素")
+
+                    inventory_catalog_data = self.parse_inventory_catalog(data)
+
+                    if inventory_catalog_data:
+                        products_list += inventory_catalog_data
+                    else:
+                        self.logger.error("解析商品目录失败")
+                        return []
+
+                except Exception as e:
+                    self.logger.error(f"处理商品目录元素时出错: {str(e)}")
                     return []
 
-            except Exception as e:
-                self.logger.error(f"处理商品目录元素时出错: {str(e)}")
-                return []
+            return products_list
 
         except Exception as e:
             self.logger.error(f"获取商品目录过程中出错: {str(e)}")
@@ -445,6 +491,31 @@ class CettireMonitor(Monitor):
             return match.group(1)
         else:
             return None
+
+    @staticmethod
+    def transform_brand_name(url) -> str | None:
+        """
+
+        :param url:
+        :return:
+        """
+        # 解析URL获取路径部分
+        path = urlparse(url).path
+
+        # 提取品牌标识
+        match = re.search(r'/collections/([^/?]+)', path)
+        if match:
+            brand_key = match.group(1)
+
+            # 替换连字符为空格
+            clean_string = brand_key.replace('-', ' ')
+
+            # 转换为标题格式（首字母大写）
+            title_string = ' '.join(word.capitalize() for word in clean_string.split())
+
+            return title_string
+
+        return None
 
 
 if __name__ == '__main__':

@@ -60,10 +60,20 @@ class BalenciagaScheduler:
         self.max_scheduler_logs = 20  # 调度器日志文件最大保留数量
         self.max_site_data_files = 50  # 每个网站数据文件最大保留数量
 
-        # 爬虫失败计数器
-        self.crawler_failure_counter = {}
-        # 最大失败周期数
-        self.max_failure_cycles = 3
+        # 爬虫失败处理相关状态
+        self.crawler_failure_counter = {}  # 爬虫失败计数器
+        self.crawler_pause_counter = {}    # 爬虫暂停计数器
+        self.crawler_status = {}           # 爬虫状态：normal、paused、permanently_disabled
+        self.crawler_email_sent = {}       # 是否已发送警告邮件的标记
+        
+        # 失败处理参数
+        self.max_failure_cycles = 3       # 最大失败周期数（第一阶段）
+        self.pause_cycles = 3              # 暂停的周期数
+
+        # 特殊运行周期配置
+        self.special_cycle_crawlers = ["mrporter_monitor"]  # 需要特殊运行周期的爬虫列表
+        self.special_cycle_multiplier = 5  # 特殊周期倍数 (self.waiting_time * 3)
+        self.cycle_counter = 0  # 运行周期计数器
 
         # 读取爬虫排除列表
         self.excluded_monitors = []
@@ -83,25 +93,43 @@ class BalenciagaScheduler:
             "mrporter_monitor": {"is_headless": True, "proxy_type": "clash", "is_no_img": True, "is_auto_port": False, "load_mode": "normal"},
             "giglio_monitor": {"is_headless": True, "proxy_type": "clash", "is_no_img": True, "is_auto_port": True, "load_mode": "normal"},
             "grifo210_monitor": {"is_headless": True, "proxy_type": "clash", "is_no_img": True, "is_auto_port": True, "load_mode": "normal"},
-            "rickowens_monitor": {"is_headless": False, "proxy_type": "clash", "is_no_img": True, "is_auto_port": False, "load_mode": "normal"},
+            "rickowens_monitor": {"is_headless": True, "proxy_type": "clash", "is_no_img": True, "is_auto_port": False, "load_mode": "normal"},
             "suus_monitor": {"is_headless": True, "proxy_type": "clash", "is_no_img": True, "is_auto_port": True, "load_mode": "normal"},
             "cettire_monitor": {"is_headless": True, "proxy_type": "ipcool", "is_no_img": True, "is_auto_port": True, "load_mode": "normal"},
             "hermes_monitor": {"is_headless": True, "proxy_type": "ipcool", "is_no_img": False, "is_auto_port": False, "load_mode": "normal"},
             # "julian_monitor": {"is_headless": False, "proxy_type": None, "is_no_img": False, "is_auto_port": False, "load_mode": "normal"},
             "d2Store_monitor": {"is_headless": True, "proxy_type": None, "is_no_img": True, "is_auto_port": True, "load_mode": "normal"},
-            "mytheresa_monitor": {"is_headless": True, "proxy_type": None, "is_no_img": True, "is_auto_port": False, "load_mode": "eager"},
+            "mytheresa_monitor": {"is_headless": True, "proxy_type": "ipcool", "is_no_img": True, "is_auto_port": False, "load_mode": "eager"},
         }
 
         # 读取钉钉配置
         try:
-            toml_path = os.path.join(self.project_paths(), 'setting.toml')
+            toml_path = os.path.join(self.project_paths.CONFIG, 'setting.toml')
             config = load_toml(toml_path, self.logger)
-            self.ding_url = config['ding_url'].get('url')
-            self.ding_secret = config['ding_secret'].get('secret')
-            self.ding_token = ""  # Token不需要，保留为空
+            
+            # 存储每个爬虫对应的钉钉配置
+            self.ding_configs = {}
+            
+            # 解析setting.toml中的所有钉钉配置
+            for section_name, section_data in config.items():
+                if section_name.endswith('_monitor_url'):
+                    monitor_name = section_name.replace('_url', '')
+                    if 'url' in section_data and 'secret' in section_data:
+                        self.ding_configs[monitor_name] = {
+                            'url': section_data['url'],
+                            'secret': section_data['secret'],
+                            'token': ""  # Token不需要，保留为空
+                        }
+            
+            self.logger.info(f"已加载 {len(self.ding_configs)} 个钉钉机器人配置")
+            
+            # 默认的钉钉配置，用于找不到对应配置的情况
+            self.default_ding_url = config.get('test_monitor_url', {}).get('url', '')
+            self.default_ding_secret = config.get('test_monitor_url', {}).get('secret', '')
+            self.default_ding_token = ""  # Token不需要，保留为空
 
             # 初始化钉钉发送器
-            self.ding_sender = DingSender(self.ding_url, self.ding_secret, self.ding_token)
+            self.ding_sender = DingSender(self.default_ding_url, self.default_ding_secret, self.default_ding_token)
         except Exception as e:
             self.logger.error(f"初始化钉钉配置失败: {str(e)}")
             raise
@@ -240,9 +268,15 @@ class BalenciagaScheduler:
                         time.sleep(retry_wait)
                     continue
 
-                # 爬虫执行成功，重置失败计数器
+                # 爬虫执行成功，重置所有失败相关状态
                 if module_name in self.crawler_failure_counter:
                     self.crawler_failure_counter[module_name] = 0
+                if module_name in self.crawler_pause_counter:
+                    self.crawler_pause_counter[module_name] = 0
+                if module_name in self.crawler_status:
+                    self.crawler_status[module_name] = "normal"
+                if module_name in self.crawler_email_sent:
+                    self.crawler_email_sent[module_name] = False
 
                 self.logger.info(f"爬虫 {class_name} 执行成功")
                 return True
@@ -257,24 +291,94 @@ class BalenciagaScheduler:
                     self.logger.info(f"等待 {retry_wait} 秒后重试...")
                     time.sleep(retry_wait)
 
-        # 所有重试都失败了，增加失败计数
-        if module_name not in self.crawler_failure_counter:
-            self.crawler_failure_counter[module_name] = 1
-        else:
-            self.crawler_failure_counter[module_name] += 1
-
-        # 检查是否达到最大失败周期数
-        if self.crawler_failure_counter[module_name] >= self.max_failure_cycles:
-            self.logger.critical(f"爬虫 {class_name} 连续 {self.max_failure_cycles} 个周期返回空结果，暂停运行该爬虫")
-            # 发送警告邮件
-            self.send_warning_email(module_name, class_name)
-            # 将爬虫添加到排除列表
-            if module_name not in self.excluded_monitors:
-                self.excluded_monitors.append(module_name)
-                self.logger.info(f"已将爬虫 {module_name} 添加到排除列表")
-
+        # 所有重试都失败了，处理失败逻辑
+        self._handle_crawler_failure(module_name, class_name)
         self.logger.error(f"爬虫 {class_name} 在 {max_retries + 1} 次尝试后仍然失败")
         return False
+
+    def _handle_crawler_failure(self, module_name, class_name):
+        """
+        处理爬虫失败逻辑
+        第一阶段：连续失败达到阈值 → 暂停3个周期
+        第二阶段：暂停后再次失败 → 永久禁用并发送唯一警告邮件
+        """
+        # 初始化爬虫状态（如果不存在）
+        if module_name not in self.crawler_status:
+            self.crawler_status[module_name] = "normal"
+        if module_name not in self.crawler_failure_counter:
+            self.crawler_failure_counter[module_name] = 0
+        if module_name not in self.crawler_pause_counter:
+            self.crawler_pause_counter[module_name] = 0
+        if module_name not in self.crawler_email_sent:
+            self.crawler_email_sent[module_name] = False
+
+        # 增加失败计数
+        self.crawler_failure_counter[module_name] += 1
+        
+        current_status = self.crawler_status[module_name]
+        failure_count = self.crawler_failure_counter[module_name]
+        
+        self.logger.warning(f"爬虫 {class_name} 失败次数: {failure_count}, 当前状态: {current_status}")
+
+        # 根据当前状态和失败次数处理
+        if current_status == "normal":
+            # 第一阶段：正常状态下失败处理
+            if failure_count >= self.max_failure_cycles:
+                self.logger.warning(f"爬虫 {class_name} 连续 {self.max_failure_cycles} 个周期失败，进入暂停状态")
+                self.crawler_status[module_name] = "paused"
+                self.crawler_pause_counter[module_name] = 0  # 重置暂停计数器
+                self.crawler_failure_counter[module_name] = 0  # 重置失败计数器
+                
+                # 暂停期间不运行爬虫
+                if module_name not in self.excluded_monitors:
+                    self.excluded_monitors.append(module_name)
+                    self.logger.info(f"已将爬虫 {module_name} 添加到临时排除列表（暂停 {self.pause_cycles} 个周期）")
+        
+        elif current_status == "testing":
+            # 第二阶段：测试状态下失败处理
+            if failure_count >= self.max_failure_cycles:
+                self.logger.critical(f"爬虫 {class_name} 在暂停恢复后的测试中再次连续失败，永久禁用该爬虫")
+                self.crawler_status[module_name] = "permanently_disabled"
+                
+                # 发送警告邮件（只发送一次）
+                if not self.crawler_email_sent[module_name]:
+                    self.send_warning_email(module_name, class_name)
+                    self.crawler_email_sent[module_name] = True
+                    self.logger.info(f"已发送爬虫 {class_name} 的警告邮件")
+                else:
+                    self.logger.info(f"爬虫 {class_name} 的警告邮件已发送过，跳过重复发送")
+                
+                # 确保在排除列表中
+                if module_name not in self.excluded_monitors:
+                    self.excluded_monitors.append(module_name)
+                    self.logger.info(f"已将爬虫 {module_name} 添加到永久排除列表")
+        
+        elif current_status == "permanently_disabled":
+            # 已永久禁用的爬虫，不做任何处理
+            self.logger.debug(f"爬虫 {class_name} 已永久禁用，跳过失败处理")
+
+    def _update_crawler_pause_status(self):
+        """
+        更新爬虫暂停状态，检查是否到了恢复运行的时间
+        """
+        for module_name, status in self.crawler_status.items():
+            if status == "paused":
+                self.crawler_pause_counter[module_name] += 1
+                pause_count = self.crawler_pause_counter[module_name]
+                
+                self.logger.debug(f"爬虫 {module_name} 暂停计数: {pause_count}/{self.pause_cycles}")
+                
+                # 检查是否达到暂停周期数
+                if pause_count >= self.pause_cycles:
+                    self.logger.info(f"爬虫 {module_name} 暂停 {self.pause_cycles} 个周期已满，恢复运行进行最后测试")
+                    self.crawler_status[module_name] = "testing"  # 设置为测试状态
+                    self.crawler_pause_counter[module_name] = 0
+                    self.crawler_failure_counter[module_name] = 0  # 重置失败计数器
+                    
+                    # 从排除列表中移除
+                    if module_name in self.excluded_monitors:
+                        self.excluded_monitors.remove(module_name)
+                        self.logger.info(f"已将爬虫 {module_name} 从排除列表中移除，开始最后测试")
 
     def send_warning_email(self, module_name, class_name):
         """发送爬虫警告邮件"""
@@ -282,15 +386,20 @@ class BalenciagaScheduler:
             self.logger.info(f"准备发送爬虫 {class_name} 警告邮件")
             
             # 邮件内容
-            subject = f"爬虫警告：{class_name} 连续失败"
+            subject = f"爬虫警告：{class_name} 永久禁用"
             content = f"""
-            警告：爬虫 {class_name} ({module_name}) 连续 {self.max_failure_cycles} 个周期返回空结果。
+            警告：爬虫 {class_name} ({module_name}) 在经过以下步骤后仍然失败：
+            
+            1. 连续 {self.max_failure_cycles} 个周期失败 → 暂停运行 {self.pause_cycles} 个周期
+            2. 暂停期满后恢复运行 → 再次连续 {self.max_failure_cycles} 个周期失败
             
             时间：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
             
-            该爬虫已被暂时排除，不会在后续周期中执行，直到手动恢复。
+            该爬虫已被永久禁用，不会在后续周期中执行，需要手动检查和恢复。
             
             请检查爬虫代码或目标网站是否发生变化。
+            
+            注意：整个故障处理过程中，此邮件只会发送一次。
             
             此邮件由系统自动发送。
             """
@@ -305,12 +414,29 @@ class BalenciagaScheduler:
             try:
                 server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # QQ邮箱SMTP服务器，端口是465
                 server.login('1014826460@qq.com', 'dfzwkpklutdkbchf')  # 发件人邮箱账号、授权码
-                server.sendmail('1014826460@qq.com', ['1014826460@qq.com'], msg.as_string())  # 发件人账号、收件人账号、发送邮件
-                server.quit()  # 关闭连接
-                self.logger.info(f"爬虫 {class_name} 警告邮件发送成功")
+                
+                # 收件人列表
+                recipients = ['1014826460@qq.com', 'jackson.wong6000@gmail.com']
+                
+                # 一次性发送给所有收件人
+                try:
+                    result = server.sendmail('1014826460@qq.com', recipients, msg.as_string())
+                    if result:
+                        # result字典包含发送失败的收件人
+                        failed_recipients = list(result.keys())
+                        self.logger.warning(f"部分收件人发送失败: {failed_recipients}")
+                    else:
+                        self.logger.info(f"爬虫 {class_name} 警告邮件发送成功，收件人: {recipients}")
+                except Exception as send_error:
+                    self.logger.error(f"邮件发送过程中出错: {str(send_error)}")
+                    raise send_error
+                finally:
+                    server.quit()  # 确保连接关闭
+                
                 return True
             except Exception as e:
                 self.logger.error(f"发送警告邮件失败: {str(e)}")
+                self.logger.error(f"错误类型: {type(e).__name__}")
                 # 如果邮件发送失败，尝试使用钉钉发送警告
                 self._send_warning_via_dingtalk(module_name, class_name)
                 return False
@@ -319,27 +445,101 @@ class BalenciagaScheduler:
             self.logger.error(f"准备警告邮件时出错: {str(e)}")
             return False
     
+    def _is_currency_conversion_change(self, from_price, to_price):
+        """
+        检查价格变化是否只是货币单位转换
+        例如：$ 459.90 → € 434.00
+        
+        Args:
+            from_price: 原价格字符串
+            to_price: 新价格字符串
+            
+        Returns:
+            bool: 如果是货币单位转换则返回True，否则返回False
+        """
+        if not from_price or not to_price:
+            return False
+            
+        # 常见货币符号
+        currency_symbols = ['$', '€', '£', '¥', '₽', 'USD', 'EUR', 'GBP', 'JPY', 'RUB', 'CNY']
+        
+        # 提取货币符号
+        from_currency = None
+        to_currency = None
+        
+        for symbol in currency_symbols:
+            if symbol in from_price:
+                from_currency = symbol
+            if symbol in to_price:
+                to_currency = symbol
+                
+        # 如果检测到不同的货币符号，很可能是货币转换
+        if from_currency and to_currency and from_currency != to_currency:
+            self.logger.info(f"检测到货币单位变化: {from_currency} → {to_currency}")
+            
+            # 进一步检查价格数值是否在合理的汇率范围内
+            import re
+            from_num_match = re.search(r'[\d,]+\.?\d*', from_price)
+            to_num_match = re.search(r'[\d,]+\.?\d*', to_price)
+            
+            if from_num_match and to_num_match:
+                try:
+                    from_value = float(from_num_match.group().replace(',', ''))
+                    to_value = float(to_num_match.group().replace(',', ''))
+                    
+                    # 计算价格比率
+                    ratio = to_value / from_value if from_value > 0 else 0
+                    
+                    # 常见汇率范围检查（大致范围，不需要精确）
+                    # USD/EUR 通常在 0.8-1.2 之间
+                    # USD/GBP 通常在 0.7-0.9 之间
+                    # 如果比率在合理的汇率范围内，认为是货币转换
+                    if 0.5 <= ratio <= 2.0:  # 宽松的汇率范围
+                        self.logger.info(f"价格比率 {ratio:.3f} 在合理汇率范围内，判定为货币转换")
+                        return True
+                        
+                except (ValueError, ZeroDivisionError):
+                    pass
+                    
+        return False
+
     def _send_warning_via_dingtalk(self, module_name, class_name):
         """通过钉钉发送爬虫警告"""
         try:
             self.logger.info(f"尝试通过钉钉发送爬虫 {class_name} 警告")
             
+            # 获取对应的钉钉配置
+            monitor_key = module_name + "_url"
+            ding_config = self.ding_configs.get(monitor_key)
+            
+            if not ding_config:
+                self.logger.warning(f"未找到 {module_name} 对应的钉钉配置，将使用默认配置")
+                ding_url = self.default_ding_url
+                ding_secret = self.default_ding_secret
+            else:
+                ding_url = ding_config['url']
+                ding_secret = ding_config['secret']
+                self.logger.info(f"使用 {module_name} 专用的钉钉机器人发送警告")
+            
             # 构建钉钉消息
-            markdown_text = f"## 爬虫警告：{class_name} 连续失败\n\n"
-            markdown_text += f"警告：爬虫 {class_name} ({module_name}) 连续 {self.max_failure_cycles} 个周期返回空结果。\n\n"
+            markdown_text = f"## 爬虫警告：{class_name} 永久禁用\n\n"
+            markdown_text += f"警告：爬虫 {class_name} ({module_name}) 在经过以下步骤后仍然失败：\n\n"
+            markdown_text += f"1. 连续 {self.max_failure_cycles} 个周期失败 → 暂停运行 {self.pause_cycles} 个周期\n\n"
+            markdown_text += f"2. 暂停期满后恢复运行 → 再次连续 {self.max_failure_cycles} 个周期失败\n\n"
             markdown_text += f"时间：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
-            markdown_text += "该爬虫已被暂时排除，不会在后续周期中执行，直到手动恢复。\n\n"
-            markdown_text += "请检查爬虫代码或目标网站是否发生变化。"
+            markdown_text += "该爬虫已被永久禁用，不会在后续周期中执行，需要手动检查和恢复。\n\n"
+            markdown_text += "请检查爬虫代码或目标网站是否发生变化。\n\n"
+            markdown_text += "注意：整个故障处理过程中，此消息只会发送一次。"
             
             markdown_message = {
-                "title": f"爬虫警告：{class_name} 连续失败",
+                "title": f"爬虫警告：{class_name} 永久禁用",
                 "text": markdown_text
             }
             
             # 发送钉钉消息
             result = self.ding_sender.send_dingtalk_message(
-                self.ding_url,
-                self.ding_secret,
+                ding_url,
+                ding_secret,
                 markdown_message
             )
             
@@ -351,11 +551,43 @@ class BalenciagaScheduler:
         """运行所有爬虫，串行执行（一个爬虫完成后再执行下一个）"""
         self.logger.info("开始执行所有网站的爬虫任务")
 
-        self.logger.info(f"有效爬虫数量: {len(self.crawlers)}")
+        # 更新暂停状态（检查是否有爬虫需要从暂停状态恢复）
+        self._update_crawler_pause_status()
+
+        # 增加运行周期计数器
+        self.cycle_counter += 1
+        
+        # 判断是否应该运行特殊周期的爬虫
+        should_run_special_cycle = (self.cycle_counter % self.special_cycle_multiplier == 0)
+        
+        self.logger.info(f"当前运行周期: {self.cycle_counter}, 特殊周期爬虫运行状态: {'是' if should_run_special_cycle else '否'}")
+
+        # 分离普通周期和特殊周期的爬虫
+        normal_crawlers = []
+        special_crawlers = []
+        
+        for crawler_info in self.crawlers:
+            module_name = crawler_info['module_name']
+            if module_name in self.special_cycle_crawlers:
+                special_crawlers.append(crawler_info)
+            else:
+                normal_crawlers.append(crawler_info)
+
+        self.logger.info(f"普通周期爬虫数量: {len(normal_crawlers)}, 特殊周期爬虫数量: {len(special_crawlers)}")
+
+        # 确定本次要执行的爬虫列表
+        crawlers_to_run = normal_crawlers.copy()
+        if should_run_special_cycle:
+            crawlers_to_run.extend(special_crawlers)
+            self.logger.info(f"本次将执行特殊周期爬虫: {[c['module_name'] for c in special_crawlers]}")
+        else:
+            self.logger.info(f"本次跳过特殊周期爬虫: {[c['module_name'] for c in special_crawlers]}")
 
         # 串行执行爬虫任务，一个结束后再执行下一个
         successful_crawlers = 0
-        for i, crawler_info in enumerate(self.crawlers):
+        executed_crawlers = 0
+        
+        for i, crawler_info in enumerate(crawlers_to_run):
             module_name = crawler_info['module_name']
             class_name = crawler_info['class_name']
             
@@ -364,7 +596,8 @@ class BalenciagaScheduler:
                 self.logger.info(f"爬虫 {module_name} 在排除列表中，已跳过执行")
                 continue
                 
-            self.logger.info(f"开始执行爬虫 [{i + 1}/{len(self.crawlers)}]: {class_name}")
+            executed_crawlers += 1
+            self.logger.info(f"开始执行爬虫 [{executed_crawlers}]: {class_name}")
 
             # 执行当前爬虫
             result = self.run_crawler(crawler_info)
@@ -374,12 +607,18 @@ class BalenciagaScheduler:
             else:
                 self.logger.warning(f"爬虫 {class_name} 执行失败")
 
-            # 如果不是最后一个爬虫，等待指定时间后再执行下一个
-            if i < len(self.crawlers) - 1:
+            # 如果不是最后一个要执行的爬虫，等待指定时间后再执行下一个
+            if i < len(crawlers_to_run) - 1:
                 self.logger.info(f"等待 {self.sleep_between_crawlers} 秒后执行下一个爬虫...")
                 time.sleep(self.sleep_between_crawlers)
 
-        self.logger.info(f"爬虫任务执行完成，成功: {successful_crawlers}/{len(self.crawlers)}")
+        self.logger.info(f"爬虫任务执行完成，成功: {successful_crawlers}/{executed_crawlers}")
+        
+        # 输出特殊周期爬虫的下次运行时间信息
+        if special_crawlers and not should_run_special_cycle:
+            cycles_until_special = self.special_cycle_multiplier - (self.cycle_counter % self.special_cycle_multiplier)
+            minutes_until_special = cycles_until_special * self.loop_time
+            self.logger.info(f"特殊周期爬虫将在 {cycles_until_special} 个周期后运行 (约 {minutes_until_special} 分钟)")
 
         # 显示执行结果摘要
         self.logger.info("所有爬虫任务已完成")
@@ -476,9 +715,25 @@ class BalenciagaScheduler:
                         self.logger.info(f"从文件路径中识别出网站: {monitor_name}")
                         break
 
-            # 获取上一次的库存数据
+            # 获取上一次的库存数据和最近三次历史数据
             dir_path = os.path.dirname(file_path)
             previous_file = self.ding_sender.find_previous_json(file_path, dir_path)
+            
+            # 获取最近三次历史记录用于防止误报
+            historical_files = self.ding_sender.find_recent_json_files(file_path, dir_path, count=3)
+            historical_data_list = []
+            
+            # 加载历史数据
+            for hist_file in historical_files:
+                try:
+                    with open(hist_file, 'r', encoding='utf-8') as f:
+                        hist_data = json.load(f)
+                        historical_data_list.append(hist_data)
+                        self.logger.debug(f"加载历史记录: {os.path.basename(hist_file)}")
+                except Exception as e:
+                    self.logger.warning(f"读取历史库存文件 {hist_file} 时出错: {str(e)}")
+            
+            self.logger.info(f"成功加载 {len(historical_data_list)} 个历史记录用于防止误报")
 
             if previous_file:
                 self.logger.info(f"找到上一次库存文件: {previous_file}")
@@ -507,9 +762,9 @@ class BalenciagaScheduler:
                 self.logger.warning(f"未找到上一次库存文件，将无法比较变化")
                 previous_data = None
 
-            # 比较变化情况
+            # 比较变化情况，传入历史数据用于防止误报
             try:
-                changes = self.ding_sender.compare_inventory(current_data, previous_data)
+                changes = self.ding_sender.compare_inventory(current_data, previous_data, historical_data_list)
 
                 # 记录变化详情
                 new_count = len(changes.get("new_products", []))
@@ -530,6 +785,19 @@ class BalenciagaScheduler:
             if not has_new_products and not has_key_changes:
                 self.logger.info(f"{monitor_name} 没有新增商品或重点监控商品变化，不发送通知")
                 return False
+            
+            # 获取对应的钉钉配置
+            monitor_key = monitor_name.lower() + "_monitor"
+            ding_config = self.ding_configs.get(monitor_key)
+            
+            if not ding_config:
+                self.logger.warning(f"未找到 {monitor_name} 对应的钉钉配置，将使用默认配置")
+                ding_url = self.default_ding_url
+                ding_secret = self.default_ding_secret
+            else:
+                ding_url = ding_config['url']
+                ding_secret = ding_config['secret']
+                self.logger.info(f"使用 {monitor_name} 专用的钉钉机器人")
             
             # 构建消息内容
             messages_sent = False
@@ -578,8 +846,8 @@ class BalenciagaScheduler:
                     self.logger.info(f"准备发送钉钉消息: {markdown_message['title']}")
 
                     result = self.ding_sender.send_dingtalk_message(
-                        self.ding_url,
-                        self.ding_secret,
+                        ding_url,
+                        ding_secret,
                         markdown_message
                     )
 
@@ -591,71 +859,96 @@ class BalenciagaScheduler:
             
             # 2. 处理重点监控商品变化通知
             if has_key_changes:
-                # 创建精简报告
-                key_count = len(changes["key_product_changes"])
-                markdown_text = f"## {monitor_name}\n\n"
-                markdown_text += f"重点监控商品变化数: {key_count}\n\n"
-                markdown_text += f"变化时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
-                markdown_text += "============\n\n"
-
-                # 添加变化商品详情
-                for i, product in enumerate(changes["key_product_changes"]):
-                    name = product.get('name', '未知商品')
-                    url = product.get('url', '')
+                # 特殊处理 D2Store 监控器的货币转换检验
+                filtered_key_changes = []
+                
+                for product in changes["key_product_changes"]:
+                    should_include = True
                     
-                    # 修改格式以确保钉钉正确渲染递增编号
-                    markdown_text += f"{i + 1}. **{name}**"
-                    if url:
-                        markdown_text += f" [【查看商品】]({url})"
-                    markdown_text += "  \n  "  # 注意这里只用一个换行
-                    
-                    # 添加价格变化信息
-                    price_change = product.get('price_change')
-                    if price_change:
-                        from_price = price_change.get('from', '')
-                        to_price = price_change.get('to', '')
-                        markdown_text += f"价格变化: {from_price} → {to_price}" + "  \n  "
-                    
-                    # 添加尺寸变化信息
-                    size_changes = product.get('size_changes', [])
-                    if size_changes:
-                        markdown_text += "尺寸变化:  \n  "
-                        for change in size_changes:
-                            size = change.get('size', '')
-                            from_status = change.get('from', '')
-                            to_status = change.get('to', '')
-                            change_type = change.get('type', '')
+                    # 检查是否为 D2Store 监控器
+                    if "d2store" in monitor_name.lower():
+                        price_change = product.get('price_change')
+                        if price_change:
+                            from_price = price_change.get('from', '')
+                            to_price = price_change.get('to', '')
                             
-                            change_desc = f"- {size}: {from_status} → {to_status}"
-                            if change_type == "stock_in":
-                                change_desc += " (补货)"
-                            elif change_type == "stock_out":
-                                change_desc += " (售罄)"
-                            
-                            markdown_text += change_desc + "  \n  "
+                            # 检查是否为货币转换变化
+                            if self._is_currency_conversion_change(from_price, to_price):
+                                self.logger.info(f"D2Store商品 {product.get('name', '未知商品')} 的价格变化被判定为货币转换，跳过发送通知")
+                                should_include = False
+                    
+                    if should_include:
+                        filtered_key_changes.append(product)
+                
+                # 如果过滤后没有有效的变化，跳过发送通知
+                if not filtered_key_changes:
+                    self.logger.info(f"{monitor_name} 的重点监控商品变化经过货币转换检验后无需发送通知")
+                else:
+                    # 创建精简报告
+                    key_count = len(filtered_key_changes)
+                    markdown_text = f"## {monitor_name}\n\n"
+                    markdown_text += f"重点监控商品变化数: {key_count}\n\n"
+                    markdown_text += f"变化时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
+                    markdown_text += "============\n\n"
 
-                # 生成钉钉消息
-                markdown_message = {
-                    "title": f"{monitor_name} - 重点商品变化通知",
-                    "text": markdown_text
-                }
+                    # 添加变化商品详情
+                    for i, product in enumerate(filtered_key_changes):
+                        name = product.get('name', '未知商品')
+                        url = product.get('url', '')
+                        
+                        # 修改格式以确保钉钉正确渲染递增编号
+                        markdown_text += f"{i + 1}. **{name}**"
+                        if url:
+                            markdown_text += f" [【查看商品】]({url})"
+                        markdown_text += "  \n  "  # 注意这里只用一个换行
+                        
+                        # 添加价格变化信息
+                        price_change = product.get('price_change')
+                        if price_change:
+                            from_price = price_change.get('from', '')
+                            to_price = price_change.get('to', '')
+                            markdown_text += f"价格变化: {from_price} → {to_price}" + "  \n  "
+                        
+                        # 添加尺寸变化信息
+                        size_changes = product.get('size_changes', [])
+                        if size_changes:
+                            markdown_text += "尺寸变化:  \n  "
+                            for change in size_changes:
+                                size = change.get('size', '')
+                                from_status = change.get('from', '')
+                                to_status = change.get('to', '')
+                                change_type = change.get('type', '')
+                                
+                                change_desc = f"- {size}: {from_status} → {to_status}"
+                                if change_type == "stock_in":
+                                    change_desc += " (补货)"
+                                elif change_type == "stock_out":
+                                    change_desc += " (售罄)"
+                                
+                                markdown_text += change_desc + "  \n  "
 
-                # 发送钉钉消息
-                try:
-                    # 记录将要发送的消息概要
-                    self.logger.info(f"准备发送钉钉消息: {markdown_message['title']}")
+                    # 生成钉钉消息
+                    markdown_message = {
+                        "title": f"{monitor_name} - 重点商品变化通知",
+                        "text": markdown_text
+                    }
 
-                    result = self.ding_sender.send_dingtalk_message(
-                        self.ding_url,
-                        self.ding_secret,
-                        markdown_message
-                    )
+                    # 发送钉钉消息
+                    try:
+                        # 记录将要发送的消息概要
+                        self.logger.info(f"准备发送钉钉消息: {markdown_message['title']}")
 
-                    self.logger.info(f"已发送重点商品变化通知: {result}")
-                    messages_sent = True
-                except Exception as e:
-                    self.logger.error(f"发送钉钉消息时出错: {str(e)}")
-                    self.logger.error(f"错误详情: {traceback.format_exc()}")
+                        result = self.ding_sender.send_dingtalk_message(
+                            ding_url,
+                            ding_secret,
+                            markdown_message
+                        )
+
+                        self.logger.info(f"已发送重点商品变化通知: {result}")
+                        messages_sent = True
+                    except Exception as e:
+                        self.logger.error(f"发送钉钉消息时出错: {str(e)}")
+                        self.logger.error(f"错误详情: {traceback.format_exc()}")
             
             return messages_sent
 
@@ -700,7 +993,15 @@ class BalenciagaScheduler:
         for crawler_name, config in self.crawler_configs.items():
             proxy_info = f"代理: {config.get('proxy_type', 'None')}" if config.get('proxy_type') else "无代理"
             headless_info = "无头模式" if config.get('is_headless', True) else "有界面模式"
-            self.logger.info(f"爬虫配置 - {crawler_name}: {headless_info}, {proxy_info}")
+            cycle_info = f"特殊周期({self.special_cycle_multiplier}倍)" if crawler_name in self.special_cycle_crawlers else "普通周期"
+            self.logger.info(f"爬虫配置 - {crawler_name}: {headless_info}, {proxy_info}, {cycle_info}")
+
+        # 输出特殊周期配置信息
+        if self.special_cycle_crawlers:
+            self.logger.info(f"特殊周期爬虫配置:")
+            self.logger.info(f"  - 爬虫列表: {self.special_cycle_crawlers}")
+            self.logger.info(f"  - 运行频率: 每 {self.loop_time * self.special_cycle_multiplier} 分钟执行一次")
+            self.logger.info(f"  - 普通周期: 每 {self.loop_time} 分钟, 特殊周期: 每 {self.special_cycle_multiplier} 个普通周期")
 
         # 每5分钟运行一次爬虫和库存变化检测
         schedule.every(self.loop_time).minutes.do(self.run_all_crawlers)

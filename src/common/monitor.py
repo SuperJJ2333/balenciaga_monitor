@@ -51,12 +51,12 @@ class Monitor(ABC):
         self.project_path = ProjectPaths()
 
         # 监控网站名称，子类需要设置
-        self.monitor_name = kwargs.get('monitor_name', "base_monitor")
+        self.monitor_name: str = kwargs.get('monitor_name', "base_monitor")
         # 商品目录URL，子类需要设置
-        self.catalog_url = kwargs.get('catalog_url', None)
+        self.catalog_url: list[str] = kwargs.get('catalog_url', [])
 
         # 保存给每个网站的唯一名称，用于文件保存
-        self.name = self.monitor_name
+        self.name: str = self.monitor_name
 
         # 商品存储字典
         self.products_dict = None
@@ -163,8 +163,8 @@ class Monitor(ABC):
 
         # ipcool代理地址
         self.ipcool_url = {
-            'http': 'http://{}:{}@us.ipcool.net:2555'.format("13727744565_187_0_0_session_5_1", "lin2225427"),
-            'https': 'http://{}:{}@us.ipcool.net:2555'.format("13727744565_187_0_0_session_5_1", "lin2225427")
+            'http': 'http://{}:{}@us.ipcool.net:2555'.format("13727744565_187_0_0_session_15_1", "lin2225427"),
+            'https': 'http://{}:{}@us.ipcool.net:2555'.format("13727744565_187_0_0_session_15_1", "lin2225427")
             }
 
         allowed_values = {"clash", "pin_zan", "kuai_dai_li", "ipcool", None}
@@ -190,6 +190,8 @@ class Monitor(ABC):
             raise ValueError("load_mode 只允许在 {'normal', 'eager', 'none', None}")
 
         option.set_load_mode(self.load_mode)
+
+        option.set_browser_path(r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe')
 
         # 禁用图片加载以提高性能
         option.no_imgs(self.is_no_img)
@@ -655,7 +657,7 @@ class Monitor(ABC):
             self.save_log_to_file()
             # 清理多余的日志和数据文件
             self.cleanup_files()
-            if self.page and self.monitor_name != "julian" and not self.is_auto_port:
+            if self.page and self.is_auto_port:
                 self.page.quit()
             return len(self.inventory_data)
 

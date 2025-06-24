@@ -86,12 +86,7 @@ class HermesMonitor(Monitor):
             self.logger.info(f"开始监控 {self.catalog_url}")
 
             # 获取商品目录
-            catalog_data = self.get_inventory_catalog()
-            if not catalog_data:
-                self.logger.error("获取商品目录失败，终止监控")
-                return
-            # 解析商品目录
-            self.products_list = catalog_data
+            self.products_list = self.get_inventory_catalog()
 
             # 如果商品列表为空，记录错误并返回
             if not self.products_list:
@@ -113,7 +108,6 @@ class HermesMonitor(Monitor):
                 changes = self.detect_inventory_changes(normalized_data)
                 if changes:
                     self.logger.info("检测到库存变化，已保存到变更记录")
-
                 return
             else:
                 self.logger.warning("未获取到任何库存信息，无法生成总结")
@@ -137,7 +131,6 @@ class HermesMonitor(Monitor):
         try:
             for url in self.catalog_url:
                 # 设置代理并访问页面
-                # self.page.get(url)
                 self.session.get(url, headers=self.headers, proxies=self.ipcool_url)
                 self.logger.info(f"正在获取商品目录: {url}")
                 # 检查页面响应

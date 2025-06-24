@@ -109,7 +109,7 @@ class RickOwensMonitor(Monitor):
         except Exception as e:
             self.logger.error(f"监控过程中出错: {str(e)}")
         finally:
-            self.page.quit()
+            # self.page.quit()
             self.logger.info("监控结束，关闭浏览器")
 
     def get_inventory_catalog(self) -> list[dict]:
@@ -233,6 +233,6 @@ class RickOwensMonitor(Monitor):
 
 if __name__ == '__main__':
     # 创建监控实例并运行
-    monitor = RickOwensMonitor(is_headless=False, proxy_type=None, is_auto_port=False,
-                               load_mode="normal", is_no_img=False)
+    monitor = RickOwensMonitor(is_headless=True, proxy_type='clash', is_auto_port=False,
+                               load_mode="normal", is_no_img=True)
     monitor.run_with_log()

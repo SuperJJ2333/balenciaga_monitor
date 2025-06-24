@@ -100,13 +100,113 @@ class DingSender:
         self.logger.info(f"找到上一个文件: {filtered_files[0]}")
         return filtered_files[0]
 
+    def find_recent_json_files(self, current_file, dir_path, count=3):
+        """
+        查找同一目录下最近的多个JSON文件（不包括当前文件）
+        支持两种命名格式：
+        1. inventory_summary_*.json
+        2. balenciaga_inventory_*.json
+        
+        Args:
+            current_file: 当前文件路径
+            dir_path: 搜索目录
+            count: 要返回的历史文件数量，默认为3
+            
+        Returns:
+            list: 按时间排序的历史文件列表（从新到旧）
+        """
+        # 获取目录下所有符合条件的JSON文件
+        all_files1 = glob.glob(os.path.join(dir_path, "inventory_summary_*.json"))
+        all_files2 = glob.glob(os.path.join(dir_path, "balenciaga_inventory_*.json"))
+        
+        # 合并两种格式的文件列表
+        all_files = all_files1 + all_files2
+        
+        if not all_files:
+            self.logger.warning(f"目录 {dir_path} 中没有找到符合条件的JSON文件")
+            return []
+
+        # 按时间戳排序（从新到旧）
+        all_files.sort(key=self._extract_timestamp, reverse=True)
+        
+        # 去除当前文件
+        current_basename = os.path.basename(current_file)
+        filtered_files = [f for f in all_files if os.path.basename(f) != current_basename]
+        
+        # 返回最近的count个文件
+        recent_files = filtered_files[:count]
+        
+        self.logger.info(f"找到最近 {len(recent_files)} 个历史文件: {[os.path.basename(f) for f in recent_files]}")
+        return recent_files
+
     @staticmethod
-    def compare_inventory(current_data, previous_data):
+    def _is_currency_conversion_change(from_price, to_price):
+        """
+        检查价格变化是否只是货币单位转换
+        例如：$ 459.90 → € 434.00
+        
+        Args:
+            from_price: 原价格字符串
+            to_price: 新价格字符串
+            
+        Returns:
+            bool: 如果是货币单位转换则返回True，否则返回False
+        """
+        if not from_price or not to_price:
+            return False
+            
+        # 常见货币符号
+        currency_symbols = ['$', '€', '£', '¥', '₽', 'USD', 'EUR', 'GBP', 'JPY', 'RUB', 'CNY']
+        
+        # 提取货币符号
+        from_currency = None
+        to_currency = None
+        
+        for symbol in currency_symbols:
+            if symbol in from_price:
+                from_currency = symbol
+            if symbol in to_price:
+                to_currency = symbol
+                
+        # 如果检测到不同的货币符号，很可能是货币转换
+        if from_currency and to_currency and from_currency != to_currency:
+            # 进一步检查价格数值是否在合理的汇率范围内
+            import re
+            from_num_match = re.search(r'[\d,]+\.?\d*', from_price)
+            to_num_match = re.search(r'[\d,]+\.?\d*', to_price)
+            
+            if from_num_match and to_num_match:
+                try:
+                    from_value = float(from_num_match.group().replace(',', ''))
+                    to_value = float(to_num_match.group().replace(',', ''))
+                    
+                    # 计算价格比率
+                    ratio = to_value / from_value if from_value > 0 else 0
+                    
+                    # 常见汇率范围检查（大致范围，不需要精确）
+                    # USD/EUR 通常在 0.8-1.2 之间
+                    # USD/GBP 通常在 0.7-0.9 之间
+                    # 如果比率在合理的汇率范围内，认为是货币转换
+                    if 0.5 <= ratio <= 2.0:  # 宽松的汇率范围
+                        return True
+                        
+                except (ValueError, ZeroDivisionError):
+                    pass
+                    
+        return False
+
+    @staticmethod
+    def compare_inventory(current_data, previous_data, historical_data_list=None):
         """
         比较当前和上一次的库存数据，返回变化情况
         支持两种数据格式:
         1. 带products字段的格式 (原有格式)
         2. 键值对直接存储商品信息的格式 (新格式)
+        
+        Args:
+            current_data: 当前库存数据
+            previous_data: 上一次库存数据
+            historical_data_list: 最近几次的历史库存数据列表，用于防止误报
         """
         changes = {
             "new_products": [],  # 新增产品
@@ -152,6 +252,58 @@ class DingSender:
                 product_name = product.get("name", key)
                 previous_products[product_name] = product
 
+        # 处理历史数据，构建历史商品库存记录
+        historical_products = {}  # {商品名称: [历史记录1, 历史记录2, ...]}
+        historical_key_products_values = {}  # {商品名称: {价格: [历史价格列表], 尺寸: [历史尺寸列表]}}
+        
+        if historical_data_list:
+            for historical_data in historical_data_list:
+                if not historical_data:
+                    continue
+                    
+                # 处理历史数据格式
+                if "products" in historical_data:
+                    # 原有格式
+                    hist_products = {p.get("name"): p for p in historical_data.get("products", [])}
+                else:
+                    # 新格式
+                    hist_products = {}
+                    for key, product in historical_data.items():
+                        if key in ["monitor", "timestamp"]:
+                            continue
+                        product_name = product.get("name", key)
+                        hist_products[product_name] = product
+                
+                # 记录历史商品
+                for name, product in hist_products.items():
+                    if name not in historical_products:
+                        historical_products[name] = []
+                    historical_products[name].append(product)
+                    
+                    # 如果是重点监控商品，记录其历史价格和尺寸值
+                    if product.get("key_monitoring", False):
+                        if name not in historical_key_products_values:
+                            historical_key_products_values[name] = {"prices": set(), "sizes": set()}
+                        
+                        # 记录历史价格
+                        price = product.get("price", "")
+                        if price:
+                            historical_key_products_values[name]["prices"].add(price)
+                        
+                        # 记录历史尺寸状态
+                        if "inventory" in product:
+                            # 新格式
+                            inventory = product["inventory"]
+                            for size, status in inventory.items():
+                                historical_key_products_values[name]["sizes"].add(f"{size}:{status}")
+                        elif "inventory_status" in product:
+                            # 原有格式
+                            for status_info in product["inventory_status"]:
+                                status = status_info.get("status", "")
+                                sizes = status_info.get("sizes", [])
+                                for size in sizes:
+                                    historical_key_products_values[name]["sizes"].add(f"{size}:{status}")
+
         # 检查当前和上一次数据的商品数量差异
         current_count = len(current_products)
         previous_count = len(previous_products)
@@ -160,14 +312,21 @@ class DingSender:
         # 如果数据量差异过大（超过30%），可能是爬取异常，对重点监控商品特殊处理
         is_data_suspicious = count_diff_ratio > 0.3
         
-        # 找出新增产品（排除可能因爬取失败导致的"假新增"重点监控商品）
+        # 找出新增产品（排除可能因爬取失败导致的"假新增"商品和历史上已出现的商品）
         for name, product in current_products.items():
             if name not in previous_products:
+                # 检查该商品是否在历史记录中出现过
+                is_historical_product = name in historical_products
+                
                 # 如果是重点监控商品且数据可疑，不将其标记为新增
                 is_key_product = product.get("key_monitoring", False)
                 if is_data_suspicious and is_key_product:
-                    # 记录为可疑新增，但不添加到新增列表
                     continue
+                
+                # 如果商品在历史记录中出现过，不标记为新增（可能是爬取遗漏后恢复）
+                if is_historical_product:
+                    continue
+                    
                 changes["new_products"].append(product)
 
         # 找出移除产品（排除可能因爬取失败导致的"假移除"重点监控商品）
@@ -176,7 +335,6 @@ class DingSender:
                 # 如果是重点监控商品且数据可疑，不将其标记为移除
                 is_key_product = product.get("key_monitoring", False)
                 if is_data_suspicious and is_key_product:
-                    # 记录为可疑移除，但不添加到移除列表
                     continue
                 changes["removed_products"].append(product)
 
@@ -215,9 +373,20 @@ class DingSender:
                                 if current_price != previous_price:
                                     if is_data_suspicious:
                                         price_change_suspicious = True
-                        
-                    # 只有在数据不可疑或价格变化不可疑的情况下才记录价格变化
-                    if current_price != previous_price and (not is_data_suspicious or not price_change_suspicious):
+                    
+                    # 检查当前价格是否在历史记录中出现过
+                    price_in_history = False
+                    if name in historical_key_products_values and current_price in historical_key_products_values[name]["prices"]:
+                        price_in_history = True
+                    
+                    # 检查是否为货币转换变化（特别针对D2Store等可能有货币转换的站点）
+                    is_currency_conversion = DingSender._is_currency_conversion_change(previous_price, current_price)
+                    
+                    # 只有在数据不可疑、价格变化不可疑、当前价格未在历史中出现且不是货币转换的情况下才记录价格变化
+                    if (current_price != previous_price and 
+                        (not is_data_suspicious or not price_change_suspicious) and 
+                        not price_in_history and 
+                        not is_currency_conversion):
                         change_details["price_change"] = {
                             "from": previous_price,
                             "to": current_price
@@ -249,15 +418,24 @@ class DingSender:
                             prev_status = previous_inventory.get(size, "Sold Out")
                             
                             if curr_status != prev_status:
-                                size_change = {
-                                    "size": size,
-                                    "from": prev_status,
-                                    "to": curr_status,
-                                    "type": "stock_changed"
-                                }
-                                size_changes.append(size_change)
-                                change_details["size_changes"].append(size_change)
-                                has_changes = True
+                                # 对于重点监控商品，检查当前状态是否在历史记录中出现过
+                                status_in_history = False
+                                if (is_key_product and name in historical_key_products_values):
+                                    size_status_key = f"{size}:{curr_status}"
+                                    if size_status_key in historical_key_products_values[name]["sizes"]:
+                                        status_in_history = True
+                                
+                                # 只有当前状态未在历史记录中出现时才记录变化
+                                if not status_in_history:
+                                    size_change = {
+                                        "size": size,
+                                        "from": prev_status,
+                                        "to": curr_status,
+                                        "type": "stock_changed"
+                                    }
+                                    size_changes.append(size_change)
+                                    change_details["size_changes"].append(size_change)
+                                    has_changes = True
                                 
                         if size_changes and not is_key_product:
                             product_change = current_product.copy()
@@ -308,30 +486,48 @@ class DingSender:
                         if prev_status.lower() != "sold out":
                             curr_status = current_status.get(size, "")
                             if curr_status.lower() == "sold out":
-                                size_change = {
-                                    "size": size,
-                                    "from": prev_status,
-                                    "to": curr_status,
-                                    "type": "stock_out"
-                                }
-                                size_changes.append(size_change)
-                                change_details["size_changes"].append(size_change)
-                                has_changes = True
+                                # 对于重点监控商品，检查当前状态是否在历史记录中出现过
+                                status_in_history = False
+                                if (is_key_product and name in historical_key_products_values):
+                                    size_status_key = f"{size}:{curr_status}"
+                                    if size_status_key in historical_key_products_values[name]["sizes"]:
+                                        status_in_history = True
+                                
+                                # 只有当前状态未在历史记录中出现时才记录变化
+                                if not status_in_history:
+                                    size_change = {
+                                        "size": size,
+                                        "from": prev_status,
+                                        "to": curr_status,
+                                        "type": "stock_out"
+                                    }
+                                    size_changes.append(size_change)
+                                    change_details["size_changes"].append(size_change)
+                                    has_changes = True
 
                     # 2. 检查尺码从缺货变为有库存
                     for size, curr_status in current_status.items():
                         if curr_status.lower() != "sold out":
                             prev_status = previous_status.get(size, "")
                             if prev_status.lower() == "sold out" or size not in previous_status:
-                                size_change = {
-                                    "size": size,
-                                    "from": prev_status,
-                                    "to": curr_status,
-                                    "type": "stock_in"
-                                }
-                                size_changes.append(size_change)
-                                change_details["size_changes"].append(size_change)
-                                has_changes = True
+                                # 对于重点监控商品，检查当前状态是否在历史记录中出现过
+                                status_in_history = False
+                                if (is_key_product and name in historical_key_products_values):
+                                    size_status_key = f"{size}:{curr_status}"
+                                    if size_status_key in historical_key_products_values[name]["sizes"]:
+                                        status_in_history = True
+                                
+                                # 只有当前状态未在历史记录中出现时才记录变化
+                                if not status_in_history:
+                                    size_change = {
+                                        "size": size,
+                                        "from": prev_status,
+                                        "to": curr_status,
+                                        "type": "stock_in"
+                                    }
+                                    size_changes.append(size_change)
+                                    change_details["size_changes"].append(size_change)
+                                    has_changes = True
 
                     # 如果有尺码变化，将产品添加到变化列表
                     if size_changes and not is_key_product:
